@@ -37,10 +37,9 @@ DEFAULT_PAGINATION = 10
 STATIC_PATHS = ['images', 
                 'extra/CNAME', 
                 'extra/.gitignore',
-                'extra/README']
+                ]
                 
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
-                        'extra/README': {'path': 'README'},
                         'extra/.gitignore': {'path': '.gitignore'}}
 
 
