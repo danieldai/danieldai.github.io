@@ -38,6 +38,7 @@ def build():
     local('pelican -s pelicanconf.py')
     #Hakcy way to publish README.md to `master` banch
     local("cp README.md {deploy_path}".format(**env))
+    local("cp .gitignore {deploy_path}".format(**env))
 
 def rebuild():
     """`clean` then `build`"""
