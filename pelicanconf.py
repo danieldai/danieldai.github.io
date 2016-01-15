@@ -41,3 +41,4 @@ EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 LOAD_CONTENT_CACHE = False
 
+DISPLAY_PAGES_ON_MENU = True
