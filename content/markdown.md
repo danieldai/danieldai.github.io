@@ -1,4 +1,4 @@
-Title: Markdown
+Title: How to write Markdown
 Date: 2016-01-15 10:20
 Category: Post
 
@@ -110,3 +110,82 @@ You can create an inline link by wrapping text in brackets(`[]`), and then wrapp
 
 For example, to created a hyperlink to [www.danidai.com](http://www.danidai.com), with a link text that says, Visit DaniDai.com!, you'd write this in Markdown: `[Visit Danidai.com!](http://www.danidai.com)`.
 
+## GitHub Flavored Markdown
+
+GitHub uses "GitHub Flavored Markdown", or GFM, across GitHub -- in issues, comments, and pull requests. It differs from standard Markdown (SM) in a few significant ways, and adds some additinal functionality.
+
+### Differences from traditional Markdown
+
+#### Multiple underscores in words
+
+Where Markdown transforms underscores (`_`) in to italics, GFM ignores underscores in words, like this:
+
+> wow_great_stuff
+
+> do_this_and_do_that_and_another_thing.
+
+This allows code and names with multiple underscores to render properly. To emphasize a portion of a work, use asterisks(`*).
+
+#### URL autolinking
+
+GFM will autolink standard URLs, so if you want to link to a URL(instead of setting link text), you can simply enter the URL and it will be turned into a link to that URL.
+
+```
+http://example.com
+```
+
+becomes
+
+http://example.com
+
+#### Strikethrough
+
+GFM adds syntax to create strikethrough text, which is missing from standard Markdown.
+
+```
+~~Mistaken text.~~
+```
+
+becomes
+
+~~Mistaken text.~~
+
+#### Fenced code blocks
+
+Standard Markdown converts text with four spaces at the beginning of each line into a code block; GFM also supports fenced blocks. Just wrap your code in ``` (as shown below) and you won't need to indent it by four spaces. Note that although fenced code blocks don't have to be preceded by a blank line—unlike indented code blocks—we recommend placing a blank line before them to make the raw Markdown easier to read.
+
+    Here's an example:
+
+    ```
+    function test() {
+      console.log("notice the blank line before this function?");
+    }
+    ```
+
+Keep in mind that, within lists, you must indent non-fenced code blocks eight spaces to render them properly.
+
+#### Syntax highlighting
+
+Code blocks can be taken a step further by adding syntax highlighting. In your fenced block, add an optional language identifier and we'll run it through syntax highlighting. For example, to syntax highlight Ruby code:
+
+    ```ruby
+    require 'redcarpet'
+    markdown = Redcarpet.new("Hello World!")
+    puts markdown.to_html
+    ```
+    
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
+GitHub use [Linguist](https://github.com/github/linguist) to perform language detection and syntax highlighting. You can find out which keywords are valid by perusing [the languages YAML file](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml).
+
+
+
+## References
+
+1. https://help.github.com/articles/markdown-basics
+2. https://help.github.com/articles/github-flavored-markdown/
+3. https://help.github.com/articles/writing-on-github/
