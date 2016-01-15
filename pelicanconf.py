@@ -34,8 +34,14 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-STATIC_PATHS = ['images', 'extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+STATIC_PATHS = ['images', 
+                'extra/CNAME', 
+                'extra/.gitignore',
+                'extra/README']
+                
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
+                        'extra/README': {'path': 'README'},
+                        'extra/.gitignore': {'path': '.gitignore'}}
 
 
 LOAD_CONTENT_CACHE = False
