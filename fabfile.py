@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- #
 from fabric.api import *
 import fabric.contrib.project as project
 import os
@@ -87,8 +88,9 @@ def publish():
         extra_opts='-c',
     )
 
-def gh_pages():
+def pages(comment):
     """Publish to GitHub Pages"""
     rebuild()
-    local("ghp-import -b {github_pages_branch} {deploy_path}".format(**env))
-    local("git push origin {github_pages_branch}".format(**env))
+    env.comment=comment
+    local("ghp-import -m '{comment}' -b {github_pages_branch} {deploy_path}".format(**env))
+    #local("git push origin {github_pages_branch}".format(**env))
