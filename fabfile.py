@@ -89,8 +89,11 @@ def publish():
     )
 
 def pages(comment):
-    """Publish to GitHub Pages"""
+    """Prepare GitHub Pages, put it on master branch"""
     rebuild()
     env.comment=comment
     local("ghp-import -m '{comment}' -b {github_pages_branch} {deploy_path}".format(**env))
-    #local("git push origin {github_pages_branch}".format(**env))
+
+def push():
+    """Publish GibHub Pages"""
+    local("git push origin {github_pages_branch}".format(**env))
