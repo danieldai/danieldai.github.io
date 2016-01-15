@@ -1,1 +1,4 @@
-*.pyc
+*pyc
+*.pid
+output
+.DS_Store
