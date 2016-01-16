@@ -1,4 +1,4 @@
-# Welcome to DaniDai.com!
+# Welcome to [DaniDai.com](http://www.danidai.com)!
 
 **[DaniDai.com](http://www.danidai.com)** is powered by **[Pelican](http://getpelican.com/)**, a static site generaotr written in **[Python](http://python.org/)**. 
 
