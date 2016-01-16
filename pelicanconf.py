@@ -33,10 +33,12 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 STATIC_PATHS = ['images', 
-                'extra/CNAME', 
+                'extra/CNAME',
+                'extra/favicon.ico' 
                 ]
                 
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
+                        'extra/favicon.ico': {'path': 'favicon.ico'}}
 
 
 LOAD_CONTENT_CACHE = False
