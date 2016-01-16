@@ -21,7 +21,519 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/how-to-write-markdown.html">How to write Markdown</a></h1>
+                    <h1 class="entry-title"><a href="/java-language-notes.html">Java Language Notes</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-01-16T10:20:00+01:00">
+                Published: Sat 16 January 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/daniel-dai.html">Daniel Dai</a>
+        </address>
+<p>In <a href="/category/post.html">Post</a>.</p>
+
+</footer><!-- /.post-info --><h2>History</h2>
+<p>Java was developed by a team led by James Gosling at Sun Microsystems. Originally called Oak, it was designed in 1991 for use in embedded chips in consumer electronic appliances. In 1995, renamed Java, it was redesigned for developing Internet applications.</p>
+<h2>Syntax</h2>
+<div class="highlight"><pre><span class="cm">/*</span>
+<span class="cm">File: Welcome.java</span>
+<span class="cm">*/</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Welcome</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Display message Welcome to Java! to the console</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Welcome to Java!&quot;</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<ul>
+<li>Every java program must have at least one class</li>
+<li>The program is executed from the <code>main</code> method</li>
+<li>Every statement in Java ends with a semicolon</li>
+<li>// starts line comment</li>
+<li>/<em> </em>/ for block comment</li>
+<li>{} in a program forms a <code>block</code>, <code>class block</code>, <code>method block</code></li>
+<li>Java is case sensitive</li>
+<li>java classes are grouped into <code>packages</code></li>
+</ul>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">WelcomeInMessageDialogBox</span> <span class="p">{</span>
+  <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">JOptionPane</span><span class="o">.</span><span class="n">showMessageDialog</span><span class="p">(</span><span class="n">null</span><span class="p">,</span> <span class="s">&quot;Welcome to Java!&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3>Import</h3>
+<p>The import statement simply tells the compiler where to locate the classes. The information for the classes in an imported package is not read in at compile time or runtime unless the class is used in the program.</p>
+<ul>
+<li>specific import and wildcard import</li>
+</ul>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">javax.swing.</span><span class="o">*</span><span class="p">;</span>
+</pre></div>
+
+
+<p>All the classes in the <code>java.lang</code> package are <strong>implicitly</strong> imported in every java program.</p>
+<p><code>System</code> is in the <code>java.lang</code> package.</p>
+<h3>How to run</h3>
+<ul>
+<li>Compile java source code to java bytecode first</li>
+<li>java bytecode runs on Java Virtual Machine (JVM)</li>
+</ul>
+<h2>Date types</h2>
+<h3>primitive data types</h3>
+<ul>
+<li>integers</li>
+<li>floating point numbers</li>
+<li>characters</li>
+<li>Boolean types</li>
+</ul>
+<div class="highlight"><pre>public class ComputeArea {
+  double radius;
+  double area;
+
+  radius = 20;
+  area = radius * radius * 3.14159;
+
+  System.out.println(&quot;The area for the circle of radius &quot; +
+    radius + &quot; is &quot; + area);
+  }
+}
+</pre></div>
+
+
+<ul>
+<li>is also string concatenation operator, if on of the operands is nonstring, the nonstring value is converted into a string and concatenated with the other sring.</li>
+</ul>
+<h3>read input</h3>
+<div class="highlight"><pre>Scanner input = new Scanner(System.in);
+</pre></div>
+
+
+<p>Methods of <code>Scanner</code> objects:</p>
+<ul>
+<li>nextByte()</li>
+<li>nextShort()</li>
+<li>nextInt()</li>
+<li>nextLong()</li>
+<li>nextFloat()</li>
+<li>netDouble()</li>
+<li>next()      reads a string that ends before a whitespace character</li>
+<li>nextLine()</li>
+</ul>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">ComputeAreaWithConsoleInput</span> <span class="p">{</span>
+  <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">Scanner</span> <span class="nb">input</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="ow">in</span><span class="p">);</span>
+
+  <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s">&quot;Enter a number for radius: &quot;</span><span class="p">);</span>
+
+  <span class="n">double</span> <span class="n">radius</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">nextDouble</span><span class="p">();</span>
+
+  <span class="n">double</span> <span class="n">area</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="mf">3.14159</span><span class="p">;</span>
+
+  <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;The area for the circle of radius &quot;</span> <span class="o">+</span>
+    <span class="n">radius</span> <span class="o">+</span> <span class="s">&quot; is &quot;</span> <span class="o">+</span> <span class="n">area</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2>Identifiers</h2>
+<ul>
+<li>letters, digits, underscores and dollar signs is allowed in identifier</li>
+<li>starts with _, $ or digit</li>
+<li>case sensitive</li>
+</ul>
+<h2>Variables</h2>
+<p>variable declarations</p>
+<div class="highlight"><pre>int i, j, k;
+int i = 1;
+int i = j = k = 1;
+int count;
+double radius;
+double interestRate;
+</pre></div>
+
+
+<h2>Constants</h2>
+<div class="highlight"><pre>final double PI = 3.14159;
+</pre></div>
+
+
+<h2>Numeric Data Types</h2>
+<ul>
+<li>byte</li>
+<li>short</li>
+<li>int</li>
+<li>long</li>
+<li>float</li>
+<li>double</li>
+</ul>
+<h3>Numeric literals</h3>
+<p>An integer literal is assumed to be of the <code>int</code> type, to denote an integer literal of <code>long</code> type: 121211412L</p>
+<ul>
+<li>01234  octal integer</li>
+<li>0xf87 or 0XF78 hexadecimal integer</li>
+</ul>
+<p>By default floating-point literal is treated as a <code>double</code> type value, to make a nubmer of float: 100.2F, double: 200.2D</p>
+<h3>Character Data Type</h3>
+<div class="highlight"><pre>char letter = &#39;A&#39;;  //&quot;A&quot; is a string, and &#39;A&#39; is a character;
+char numChar = &#39;4&#39;;
+</pre></div>
+
+
+<h2>Unicode and ASCII</h2>
+<p>Mapping a character to its binary representaion is called <code>encoding</code></p>
+<h2>String</h2>
+<div class="highlight"><pre>String message = &quot;Welcome to Java&quot;;
+</pre></div>
+
+
+<h3>Javadoc</h3>
+<div class="highlight"><pre><span class="cm">/**</span>
+
+<span class="cm">*/</span><span class="w"></span>
+</pre></div>
+
+
+<h2>Converting String to numbers</h2>
+<div class="highlight"><pre>int a = Integer.parseInt(intStr);
+double b = Double.parseDouble(str);
+</pre></div>
+
+
+<h1>Flow Control</h1>
+<div class="highlight"><pre>if (radius &lt; 0) {
+  System.out.println(&quot;Bad input&quot;);
+} else {
+  area = radius * radius * PI;
+  System.out.println(&quot;Area is &quot; + area);
+}
+</pre></div>
+
+
+<h2>boolean type</h2>
+<ul>
+<li>true</li>
+<li>false</li>
+</ul>
+<div class="highlight"><pre>boolean lightsOn = true;
+</pre></div>
+
+
+<h2>comparsion operators</h2>
+<ul>
+<li><code>&lt;</code></li>
+<li><code>&lt;=</code></li>
+<li><code>&gt;</code></li>
+<li><code>&gt;=</code></li>
+<li><code>==</code></li>
+<li><code>!=</code></li>
+</ul>
+<h2>if statement</h2>
+<div class="highlight"><pre>if (i &gt; 0) {
+  System.out.println(&quot;is is positive&quot;);
+}
+</pre></div>
+
+
+<h2>if else statement</h2>
+<div class="highlight"><pre>if (boolean-expression) {
+  statements;
+}
+else {
+  statements;
+}
+</pre></div>
+
+
+<h2>nested if</h2>
+<div class="highlight"><pre>if (i &gt; k) {
+  if (j &gt; k) {
+    statements;
+  }
+} 
+else {
+  statements;
+}
+</pre></div>
+
+
+<h2>logical operators</h2>
+<ul>
+<li><code>!</code></li>
+<li><code>&amp;&amp;</code></li>
+<li><code>||</code></li>
+<li><code>^</code></li>
+</ul>
+<h2>switch</h2>
+<div class="highlight"><pre><span class="nt">switch</span> <span class="o">(</span><span class="nt">status</span><span class="o">)</span> <span class="p">{</span>
+  <span class="n">case</span> <span class="m">0</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
+          <span class="n">break</span><span class="p">;</span>
+  <span class="n">case</span> <span class="m">1</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
+          <span class="n">break</span><span class="p">;</span>
+  <span class="k">default</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2>Conditional expression</h2>
+<div class="highlight"><pre><span class="nt">y</span> <span class="o">=</span> <span class="o">(</span><span class="nt">x</span><span class="o">&gt;</span><span class="nt">0</span><span class="o">)?</span> <span class="nt">1</span><span class="o">:</span> <span class="nt">-1</span><span class="o">;</span>
+</pre></div>
+
+
+<h2>while loop</h2>
+<div class="highlight"><pre>while (loop-condition) {
+  stateements;
+}
+</pre></div>
+
+
+<h2>do-while loop</h2>
+<div class="highlight"><pre>do {
+  statements;
+} while (condition);
+</pre></div>
+
+
+<h2>for loop</h2>
+<div class="highlight"><pre>for (i = 0; i &lt; 99; i++) {
+  statements;
+}
+</pre></div>
+
+
+<h2>for-each loop</h2>
+<div class="highlight"><pre>for (double u: myList) { 
+  System.out.println(u);
+}
+</pre></div>
+
+
+<h3>Formatting console output</h3>
+<p><code>System.out.printf(format, item1, item2, ..., item_k_);</code></p>
+<ul>
+<li><code>%b</code> boolean value</li>
+<li><code>%c</code> char</li>
+<li><code>%d</code> integar</li>
+<li><code>%f</code> floating</li>
+<li><code>%e</code> scientfic notation</li>
+<li><code>%s</code> string</li>
+</ul>
+<h3>Width and precison</h3>
+<ul>
+<li><code>%5c</code> Output the character and add four spaces before the character item</li>
+<li><code>%10.2f</code> Output the floating item with width at least 10 including a decimal point</li>
+</ul>
+<h1>Methods</h1>
+<div class="highlight"><pre>public static int sum(int i1, int i2) {
+  int sum = 0;
+  for (int i = i1; i &lt;= i2; i++) {
+    sum += i;
+  }
+
+  return sum; // method return something back
+}
+
+// void method does not returning value
+public static void main(String[] args) {
+  System.out.println(&quot;System from 1 to 10 is&quot; + sum(1, 10));
+}
+</pre></div>
+
+
+<p>A call to void method must be a statement</p>
+<h2>prarameters</h2>
+<p>pass by value</p>
+<h2>OverLoading</h2>
+<p>two methods have the same name but different parameter lists within one class, can not overload methods with just different return type</p>
+<div class="highlight"><pre>public static int max(int a, int b) {
+  if (a &gt; b) {
+    return a;
+  }
+  else {
+    return b;
+  }
+}
+
+// max(int, double) will also invoke this one
+public static double max(double a, double b) {
+  if (a &gt; b) {
+    return a;
+  }
+  else {
+    return b;
+  }
+}
+</pre></div>
+
+
+<h2>Scope of variable</h2>
+<h3>local varialbe</h3>
+<ul>
+<li>variable scope begains from its declaration</li>
+<li>parameter is a local variable</li>
+<li>varialbe declared in for loop has its scope in the entire loop</li>
+</ul>
+<h1>Data Structure</h1>
+<h2>Array</h2>
+<div class="highlight"><pre>double[] numbers = new double[20];
+numbers[0] = 2.0;
+//
+// array initilizer 
+double[] myList = {1.9, 2.9, 3.4, 3.5};
+</pre></div>
+
+
+<p>the declaration of an array variable does not allocate any space in memory for the array. It creates only a storage location for the refer- ence to an array.</p>
+<p>array size can not be changed after created, and when an array is created, its elements are assigned the default value of <code>0</code> for the numeric primitive data types, <code>\u0000</code> for char types, and <code>false</code> for boolean types.</p>
+<h2>Array coping</h2>
+<p>In Java, you can use assignment statements to copy primitive data type variables, but not arrays.</p>
+<div class="highlight"><pre> list2 = list1;
+ // list1 and list2 reference to the same array
+</pre></div>
+
+
+<ul>
+<li>Use a loop to copy individual elements one by one.</li>
+<li>Use the static arraycopy method in the System class.</li>
+<li>Use the clone method to copy arrays</li>
+</ul>
+<h2>passing array as argument</h2>
+<p>array is pass-by-sharing</p>
+<h2>Variable-Length Arguemnt list</h2>
+<p>Only one variable-length parameter may be specified in a method, and this parameter must be the last parameter.</p>
+<p>You can pass an array or a variable number of arguments to a variable-length parameter.</p>
+<div class="highlight"><pre>public static void printMax(double... numbers) {
+  double result = nubmers[0];
+}
+</pre></div>
+
+
+<h2>java.util.Arrays</h2>
+<div class="highlight"><pre>// Sort the whole array
+double[] numbers = {6.0, 4.4, 1.9, 2.9, 3.4, 3.5}; 
+java.util.Arrays.sort(numbers); 
+//
+char[] chars = {&#39;a&#39;, &#39;A&#39;, &#39;4&#39;, &#39;F&#39;, &#39;D&#39;, &#39;P&#39;}; 
+// Sort part of the array
+java.util.Arrays.sort(chars, 1, 3); 
+</pre></div>
+
+
+<h2>2-dimensional array</h2>
+<div class="highlight"><pre>// normal array:
+double[][] matrix;
+//raged array:
+int[][] triangleArray = new int[5][] ; 
+triangleArray[0] = new int[5]; 
+triangleArray[1] = new int[4]; 
+triangleArray[2] = new int[3]; 
+triangleArray[3] = new int[2]; 
+triangleArray[4] = new int[1];
+</pre></div>
+
+
+<h1>OOP</h1>
+<p><strong>state</strong> of object</p>
+<p><strong>behavior</strong> of object</p>
+<div class="highlight"><pre><span class="k">class</span> <span class="n">Circle</span> {
+  //<span class="n">attribute</span>
+  <span class="n">double</span> <span class="n">radius</span> = <span class="mf">1.0</span>;
+
+  // <span class="n">constructor</span>
+  <span class="n">Circle</span>() {
+  }
+
+  //<span class="n">contructor</span>
+  <span class="n">Circlr</span>(<span class="n">double</span> <span class="n">newRadius</span>) {
+    <span class="n">radius</span> = <span class="n">newRadius</span>;
+  }
+
+  //<span class="k">method</span>
+  <span class="n">double</span> <span class="n">getArea</span>() {
+    <span class="k">return</span> <span class="n">radius</span> * <span class="n">radius</span> * <span class="mf">3.14</span>;
+  }
+}
+</pre></div>
+
+
+<p>You can put the two classes into one file, but only one class in the file can be a public class. Furthermore, the public class must have the same name as the file name.</p>
+<ul>
+<li>A constructor must have the same name as the class itself.</li>
+<li>Constructors do not have a return type—not even void.</li>
+<li>Constructors are invoked using the new operator when an object is created.</li>
+</ul>
+<div class="highlight"><pre>//TV.java
+public class TV {
+  int channel = 1;
+  int VolumeLevel = 1;
+  boolean on = false;
+
+  public TV(){
+  }
+
+  public void turnOn() {
+    on = ture; // instance variable is refered directly here
+  }
+
+  public void turnOff() {
+    on = false;
+  }
+
+  public void setChannel(int newChannel) {
+    if (on &amp;&amp; newChannel &gt;= 1 &amp;&amp; newChannel &lt;= 120)
+      channel = newChannel;
+  }
+
+  public void setVolume(int new VolumeLevel) {
+    if (on &amp;&amp; newVolumeLevel &gt;=1 &amp;&amp; newVolumeLevel &lt;=7)
+      volumeLevel = newVolumeLevel;
+  }
+
+  public void channelUp() {
+    if 
+
+}
+</pre></div>
+
+
+<p>Objects are accessed via object reference variables, which contain references to the objects.</p>
+<p>a class is a <code>reference type</code>
+dot operator</p>
+<h2>Constructor</h2>
+<h1>Exceptions</h1>
+<h1>Libraries</h1>
+<!-- Highlight syntax for Mou.app, insert at the bottom of the markdown document  -->
+
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+
+<p><link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
+<script>
+  hljs.initHighlightingOnLoad();
+</script></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/how-to-write-markdown.html" rel="bookmark"
+                           title="Permalink to How to write Markdown">How to write Markdown</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2016-01-15T10:20:00+01:00">
                 Published: Fri 15 January 2016
@@ -32,155 +544,15 @@
         </address>
 <p>In <a href="/category/post.html">Post</a>.</p>
 
-</footer><!-- /.post-info --><h2>Basic</h2>
+</footer><!-- /.post-info -->                <h2>Basic</h2>
 <h3>Paragraphs</h3>
 <p>Paragraphs in Markdown are just one or more lines of consecutive text followed by one or more blank lines.</p>
 <div class="highlight"><pre>On July 2, an alien mothership entered Earth&#39;s orbit and deployed several dozen saucer-shaped &quot;destroyer&quot; spacecraft, each 15 miles (24 km) wide.
 
-On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, participated in an assault on a destroyer near the city of Los Angeles.
-</pre></div>
-
-
-<h3>Headings</h3>
-<p>You can create a heading by adding one or more <code>#</code> symbols before your heading text. The number of <code>#</code> you use will determine the size of the heading.</p>
-<div class="highlight"><pre># The largest heading (an &lt;h1&gt; tag)
-## The second largest heading (an &lt;h2&gt; tag)
-...
-###### The 6th largest heading (an &lt;h6&gt; tag)
-</pre></div>
-
-
-<h3>Blockquotes</h3>
-<div class="highlight"><pre>In the words of Abraham Lincoln:
-&gt; Pardon my french
-</pre></div>
-
-
-<h3>Styling text</h3>
-<p>You can make text <strong>bold</strong> or <em>italic</em></p>
-<div class="highlight"><pre>*This text will be italic*
-**This text will be bold**
-</pre></div>
-
-
-<p>Both <strong>bold</strong> and <em>italic</em> can use either a <code>*</code> or an <code>_</code> around the text for styling. This allows yo to combine both bold and italic if needed.</p>
-<div class="highlight"><pre>**Everyone _must_ attend the meeting at 5 o&#39;clock today**
-</pre></div>
-
-
-<h1>Lists</h1>
-<h3>Unordered lists</h3>
-<p>You can make an unordered list by preceding list items with either a <code>*</code> or a <code>-</code></p>
-<div class="highlight"><pre>* Item
-* Item
-* Item
-
-- Item
-- Item
-- Item
-</pre></div>
-
-
-<h3>Ordered lists</h3>
-<p>You can make an ordered list by preceding list items with a number</p>
-<div class="highlight"><pre>1. Item 1
-2. Item 2
-3. Item 3
-</pre></div>
-
-
-<h3>Nested lists</h3>
-<p>You can create nested lists by indenting list items by two spaces.</p>
-<div class="highlight"><pre>1. Item 1
-  1. A corollary to the above item.
-  2. Yet another point to consider.
-2. Item 2
-  * A corollary that does not need to be ordered.
-    * This is indented four spaces, because it&#39;s two spaces further than the item above.
-    * You might want to consider making a new list.
-3. Item 3
-</pre></div>
-
-
-<h2>Code formating</h2>
-<h3>Inline formats</h3>
-<p>Use single backticks (`) to format text in a special monospace format. Everything within the backticks appear as-is, with no other special formatting.</p>
-<div class="highlight"><pre>Here&#39;s an idea: why don&#39;t we take `SuperiorProject` and turn it into `**Reasonable**Project`.
-</pre></div>
-
-
-<h3>Multiple lines</h3>
-<p>You can use triple backticks(```) to format text as its down distinct block</p>
-<h3>Links</h3>
-<p>You can create an inline link by wrapping text in brackets(<code>[]</code>), and then wrapping the link in parentheses(<code>()</code>)</p>
-<p>For example, to created a hyperlink to <a href="http://www.danidai.com">www.danidai.com</a>, with a link text that says, Visit DaniDai.com!, you'd write this in Markdown: <code>[Visit Danidai.com!](http://www.danidai.com)</code>.</p>
-<h2>GitHub Flavored Markdown</h2>
-<p>GitHub uses "GitHub Flavored Markdown", or GFM, across GitHub -- in issues, comments, and pull requests. It differs from standard Markdown (SM) in a few significant ways, and adds some additinal functionality.</p>
-<h3>Differences from traditional Markdown</h3>
-<h4>Multiple underscores in words</h4>
-<p>Where Markdown transforms underscores (<code>_</code>) in to italics, GFM ignores underscores in words, like this:</p>
-<blockquote>
-<p>wow_great_stuff</p>
-<p>do_this_and_do_that_and_another_thing.</p>
-</blockquote>
-<p>This allows code and names with multiple underscores to render properly. To emphasize a portion of a work, use asterisks(`*).</p>
-<h4>URL autolinking</h4>
-<p>GFM will autolink standard URLs, so if you want to link to a URL(instead of setting link text), you can simply enter the URL and it will be turned into a link to that URL.</p>
-<div class="highlight"><pre>http://example.com
-</pre></div>
-
-
-<p>becomes</p>
-<p>http://example.com</p>
-<h4>Strikethrough</h4>
-<p>GFM adds syntax to create strikethrough text, which is missing from standard Markdown.</p>
-<div class="highlight"><pre>~~Mistaken text.~~
-</pre></div>
-
-
-<p>becomes</p>
-<p>~~Mistaken text.~~</p>
-<h4>Fenced code blocks</h4>
-<p>Standard Markdown converts text with four spaces at the beginning of each line into a code block; GFM also supports fenced blocks. Just wrap your code in ``` (as shown below) and you won't need to indent it by four spaces. Note that although fenced code blocks don't have to be preceded by a blank line—unlike indented code blocks—we recommend placing a blank line before them to make the raw Markdown easier to read.</p>
-<div class="highlight"><pre><span class="nx">Here</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">an</span> <span class="nx">example</span><span class="o">:</span>
-
-<span class="err">```</span>
-<span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;notice the blank line before this function?&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="err">```</span>
-</pre></div>
-
-
-<p>Keep in mind that, within lists, you must indent non-fenced code blocks eight spaces to render them properly.</p>
-<h4>Syntax highlighting</h4>
-<p>Code blocks can be taken a step further by adding syntax highlighting. In your fenced block, add an optional language identifier and we'll run it through syntax highlighting. For example, to syntax highlight Ruby code:</p>
-<div class="highlight"><pre>```ruby
-require &#39;redcarpet&#39;
-markdown = Redcarpet.new(&quot;Hello World!&quot;)
-puts markdown.to_html
-```
-</pre></div>
-
-
-<div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;redcarpet&#39;</span>
-<span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
-<span class="nb">puts</span> <span class="n">markdown</span><span class="o">.</span><span class="n">to_html</span>
-</pre></div>
-
-
-<p>GitHub use <a href="https://github.com/github/linguist">Linguist</a> to perform language detection and syntax highlighting. You can find out which keywords are valid by perusing <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml">the languages YAML file</a>.</p>
-<h2>References</h2>
-<ol>
-<li>https://help.github.com/articles/markdown-basics</li>
-<li>https://help.github.com/articles/github-flavored-markdown/</li>
-<li>https://help.github.com/articles/writing-on-github/</li>
-</ol>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+On July 3, the Black Knights ...</pre></div>
+                <a class="readmore" href="/how-to-write-markdown.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
