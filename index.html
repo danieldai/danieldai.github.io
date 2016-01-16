@@ -56,9 +56,68 @@
 </pre></div>
 
 
+<h1>Absolute Imports</h1>
+<p>In Python 2.4 and earlier, if you're reading a module located inside a package, it is not clear whether</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">foo</span>
+</pre></div>
+
+
+<p>refers to a top-level module or to another module inside the package. As Python's library expands, more and more existing package internal modules suddenly shadow standard library modules by accident. It's a particularly difficult problem inside packages because there's no way to specify which module is meant. To resolve the ambiguity, it is proposed that foo will always be a module or package reachable from sys.path . This is called an absolute import.</p>
+<p>The python-dev community chose absolute imports as the default because they're the more common use case and because absolute imports can provide all the functionality of relative (intra-package) imports -- albeit at the cost of difficulty when renaming package pieces higher up in the hierarchy or when moving one package inside another.</p>
+<p>Because this represents a change in semantics, absolute imports will be optional in Python 2.5 and 2.6 through the use of</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+</pre></div>
+
+
+<p>This part of the proposal had BDFL approval from the beginning.</p>
+<h1>Relative Imports</h1>
+<p>Relative imports use leading dots. A single leading dot indicates a relative import, starting with the current package. Two or more leading dots give a relative import to the parent(s) of the current package, one level per dot after the first. Here's a sample package layout:</p>
+<div class="highlight"><pre>package/
+    __init__.py
+    subpackage1/
+        __init__.py
+        moduleX.py
+        moduleY.py
+    subpackage2/
+        __init__.py
+        moduleZ.py
+    moduleA.py
+</pre></div>
+
+
+<p>Assuming that the current file is either <code>moduleX.py</code> or <code>subpackage1/__init__.py</code> , following are correct usages of the new syntax:</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">.moduleY</span> <span class="kn">import</span> <span class="n">spam</span>
+<span class="kn">from</span> <span class="nn">.moduleY</span> <span class="kn">import</span> <span class="n">spam</span> <span class="k">as</span> <span class="n">ham</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">moduleY</span>
+<span class="kn">from</span> <span class="nn">..subpackage1</span> <span class="kn">import</span> <span class="n">moduleY</span>
+<span class="kn">from</span> <span class="nn">..subpackage2.moduleZ</span> <span class="kn">import</span> <span class="n">eggs</span>
+<span class="kn">from</span> <span class="nn">..moduleA</span> <span class="kn">import</span> <span class="n">foo</span>
+<span class="kn">from</span> <span class="nn">...package</span> <span class="kn">import</span> <span class="n">bar</span>
+<span class="kn">from</span> <span class="nn">...sys</span> <span class="kn">import</span> <span class="n">path</span>
+</pre></div>
+
+
+<p>Note that while that last case is legal, it is certainly discouraged ("insane" was the word Guido used).</p>
+<p>Relative imports must always use <code>from &lt;&gt; import</code> ; <code>import &lt;&gt;</code> is always absolute. Of course, absolute imports can use <code>from &lt;&gt; import</code> by omitting the leading dots. The reason <code>import .foo</code> is prohibited is because after</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">XXX.YYY.ZZZ</span>
+</pre></div>
+
+
+<p>then</p>
+<div class="highlight"><pre>XXX.YYY.ZZZ
+</pre></div>
+
+
+<p>is usable in an expression. But</p>
+<div class="highlight"><pre><span class="na">.moduleY</span>
+</pre></div>
+
+
+<p>is not usable in an expression.</p>
 <h1>ref</h1>
 <ol>
 <li>http://www.learnpython.org/en/Modules_and_Packages</li>
+<li>https://www.python.org/dev/peps/pep-0328/</li>
 </ol>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
