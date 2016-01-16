@@ -21,7 +21,58 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/java-language-notes.html">Java Language Notes</a></h1>
+                    <h1 class="entry-title"><a href="/python-modules-packages-and-import.html">Python Modules, Packages and Import</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-01-16T22:20:00+01:00">
+                Published: Sat 16 January 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/daniel-dai.html">Daniel Dai</a>
+        </address>
+<p>In <a href="/category/post.html">Post</a>.</p>
+
+</footer><!-- /.post-info --><p>Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the <code>import</code> command.</p>
+<p>To import a module, we use the <code>import</code> command. Check out the full list of built-in modules in the Python standard library <a href="http://docs.python.org/2/library/">here</a>.</p>
+<p>The first time a module is loaded into a running Python script, it is initialized by executing the code in the module once. If another module in your code imports the same module again, it will not be loaded twice but once only - so local variables inside the module act as a <strong>"singleton"</strong> - they are <strong>initialized only once</strong>.</p>
+<p>If we want to import the module <code>urllib</code>, which enables us to create read data from URLs, we simply <code>import</code> the module:</p>
+<div class="highlight"><pre><span class="c"># import the library</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
+
+<span class="c"># use it</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+
+
+<h2>Writing modules</h2>
+<p>Writing Python modules is very simple. To create a module of your own, simply create a new .py file with the module name, and then import it using the Python file name (without the .py extension) using the <code>import</code> command.</p>
+<h2>Writing packages</h2>
+<p>Packages are namespaces which contain multiple packages and modules themselves. They are simply directories, but with a twist.</p>
+<p>Each package in Python is a directory which <strong>MUST</strong> contain a special file called <strong><code>__init__.py</code></strong>. This file can be empty, and it indicates that the directory it contains is a Python package, so it can be imported the same way a module can be imported.</p>
+<p>The <strong><code>__init__.py</code></strong> file can also decide which modules the package exports as the API, while keeping other modules internal, by overriding the <strong><code>__all__</code></strong> variable, like so:</p>
+<div class="highlight"><pre><span class="n">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;bar&quot;</span><span class="p">]</span>
+</pre></div>
+
+
+<h1>ref</h1>
+<ol>
+<li>http://www.learnpython.org/en/Modules_and_Packages</li>
+</ol>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/java-language-notes.html" rel="bookmark"
+                           title="Permalink to Java Language Notes">Java Language Notes</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2016-01-16T10:20:00+01:00">
                 Published: Sat 16 January 2016
@@ -32,500 +83,17 @@
         </address>
 <p>In <a href="/category/post.html">Post</a>.</p>
 
-</footer><!-- /.post-info --><h2>History</h2>
+</footer><!-- /.post-info -->                <h2>History</h2>
 <p>Java was developed by a team led by James Gosling at Sun Microsystems. Originally called Oak, it was designed in 1991 for use in embedded chips in consumer electronic appliances. In 1995, renamed Java, it was redesigned for developing Internet applications.</p>
 <h2>Syntax</h2>
 <div class="highlight"><pre><span class="cm">/*</span>
 <span class="cm">File: Welcome.java</span>
 <span class="cm">*/</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Welcome</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">// Display message Welcome to Java! to the console</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Welcome to Java!&quot;</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
-
-
-<ul>
-<li>Every java program must have at least one class</li>
-<li>The program is executed from the <code>main</code> method</li>
-<li>Every statement in Java ends with a semicolon</li>
-<li>// starts line comment</li>
-<li>/<em> </em>/ for block comment</li>
-<li>{} in a program forms a <code>block</code>, <code>class block</code>, <code>method block</code></li>
-<li>Java is case sensitive</li>
-<li>java classes are grouped into <code>packages</code></li>
-</ul>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
-
-<span class="n">public</span> <span class="k">class</span> <span class="nc">WelcomeInMessageDialogBox</span> <span class="p">{</span>
-  <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">JOptionPane</span><span class="o">.</span><span class="n">showMessageDialog</span><span class="p">(</span><span class="n">null</span><span class="p">,</span> <span class="s">&quot;Welcome to Java!&quot;</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h3>Import</h3>
-<p>The import statement simply tells the compiler where to locate the classes. The information for the classes in an imported package is not read in at compile time or runtime unless the class is used in the program.</p>
-<ul>
-<li>specific import and wildcard import</li>
-</ul>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
-</pre></div>
-
-
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">javax.swing.</span><span class="o">*</span><span class="p">;</span>
-</pre></div>
-
-
-<p>All the classes in the <code>java.lang</code> package are <strong>implicitly</strong> imported in every java program.</p>
-<p><code>System</code> is in the <code>java.lang</code> package.</p>
-<h3>How to run</h3>
-<ul>
-<li>Compile java source code to java bytecode first</li>
-<li>java bytecode runs on Java Virtual Machine (JVM)</li>
-</ul>
-<h2>Date types</h2>
-<h3>primitive data types</h3>
-<ul>
-<li>integers</li>
-<li>floating point numbers</li>
-<li>characters</li>
-<li>Boolean types</li>
-</ul>
-<div class="highlight"><pre>public class ComputeArea {
-  double radius;
-  double area;
-
-  radius = 20;
-  area = radius * radius * 3.14159;
-
-  System.out.println(&quot;The area for the circle of radius &quot; +
-    radius + &quot; is &quot; + area);
-  }
-}
-</pre></div>
-
-
-<ul>
-<li>is also string concatenation operator, if on of the operands is nonstring, the nonstring value is converted into a string and concatenated with the other sring.</li>
-</ul>
-<h3>read input</h3>
-<div class="highlight"><pre>Scanner input = new Scanner(System.in);
-</pre></div>
-
-
-<p>Methods of <code>Scanner</code> objects:</p>
-<ul>
-<li>nextByte()</li>
-<li>nextShort()</li>
-<li>nextInt()</li>
-<li>nextLong()</li>
-<li>nextFloat()</li>
-<li>netDouble()</li>
-<li>next()      reads a string that ends before a whitespace character</li>
-<li>nextLine()</li>
-</ul>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
-
-<span class="n">public</span> <span class="k">class</span> <span class="nc">ComputeAreaWithConsoleInput</span> <span class="p">{</span>
-  <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">Scanner</span> <span class="nb">input</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="ow">in</span><span class="p">);</span>
-
-  <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s">&quot;Enter a number for radius: &quot;</span><span class="p">);</span>
-
-  <span class="n">double</span> <span class="n">radius</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">nextDouble</span><span class="p">();</span>
-
-  <span class="n">double</span> <span class="n">area</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="mf">3.14159</span><span class="p">;</span>
-
-  <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;The area for the circle of radius &quot;</span> <span class="o">+</span>
-    <span class="n">radius</span> <span class="o">+</span> <span class="s">&quot; is &quot;</span> <span class="o">+</span> <span class="n">area</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h2>Identifiers</h2>
-<ul>
-<li>letters, digits, underscores and dollar signs is allowed in identifier</li>
-<li>starts with _, $ or digit</li>
-<li>case sensitive</li>
-</ul>
-<h2>Variables</h2>
-<p>variable declarations</p>
-<div class="highlight"><pre>int i, j, k;
-int i = 1;
-int i = j = k = 1;
-int count;
-double radius;
-double interestRate;
-</pre></div>
-
-
-<h2>Constants</h2>
-<div class="highlight"><pre>final double PI = 3.14159;
-</pre></div>
-
-
-<h2>Numeric Data Types</h2>
-<ul>
-<li>byte</li>
-<li>short</li>
-<li>int</li>
-<li>long</li>
-<li>float</li>
-<li>double</li>
-</ul>
-<h3>Numeric literals</h3>
-<p>An integer literal is assumed to be of the <code>int</code> type, to denote an integer literal of <code>long</code> type: 121211412L</p>
-<ul>
-<li>01234  octal integer</li>
-<li>0xf87 or 0XF78 hexadecimal integer</li>
-</ul>
-<p>By default floating-point literal is treated as a <code>double</code> type value, to make a nubmer of float: 100.2F, double: 200.2D</p>
-<h3>Character Data Type</h3>
-<div class="highlight"><pre>char letter = &#39;A&#39;;  //&quot;A&quot; is a string, and &#39;A&#39; is a character;
-char numChar = &#39;4&#39;;
-</pre></div>
-
-
-<h2>Unicode and ASCII</h2>
-<p>Mapping a character to its binary representaion is called <code>encoding</code></p>
-<h2>String</h2>
-<div class="highlight"><pre>String message = &quot;Welcome to Java&quot;;
-</pre></div>
-
-
-<h3>Javadoc</h3>
-<div class="highlight"><pre><span class="cm">/**</span>
-
-<span class="cm">*/</span><span class="w"></span>
-</pre></div>
-
-
-<h2>Converting String to numbers</h2>
-<div class="highlight"><pre>int a = Integer.parseInt(intStr);
-double b = Double.parseDouble(str);
-</pre></div>
-
-
-<h1>Flow Control</h1>
-<div class="highlight"><pre>if (radius &lt; 0) {
-  System.out.println(&quot;Bad input&quot;);
-} else {
-  area = radius * radius * PI;
-  System.out.println(&quot;Area is &quot; + area);
-}
-</pre></div>
-
-
-<h2>boolean type</h2>
-<ul>
-<li>true</li>
-<li>false</li>
-</ul>
-<div class="highlight"><pre>boolean lightsOn = true;
-</pre></div>
-
-
-<h2>comparsion operators</h2>
-<ul>
-<li><code>&lt;</code></li>
-<li><code>&lt;=</code></li>
-<li><code>&gt;</code></li>
-<li><code>&gt;=</code></li>
-<li><code>==</code></li>
-<li><code>!=</code></li>
-</ul>
-<h2>if statement</h2>
-<div class="highlight"><pre>if (i &gt; 0) {
-  System.out.println(&quot;is is positive&quot;);
-}
-</pre></div>
-
-
-<h2>if else statement</h2>
-<div class="highlight"><pre>if (boolean-expression) {
-  statements;
-}
-else {
-  statements;
-}
-</pre></div>
-
-
-<h2>nested if</h2>
-<div class="highlight"><pre>if (i &gt; k) {
-  if (j &gt; k) {
-    statements;
-  }
-} 
-else {
-  statements;
-}
-</pre></div>
-
-
-<h2>logical operators</h2>
-<ul>
-<li><code>!</code></li>
-<li><code>&amp;&amp;</code></li>
-<li><code>||</code></li>
-<li><code>^</code></li>
-</ul>
-<h2>switch</h2>
-<div class="highlight"><pre><span class="nt">switch</span> <span class="o">(</span><span class="nt">status</span><span class="o">)</span> <span class="p">{</span>
-  <span class="n">case</span> <span class="m">0</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
-          <span class="n">break</span><span class="p">;</span>
-  <span class="n">case</span> <span class="m">1</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
-          <span class="n">break</span><span class="p">;</span>
-  <span class="k">default</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h2>Conditional expression</h2>
-<div class="highlight"><pre><span class="nt">y</span> <span class="o">=</span> <span class="o">(</span><span class="nt">x</span><span class="o">&gt;</span><span class="nt">0</span><span class="o">)?</span> <span class="nt">1</span><span class="o">:</span> <span class="nt">-1</span><span class="o">;</span>
-</pre></div>
-
-
-<h2>while loop</h2>
-<div class="highlight"><pre>while (loop-condition) {
-  stateements;
-}
-</pre></div>
-
-
-<h2>do-while loop</h2>
-<div class="highlight"><pre>do {
-  statements;
-} while (condition);
-</pre></div>
-
-
-<h2>for loop</h2>
-<div class="highlight"><pre>for (i = 0; i &lt; 99; i++) {
-  statements;
-}
-</pre></div>
-
-
-<h2>for-each loop</h2>
-<div class="highlight"><pre>for (double u: myList) { 
-  System.out.println(u);
-}
-</pre></div>
-
-
-<h3>Formatting console output</h3>
-<p><code>System.out.printf(format, item1, item2, ..., item_k_);</code></p>
-<ul>
-<li><code>%b</code> boolean value</li>
-<li><code>%c</code> char</li>
-<li><code>%d</code> integar</li>
-<li><code>%f</code> floating</li>
-<li><code>%e</code> scientfic notation</li>
-<li><code>%s</code> string</li>
-</ul>
-<h3>Width and precison</h3>
-<ul>
-<li><code>%5c</code> Output the character and add four spaces before the character item</li>
-<li><code>%10.2f</code> Output the floating item with width at least 10 including a decimal point</li>
-</ul>
-<h1>Methods</h1>
-<div class="highlight"><pre>public static int sum(int i1, int i2) {
-  int sum = 0;
-  for (int i = i1; i &lt;= i2; i++) {
-    sum += i;
-  }
-
-  return sum; // method return something back
-}
-
-// void method does not returning value
-public static void main(String[] args) {
-  System.out.println(&quot;System from 1 to 10 is&quot; + sum(1, 10));
-}
-</pre></div>
-
-
-<p>A call to void method must be a statement</p>
-<h2>prarameters</h2>
-<p>pass by value</p>
-<h2>OverLoading</h2>
-<p>two methods have the same name but different parameter lists within one class, can not overload methods with just different return type</p>
-<div class="highlight"><pre>public static int max(int a, int b) {
-  if (a &gt; b) {
-    return a;
-  }
-  else {
-    return b;
-  }
-}
-
-// max(int, double) will also invoke this one
-public static double max(double a, double b) {
-  if (a &gt; b) {
-    return a;
-  }
-  else {
-    return b;
-  }
-}
-</pre></div>
-
-
-<h2>Scope of variable</h2>
-<h3>local varialbe</h3>
-<ul>
-<li>variable scope begains from its declaration</li>
-<li>parameter is a local variable</li>
-<li>varialbe declared in for loop has its scope in the entire loop</li>
-</ul>
-<h1>Data Structure</h1>
-<h2>Array</h2>
-<div class="highlight"><pre>double[] numbers = new double[20];
-numbers[0] = 2.0;
-//
-// array initilizer 
-double[] myList = {1.9, 2.9, 3.4, 3.5};
-</pre></div>
-
-
-<p>the declaration of an array variable does not allocate any space in memory for the array. It creates only a storage location for the refer- ence to an array.</p>
-<p>array size can not be changed after created, and when an array is created, its elements are assigned the default value of <code>0</code> for the numeric primitive data types, <code>\u0000</code> for char types, and <code>false</code> for boolean types.</p>
-<h2>Array coping</h2>
-<p>In Java, you can use assignment statements to copy primitive data type variables, but not arrays.</p>
-<div class="highlight"><pre> list2 = list1;
- // list1 and list2 reference to the same array
-</pre></div>
-
-
-<ul>
-<li>Use a loop to copy individual elements one by one.</li>
-<li>Use the static arraycopy method in the System class.</li>
-<li>Use the clone method to copy arrays</li>
-</ul>
-<h2>passing array as argument</h2>
-<p>array is pass-by-sharing</p>
-<h2>Variable-Length Arguemnt list</h2>
-<p>Only one variable-length parameter may be specified in a method, and this parameter must be the last parameter.</p>
-<p>You can pass an array or a variable number of arguments to a variable-length parameter.</p>
-<div class="highlight"><pre>public static void printMax(double... numbers) {
-  double result = nubmers[0];
-}
-</pre></div>
-
-
-<h2>java.util.Arrays</h2>
-<div class="highlight"><pre>// Sort the whole array
-double[] numbers = {6.0, 4.4, 1.9, 2.9, 3.4, 3.5}; 
-java.util.Arrays.sort(numbers); 
-//
-char[] chars = {&#39;a&#39;, &#39;A&#39;, &#39;4&#39;, &#39;F&#39;, &#39;D&#39;, &#39;P&#39;}; 
-// Sort part of the array
-java.util.Arrays.sort(chars, 1, 3); 
-</pre></div>
-
-
-<h2>2-dimensional array</h2>
-<div class="highlight"><pre>// normal array:
-double[][] matrix;
-//raged array:
-int[][] triangleArray = new int[5][] ; 
-triangleArray[0] = new int[5]; 
-triangleArray[1] = new int[4]; 
-triangleArray[2] = new int[3]; 
-triangleArray[3] = new int[2]; 
-triangleArray[4] = new int[1];
-</pre></div>
-
-
-<h1>OOP</h1>
-<p><strong>state</strong> of object</p>
-<p><strong>behavior</strong> of object</p>
-<div class="highlight"><pre><span class="k">class</span> <span class="n">Circle</span> {
-  //<span class="n">attribute</span>
-  <span class="n">double</span> <span class="n">radius</span> = <span class="mf">1.0</span>;
-
-  // <span class="n">constructor</span>
-  <span class="n">Circle</span>() {
-  }
-
-  //<span class="n">contructor</span>
-  <span class="n">Circlr</span>(<span class="n">double</span> <span class="n">newRadius</span>) {
-    <span class="n">radius</span> = <span class="n">newRadius</span>;
-  }
-
-  //<span class="k">method</span>
-  <span class="n">double</span> <span class="n">getArea</span>() {
-    <span class="k">return</span> <span class="n">radius</span> * <span class="n">radius</span> * <span class="mf">3.14</span>;
-  }
-}
-</pre></div>
-
-
-<p>You can put the two classes into one file, but only one class in the file can be a public class. Furthermore, the public class must have the same name as the file name.</p>
-<ul>
-<li>A constructor must have the same name as the class itself.</li>
-<li>Constructors do not have a return type—not even void.</li>
-<li>Constructors are invoked using the new operator when an object is created.</li>
-</ul>
-<div class="highlight"><pre>//TV.java
-public class TV {
-  int channel = 1;
-  int VolumeLevel = 1;
-  boolean on = false;
-
-  public TV(){
-  }
-
-  public void turnOn() {
-    on = ture; // instance variable is refered directly here
-  }
-
-  public void turnOff() {
-    on = false;
-  }
-
-  public void setChannel(int newChannel) {
-    if (on &amp;&amp; newChannel &gt;= 1 &amp;&amp; newChannel &lt;= 120)
-      channel = newChannel;
-  }
-
-  public void setVolume(int new VolumeLevel) {
-    if (on &amp;&amp; newVolumeLevel &gt;=1 &amp;&amp; newVolumeLevel &lt;=7)
-      volumeLevel = newVolumeLevel;
-  }
-
-  public void channelUp() {
-    if 
-
-}
-</pre></div>
-
-
-<p>Objects are accessed via object reference variables, which contain references to the objects.</p>
-<p>a class is a <code>reference type</code>
-dot operator</p>
-<h2>Constructor</h2>
-<h1>Exceptions</h1>
-<h1>Libraries</h1>
-<!-- Highlight syntax for Mou.app, insert at the bottom of the markdown document  -->
-
-<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-
-<p><link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
-<script>
-  hljs.initHighlightingOnLoad();
-</script></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+  <span class="kd">public ...</span></pre></div>
+                <a class="readmore" href="/java-language-notes.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
