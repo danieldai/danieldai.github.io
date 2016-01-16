@@ -36,6 +36,81 @@ __init__.py:
 __all__ = ["bar"]
 ```
 
+# Absolute Imports
+
+In Python 2.4 and earlier, if you're reading a module located inside a package, it is not clear whether
+
+```python
+import foo
+```
+
+refers to a top-level module or to another module inside the package. As Python's library expands, more and more existing package internal modules suddenly shadow standard library modules by accident. It's a particularly difficult problem inside packages because there's no way to specify which module is meant. To resolve the ambiguity, it is proposed that foo will always be a module or package reachable from sys.path . This is called an absolute import.
+
+The python-dev community chose absolute imports as the default because they're the more common use case and because absolute imports can provide all the functionality of relative (intra-package) imports -- albeit at the cost of difficulty when renaming package pieces higher up in the hierarchy or when moving one package inside another.
+
+Because this represents a change in semantics, absolute imports will be optional in Python 2.5 and 2.6 through the use of
+
+```python
+from __future__ import absolute_import
+```
+
+This part of the proposal had BDFL approval from the beginning.
+
+# Relative Imports
+
+Relative imports use leading dots. A single leading dot indicates a relative import, starting with the current package. Two or more leading dots give a relative import to the parent(s) of the current package, one level per dot after the first. Here's a sample package layout:
+
+```
+package/
+    __init__.py
+    subpackage1/
+        __init__.py
+        moduleX.py
+        moduleY.py
+    subpackage2/
+        __init__.py
+        moduleZ.py
+    moduleA.py
+```
+
+Assuming that the current file is either `moduleX.py` or `subpackage1/__init__.py` , following are correct usages of the new syntax:
+
+```python
+from .moduleY import spam
+from .moduleY import spam as ham
+from . import moduleY
+from ..subpackage1 import moduleY
+from ..subpackage2.moduleZ import eggs
+from ..moduleA import foo
+from ...package import bar
+from ...sys import path
+```
+
+Note that while that last case is legal, it is certainly discouraged ("insane" was the word Guido used).
+
+Relative imports must always use `from <> import` ; `import <>` is always absolute. Of course, absolute imports can use `from <> import` by omitting the leading dots. The reason `import .foo` is prohibited is because after
+
+```python
+import XXX.YYY.ZZZ
+```
+
+then
+
+```pytohn
+XXX.YYY.ZZZ
+```
+
+is usable in an expression. But
+
+```pytohn
+.moduleY
+```
+
+is not usable in an expression.
+
+
+
 #ref
 
 1. http://www.learnpython.org/en/Modules_and_Packages
+2. https://www.python.org/dev/peps/pep-0328/
