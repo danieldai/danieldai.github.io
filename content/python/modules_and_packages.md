@@ -114,3 +114,4 @@ is not usable in an expression.
 
 1. http://www.learnpython.org/en/Modules_and_Packages
 2. https://www.python.org/dev/peps/pep-0328/
+3. https://docs.python.org/2.5/whatsnew/pep-328.html
