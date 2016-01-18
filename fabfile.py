@@ -41,6 +41,14 @@ def build():
     local("cp .gitignore {deploy_path}".format(**env))
     local("cp google7ed5b9715d9d7c37.html {deploy_path}".format(**env))
 
+def publish_build():
+    """Build local version of site"""
+    local('pelican -s publishconf.py')
+    #Hakcy way to publish README.md to `master` banch
+    local("cp README.md {deploy_path}".format(**env))
+    local("cp .gitignore {deploy_path}".format(**env))
+    local("cp google7ed5b9715d9d7c37.html {deploy_path}".format(**env))
+
 def rebuild():
     """`clean` then `build`"""
     clean()
@@ -94,7 +102,8 @@ def publish():
 
 def pages(comment):
     """Prepare GitHub Pages, put it on master branch"""
-    rebuild()
+    clean()
+    publish_build()
     env.comment=comment
     local("ghp-import -m '{comment}' -b {github_pages_branch} {deploy_path}".format(**env))
 
