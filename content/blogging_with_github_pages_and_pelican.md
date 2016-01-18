@@ -177,3 +177,4 @@ git push
 
 Visit `username.github.io` with your favorite Browser, your new Blog site is on GitHub Pages now. 
 
+If you meet any problem, please feel free to checkout my site repo https://github.com/danieldai/danieldai.github.io
