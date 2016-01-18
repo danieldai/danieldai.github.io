@@ -1,5 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai - An Engineer</title><link href="http://www.danidai.com/" rel="alternate"></link><link href="http://www.danidai.com/feeds/post.atom.xml" rel="self"></link><id>http://www.danidai.com/</id><updated>2016-01-15T10:20:00+01:00</updated><entry><title>How to write Markdown</title><link href="http://www.danidai.com/how-to-write-markdown.html" rel="alternate"></link><updated>2016-01-15T10:20:00+01:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danidai.com,2016-01-15:how-to-write-markdown.html</id><summary type="html">&lt;h2&gt;Basic&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai - An Engineer</title><link href="http://www.danidai.com/" rel="alternate"></link><link href="http://www.danidai.com/feeds/post.atom.xml" rel="self"></link><id>http://www.danidai.com/</id><updated>2016-01-18T22:20:00+01:00</updated><entry><title>Blogging with GitHub Pages and Pelican Step by Step</title><link href="http://www.danidai.com/blogging-with-github-pages-and-pelican-step-by-step.html" rel="alternate"></link><updated>2016-01-18T22:20:00+01:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danidai.com,2016-01-18:blogging-with-github-pages-and-pelican-step-by-step.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; is a service provide by GitHub to allow people having websites out of the content of their Repo. 
+As you know, &lt;strong&gt;&lt;a href="http://www.danidai.com"&gt;DaniDai.com&lt;/a&gt;&lt;/strong&gt; is hosted on &lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt;. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can be Markdown files writen is way supported by &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, GitHub Pages has built support for &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, it will convert Markdown to HTML.&lt;/p&gt;
+&lt;p&gt;If you do not want to install &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;,but still want to write blog in Markdown, you can use a static site generator, This site is built with such a tool called &lt;strong&gt;&lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;&lt;/strong&gt;, a static site generaotr written in &lt;strong&gt;&lt;a href="http://python.org/"&gt;Python&lt;/a&gt;&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;I'm going to tell you how to blog with &lt;strong&gt;GitHub Pages&lt;/strong&gt; and &lt;strong&gt;Pelican&lt;/strong&gt; from scratch in this article.&lt;/p&gt;
+&lt;h2&gt;1. Setup the Repository&lt;/h2&gt;
+&lt;p&gt;First, you need to create a repo on GitHub to contain the content of the blog. Please follow the &lt;a href="https://pages.github.com/"&gt;guides&lt;/a&gt; provided by &lt;strong&gt;GitHub Pages&lt;/strong&gt; to setup the repo. If you are creating a user site, the name of the repo would be &lt;code&gt;username.github.io&lt;/code&gt;. At last you should have your repo cloned to your local machine:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/username/username.github.io
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;As the content of the site must be on &lt;code&gt;master&lt;/code&gt; branch, which is required by GitHub Pages, to keep the repo clean, I will use a seperated branch to contain the source code. I choosed to use &lt;code&gt;source&lt;/code&gt; name the branch, you can choose any name you like except &lt;code&gt;master&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git checkout -b source
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;How &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;source&lt;/code&gt; branchs related to each other?&lt;/h3&gt;
+&lt;p&gt;Unlike normal git repositories, in this repo, &lt;code&gt;master&lt;/code&gt; branch and &lt;code&gt;source&lt;/code&gt; branches are 2 parallel branches that only share a common parent, but will never merge together in future. The content of each commits on &lt;code&gt;master&lt;/code&gt; branch is generated output by Pelican from the content of some commits on &lt;code&gt;source&lt;/code&gt; branch, and usually &lt;code&gt;source&lt;/code&gt; branch has more commits than &lt;code&gt;master&lt;/code&gt; branch.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;o----o----o----o----o----o master branch
+ \
+  \---o--o--o--o--o--o--o--o--o--o--o--o--o--o--o source branch    
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;each commit on &lt;code&gt;master&lt;/code&gt; branch is the compiled result of on commit on &lt;code&gt;source&lt;/code&gt; branch&lt;/p&gt;
+&lt;h2&gt;2. Install Pelican&lt;/h2&gt;
+&lt;p&gt;Next, install Pelican and other utils on your local machine. Use your favorite text editor create a new files called &lt;code&gt;requirements.txt&lt;/code&gt;, add the following lines to this file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;markdown
+pelican
+typogrify
+fabric
+ghp-import
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And then run&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install -r requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you like, you can save current state of &lt;code&gt;source&lt;/code&gt; as a new commit.&lt;/p&gt;
+&lt;h2&gt;3. Start Pelican Project&lt;/h2&gt;
+&lt;p&gt;Run this command in repo dir, to start a new Pelican project:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pelican-quickstart
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pelican will ask you some questions:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(danidai)ming/tmp/pel$ pelican-quickstart
+Welcome to pelican-quickstart v3.6.3.
+
+This script will help you create a new Pelican-based website.
+
+Please answer the following questions so this script can generate the files
+needed by Pelican.
+
+
+&amp;gt; Where do you want to create your new web site? [.]
+&amp;gt; What will be the title of this web site? Pelican site
+&amp;gt; Who will be the author of this web site? Daniel Dai
+&amp;gt; What will be the default language of this web site? [en]
+&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n)
+&amp;gt; What is your URL prefix? (see above example; no trailing slash)
+You must enter something
+&amp;gt; What is your URL prefix? (see above example; no trailing slash) http://www.danidai.com
+&amp;gt; Do you want to enable article pagination? (Y/n) Y
+&amp;gt; How many articles per page do you want? [10]
+&amp;gt; What is your time zone? [Europe/Paris]
+&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n)
+&amp;gt; Do you want an auto-reload &amp;amp; simpleHTTP script to assist with theme and site development? (Y/n)
+&amp;gt; Do you want to upload your website using FTP? (y/N)
+&amp;gt; Do you want to upload your website using SSH? (y/N)
+&amp;gt; Do you want to upload your website using Dropbox? (y/N)
+&amp;gt; Do you want to upload your website using S3? (y/N)
+&amp;gt; Do you want to upload your website using Rackspace Cloud Files? (y/N)
+&amp;gt; Do you want to upload your website using GitHub Pages? (y/N) y
+&amp;gt; Is this your personal page (username.github.io)? (y/N) danieldai.github.io
+You must answer &amp;#39;yes&amp;#39; or &amp;#39;no&amp;#39;
+&amp;gt; Is this your personal page (username.github.io)? (y/N) y
+Done. Your new project is available at /private/tmp/pel
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;These are the files generated by Pelican:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(danidai)ming/tmp/pel$ find .
+.
+./content             # the content of the site goes here
+./develop_server.sh
+./fabfile.py
+./Makefile
+./output
+./pelicanconf.py
+./publishconf.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Create some example files in &lt;code&gt;content&lt;/code&gt; diretory. You can get more tips on who to write from &lt;a href="http://docs.getpelican.com/en/3.6.3/index.html"&gt;Pelican docs&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Customize Fabric file&lt;/h3&gt;
+&lt;p&gt;As we are going to publish the site to GitHub Pages, we need to customize &lt;code&gt;fabfile.py&lt;/code&gt; a bit. First, tell Pelican our GitHub Pages Branch is &lt;code&gt;master&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Github Pages configuration&lt;/span&gt;
+&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github_pages_branch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;master&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then add 2 fabric commands to output generated site to master branch,and push master branch to GitHub Pages:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;pages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Prepare GitHub Pages, put it on master branch&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;rebuild&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;comment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;comment&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ghp-import -m &amp;#39;{comment}&amp;#39; -b {github_pages_branch} {deploy_path}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;push&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Publish GibHub Pages&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;git push origin {github_pages_branch}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;ghp-import&lt;/code&gt; plays a very important role here. Pelican put the generated site in &lt;code&gt;output&lt;/code&gt; directory, &lt;code&gt;ghp-import&lt;/code&gt; takes the content of &lt;code&gt;output&lt;/code&gt; directory, and outout it to &lt;code&gt;master&lt;/code&gt; branch of current repo.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;compile content in to HTML&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;fab build
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;start dev server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;fab serve
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;visit http://localhost:8888 to review it&lt;/li&gt;
+&lt;li&gt;publish to &lt;code&gt;master&lt;/code&gt; branch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;fab pages:&amp;#39;&amp;lt;commit message for master branch&amp;gt;&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;publish to GitHub Pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;fab push
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;push source branch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git add .
+git commit -m &amp;quot;&amp;lt;commit message for source branch&amp;quot;
+git push
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Visit &lt;code&gt;username.github.io&lt;/code&gt; with your favorite Browser, your new Blog site is on GitHub Pages now. &lt;/p&gt;</summary><category term="Pelican"></category><category term="GitHub Pages"></category></entry><entry><title>How to write Markdown</title><link href="http://www.danidai.com/how-to-write-markdown.html" rel="alternate"></link><updated>2016-01-15T10:20:00+01:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danidai.com,2016-01-15:how-to-write-markdown.html</id><summary type="html">&lt;h2&gt;Basic&lt;/h2&gt;
 &lt;h3&gt;Paragraphs&lt;/h3&gt;
 &lt;p&gt;Paragraphs in Markdown are just one or more lines of consecutive text followed by one or more blank lines.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;On July 2, an alien mothership entered Earth&amp;#39;s orbit and deployed several dozen saucer-shaped &amp;quot;destroyer&amp;quot; spacecraft, each 15 miles (24 km) wide.
