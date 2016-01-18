@@ -154,7 +154,8 @@ git push
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Visit &lt;code&gt;username.github.io&lt;/code&gt; with your favorite Browser, your new Blog site is on GitHub Pages now. &lt;/p&gt;</summary><category term="Pelican"></category><category term="GitHub Pages"></category></entry><entry><title>How to write Markdown</title><link href="http://www.danidai.com/how-to-write-markdown.html" rel="alternate"></link><updated>2016-01-15T10:20:00+01:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danidai.com,2016-01-15:how-to-write-markdown.html</id><summary type="html">&lt;h2&gt;Basic&lt;/h2&gt;
+&lt;p&gt;Visit &lt;code&gt;username.github.io&lt;/code&gt; with your favorite Browser, your new Blog site is on GitHub Pages now. &lt;/p&gt;
+&lt;p&gt;If you meet any problem, please feel free to checkout my site repo https://github.com/danieldai/danieldai.github.io&lt;/p&gt;</summary><category term="Pelican"></category><category term="GitHub Pages"></category></entry><entry><title>How to write Markdown</title><link href="http://www.danidai.com/how-to-write-markdown.html" rel="alternate"></link><updated>2016-01-15T10:20:00+01:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danidai.com,2016-01-15:how-to-write-markdown.html</id><summary type="html">&lt;h2&gt;Basic&lt;/h2&gt;
 &lt;h3&gt;Paragraphs&lt;/h3&gt;
 &lt;p&gt;Paragraphs in Markdown are just one or more lines of consecutive text followed by one or more blank lines.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;On July 2, an alien mothership entered Earth&amp;#39;s orbit and deployed several dozen saucer-shaped &amp;quot;destroyer&amp;quot; spacecraft, each 15 miles (24 km) wide.
