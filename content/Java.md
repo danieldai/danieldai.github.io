@@ -1,6 +1,6 @@
 Title: Java Language Notes
 Date: 2016-01-16 10:20
-Category: Post
+Category: Java
 
 
 ## History

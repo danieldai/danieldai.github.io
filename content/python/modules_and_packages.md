@@ -1,6 +1,6 @@
 Title: Python Modules, Packages and Import
 Date: 2016-01-16 22:20
-Category: Post
+Category: Python
 
 Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the `import` command.
 
