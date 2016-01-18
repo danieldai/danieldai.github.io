@@ -39,6 +39,7 @@ def build():
     #Hakcy way to publish README.md to `master` banch
     local("cp README.md {deploy_path}".format(**env))
     local("cp .gitignore {deploy_path}".format(**env))
+    local("cp google7ed5b9715d9d7c37.html {deploy_path}".format(**env))
 
 def rebuild():
     """`clean` then `build`"""
