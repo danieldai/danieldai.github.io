@@ -33,21 +33,23 @@ def clean():
         shutil.rmtree(DEPLOY_PATH)
         os.makedirs(DEPLOY_PATH)
 
+def _copy_extra_files():
+    #Hakcy way to publish README.md to `master` banch
+    local("cp README.md {deploy_path}".format(**env))
+    
+    local("cp .gitignore {deploy_path}".format(**env))
+    local("cp google7ed5b9715d9d7c37.html {deploy_path}".format(**env))
+    local("cp favicons/* {deploy_path}".format(**env))
+
 def build():
     """Build local version of site"""
     local('pelican -s pelicanconf.py')
-    #Hakcy way to publish README.md to `master` banch
-    local("cp README.md {deploy_path}".format(**env))
-    local("cp .gitignore {deploy_path}".format(**env))
-    local("cp google7ed5b9715d9d7c37.html {deploy_path}".format(**env))
+    _copy_extra_files()
 
 def publish_build():
     """Build local version of site"""
     local('pelican -s publishconf.py')
-    #Hakcy way to publish README.md to `master` banch
-    local("cp README.md {deploy_path}".format(**env))
-    local("cp .gitignore {deploy_path}".format(**env))
-    local("cp google7ed5b9715d9d7c37.html {deploy_path}".format(**env))
+    _copy_extra_files()
 
 def rebuild():
     """`clean` then `build`"""

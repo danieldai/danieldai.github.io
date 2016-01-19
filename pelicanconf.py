@@ -20,6 +20,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 THEME = "themes/alchemy"
+EXTRA_FAVICON = True
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
