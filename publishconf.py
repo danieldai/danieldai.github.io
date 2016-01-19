@@ -21,6 +21,6 @@ DELETE_OUTPUT_DIRECTORY = False
 # Following items are often useful when publishing
 
 DISQUS_SITENAME = "danieldai"
-GOOGLE_ANALYTICS = "UA-56972775-1"
+GOOGLE_ANALYTICS = "UA-72604787-1"
 GITHUB_URL = "https://github.com/danieldai"
-GOOGLE_ANALYTICS_ID = "UA-56972775-1" # for alchemy theme
+GOOGLE_ANALYTICS_ID = GOOGLE_ANALYTICS # for alchemy theme
