@@ -54,3 +54,10 @@ PROFILE_IMAGE = '/daniel.jpeg'
 SITE_SUBTEXT = SITESUBTITLE
 
 PAGES_ON_MENU = True
+CATEGORIES_ON_MENU = True
+TAGS_ON_MENU = True
+ARCHIVES_ON_MENU = True
+
+EMAIL_ADDRESS = 'daeming@gmail.com'
+GITHUB_ADDRESS = 'https://github.com/danieldai'
+SO_ADDRESS = 'http://stackoverflow.com/users/1089262/daniel-dai'
