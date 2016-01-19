@@ -51,7 +51,7 @@ DISPLAY_PAGES_ON_MENU = True
 
 PROFILE_IMAGE = '/daniel.jpeg'
 
-SITE_SUBTEXT = SITESUBTITLE
+SITE_SUBTEXT = "Day after day, we are closer to the Matrix, it's IT."
 
 PAGES_ON_MENU = True
 CATEGORIES_ON_MENU = True
