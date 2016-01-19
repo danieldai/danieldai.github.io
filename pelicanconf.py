@@ -8,7 +8,7 @@ SITEURL = ''
 
 PATH = 'content'
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Asia/Chongqing'
 
 DEFAULT_LANG = u'en'
 
@@ -40,6 +40,7 @@ STATIC_PATHS = ['images',
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
                         'extra/favicon.ico': {'path': 'favicon.ico'}}
 
+SITESUBTITLE = "Day after day, we are closer to the Matrix, it's IT."
 
 LOAD_CONTENT_CACHE = False
 
