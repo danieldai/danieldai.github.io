@@ -37,14 +37,18 @@ DEFAULT_PAGINATION = 10
 
 STATIC_PATHS = ['images', 
                 'extra/CNAME',
-                'extra/favicon.ico' 
+                'extra/daniel.jpeg' 
                 ]
                 
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
-                        'extra/favicon.ico': {'path': 'favicon.ico'}}
+                        'extra/daniel.jpeg': {'path': 'daniel.jpeg'}}
 
 SITESUBTITLE = "Day after day, we are closer to the Matrix, it's IT."
 
 LOAD_CONTENT_CACHE = False
 
 DISPLAY_PAGES_ON_MENU = True
+
+PROFILE_IMAGE = '/daniel.jpeg'
+
+SITE_SUBTEXT = SITESUBTITLE

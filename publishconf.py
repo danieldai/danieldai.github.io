@@ -23,3 +23,4 @@ DELETE_OUTPUT_DIRECTORY = False
 DISQUS_SITENAME = "danieldai"
 GOOGLE_ANALYTICS = "UA-56972775-1"
 GITHUB_URL = "https://github.com/danieldai"
+GOOGLE_ANALYTICS_ID = "UA-56972775-1" # for alchemy theme
