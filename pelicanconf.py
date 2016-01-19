@@ -43,7 +43,7 @@ STATIC_PATHS = ['images',
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
                         'extra/daniel.jpeg': {'path': 'daniel.jpeg'}}
 
-SITESUBTITLE = "Day after day, we are closer to the Matrix, it's IT."
+SITESUBTITLE = "Daniel Dai - An Software Engineer"
 
 LOAD_CONTENT_CACHE = False
 
