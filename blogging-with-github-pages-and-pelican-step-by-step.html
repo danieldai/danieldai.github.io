@@ -1,49 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Blogging with GitHub Pages and Pelican Step by Step</title>
-        <link rel="stylesheet" href="http://www.danidai.com/theme/css/main.css" />
-        <link href="http://www.danidai.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Daniel Dai - An Engineer Atom Feed" />
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+<head>
+      <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="http://www.danidai.com/blogging-with-github-pages-and-pelican-step-by-step.html" />
+
+    <title>  Daniel Dai - An Engineer &mdash; Blogging with GitHub Pages and Pelican Step by Step
+</title>
+
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/>
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png"/>
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png"/>
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png"/>
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png"/>
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png"/>
+      <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png"/>
+      <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png"/>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png"/>
+      <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
+      <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192"/>
+      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+      <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
+      <link rel="manifest" href="/manifest.json"/>
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+      <meta name="msapplication-TileColor" content="#da532c"/>
+      <meta name="msapplication-TileImage" content="/mstile-144x144.png"/>
+      <meta name="theme-color" content="#ffffff"/>
+
+
+
+    <link rel="stylesheet" href="http://www.danidai.com/theme/css/style.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-56972775-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+    <meta name="author" content="Daniel Dai">
+    <meta name="description" content="GitHub Pages is a service provide by GitHub to allow people having websites out of the content of their Repo. As you know, DaniDai.com is hosted on GitHub Pages. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can ...">
+  <meta name="tags" contents="Pelican, GitHub Pages, ">
 </head>
 
-<body id="index" class="home">
-<a href="https://github.com/danieldai">
-<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
-</a>
-        <header id="banner" class="body">
-                <h1><a href="http://www.danidai.com/">Daniel Dai - An Engineer  <strong>Day after day, we are closer to the Matrix, it's IT.</strong></a></h1>
-                <nav><ul>
-                    <li><a href="http://www.danidai.com/pages/about-me.html">About Me</a></li>
-                    <li><a href="http://www.danidai.com/category/java.html">Java</a></li>
-                    <li class="active"><a href="http://www.danidai.com/category/post.html">Post</a></li>
-                    <li><a href="http://www.danidai.com/category/python.html">Python</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="http://www.danidai.com/blogging-with-github-pages-and-pelican-step-by-step.html" rel="bookmark"
-           title="Permalink to Blogging with GitHub Pages and Pelican Step by Step">Blogging with GitHub Pages and Pelican Step by Step</a></h1>
-    </header>
-
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2016-01-18T22:20:00+08:00">
-                Published: Mon 18 January 2016
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://www.danidai.com/author/daniel-dai.html">Daniel Dai</a>
-        </address>
-<p>In <a href="http://www.danidai.com/category/post.html">Post</a>.</p>
-<p>tags: <a href="http://www.danidai.com/tag/pelican.html">Pelican</a> <a href="http://www.danidai.com/tag/github-pages.html">GitHub Pages</a> </p>
-</footer><!-- /.post-info -->      <p><strong><a href="https://pages.github.com/">GitHub Pages</a></strong> is a service provide by GitHub to allow people having websites out of the content of their Repo. 
+<body>
+<header class="header">
+  <div class="container">
+      <div class="header-image pull-left">
+        <a class="nodec" href="http://www.danidai.com"><img src=/daniel.jpeg></a>
+      </div>
+    <div class="header-inner">
+      <h1 class="header-name">
+        <a class="nodec" href="http://www.danidai.com">Daniel Dai - An Engineer</a>
+      </h1>
+      <h3 class="header-text">Day after day, we are closer to the Matrix, it's IT.</h3>
+      <ul class="header-menu list-inline">
+      </ul>
+    </div>
+  </div>
+</header> <!-- /.header -->  <div class="container">
+  <div class="post full-post">
+    <h1 class="post-title">
+      <a href="/blogging-with-github-pages-and-pelican-step-by-step.html" title="Permalink to Blogging with GitHub Pages and Pelican Step by Step">Blogging with GitHub Pages and Pelican Step by Step</a>
+    </h1>
+    <ul class="list-inline">
+      <li class="post-date">
+        <a class="text-muted" href="/blogging-with-github-pages-and-pelican-step-by-step.html" title="2016-01-18T22:20:00+08:00">Mon 18 January 2016</a>
+      </li>
+      <li class="muted">&middot;</li>
+      <li class="post-category">
+        <a href="http://www.danidai.com/category/post.html">Post</a>
+      </li>
+        <li class="muted">&middot;</li>
+        <li>
+            <a href="/tag/Pelican.html">Pelican</a>,             <a href="/tag/GitHub Pages.html">GitHub Pages</a>        </li>
+    </ul>
+    <div class="post-content">
+      <p><strong><a href="https://pages.github.com/">GitHub Pages</a></strong> is a service provide by GitHub to allow people having websites out of the content of their Repo. 
 As you know, <strong><a href="http://www.danidai.com">DaniDai.com</a></strong> is hosted on <strong><a href="https://pages.github.com/">GitHub Pages</a></strong>. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can be Markdown files writen is way supported by <a href="http://jekyllrb.com/]">Jekyll</a>, GitHub Pages has built support for <a href="http://jekyllrb.com/]">Jekyll</a>, it will convert Markdown to HTML.</p>
 <p>If you do not want to install <a href="http://jekyllrb.com/]">Jekyll</a>,but still want to write blog in Markdown, you can use a static site generator, This site is built with such a tool called <strong><a href="http://getpelican.com/">Pelican</a></strong>, a static site generaotr written in <strong><a href="http://python.org/">Python</a></strong>. </p>
 <p>I'm going to tell you how to blog with <strong>GitHub Pages</strong> and <strong>Pelican</strong> from scratch in this article.</p>
@@ -200,70 +244,46 @@ git push
 
 <p>Visit <code>username.github.io</code> with your favorite Browser, your new Blog site is on GitHub Pages now. </p>
 <p>If you meet any problem, please feel free to checkout my site repo https://github.com/danieldai/danieldai.github.io</p>
-    </div><!-- /.entry-content -->
-    <div class="comments">
-      <h2>Comments !</h2>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        var disqus_shortname = 'danieldai';
-        var disqus_identifier = 'blogging-with-github-pages-and-pelican-step-by-step.html';
-        var disqus_url = 'http://www.danidai.com/blogging-with-github-pages-and-pelican-step-by-step.html';
-        (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//danieldai.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the comments.</noscript>
     </div>
-
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://www.danidai.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-
-                            <li><a href="https://gatherhealth.com">Gather Health</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-56972775-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = 'https://ssl.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+  </div>
+  <hr class="separator">
+  <div class="col-md-8 col-md-offset-2">
+  <div id="disqus_thread">
+    <script>
+      var disqus_shortname = 'danieldai';
+      (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] ||
+         document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
     </script>
-<script type="text/javascript">
-    var disqus_shortname = 'danieldai';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-</body>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript=danieldai">
+        comments powered by Disqus.
+      </a>
+    </noscript>
+    <a href="https://disqus.com" class="dsq-brlink">
+      blog comments powered by <span class="logo-disqus">Disqus</span>
+    </a>
+  </div>
+  </div>
+  </div>
+<footer class="footer">
+  <div class="container">
+    <p class="text-center">
+      Daniel Dai, <a href="" target="_blank"></a> unless otherwise noted.
+    </p>
+    <div class="text-center">
+      Generated by <a href="http://getpelican.com" target="_blank">Pelican</a> with the <a href="http://github.com/nairobilug/pelican-alchemy">alchemy</a> theme.
+    </div>
+  </div>
+</footer> <!-- /.footer -->
+  <script src="http://www.danidai.com/theme/js/jquery.min.js"></script>
+  <script src="http://www.danidai.com/theme/js/bootstrap.min.js"></script>
+</body> <!-- 42 -->
+
 </html>
