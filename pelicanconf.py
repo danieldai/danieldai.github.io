@@ -61,3 +61,21 @@ ARCHIVES_ON_MENU = True
 EMAIL_ADDRESS = 'daeming@gmail.com'
 GITHUB_ADDRESS = 'https://github.com/danieldai'
 SO_ADDRESS = 'http://stackoverflow.com/users/1089262/daniel-dai'
+
+PLUGIN_PATHS = ['/Users/ming/opensource/pelican-plugins']
+
+PLUGINS = ['sitemap']
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'daily',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
