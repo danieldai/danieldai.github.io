@@ -298,5 +298,5 @@ puts markdown.to_html
 &lt;li&gt;https://help.github.com/articles/markdown-basics&lt;/li&gt;
 &lt;li&gt;https://help.github.com/articles/github-flavored-markdown/&lt;/li&gt;
 &lt;li&gt;https://help.github.com/articles/writing-on-github/&lt;/li&gt;
-&lt;/ol&gt;</summary></entry><entry><title>Welcome to DaniDai.com!</title><link href="http://danieldai.me/welcome-to-danidaicom.html" rel="alternate"></link><updated>2015-07-30T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2015-07-30:welcome-to-danidaicom.html</id><summary type="html">&lt;p&gt;Hello World.&lt;/p&gt;
+&lt;/ol&gt;</summary></entry><entry><title>Welcome to DanielDai.Me!</title><link href="http://danieldai.me/welcome-to-danieldaime.html" rel="alternate"></link><updated>2015-07-30T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2015-07-30:welcome-to-danieldaime.html</id><summary type="html">&lt;p&gt;Hello World.&lt;/p&gt;
 &lt;p&gt;This is my blog, I will use it to share a lot of things with you.&lt;/p&gt;</summary></entry></feed>

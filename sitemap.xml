@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://danieldai.me/</loc>
-<lastmod>2016-01-20T08:45:29-00:00</lastmod>
+<lastmod>2016-01-20T21:38:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://danieldai.me/archives.html</loc>
-<lastmod>2016-01-20T08:45:29-00:00</lastmod>
+<lastmod>2016-01-20T21:38:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://danieldai.me/tags.html</loc>
-<lastmod>2016-01-20T08:45:29-00:00</lastmod>
+<lastmod>2016-01-20T21:38:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://danieldai.me/categories.html</loc>
-<lastmod>2016-01-20T08:45:29-00:00</lastmod>
+<lastmod>2016-01-20T21:38:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -67,7 +67,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://danieldai.me/welcome-to-danidaicom.html</loc>
+<loc>http://danieldai.me/welcome-to-danieldaime.html</loc>
 <lastmod>2015-07-30T10:20:00+08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
