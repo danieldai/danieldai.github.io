@@ -1,4 +1,4 @@
-Title: Welcome to DaniDai.com!
+Title: Welcome to DanielDai.Me!
 Date: 2015-07-30 10:20
 Category: Post
 
