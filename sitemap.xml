@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://danieldai.me/</loc>
-<lastmod>2016-01-20T21:38:04-00:00</lastmod>
+<lastmod>2016-01-27T12:25:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://danieldai.me/archives.html</loc>
-<lastmod>2016-01-20T21:38:04-00:00</lastmod>
+<lastmod>2016-01-27T12:25:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://danieldai.me/tags.html</loc>
-<lastmod>2016-01-20T21:38:04-00:00</lastmod>
+<lastmod>2016-01-27T12:25:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://danieldai.me/categories.html</loc>
-<lastmod>2016-01-20T21:38:04-00:00</lastmod>
+<lastmod>2016-01-27T12:25:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -35,6 +35,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>http://danieldai.me/pages/about-me.html</loc>
 <lastmod>2016-01-15T10:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://danieldai.me/django-template-include-and-i18n.html</loc>
+<lastmod>2016-01-27T22:20:00+08:00</lastmod>
+<changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -89,7 +96,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://danieldai.me/category/python.html</loc>
-<lastmod>2016-01-16T22:20:00+08:06</lastmod>
+<lastmod>2016-01-27T22:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -109,8 +116,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://danieldai.me/tag/django.html</loc>
+<lastmod>2016-01-27T22:20:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://danieldai.me/author/daniel-dai.html</loc>
-<lastmod>2016-01-18T22:20:00+08:06</lastmod>
+<lastmod>2016-01-27T22:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

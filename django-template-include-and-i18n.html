@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+      <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="http://danieldai.me/authors.html" />
+    <link rel="canonical" href="http://danieldai.me/django-template-include-and-i18n.html" />
 
-    <title>  Daniel Dai - An Engineer &mdash; Authors
+    <title>  Daniel Dai - An Engineer &mdash; Django Template Include and I18n
 </title>
 
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/>
@@ -48,6 +48,10 @@
     ga('send', 'pageview');
 
   </script>
+
+    <meta name="author" content="Daniel Dai">
+    <meta name="description" content="In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte. {% include "include/another_template.html" with text='I love Python' %} Sometimes, we need to tranalte include prarameters, this can not be done in another_template.html ...">
+  <meta name="tags" contents="Django, ">
 </head>
 
 <body>
@@ -78,10 +82,71 @@
     </div>
   </div>
 </header> <!-- /.header -->  <div class="container">
-  <h1>Authors on Daniel Dai - An Engineer</h1>
-  <ul class="list-unstyled">
-      <li><a href="http://danieldai.me/author/daniel-dai.html">Daniel Dai</a> (6)</li>
-  </ul>
+  <div class="post full-post">
+    <h1 class="post-title">
+      <a href="/django-template-include-and-i18n.html" title="Permalink to Django Template Include and I18n">Django Template Include and I18n</a>
+    </h1>
+    <ul class="list-inline">
+      <li class="post-date">
+        <a class="text-muted" href="/django-template-include-and-i18n.html" title="2016-01-27T22:20:00+08:00">Wed 27 January 2016</a>
+      </li>
+      <li class="muted">&middot;</li>
+      <li class="post-category">
+        <a href="http://danieldai.me/category/python.html">Python</a>
+      </li>
+        <li class="muted">&middot;</li>
+        <li>
+            <a href="/tag/Django.html">Django</a>        </li>
+    </ul>
+    <div class="post-content">
+      <p>In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.</p>
+<div class="highlight"><pre>{% include &quot;include/another_template.html&quot; with text=&#39;I love Python&#39; %}
+</pre></div>
+
+
+<p>Sometimes, we need to tranalte <code>include prarameters</code>, this can not be done in <code>another_template.html</code>, <code>blocktrans</code> will not work here.</p>
+<div class="highlight"><pre><span class="x"># in another_template.html</span>
+<span class="cp">{%</span> <span class="k">blocktrans</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">text</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endblocktrans</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+
+
+<p>We need to do the translation in the first temalate, before passing it to another template:</p>
+<div class="highlight"><pre>{% trans &#39;I love Python&#39; as text %}
+{% include &quot;include/another_template.html&quot; with text=text %}
+</pre></div>
+
+
+<p>Reference:</p>
+<p><a href="http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags">http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags</a></p>
+    </div>
+  </div>
+  <hr class="separator">
+  <div class="col-md-8 col-md-offset-2">
+  <div id="disqus_thread">
+    <script>
+      var disqus_shortname = 'danieldai';
+      (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] ||
+         document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript=danieldai">
+        comments powered by Disqus.
+      </a>
+    </noscript>
+    <a href="https://disqus.com" class="dsq-brlink">
+      blog comments powered by <span class="logo-disqus">Disqus</span>
+    </a>
+  </div>
+  </div>
   </div>
 <footer class="footer">
   <div class="container">
