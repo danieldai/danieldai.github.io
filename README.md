@@ -12,6 +12,7 @@ As the contents of GitHub Pages for user must be on `master` branch, I put the s
 ```
 git clone git@github.com:danieldai/danieldai.github.io.git
 cd danieldai.github.io.git
+git checkout source
 mkvirtualenv danidai
 pip install -r requirements.txt
 ```
