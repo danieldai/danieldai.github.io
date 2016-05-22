@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai - Linux, Network and Web Tech</title><link href="http://danieldai.me/" rel="alternate"></link><link href="http://danieldai.me/feeds/all.atom.xml" rel="self"></link><id>http://danieldai.me/</id><updated>2016-01-27T22:20:00+08:00</updated><entry><title>Django Template Include and I18n</title><link href="http://danieldai.me/django-template-include-and-i18n.html" rel="alternate"></link><updated>2016-01-27T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-27:django-template-include-and-i18n.html</id><summary type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai - Linux, Network and Web Tech</title><link href="http://danieldai.me/" rel="alternate"></link><link href="http://danieldai.me/feeds/all.atom.xml" rel="self"></link><id>http://danieldai.me/</id><updated>2016-01-27T22:20:00+08:00</updated><entry><title>Django Template Include and I18n</title><link href="http://danieldai.me/django-template-include-and-i18n.html" rel="alternate"></link><published>2016-01-27T22:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-27:django-template-include-and-i18n.html</id><summary type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Sometimes, we need to tranalte &lt;code&gt;include prarameters&lt;/code&gt;, this can not be done in &lt;code&gt;another_template.html&lt;/code&gt;, &lt;code&gt;blocktrans&lt;/code&gt; will not work here.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;# in another_template.html&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# in another_template.html&lt;/span&gt;
 &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;blocktrans&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;text&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endblocktrans&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
@@ -13,30 +13,30 @@
 
 
 &lt;p&gt;We need to do the translation in the first temalate, before passing it to another template:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;{% trans &amp;#39;I love Python&amp;#39; as text %}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{% trans &amp;#39;I love Python&amp;#39; as text %}
 {% include &amp;quot;include/another_template.html&amp;quot; with text=text %}
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Reference:&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags"&gt;http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags&lt;/a&gt;&lt;/p&gt;</summary><category term="Django"></category></entry><entry><title>Blogging with GitHub Pages and Pelican Step by Step</title><link href="http://danieldai.me/blogging-with-github-pages-and-pelican-step-by-step.html" rel="alternate"></link><updated>2016-01-18T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-18:blogging-with-github-pages-and-pelican-step-by-step.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; is a service provide by GitHub to allow people having websites out of the content of their Repo. 
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags"&gt;http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags&lt;/a&gt;&lt;/p&gt;</summary><category term="Django"></category></entry><entry><title>Blogging with GitHub Pages and Pelican Step by Step</title><link href="http://danieldai.me/blogging-with-github-pages-and-pelican-step-by-step.html" rel="alternate"></link><published>2016-01-18T22:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-18:blogging-with-github-pages-and-pelican-step-by-step.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; is a service provide by GitHub to allow people having websites out of the content of their Repo. 
 As you know, &lt;strong&gt;&lt;a href="http://danieldai.me"&gt;DanielDai.Me&lt;/a&gt;&lt;/strong&gt; is hosted on &lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt;. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can be Markdown files writen is way supported by &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, GitHub Pages has built support for &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, it will convert Markdown to HTML.&lt;/p&gt;
 &lt;p&gt;If you do not want to install &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;,but still want to write blog in Markdown, you can use a static site generator, This site is built with such a tool called &lt;strong&gt;&lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;&lt;/strong&gt;, a static site generaotr written in &lt;strong&gt;&lt;a href="http://python.org/"&gt;Python&lt;/a&gt;&lt;/strong&gt;. &lt;/p&gt;
 &lt;p&gt;I'm going to tell you how to blog with &lt;strong&gt;GitHub Pages&lt;/strong&gt; and &lt;strong&gt;Pelican&lt;/strong&gt; from scratch in this article.&lt;/p&gt;
 &lt;h2&gt;1. Setup the Repository&lt;/h2&gt;
 &lt;p&gt;First, you need to create a repo on GitHub to contain the content of the blog. Please follow the &lt;a href="https://pages.github.com/"&gt;guides&lt;/a&gt; provided by &lt;strong&gt;GitHub Pages&lt;/strong&gt; to setup the repo. If you are creating a user site, the name of the repo would be &lt;code&gt;username.github.io&lt;/code&gt;. At last you should have your repo cloned to your local machine:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/username/username.github.io
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/username/username.github.io
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;As the content of the site must be on &lt;code&gt;master&lt;/code&gt; branch, which is required by GitHub Pages, to keep the repo clean, I will use a seperated branch to contain the source code. I choosed to use &lt;code&gt;source&lt;/code&gt; name the branch, you can choose any name you like except &lt;code&gt;master&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git checkout -b source
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git checkout -b source
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;How &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;source&lt;/code&gt; branchs related to each other?&lt;/h3&gt;
 &lt;p&gt;Unlike normal git repositories, in this repo, &lt;code&gt;master&lt;/code&gt; branch and &lt;code&gt;source&lt;/code&gt; branches are 2 parallel branches that only share a common parent, but will never merge together in future. The content of each commits on &lt;code&gt;master&lt;/code&gt; branch is generated output by Pelican from the content of some commits on &lt;code&gt;source&lt;/code&gt; branch, and usually &lt;code&gt;source&lt;/code&gt; branch has more commits than &lt;code&gt;master&lt;/code&gt; branch.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;o----o----o----o----o----o master branch
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;o----o----o----o----o----o master branch
  \
   \---o--o--o--o--o--o--o--o--o--o--o--o--o--o--o source branch    
 &lt;/pre&gt;&lt;/div&gt;
@@ -45,7 +45,7 @@ As you know, &lt;strong&gt;&lt;a href="http://danieldai.me"&gt;DanielDai.Me&lt;/
 &lt;p&gt;each commit on &lt;code&gt;master&lt;/code&gt; branch is the compiled result of on commit on &lt;code&gt;source&lt;/code&gt; branch&lt;/p&gt;
 &lt;h2&gt;2. Install Pelican&lt;/h2&gt;
 &lt;p&gt;Next, install Pelican and other utils on your local machine. Use your favorite text editor create a new files called &lt;code&gt;requirements.txt&lt;/code&gt;, add the following lines to this file:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;markdown
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;markdown
 pelican
 typogrify
 fabric
@@ -54,19 +54,19 @@ ghp-import
 
 
 &lt;p&gt;And then run&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;pip install -r requirements.txt
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install -r requirements.txt
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;If you like, you can save current state of &lt;code&gt;source&lt;/code&gt; as a new commit.&lt;/p&gt;
 &lt;h2&gt;3. Start Pelican Project&lt;/h2&gt;
 &lt;p&gt;Run this command in repo dir, to start a new Pelican project:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;pelican-quickstart
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pelican-quickstart
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Pelican will ask you some questions:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;(danidai)ming/tmp/pel$ pelican-quickstart
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(danidai)ming/tmp/pel$ pelican-quickstart
 Welcome to pelican-quickstart v3.6.3.
 
 This script will help you create a new Pelican-based website.
@@ -102,7 +102,7 @@ Done. Your new project is available at /private/tmp/pel
 
 
 &lt;p&gt;These are the files generated by Pelican:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;(danidai)ming/tmp/pel$ find .
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(danidai)ming/tmp/pel$ find .
 .
 ./content             # the content of the site goes here
 ./develop_server.sh
@@ -117,21 +117,21 @@ Done. Your new project is available at /private/tmp/pel
 &lt;p&gt;Create some example files in &lt;code&gt;content&lt;/code&gt; diretory. You can get more tips on who to write from &lt;a href="http://docs.getpelican.com/en/3.6.3/index.html"&gt;Pelican docs&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Customize Fabric file&lt;/h3&gt;
 &lt;p&gt;As we are going to publish the site to GitHub Pages, we need to customize &lt;code&gt;fabfile.py&lt;/code&gt; a bit. First, tell Pelican our GitHub Pages Branch is &lt;code&gt;master&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Github Pages configuration&lt;/span&gt;
-&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github_pages_branch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;master&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Github Pages configuration&lt;/span&gt;
+&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github_pages_branch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;master&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Then add 2 fabric commands to output generated site to master branch,and push master branch to GitHub Pages:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;pages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;pages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Prepare GitHub Pages, put it on master branch&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
     &lt;span class="n"&gt;rebuild&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;comment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;comment&lt;/span&gt;
-    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ghp-import -m &amp;#39;{comment}&amp;#39; -b {github_pages_branch} {deploy_path}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ghp-import -m &amp;#39;{comment}&amp;#39; -b {github_pages_branch} {deploy_path}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;push&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Publish GibHub Pages&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;git push origin {github_pages_branch}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git push origin {github_pages_branch}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -139,14 +139,14 @@ Done. Your new project is available at /private/tmp/pel
 &lt;ul&gt;
 &lt;li&gt;compile content in to HTML&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;fab build
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fab build
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
 &lt;li&gt;start dev server&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;fab serve
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fab serve
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -154,35 +154,35 @@ Done. Your new project is available at /private/tmp/pel
 &lt;li&gt;visit http://localhost:8888 to review it&lt;/li&gt;
 &lt;li&gt;publish to &lt;code&gt;master&lt;/code&gt; branch&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;fab pages:&amp;#39;&amp;lt;commit message for master branch&amp;gt;&amp;#39;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fab pages:&amp;#39;&amp;lt;commit message for master branch&amp;gt;&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
 &lt;li&gt;publish to GitHub Pages&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;fab push
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fab push
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
 &lt;li&gt;push source branch&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git add .
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git add .
 git commit -m &amp;quot;&amp;lt;commit message for source branch&amp;quot;
 git push
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Visit &lt;code&gt;username.github.io&lt;/code&gt; with your favorite Browser, your new Blog site is on GitHub Pages now. &lt;/p&gt;
-&lt;p&gt;If you meet any problem, please feel free to checkout my site repo https://github.com/danieldai/danieldai.github.io&lt;/p&gt;</summary><category term="Pelican"></category><category term="GitHub Pages"></category></entry><entry><title>Python Modules, Packages and Import</title><link href="http://danieldai.me/python-modules-packages-and-import.html" rel="alternate"></link><updated>2016-01-16T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-16:python-modules-packages-and-import.html</id><summary type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;If you meet any problem, please feel free to checkout my site repo https://github.com/danieldai/danieldai.github.io&lt;/p&gt;</summary><category term="Pelican"></category><category term="GitHub Pages"></category></entry><entry><title>Python Modules, Packages and Import</title><link href="http://danieldai.me/python-modules-packages-and-import.html" rel="alternate"></link><published>2016-01-16T22:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-16:python-modules-packages-and-import.html</id><summary type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;To import a module, we use the &lt;code&gt;import&lt;/code&gt; command. Check out the full list of built-in modules in the Python standard library &lt;a href="http://docs.python.org/2/library/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The first time a module is loaded into a running Python script, it is initialized by executing the code in the module once. If another module in your code imports the same module again, it will not be loaded twice but once only - so local variables inside the module act as a &lt;strong&gt;"singleton"&lt;/strong&gt; - they are &lt;strong&gt;initialized only once&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;If we want to import the module &lt;code&gt;urllib&lt;/code&gt;, which enables us to create read data from URLs, we simply &lt;code&gt;import&lt;/code&gt; the module:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# import the library&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# import the library&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib&lt;/span&gt;
 
-&lt;span class="c"&gt;# use it&lt;/span&gt;
+&lt;span class="c1"&gt;# use it&lt;/span&gt;
 &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -193,29 +193,29 @@ git push
 &lt;p&gt;Packages are namespaces which contain multiple packages and modules themselves. They are simply directories, but with a twist.&lt;/p&gt;
 &lt;p&gt;Each package in Python is a directory which &lt;strong&gt;MUST&lt;/strong&gt; contain a special file called &lt;strong&gt;&lt;code&gt;__init__.py&lt;/code&gt;&lt;/strong&gt;. This file can be empty, and it indicates that the directory it contains is a Python package, so it can be imported the same way a module can be imported.&lt;/p&gt;
 &lt;p&gt;The &lt;strong&gt;&lt;code&gt;__init__.py&lt;/code&gt;&lt;/strong&gt; file can also decide which modules the package exports as the API, while keeping other modules internal, by overriding the &lt;strong&gt;&lt;code&gt;__all__&lt;/code&gt;&lt;/strong&gt; variable, like so:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 
-&lt;span class="n"&gt;__all__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;__all__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h1&gt;Absolute Imports&lt;/h1&gt;
 &lt;p&gt;In Python 2.4 and earlier, if you're reading a module located inside a package, it is not clear whether&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;foo&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;foo&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;refers to a top-level module or to another module inside the package. As Python's library expands, more and more existing package internal modules suddenly shadow standard library modules by accident. It's a particularly difficult problem inside packages because there's no way to specify which module is meant. To resolve the ambiguity, it is proposed that foo will always be a module or package reachable from sys.path . This is called an absolute import.&lt;/p&gt;
 &lt;p&gt;The python-dev community chose absolute imports as the default because they're the more common use case and because absolute imports can provide all the functionality of relative (intra-package) imports -- albeit at the cost of difficulty when renaming package pieces higher up in the hierarchy or when moving one package inside another.&lt;/p&gt;
 &lt;p&gt;Because this represents a change in semantics, absolute imports will be optional in Python 2.5 and 2.6 through the use of&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;absolute_import&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;absolute_import&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;This part of the proposal had BDFL approval from the beginning.&lt;/p&gt;
 &lt;h1&gt;Relative Imports&lt;/h1&gt;
 &lt;p&gt;Relative imports use leading dots. A single leading dot indicates a relative import, starting with the current package. Two or more leading dots give a relative import to the parent(s) of the current package, one level per dot after the first. Here's a sample package layout:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;package/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;package/
     __init__.py
     subpackage1/
         __init__.py
@@ -229,7 +229,7 @@ git push
 
 
 &lt;p&gt;Assuming that the current file is either &lt;code&gt;moduleX.py&lt;/code&gt; or &lt;code&gt;subpackage1/__init__.py&lt;/code&gt; , following are correct usages of the new syntax:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;.moduleY&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;spam&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;.moduleY&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;spam&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;.moduleY&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;spam&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ham&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;.&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;moduleY&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;..subpackage1&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;moduleY&lt;/span&gt;
@@ -242,17 +242,17 @@ git push
 
 &lt;p&gt;Note that while that last case is legal, it is certainly discouraged ("insane" was the word Guido used).&lt;/p&gt;
 &lt;p&gt;Relative imports must always use &lt;code&gt;from &amp;lt;&amp;gt; import&lt;/code&gt; ; &lt;code&gt;import &amp;lt;&amp;gt;&lt;/code&gt; is always absolute. Of course, absolute imports can use &lt;code&gt;from &amp;lt;&amp;gt; import&lt;/code&gt; by omitting the leading dots. The reason &lt;code&gt;import .foo&lt;/code&gt; is prohibited is because after&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;XXX.YYY.ZZZ&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;XXX.YYY.ZZZ&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;then&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;XXX.YYY.ZZZ
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;XXX.YYY.ZZZ
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;is usable in an expression. But&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="na"&gt;.moduleY&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;.moduleY&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -262,10 +262,10 @@ git push
 &lt;li&gt;http://www.learnpython.org/en/Modules_and_Packages&lt;/li&gt;
 &lt;li&gt;https://www.python.org/dev/peps/pep-0328/&lt;/li&gt;
 &lt;li&gt;https://docs.python.org/2.5/whatsnew/pep-328.html&lt;/li&gt;
-&lt;/ol&gt;</summary></entry><entry><title>Java Language Notes</title><link href="http://danieldai.me/java-language-notes.html" rel="alternate"></link><updated>2016-01-16T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-16:java-language-notes.html</id><summary type="html">&lt;h2&gt;History&lt;/h2&gt;
+&lt;/ol&gt;</summary></entry><entry><title>Java Language Notes</title><link href="http://danieldai.me/java-language-notes.html" rel="alternate"></link><published>2016-01-16T10:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-16:java-language-notes.html</id><summary type="html">&lt;h2&gt;History&lt;/h2&gt;
 &lt;p&gt;Java was developed by a team led by James Gosling at Sun Microsystems. Originally called Oak, it was designed in 1991 for use in embedded chips in consumer electronic appliances. In 1995, renamed Java, it was redesigned for developing Internet applications.&lt;/p&gt;
 &lt;h2&gt;Syntax&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
 &lt;span class="cm"&gt;File: Welcome.java&lt;/span&gt;
 &lt;span class="cm"&gt;*/&lt;/span&gt;
 &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Welcome&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
@@ -287,11 +287,11 @@ git push
 &lt;li&gt;Java is case sensitive&lt;/li&gt;
 &lt;li&gt;java classes are grouped into &lt;code&gt;packages&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;javax.swing.JOptionPane&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;javax.swing.JOptionPane&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;WelcomeInMessageDialogBox&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;JOptionPane&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;showMessageDialog&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Welcome to Java!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;JOptionPane&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;showMessageDialog&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Welcome to Java!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
   &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -302,11 +302,11 @@ git push
 &lt;ul&gt;
 &lt;li&gt;specific import and wildcard import&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;javax.swing.JOptionPane&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;javax.swing.JOptionPane&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;javax.swing.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;javax.swing.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -325,7 +325,7 @@ git push
 &lt;li&gt;characters&lt;/li&gt;
 &lt;li&gt;Boolean types&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;public class ComputeArea {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;public class ComputeArea {
   double radius;
   double area;
 
@@ -343,7 +343,7 @@ git push
 &lt;li&gt;is also string concatenation operator, if on of the operands is nonstring, the nonstring value is converted into a string and concatenated with the other sring.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;read input&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Scanner input = new Scanner(System.in);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Scanner input = new Scanner(System.in);
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -358,20 +358,20 @@ git push
 &lt;li&gt;next()      reads a string that ends before a whitespace character&lt;/li&gt;
 &lt;li&gt;nextLine()&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ComputeAreaWithConsoleInput&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-  &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Enter a number for radius: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Enter a number for radius: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
   &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nextDouble&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 
   &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;area&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mf"&gt;3.14159&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-  &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;The area for the circle of radius &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-    &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot; is &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;area&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The area for the circle of radius &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot; is &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;area&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
   &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -385,7 +385,7 @@ git push
 &lt;/ul&gt;
 &lt;h2&gt;Variables&lt;/h2&gt;
 &lt;p&gt;variable declarations&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;int i, j, k;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;int i, j, k;
 int i = 1;
 int i = j = k = 1;
 int count;
@@ -395,7 +395,7 @@ double interestRate;
 
 
 &lt;h2&gt;Constants&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;final double PI = 3.14159;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;final double PI = 3.14159;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -416,7 +416,7 @@ double interestRate;
 &lt;/ul&gt;
 &lt;p&gt;By default floating-point literal is treated as a &lt;code&gt;double&lt;/code&gt; type value, to make a nubmer of float: 100.2F, double: 200.2D&lt;/p&gt;
 &lt;h3&gt;Character Data Type&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;char letter = &amp;#39;A&amp;#39;;  //&amp;quot;A&amp;quot; is a string, and &amp;#39;A&amp;#39; is a character;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;char letter = &amp;#39;A&amp;#39;;  //&amp;quot;A&amp;quot; is a string, and &amp;#39;A&amp;#39; is a character;
 char numChar = &amp;#39;4&amp;#39;;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -424,25 +424,25 @@ char numChar = &amp;#39;4&amp;#39;;
 &lt;h2&gt;Unicode and ASCII&lt;/h2&gt;
 &lt;p&gt;Mapping a character to its binary representaion is called &lt;code&gt;encoding&lt;/code&gt;&lt;/p&gt;
 &lt;h2&gt;String&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;String message = &amp;quot;Welcome to Java&amp;quot;;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;String message = &amp;quot;Welcome to Java&amp;quot;;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;Javadoc&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
 
 &lt;span class="cm"&gt;*/&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;Converting String to numbers&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;int a = Integer.parseInt(intStr);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;int a = Integer.parseInt(intStr);
 double b = Double.parseDouble(str);
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h1&gt;Flow Control&lt;/h1&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;if (radius &amp;lt; 0) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if (radius &amp;lt; 0) {
   System.out.println(&amp;quot;Bad input&amp;quot;);
 } else {
   area = radius * radius * PI;
@@ -456,7 +456,7 @@ double b = Double.parseDouble(str);
 &lt;li&gt;true&lt;/li&gt;
 &lt;li&gt;false&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;boolean lightsOn = true;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;boolean lightsOn = true;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -470,14 +470,14 @@ double b = Double.parseDouble(str);
 &lt;li&gt;&lt;code&gt;!=&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;if statement&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;if (i &amp;gt; 0) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if (i &amp;gt; 0) {
   System.out.println(&amp;quot;is is positive&amp;quot;);
 }
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;if else statement&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;if (boolean-expression) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if (boolean-expression) {
   statements;
 }
 else {
@@ -487,7 +487,7 @@ else {
 
 
 &lt;h2&gt;nested if&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;if (i &amp;gt; k) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if (i &amp;gt; k) {
   if (j &amp;gt; k) {
     statements;
   }
@@ -506,44 +506,44 @@ else {
 &lt;li&gt;&lt;code&gt;^&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;switch&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;switch&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;status&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;switch&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;status&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="n"&gt;case&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;statements&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
           &lt;span class="n"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
   &lt;span class="n"&gt;case&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;statements&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
           &lt;span class="n"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;statements&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nb"&gt;default&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;statements&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;Conditional expression&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;x&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;0&lt;/span&gt;&lt;span class="o"&gt;)?&lt;/span&gt; &lt;span class="nt"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;-1&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;x&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;0&lt;/span&gt;&lt;span class="o"&gt;)?&lt;/span&gt; &lt;span class="nt"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;-1&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;while loop&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;while (loop-condition) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;while (loop-condition) {
   stateements;
 }
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;do-while loop&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;do {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;do {
   statements;
 } while (condition);
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;for loop&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;for (i = 0; i &amp;lt; 99; i++) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for (i = 0; i &amp;lt; 99; i++) {
   statements;
 }
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;for-each loop&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;for (double u: myList) { 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for (double u: myList) { 
   System.out.println(u);
 }
 &lt;/pre&gt;&lt;/div&gt;
@@ -565,7 +565,7 @@ else {
 &lt;li&gt;&lt;code&gt;%10.2f&lt;/code&gt; Output the floating item with width at least 10 including a decimal point&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Methods&lt;/h1&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;public static int sum(int i1, int i2) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;public static int sum(int i1, int i2) {
   int sum = 0;
   for (int i = i1; i &amp;lt;= i2; i++) {
     sum += i;
@@ -586,7 +586,7 @@ public static void main(String[] args) {
 &lt;p&gt;pass by value&lt;/p&gt;
 &lt;h2&gt;OverLoading&lt;/h2&gt;
 &lt;p&gt;two methods have the same name but different parameter lists within one class, can not overload methods with just different return type&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;public static int max(int a, int b) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;public static int max(int a, int b) {
   if (a &amp;gt; b) {
     return a;
   }
@@ -616,7 +616,7 @@ public static double max(double a, double b) {
 &lt;/ul&gt;
 &lt;h1&gt;Data Structure&lt;/h1&gt;
 &lt;h2&gt;Array&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;double[] numbers = new double[20];
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;double[] numbers = new double[20];
 numbers[0] = 2.0;
 //
 // array initilizer 
@@ -628,7 +628,7 @@ double[] myList = {1.9, 2.9, 3.4, 3.5};
 &lt;p&gt;array size can not be changed after created, and when an array is created, its elements are assigned the default value of &lt;code&gt;0&lt;/code&gt; for the numeric primitive data types, &lt;code&gt;\u0000&lt;/code&gt; for char types, and &lt;code&gt;false&lt;/code&gt; for boolean types.&lt;/p&gt;
 &lt;h2&gt;Array coping&lt;/h2&gt;
 &lt;p&gt;In Java, you can use assignment statements to copy primitive data type variables, but not arrays.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; list2 = list1;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; list2 = list1;
  // list1 and list2 reference to the same array
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -643,14 +643,14 @@ double[] myList = {1.9, 2.9, 3.4, 3.5};
 &lt;h2&gt;Variable-Length Arguemnt list&lt;/h2&gt;
 &lt;p&gt;Only one variable-length parameter may be specified in a method, and this parameter must be the last parameter.&lt;/p&gt;
 &lt;p&gt;You can pass an array or a variable number of arguments to a variable-length parameter.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;public static void printMax(double... numbers) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;public static void printMax(double... numbers) {
   double result = nubmers[0];
 }
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;java.util.Arrays&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;// Sort the whole array
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;// Sort the whole array
 double[] numbers = {6.0, 4.4, 1.9, 2.9, 3.4, 3.5}; 
 java.util.Arrays.sort(numbers); 
 //
@@ -661,7 +661,7 @@ java.util.Arrays.sort(chars, 1, 3);
 
 
 &lt;h2&gt;2-dimensional array&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;// normal array:
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;// normal array:
 double[][] matrix;
 //raged array:
 int[][] triangleArray = new int[5][] ; 
@@ -676,7 +676,7 @@ triangleArray[4] = new int[1];
 &lt;h1&gt;OOP&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;state&lt;/strong&gt; of object&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;behavior&lt;/strong&gt; of object&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Circle&lt;/span&gt; {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Circle&lt;/span&gt; {
   //&lt;span class="n"&gt;attribute&lt;/span&gt;
   &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; = &lt;span class="mf"&gt;1.0&lt;/span&gt;;
 
@@ -703,7 +703,7 @@ triangleArray[4] = new int[1];
 &lt;li&gt;Constructors do not have a return type—not even void.&lt;/li&gt;
 &lt;li&gt;Constructors are invoked using the new operator when an object is created.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;//TV.java
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;//TV.java
 public class TV {
   int channel = 1;
   int VolumeLevel = 1;
@@ -750,10 +750,10 @@ dot operator&lt;/p&gt;
 &lt;p&gt;&lt;link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css"&gt;
 &lt;script&gt;
   hljs.initHighlightingOnLoad();
-&lt;/script&gt;&lt;/p&gt;</summary></entry><entry><title>How to write Markdown</title><link href="http://danieldai.me/how-to-write-markdown.html" rel="alternate"></link><updated>2016-01-15T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-15:how-to-write-markdown.html</id><summary type="html">&lt;h2&gt;Basic&lt;/h2&gt;
+&lt;/script&gt;&lt;/p&gt;</summary></entry><entry><title>How to write Markdown</title><link href="http://danieldai.me/how-to-write-markdown.html" rel="alternate"></link><published>2016-01-15T10:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-15:how-to-write-markdown.html</id><summary type="html">&lt;h2&gt;Basic&lt;/h2&gt;
 &lt;h3&gt;Paragraphs&lt;/h3&gt;
 &lt;p&gt;Paragraphs in Markdown are just one or more lines of consecutive text followed by one or more blank lines.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;On July 2, an alien mothership entered Earth&amp;#39;s orbit and deployed several dozen saucer-shaped &amp;quot;destroyer&amp;quot; spacecraft, each 15 miles (24 km) wide.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;On July 2, an alien mothership entered Earth&amp;#39;s orbit and deployed several dozen saucer-shaped &amp;quot;destroyer&amp;quot; spacecraft, each 15 miles (24 km) wide.
 
 On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, participated in an assault on a destroyer near the city of Los Angeles.
 &lt;/pre&gt;&lt;/div&gt;
@@ -761,7 +761,7 @@ On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, partici
 
 &lt;h3&gt;Headings&lt;/h3&gt;
 &lt;p&gt;You can create a heading by adding one or more &lt;code&gt;#&lt;/code&gt; symbols before your heading text. The number of &lt;code&gt;#&lt;/code&gt; you use will determine the size of the heading.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# The largest heading (an &amp;lt;h1&amp;gt; tag)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# The largest heading (an &amp;lt;h1&amp;gt; tag)
 ## The second largest heading (an &amp;lt;h2&amp;gt; tag)
 ...
 ###### The 6th largest heading (an &amp;lt;h6&amp;gt; tag)
@@ -769,27 +769,27 @@ On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, partici
 
 
 &lt;h3&gt;Blockquotes&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;In the words of Abraham Lincoln:
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;In the words of Abraham Lincoln:
 &amp;gt; Pardon my french
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;Styling text&lt;/h3&gt;
 &lt;p&gt;You can make text &lt;strong&gt;bold&lt;/strong&gt; or &lt;em&gt;italic&lt;/em&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;*This text will be italic*
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;*This text will be italic*
 **This text will be bold**
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Both &lt;strong&gt;bold&lt;/strong&gt; and &lt;em&gt;italic&lt;/em&gt; can use either a &lt;code&gt;*&lt;/code&gt; or an &lt;code&gt;_&lt;/code&gt; around the text for styling. This allows yo to combine both bold and italic if needed.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;**Everyone _must_ attend the meeting at 5 o&amp;#39;clock today**
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;**Everyone _must_ attend the meeting at 5 o&amp;#39;clock today**
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h1&gt;Lists&lt;/h1&gt;
 &lt;h3&gt;Unordered lists&lt;/h3&gt;
 &lt;p&gt;You can make an unordered list by preceding list items with either a &lt;code&gt;*&lt;/code&gt; or a &lt;code&gt;-&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;* Item
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;* Item
 * Item
 * Item
 
@@ -801,7 +801,7 @@ On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, partici
 
 &lt;h3&gt;Ordered lists&lt;/h3&gt;
 &lt;p&gt;You can make an ordered list by preceding list items with a number&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;1. Item 1
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1. Item 1
 2. Item 2
 3. Item 3
 &lt;/pre&gt;&lt;/div&gt;
@@ -809,7 +809,7 @@ On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, partici
 
 &lt;h3&gt;Nested lists&lt;/h3&gt;
 &lt;p&gt;You can create nested lists by indenting list items by two spaces.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;1. Item 1
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1. Item 1
   1. A corollary to the above item.
   2. Yet another point to consider.
 2. Item 2
@@ -823,7 +823,7 @@ On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, partici
 &lt;h2&gt;Code formating&lt;/h2&gt;
 &lt;h3&gt;Inline formats&lt;/h3&gt;
 &lt;p&gt;Use single backticks (`) to format text in a special monospace format. Everything within the backticks appear as-is, with no other special formatting.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Here&amp;#39;s an idea: why don&amp;#39;t we take `SuperiorProject` and turn it into `**Reasonable**Project`.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Here&amp;#39;s an idea: why don&amp;#39;t we take `SuperiorProject` and turn it into `**Reasonable**Project`.
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -844,7 +844,7 @@ On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, partici
 &lt;p&gt;This allows code and names with multiple underscores to render properly. To emphasize a portion of a work, use asterisks(`*).&lt;/p&gt;
 &lt;h4&gt;URL autolinking&lt;/h4&gt;
 &lt;p&gt;GFM will autolink standard URLs, so if you want to link to a URL(instead of setting link text), you can simply enter the URL and it will be turned into a link to that URL.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;http://example.com
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;http://example.com
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -852,7 +852,7 @@ On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, partici
 &lt;p&gt;http://example.com&lt;/p&gt;
 &lt;h4&gt;Strikethrough&lt;/h4&gt;
 &lt;p&gt;GFM adds syntax to create strikethrough text, which is missing from standard Markdown.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;~~Mistaken text.~~
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;~~Mistaken text.~~
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -860,20 +860,20 @@ On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, partici
 &lt;p&gt;~~Mistaken text.~~&lt;/p&gt;
 &lt;h4&gt;Fenced code blocks&lt;/h4&gt;
 &lt;p&gt;Standard Markdown converts text with four spaces at the beginning of each line into a code block; GFM also supports fenced blocks. Just wrap your code in ``` (as shown below) and you won't need to indent it by four spaces. Note that although fenced code blocks don't have to be preceded by a blank line—unlike indented code blocks—we recommend placing a blank line before them to make the raw Markdown easier to read.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;Here&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="nx"&gt;an&lt;/span&gt; &lt;span class="nx"&gt;example&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Here&amp;#39;s an example:
 
-&lt;span class="err"&gt;```&lt;/span&gt;
-&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;test&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;notice the blank line before this function?&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="err"&gt;```&lt;/span&gt;
+```
+function test() {
+  console.log(&amp;quot;notice the blank line before this function?&amp;quot;);
+}
+```
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Keep in mind that, within lists, you must indent non-fenced code blocks eight spaces to render them properly.&lt;/p&gt;
 &lt;h4&gt;Syntax highlighting&lt;/h4&gt;
 &lt;p&gt;Code blocks can be taken a step further by adding syntax highlighting. In your fenced block, add an optional language identifier and we'll run it through syntax highlighting. For example, to syntax highlight Ruby code:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;```ruby
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;```ruby
 require &amp;#39;redcarpet&amp;#39;
 markdown = Redcarpet.new(&amp;quot;Hello World!&amp;quot;)
 puts markdown.to_html
@@ -881,7 +881,7 @@ puts markdown.to_html
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;redcarpet&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;redcarpet&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;markdown&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Redcarpet&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_html&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -893,5 +893,5 @@ puts markdown.to_html
 &lt;li&gt;https://help.github.com/articles/markdown-basics&lt;/li&gt;
 &lt;li&gt;https://help.github.com/articles/github-flavored-markdown/&lt;/li&gt;
 &lt;li&gt;https://help.github.com/articles/writing-on-github/&lt;/li&gt;
-&lt;/ol&gt;</summary></entry><entry><title>Welcome to DanielDai.Me!</title><link href="http://danieldai.me/welcome-to-danieldaime.html" rel="alternate"></link><updated>2015-07-30T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2015-07-30:welcome-to-danieldaime.html</id><summary type="html">&lt;p&gt;Hello World.&lt;/p&gt;
+&lt;/ol&gt;</summary></entry><entry><title>Welcome to DanielDai.Me!</title><link href="http://danieldai.me/welcome-to-danieldaime.html" rel="alternate"></link><published>2015-07-30T10:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2015-07-30:welcome-to-danieldaime.html</id><summary type="html">&lt;p&gt;Hello World.&lt;/p&gt;
 &lt;p&gt;This is my blog, I will use it to share a lot of things with you.&lt;/p&gt;</summary></entry></feed>

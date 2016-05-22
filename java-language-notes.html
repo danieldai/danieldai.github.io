@@ -88,7 +88,7 @@
     </h1>
     <ul class="list-inline">
       <li class="post-date">
-        <a class="text-muted" href="/java-language-notes.html" title="2016-01-16T10:20:00+08:00">Sat 16 January 2016</a>
+        <a class="text-muted" href="/java-language-notes.html" title="2016-01-16T10:20:00+08:00">六 16 一月 2016</a>
       </li>
       <li class="muted">&middot;</li>
       <li class="post-category">
@@ -99,7 +99,7 @@
       <h2>History</h2>
 <p>Java was developed by a team led by James Gosling at Sun Microsystems. Originally called Oak, it was designed in 1991 for use in embedded chips in consumer electronic appliances. In 1995, renamed Java, it was redesigned for developing Internet applications.</p>
 <h2>Syntax</h2>
-<div class="highlight"><pre><span class="cm">/*</span>
+<div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">File: Welcome.java</span>
 <span class="cm">*/</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Welcome</span> <span class="o">{</span>
@@ -121,11 +121,11 @@
 <li>Java is case sensitive</li>
 <li>java classes are grouped into <code>packages</code></li>
 </ul>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
 
 <span class="n">public</span> <span class="k">class</span> <span class="nc">WelcomeInMessageDialogBox</span> <span class="p">{</span>
   <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">JOptionPane</span><span class="o">.</span><span class="n">showMessageDialog</span><span class="p">(</span><span class="n">null</span><span class="p">,</span> <span class="s">&quot;Welcome to Java!&quot;</span><span class="p">);</span>
+    <span class="n">JOptionPane</span><span class="o">.</span><span class="n">showMessageDialog</span><span class="p">(</span><span class="n">null</span><span class="p">,</span> <span class="s2">&quot;Welcome to Java!&quot;</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -136,11 +136,11 @@
 <ul>
 <li>specific import and wildcard import</li>
 </ul>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
 </pre></div>
 
 
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">javax.swing.</span><span class="o">*</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javax.swing.</span><span class="o">*</span><span class="p">;</span>
 </pre></div>
 
 
@@ -159,7 +159,7 @@
 <li>characters</li>
 <li>Boolean types</li>
 </ul>
-<div class="highlight"><pre>public class ComputeArea {
+<div class="highlight"><pre><span></span>public class ComputeArea {
   double radius;
   double area;
 
@@ -177,7 +177,7 @@
 <li>is also string concatenation operator, if on of the operands is nonstring, the nonstring value is converted into a string and concatenated with the other sring.</li>
 </ul>
 <h3>read input</h3>
-<div class="highlight"><pre>Scanner input = new Scanner(System.in);
+<div class="highlight"><pre><span></span>Scanner input = new Scanner(System.in);
 </pre></div>
 
 
@@ -192,20 +192,20 @@
 <li>next()      reads a string that ends before a whitespace character</li>
 <li>nextLine()</li>
 </ul>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
 
 <span class="n">public</span> <span class="k">class</span> <span class="nc">ComputeAreaWithConsoleInput</span> <span class="p">{</span>
   <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">Scanner</span> <span class="nb">input</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="ow">in</span><span class="p">);</span>
 
-  <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s">&quot;Enter a number for radius: &quot;</span><span class="p">);</span>
+  <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Enter a number for radius: &quot;</span><span class="p">);</span>
 
   <span class="n">double</span> <span class="n">radius</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">nextDouble</span><span class="p">();</span>
 
   <span class="n">double</span> <span class="n">area</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="mf">3.14159</span><span class="p">;</span>
 
-  <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;The area for the circle of radius &quot;</span> <span class="o">+</span>
-    <span class="n">radius</span> <span class="o">+</span> <span class="s">&quot; is &quot;</span> <span class="o">+</span> <span class="n">area</span><span class="p">);</span>
+  <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;The area for the circle of radius &quot;</span> <span class="o">+</span>
+    <span class="n">radius</span> <span class="o">+</span> <span class="s2">&quot; is &quot;</span> <span class="o">+</span> <span class="n">area</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -219,7 +219,7 @@
 </ul>
 <h2>Variables</h2>
 <p>variable declarations</p>
-<div class="highlight"><pre>int i, j, k;
+<div class="highlight"><pre><span></span>int i, j, k;
 int i = 1;
 int i = j = k = 1;
 int count;
@@ -229,7 +229,7 @@ double interestRate;
 
 
 <h2>Constants</h2>
-<div class="highlight"><pre>final double PI = 3.14159;
+<div class="highlight"><pre><span></span>final double PI = 3.14159;
 </pre></div>
 
 
@@ -250,7 +250,7 @@ double interestRate;
 </ul>
 <p>By default floating-point literal is treated as a <code>double</code> type value, to make a nubmer of float: 100.2F, double: 200.2D</p>
 <h3>Character Data Type</h3>
-<div class="highlight"><pre>char letter = &#39;A&#39;;  //&quot;A&quot; is a string, and &#39;A&#39; is a character;
+<div class="highlight"><pre><span></span>char letter = &#39;A&#39;;  //&quot;A&quot; is a string, and &#39;A&#39; is a character;
 char numChar = &#39;4&#39;;
 </pre></div>
 
@@ -258,25 +258,25 @@ char numChar = &#39;4&#39;;
 <h2>Unicode and ASCII</h2>
 <p>Mapping a character to its binary representaion is called <code>encoding</code></p>
 <h2>String</h2>
-<div class="highlight"><pre>String message = &quot;Welcome to Java&quot;;
+<div class="highlight"><pre><span></span>String message = &quot;Welcome to Java&quot;;
 </pre></div>
 
 
 <h3>Javadoc</h3>
-<div class="highlight"><pre><span class="cm">/**</span>
+<div class="highlight"><pre><span></span><span class="cm">/**</span>
 
 <span class="cm">*/</span><span class="w"></span>
 </pre></div>
 
 
 <h2>Converting String to numbers</h2>
-<div class="highlight"><pre>int a = Integer.parseInt(intStr);
+<div class="highlight"><pre><span></span>int a = Integer.parseInt(intStr);
 double b = Double.parseDouble(str);
 </pre></div>
 
 
 <h1>Flow Control</h1>
-<div class="highlight"><pre>if (radius &lt; 0) {
+<div class="highlight"><pre><span></span>if (radius &lt; 0) {
   System.out.println(&quot;Bad input&quot;);
 } else {
   area = radius * radius * PI;
@@ -290,7 +290,7 @@ double b = Double.parseDouble(str);
 <li>true</li>
 <li>false</li>
 </ul>
-<div class="highlight"><pre>boolean lightsOn = true;
+<div class="highlight"><pre><span></span>boolean lightsOn = true;
 </pre></div>
 
 
@@ -304,14 +304,14 @@ double b = Double.parseDouble(str);
 <li><code>!=</code></li>
 </ul>
 <h2>if statement</h2>
-<div class="highlight"><pre>if (i &gt; 0) {
+<div class="highlight"><pre><span></span>if (i &gt; 0) {
   System.out.println(&quot;is is positive&quot;);
 }
 </pre></div>
 
 
 <h2>if else statement</h2>
-<div class="highlight"><pre>if (boolean-expression) {
+<div class="highlight"><pre><span></span>if (boolean-expression) {
   statements;
 }
 else {
@@ -321,7 +321,7 @@ else {
 
 
 <h2>nested if</h2>
-<div class="highlight"><pre>if (i &gt; k) {
+<div class="highlight"><pre><span></span>if (i &gt; k) {
   if (j &gt; k) {
     statements;
   }
@@ -340,44 +340,44 @@ else {
 <li><code>^</code></li>
 </ul>
 <h2>switch</h2>
-<div class="highlight"><pre><span class="nt">switch</span> <span class="o">(</span><span class="nt">status</span><span class="o">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><span class="nt">switch</span> <span class="o">(</span><span class="nt">status</span><span class="o">)</span> <span class="p">{</span>
   <span class="n">case</span> <span class="m">0</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
           <span class="n">break</span><span class="p">;</span>
   <span class="n">case</span> <span class="m">1</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
           <span class="n">break</span><span class="p">;</span>
-  <span class="k">default</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
+  <span class="nb">default</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
 
 <h2>Conditional expression</h2>
-<div class="highlight"><pre><span class="nt">y</span> <span class="o">=</span> <span class="o">(</span><span class="nt">x</span><span class="o">&gt;</span><span class="nt">0</span><span class="o">)?</span> <span class="nt">1</span><span class="o">:</span> <span class="nt">-1</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><span class="nt">y</span> <span class="o">=</span> <span class="o">(</span><span class="nt">x</span><span class="o">&gt;</span><span class="nt">0</span><span class="o">)?</span> <span class="nt">1</span><span class="o">:</span> <span class="nt">-1</span><span class="o">;</span>
 </pre></div>
 
 
 <h2>while loop</h2>
-<div class="highlight"><pre>while (loop-condition) {
+<div class="highlight"><pre><span></span>while (loop-condition) {
   stateements;
 }
 </pre></div>
 
 
 <h2>do-while loop</h2>
-<div class="highlight"><pre>do {
+<div class="highlight"><pre><span></span>do {
   statements;
 } while (condition);
 </pre></div>
 
 
 <h2>for loop</h2>
-<div class="highlight"><pre>for (i = 0; i &lt; 99; i++) {
+<div class="highlight"><pre><span></span>for (i = 0; i &lt; 99; i++) {
   statements;
 }
 </pre></div>
 
 
 <h2>for-each loop</h2>
-<div class="highlight"><pre>for (double u: myList) { 
+<div class="highlight"><pre><span></span>for (double u: myList) { 
   System.out.println(u);
 }
 </pre></div>
@@ -399,7 +399,7 @@ else {
 <li><code>%10.2f</code> Output the floating item with width at least 10 including a decimal point</li>
 </ul>
 <h1>Methods</h1>
-<div class="highlight"><pre>public static int sum(int i1, int i2) {
+<div class="highlight"><pre><span></span>public static int sum(int i1, int i2) {
   int sum = 0;
   for (int i = i1; i &lt;= i2; i++) {
     sum += i;
@@ -420,7 +420,7 @@ public static void main(String[] args) {
 <p>pass by value</p>
 <h2>OverLoading</h2>
 <p>two methods have the same name but different parameter lists within one class, can not overload methods with just different return type</p>
-<div class="highlight"><pre>public static int max(int a, int b) {
+<div class="highlight"><pre><span></span>public static int max(int a, int b) {
   if (a &gt; b) {
     return a;
   }
@@ -450,7 +450,7 @@ public static double max(double a, double b) {
 </ul>
 <h1>Data Structure</h1>
 <h2>Array</h2>
-<div class="highlight"><pre>double[] numbers = new double[20];
+<div class="highlight"><pre><span></span>double[] numbers = new double[20];
 numbers[0] = 2.0;
 //
 // array initilizer 
@@ -462,7 +462,7 @@ double[] myList = {1.9, 2.9, 3.4, 3.5};
 <p>array size can not be changed after created, and when an array is created, its elements are assigned the default value of <code>0</code> for the numeric primitive data types, <code>\u0000</code> for char types, and <code>false</code> for boolean types.</p>
 <h2>Array coping</h2>
 <p>In Java, you can use assignment statements to copy primitive data type variables, but not arrays.</p>
-<div class="highlight"><pre> list2 = list1;
+<div class="highlight"><pre><span></span> list2 = list1;
  // list1 and list2 reference to the same array
 </pre></div>
 
@@ -477,14 +477,14 @@ double[] myList = {1.9, 2.9, 3.4, 3.5};
 <h2>Variable-Length Arguemnt list</h2>
 <p>Only one variable-length parameter may be specified in a method, and this parameter must be the last parameter.</p>
 <p>You can pass an array or a variable number of arguments to a variable-length parameter.</p>
-<div class="highlight"><pre>public static void printMax(double... numbers) {
+<div class="highlight"><pre><span></span>public static void printMax(double... numbers) {
   double result = nubmers[0];
 }
 </pre></div>
 
 
 <h2>java.util.Arrays</h2>
-<div class="highlight"><pre>// Sort the whole array
+<div class="highlight"><pre><span></span>// Sort the whole array
 double[] numbers = {6.0, 4.4, 1.9, 2.9, 3.4, 3.5}; 
 java.util.Arrays.sort(numbers); 
 //
@@ -495,7 +495,7 @@ java.util.Arrays.sort(chars, 1, 3);
 
 
 <h2>2-dimensional array</h2>
-<div class="highlight"><pre>// normal array:
+<div class="highlight"><pre><span></span>// normal array:
 double[][] matrix;
 //raged array:
 int[][] triangleArray = new int[5][] ; 
@@ -510,7 +510,7 @@ triangleArray[4] = new int[1];
 <h1>OOP</h1>
 <p><strong>state</strong> of object</p>
 <p><strong>behavior</strong> of object</p>
-<div class="highlight"><pre><span class="k">class</span> <span class="n">Circle</span> {
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">Circle</span> {
   //<span class="n">attribute</span>
   <span class="n">double</span> <span class="n">radius</span> = <span class="mf">1.0</span>;
 
@@ -537,7 +537,7 @@ triangleArray[4] = new int[1];
 <li>Constructors do not have a return type—not even void.</li>
 <li>Constructors are invoked using the new operator when an object is created.</li>
 </ul>
-<div class="highlight"><pre>//TV.java
+<div class="highlight"><pre><span></span>//TV.java
 public class TV {
   int channel = 1;
   int VolumeLevel = 1;

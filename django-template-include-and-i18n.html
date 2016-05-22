@@ -88,7 +88,7 @@
     </h1>
     <ul class="list-inline">
       <li class="post-date">
-        <a class="text-muted" href="/django-template-include-and-i18n.html" title="2016-01-27T22:20:00+08:00">Wed 27 January 2016</a>
+        <a class="text-muted" href="/django-template-include-and-i18n.html" title="2016-01-27T22:20:00+08:00">三 27 一月 2016</a>
       </li>
       <li class="muted">&middot;</li>
       <li class="post-category">
@@ -100,12 +100,12 @@
     </ul>
     <div class="post-content">
       <p>In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.</p>
-<div class="highlight"><pre>{% include &quot;include/another_template.html&quot; with text=&#39;I love Python&#39; %}
+<div class="highlight"><pre><span></span>{% include &quot;include/another_template.html&quot; with text=&#39;I love Python&#39; %}
 </pre></div>
 
 
 <p>Sometimes, we need to tranalte <code>include prarameters</code>, this can not be done in <code>another_template.html</code>, <code>blocktrans</code> will not work here.</p>
-<div class="highlight"><pre><span class="x"># in another_template.html</span>
+<div class="highlight"><pre><span></span><span class="x"># in another_template.html</span>
 <span class="cp">{%</span> <span class="k">blocktrans</span> <span class="cp">%}</span><span class="x"></span>
 <span class="cp">{{</span> <span class="nv">text</span> <span class="cp">}}</span><span class="x"></span>
 <span class="cp">{%</span> <span class="k">endblocktrans</span> <span class="cp">%}</span><span class="x"></span>
@@ -113,7 +113,7 @@
 
 
 <p>We need to do the translation in the first temalate, before passing it to another template:</p>
-<div class="highlight"><pre>{% trans &#39;I love Python&#39; as text %}
+<div class="highlight"><pre><span></span>{% trans &#39;I love Python&#39; as text %}
 {% include &quot;include/another_template.html&quot; with text=text %}
 </pre></div>
 
