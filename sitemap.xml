@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://danieldai.me/</loc>
-<lastmod>2016-06-30T10:00:53-00:00</lastmod>
+<lastmod>2016-08-04T10:09:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://danieldai.me/archives.html</loc>
-<lastmod>2016-06-30T10:00:53-00:00</lastmod>
+<lastmod>2016-08-04T10:09:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://danieldai.me/tags.html</loc>
-<lastmod>2016-06-30T10:00:53-00:00</lastmod>
+<lastmod>2016-08-04T10:09:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://danieldai.me/categories.html</loc>
-<lastmod>2016-06-30T10:00:53-00:00</lastmod>
+<lastmod>2016-08-04T10:09:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -35,6 +35,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>http://danieldai.me/pages/about-me.html</loc>
 <lastmod>2016-01-15T10:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://danieldai.me/iproute2-basic.html</loc>
+<lastmod>2016-08-04T10:00:00+08:00</lastmod>
+<changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -95,6 +102,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://danieldai.me/category/linux.html</loc>
+<lastmod>2016-08-04T10:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://danieldai.me/category/post.html</loc>
 <lastmod>2016-01-18T22:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -131,7 +145,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://danieldai.me/author/daniel-dai.html</loc>
-<lastmod>2016-06-30T09:20:00+08:06</lastmod>
+<lastmod>2016-08-04T10:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

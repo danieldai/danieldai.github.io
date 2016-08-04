@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="http://danieldai.me/iproute2-basic.html" />
+
+    <title>  Daniel Dai - Linux, Network and Web Tech &mdash; IPRoute2 Basic
+</title>
+
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/>
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png"/>
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png"/>
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png"/>
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png"/>
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png"/>
+      <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png"/>
+      <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png"/>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png"/>
+      <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
+      <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192"/>
+      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+      <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
+      <link rel="manifest" href="/manifest.json"/>
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+      <meta name="msapplication-TileColor" content="#da532c"/>
+      <meta name="msapplication-TileImage" content="/mstile-144x144.png"/>
+      <meta name="theme-color" content="#ffffff"/>
+
+
+
+    <link rel="stylesheet" href="http://danieldai.me/theme/css/style.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72604787-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+    <meta name="author" content="Daniel Dai">
+    <meta name="description" content="ip link Show link layer interface information ip link 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc ...">
+  <meta name="tags" contents="">
+</head>
+
+<body>
+<header class="header">
+  <div class="container">
+      <div class="header-image pull-left">
+        <a class="nodec" href="http://danieldai.me"><img src=/daniel_150.png></a>
+      </div>
+    <div class="header-inner">
+      <h1 class="header-name">
+        <a class="nodec" href="http://danieldai.me">Daniel Dai - Web Tech Professional</a>
+      </h1>
+      <h3 class="header-text">Day after day, we are closer to the Matrix, it's IT.</h3>
+      <ul class="header-menu list-inline">
+              <li class="muted">|</li>
+            <li><a class="nodec" href="http://danieldai.me/pages/about-me.html">About Me</a></li>
+              <li class="muted">|</li>
+          <li><a class="nodec" href="http://danieldai.me/categories.html">Categories</a></li>
+          <li class="muted">|</li>
+          <li><a class="nodec" href="http://danieldai.me/tags.html">Tags</a></li>
+          <li class="muted">|</li>
+          <li><a class="nodec" href="http://danieldai.me/archives.html">Archives</a></li>
+          <li class="muted">|</li>
+          <li><a class="nodec icon-mail-alt" href="mailto:daeming@gmail.com"></a></li>
+          <li><a class="nodec icon-github" href="https://github.com/danieldai"></a></li>
+          <li><a class="nodec icon-stackoverflow" href="http://stackoverflow.com/users/1089262/daniel-dai"></a></li>
+      </ul>
+    </div>
+  </div>
+</header> <!-- /.header -->  <div class="container">
+  <div class="post full-post">
+    <h1 class="post-title">
+      <a href="/iproute2-basic.html" title="Permalink to IPRoute2 Basic">IPRoute2 Basic</a>
+    </h1>
+    <ul class="list-inline">
+      <li class="post-date">
+        <a class="text-muted" href="/iproute2-basic.html" title="2016-08-04T10:00:00+08:00">四 04 八月 2016</a>
+      </li>
+      <li class="muted">&middot;</li>
+      <li class="post-category">
+        <a href="http://danieldai.me/category/linux.html">Linux</a>
+      </li>
+    </ul>
+    <div class="post-content">
+      <h3>ip link</h3>
+<p>Show link layer interface information</p>
+<div class="highlight"><pre><span></span>ip link
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">:</span> <span class="n">lo</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">LOOPBACK</span><span class="o">,</span><span class="n">UP</span><span class="o">,</span><span class="n">LOWER_UP</span><span class="o">&gt;</span> <span class="n">mtu</span> <span class="mi">65536</span> <span class="n">qdisc</span> <span class="n">noqueue</span> <span class="n">state</span> <span class="n">UNKNOWN</span> <span class="n">mode</span> <span class="n">DEFAULT</span> <span class="n">group</span> <span class="k">default</span> <span class="n">qlen</span> <span class="mi">1</span>
+    <span class="n">link</span><span class="o">/</span><span class="n">loopback</span> <span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span> <span class="n">brd</span> <span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span>
+<span class="mi">2</span><span class="o">:</span> <span class="n">ens33</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">BROADCAST</span><span class="o">,</span><span class="n">MULTICAST</span><span class="o">,</span><span class="n">UP</span><span class="o">,</span><span class="n">LOWER_UP</span><span class="o">&gt;</span> <span class="n">mtu</span> <span class="mi">1500</span> <span class="n">qdisc</span> <span class="n">pfifo_fast</span> <span class="n">state</span> <span class="n">UP</span> <span class="n">mode</span> <span class="n">DEFAULT</span> <span class="n">group</span> <span class="k">default</span> <span class="n">qlen</span> <span class="mi">1000</span>
+    <span class="n">link</span><span class="o">/</span><span class="n">ether</span> <span class="mi">00</span><span class="o">:</span><span class="mi">0</span><span class="n">c</span><span class="o">:</span><span class="mi">29</span><span class="o">:</span><span class="n">fc</span><span class="o">:</span><span class="n">a7</span><span class="o">:</span><span class="n">ea</span> <span class="n">brd</span> <span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span>
+</pre></div>
+
+
+<p>To get statistics about how an interface is communicating, you can query statistics from each interface by passing the -s option to the link subcommand:</p>
+<div class="highlight"><pre><span></span>ip -s link show ens33
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">:</span> <span class="n">ens33</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">BROADCAST</span><span class="o">,</span><span class="n">MULTICAST</span><span class="o">,</span><span class="n">UP</span><span class="o">,</span><span class="n">LOWER_UP</span><span class="o">&gt;</span> <span class="n">mtu</span> <span class="mi">1500</span> <span class="n">qdisc</span> <span class="n">pfifo_fast</span> <span class="n">state</span> <span class="n">UP</span> <span class="n">mode</span> <span class="n">DEFAULT</span> <span class="n">group</span> <span class="k">default</span> <span class="n">qlen</span> <span class="mi">1000</span>
+    <span class="n">link</span><span class="o">/</span><span class="n">ether</span> <span class="mi">00</span><span class="o">:</span><span class="mi">0</span><span class="n">c</span><span class="o">:</span><span class="mi">29</span><span class="o">:</span><span class="n">fc</span><span class="o">:</span><span class="n">a7</span><span class="o">:</span><span class="n">ea</span> <span class="n">brd</span> <span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span>
+    <span class="n">RX</span><span class="o">:</span> <span class="n">bytes</span>  <span class="n">packets</span>  <span class="n">errors</span>  <span class="n">dropped</span> <span class="n">overrun</span> <span class="n">mcast</span>   
+    <span class="mi">1060924019</span> <span class="mi">724744</span>   <span class="mi">0</span>       <span class="mi">0</span>       <span class="mi">0</span>       <span class="mi">0</span>       
+    <span class="n">TX</span><span class="o">:</span> <span class="n">bytes</span>  <span class="n">packets</span>  <span class="n">errors</span>  <span class="n">dropped</span> <span class="n">carrier</span> <span class="n">collsns</span> 
+    <span class="mi">12143852</span>   <span class="mi">195148</span>   <span class="mi">0</span>       <span class="mi">0</span>       <span class="mi">0</span>       <span class="mi">0</span> 
+</pre></div>
+
+
+<h3>ip addr</h3>
+<p>get an overview of the addresses attached to each interface</p>
+<div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">:</span> <span class="n">lo</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">LOOPBACK</span><span class="o">,</span><span class="n">UP</span><span class="o">,</span><span class="n">LOWER_UP</span><span class="o">&gt;</span> <span class="n">mtu</span> <span class="mi">65536</span> <span class="n">qdisc</span> <span class="n">noqueue</span> <span class="n">state</span> <span class="n">UNKNOWN</span> <span class="n">group</span> <span class="k">default</span> <span class="n">qlen</span> <span class="mi">1</span>
+    <span class="n">link</span><span class="o">/</span><span class="n">loopback</span> <span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span> <span class="n">brd</span> <span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span>
+    <span class="n">inet</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="o">/</span><span class="mi">8</span> <span class="n">scope</span> <span class="n">host</span> <span class="n">lo</span>
+       <span class="n">valid_lft</span> <span class="n">forever</span> <span class="n">preferred_lft</span> <span class="n">forever</span>
+    <span class="n">inet6</span> <span class="o">::</span><span class="mi">1</span><span class="o">/</span><span class="mi">128</span> <span class="n">scope</span> <span class="n">host</span> 
+       <span class="n">valid_lft</span> <span class="n">forever</span> <span class="n">preferred_lft</span> <span class="n">forever</span>
+<span class="mi">2</span><span class="o">:</span> <span class="n">ens33</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">BROADCAST</span><span class="o">,</span><span class="n">MULTICAST</span><span class="o">,</span><span class="n">UP</span><span class="o">,</span><span class="n">LOWER_UP</span><span class="o">&gt;</span> <span class="n">mtu</span> <span class="mi">1500</span> <span class="n">qdisc</span> <span class="n">pfifo_fast</span> <span class="n">state</span> <span class="n">UP</span> <span class="n">group</span> <span class="k">default</span> <span class="n">qlen</span> <span class="mi">1000</span>
+    <span class="n">link</span><span class="o">/</span><span class="n">ether</span> <span class="mi">00</span><span class="o">:</span><span class="mi">0</span><span class="n">c</span><span class="o">:</span><span class="mi">29</span><span class="o">:</span><span class="n">fc</span><span class="o">:</span><span class="n">a7</span><span class="o">:</span><span class="n">ea</span> <span class="n">brd</span> <span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span>
+    <span class="n">inet</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">138.128</span><span class="o">/</span><span class="mi">24</span> <span class="n">brd</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">138.255</span> <span class="n">scope</span> <span class="n">global</span> <span class="kd">dynamic</span> <span class="n">ens33</span>
+       <span class="n">valid_lft</span> <span class="mi">1425</span><span class="n">sec</span> <span class="n">preferred_lft</span> <span class="mi">1425</span><span class="n">sec</span>
+    <span class="n">inet6</span> <span class="n">fe80</span><span class="o">::</span><span class="mi">1856</span><span class="o">:</span><span class="n">a02b</span><span class="o">:</span><span class="mi">4</span><span class="n">c91</span><span class="o">:</span><span class="n">cea6</span><span class="o">/</span><span class="mi">64</span> <span class="n">scope</span> <span class="n">link</span> 
+       <span class="n">valid_lft</span> <span class="n">forever</span> <span class="n">preferred_lft</span> <span class="n">forever</span>
+<span class="mi">3</span><span class="o">:</span> <span class="n">docker0</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">BROADCAST</span><span class="o">,</span><span class="n">MULTICAST</span><span class="o">,</span><span class="n">UP</span><span class="o">,</span><span class="n">LOWER_UP</span><span class="o">&gt;</span> <span class="n">mtu</span> <span class="mi">1500</span> <span class="n">qdisc</span> <span class="n">noqueue</span> <span class="n">state</span> <span class="n">UP</span> <span class="n">group</span> <span class="k">default</span> 
+    <span class="n">link</span><span class="o">/</span><span class="n">ether</span> <span class="mi">02</span><span class="o">:</span><span class="mi">42</span><span class="o">:</span><span class="mi">34</span><span class="o">:</span><span class="n">a4</span><span class="o">:</span><span class="mi">7</span><span class="n">b</span><span class="o">:</span><span class="mi">20</span> <span class="n">brd</span> <span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span>
+    <span class="n">inet</span> <span class="mf">172.17</span><span class="o">.</span><span class="mf">0.1</span><span class="o">/</span><span class="mi">16</span> <span class="n">scope</span> <span class="n">global</span> <span class="n">docker0</span>
+       <span class="n">valid_lft</span> <span class="n">forever</span> <span class="n">preferred_lft</span> <span class="n">forever</span>
+    <span class="n">inet6</span> <span class="n">fe80</span><span class="o">::</span><span class="mi">42</span><span class="o">:</span><span class="mi">34</span><span class="n">ff</span><span class="o">:</span><span class="n">fea4</span><span class="o">:</span><span class="mi">7</span><span class="n">b20</span><span class="o">/</span><span class="mi">64</span> <span class="n">scope</span> <span class="n">link</span> 
+       <span class="n">valid_lft</span> <span class="n">forever</span> <span class="n">preferred_lft</span> <span class="n">forever</span>
+<span class="mi">5</span><span class="o">:</span> <span class="n">veth78282f4</span><span class="err">@</span><span class="n">if4</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">BROADCAST</span><span class="o">,</span><span class="n">MULTICAST</span><span class="o">,</span><span class="n">UP</span><span class="o">,</span><span class="n">LOWER_UP</span><span class="o">&gt;</span> <span class="n">mtu</span> <span class="mi">1500</span> <span class="n">qdisc</span> <span class="n">noqueue</span> <span class="n">master</span> <span class="n">docker0</span> <span class="n">state</span> <span class="n">UP</span> <span class="n">group</span> <span class="k">default</span> 
+    <span class="n">link</span><span class="o">/</span><span class="n">ether</span> <span class="n">b2</span><span class="o">:</span><span class="mi">42</span><span class="o">:</span><span class="n">c4</span><span class="o">:</span><span class="mi">47</span><span class="o">:</span><span class="mi">0</span><span class="n">c</span><span class="o">:</span><span class="mi">16</span> <span class="n">brd</span> <span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span><span class="o">:</span><span class="n">ff</span> <span class="n">link</span><span class="o">-</span><span class="n">netnsid</span> <span class="mi">0</span>
+    <span class="n">inet6</span> <span class="n">fe80</span><span class="o">::</span><span class="n">b042</span><span class="o">:</span><span class="n">c4ff</span><span class="o">:</span><span class="n">fe47</span><span class="o">:</span><span class="n">c16</span><span class="o">/</span><span class="mi">64</span> <span class="n">scope</span> <span class="n">link</span> 
+       <span class="n">valid_lft</span> <span class="n">forever</span> <span class="n">preferred_lft</span> <span class="n">forever</span>
+</pre></div>
+
+
+<p>To get a specific interface, you can use this syntax:</p>
+<div class="highlight"><pre><span></span>ip addr show eth0
+</pre></div>
+
+
+<h3>ip route</h3>
+<p>The routing table contains kernel information about the paths to other network locations. We can print off the current routing table by typing:</p>
+<div class="highlight"><pre><span></span>ip route
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>default via 192.168.138.2 dev ens33  proto static  metric 100 
+169.254.0.0/16 dev docker0  scope link  metric 1000 
+172.17.0.0/16 dev docker0  proto kernel  scope link  src 172.17.0.1 
+192.168.138.0/24 dev ens33  proto kernel  scope link  src 192.168.138.128  metric 100
+</pre></div>
+
+
+<h2>How To Configure Network Interfaces and Addresses</h2>
+<h3>Config interface</h3>
+<div class="highlight"><pre><span></span>ip link set eth1 up
+ip link set eth1 down
+</pre></div>
+
+
+<p>You can also use the ip link subcommand to set attributes about the interface. For instance, if you would like to change the multicast flag on or off for your interface, you can type:</p>
+<div class="highlight"><pre><span></span>ip link set eth1 multicast on
+ip link set eth1 multicast off
+</pre></div>
+
+
+<p>You can adjust the mtu and package queue length like this:</p>
+<div class="highlight"><pre><span></span>ip link set eth1 mtu 1500
+ip link set eth1 txqueuelen 1000
+</pre></div>
+
+
+<p>If the interface you are configuring is down, you can adjust the interface name and the arp flag associated with the device:</p>
+<div class="highlight"><pre><span></span>ip link set eth1 name eth10
+ip link set eth1 arp on
+</pre></div>
+
+
+<p>To adjust the addresses associated with the interfaces, we again use the <code>ip addr</code> subcommand.</p>
+<p>We can add an address to a device by typing:</p>
+<div class="highlight"><pre><span></span>ip addr add ip_address/net_prefix brd + dev interface
+</pre></div>
+
+
+<p>The <code>brd +</code> portion of the command automatically sets the broadcast address. Multiple addresses can be added to each interface without a problem.</p>
+<p>We can get rid of addresses with the inverse operation. To delete a specific address associated with an interface, you can use it like this:</p>
+<div class="highlight"><pre><span></span>ip addr del ip_address/net_prefix dev interface
+</pre></div>
+
+
+<p>Optionally, you can omit the address, and the first listed address associated with that interface will be deleted.</p>
+<p>You can also adjust the routing of the server, using the <code>ip route [add | change | replace | delete ]</code> syntax, but we won't be covering this here, because most people will will not be adjusting this on a regular basis</p>
+<h2>Additional Capabilities of IPRoute2</h2>
+<p>IPRoute2 has some additional capabilities that we will not be able to discuss in-depth in this guide. Instead, we will talk about what these are and what situations you may find them useful.</p>
+<p>The idea of IP routing rules is difficult to talk about because it is very situation dependent. Basically, you can decide on how to route traffic based on a number of fields, including target address, source address, routing protocol, packet size, etc.</p>
+<p>We access this functionality by using the ip rule subcommand. The basic querying follows the general pattern of the other subcommands:</p>
+<div class="highlight"><pre><span></span>ip rule show
+0:  from all lookup local 
+32766:  from all lookup main 
+32767:  from all lookup default
+</pre></div>
+
+
+<p>These three routing rules are the default rules configured by the kernel. The first line matches any traffic and is used to route high priority traffic. The second line is the main rule that handles normal routing. The last one is an empty rule that is used for post-processing if the rules above didn't match the packet.</p>
+<p>Routing rules, as configured by the IPRoute2 software, are stored in a routing policy database, where the policy is selected by matching against sets of rules. We can add or delete rules using the appropriate actions. You should not do this without knowing what you are doing however. Look at the man pages and search for ip rule for more information.</p>
+<div class="highlight"><pre><span></span>man ip         # search for &quot;ip rule&quot;
+</pre></div>
+
+
+<p>Another thing that we'll discuss briefly is the handling of arp information through these tools. The subcommand that deals with this information is called ip neigh.</p>
+<div class="highlight"><pre><span></span>ip neigh
+107.170.58.1 dev eth0 lladdr 00:00:5e:00:01:68 DELAY
+</pre></div>
+
+
+<p>By default, this should at least list your gateway. Arp is a protocol used to gather information about physical devices accessible through the local network.</p>
+<p>Basically, an arp request is broadcast over the local network whenever an IP address needs to be reached. The matching IP address responds and then the local computer knows where to send information to that IP address. This information is cached on the local system for some time (typically about 15 minutes) to avoid having to query during follow up communication.</p>
+    </div>
+  </div>
+  <hr class="separator">
+  <div class="col-md-8 col-md-offset-2">
+  <div id="disqus_thread">
+    <script>
+      var disqus_shortname = 'danieldai';
+      (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] ||
+         document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript=danieldai">
+        comments powered by Disqus.
+      </a>
+    </noscript>
+    <a href="https://disqus.com" class="dsq-brlink">
+      blog comments powered by <span class="logo-disqus">Disqus</span>
+    </a>
+  </div>
+  </div>
+  </div>
+<footer class="footer">
+  <div class="container">
+    <p class="text-center">
+      Daniel Dai, <a href="" target="_blank"></a> unless otherwise noted.
+    </p>
+    <div class="text-center">
+      Generated by <a href="http://getpelican.com" target="_blank">Pelican</a> with the <a href="http://github.com/nairobilug/pelican-alchemy">alchemy</a> theme.
+    </div>
+  </div>
+</footer> <!-- /.footer -->
+  <script src="http://danieldai.me/theme/js/jquery.min.js"></script>
+  <script src="http://danieldai.me/theme/js/bootstrap.min.js"></script>
+</body> <!-- 42 -->
+
+</html>
