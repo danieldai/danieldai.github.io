@@ -2,7 +2,7 @@ Title: About Me
 Date: 2016-01-15 10:20
 
 
-I'm a Software Engineer speak mainly `Python`, `Object-C` and `Java` currently. 
+I'm a Software Engineer speak mainly `Python`, and `Java` currently. 
 
 * Linkedin:[https://cn.linkedin.com/in/danieldaime](https://cn.linkedin.com/in/danieldaime).
 * GitHub: [https://github.com/danieldai](https://github.com/danieldai)
