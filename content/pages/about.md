@@ -4,7 +4,7 @@ Date: 2016-01-15 10:20
 
 I'm a Software Engineer speak mainly `Python`, and `Java` currently. 
 
-* Linkedin:[https://cn.linkedin.com/in/danieldaime](https://cn.linkedin.com/in/danieldaime).
+* Linkedin:[https://cn.linkedin.com/in/daniel-dai](https://cn.linkedin.com/in/daniel-dai).
 * GitHub: [https://github.com/danieldai](https://github.com/danieldai)
 
 
