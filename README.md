@@ -1,6 +1,6 @@
-# Welcome to [DanielDai.cn](http://www.danieldai.cn)!
+# Welcome to [DanielDai.cn](http://danieldai.cn)!
 
-**[DanielDai.cn](http://www.danieldai.cn)** is powered by **[Pelican](http://getpelican.com/)**, a static site generaotr written in **[Python](http://python.org/)**. 
+**[DanielDai.cn](http://danieldai.cn)** is powered by **[Pelican](http://getpelican.com/)**, a static site generaotr written in **[Python](http://python.org/)**. 
 
 As the contents of GitHub Pages for user must be on `master` branch, I put the source code of this blog on another branch named `source`. Whenever I do any changes to the contents of the blog, I check out the `source` branch, edit the markdown files, regenerate the content and output the content to `master` branch with `ghp-import`
 

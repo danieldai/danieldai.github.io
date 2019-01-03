@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai - Linux, Network and Web Tech</title><link href="http://danieldai.me/" rel="alternate"></link><link href="http://danieldai.me/feeds/all.atom.xml" rel="self"></link><id>http://danieldai.me/</id><updated>2016-08-04T10:00:00+08:00</updated><entry><title>IPRoute2 Basic</title><link href="http://danieldai.me/iproute2-basic.html" rel="alternate"></link><published>2016-08-04T10:00:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-08-04:iproute2-basic.html</id><summary type="html">&lt;h3&gt;ip link&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai - Linux, Network and Web Tech</title><link href="http://danieldai.cn/" rel="alternate"></link><link href="http://danieldai.cn/feeds/all.atom.xml" rel="self"></link><id>http://danieldai.cn/</id><updated>2016-08-04T10:00:00+08:00</updated><subtitle>Daniel Dai - Web Tech Professional</subtitle><entry><title>IPRoute2 Basic</title><link href="http://danieldai.cn/iproute2-basic.html" rel="alternate"></link><published>2016-08-04T10:00:00+08:00</published><updated>2016-08-04T10:00:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.cn,2016-08-04:/iproute2-basic.html</id><summary type="html">&lt;h3&gt;ip link&lt;/h3&gt;
+&lt;p&gt;Show link layer interface information&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ip link
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;lo&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;LOOPBACK&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;UP&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;LOWER_UP&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;mtu&lt;/span&gt; &lt;span class="mi"&gt;65536&lt;/span&gt; &lt;span class="n"&gt;qdisc&lt;/span&gt; &lt;span class="n"&gt;noqueue&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="n"&gt;UNKNOWN&lt;/span&gt; &lt;span class="n"&gt;mode&lt;/span&gt; &lt;span class="n"&gt;DEFAULT&lt;/span&gt; &lt;span class="n"&gt;group&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="n"&gt;qlen&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;link&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;loopback&lt;/span&gt; &lt;span class="mi"&gt;00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt; &lt;span class="n"&gt;brd&lt;/span&gt; &lt;span class="mi"&gt;00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ens33&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;BROADCAST&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;MULTICAST&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;UP&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;LOWER_UP&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;mtu&lt;/span&gt; &lt;span class="mi"&gt;1500&lt;/span&gt; &lt;span class="n"&gt;qdisc …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h3&gt;ip link&lt;/h3&gt;
 &lt;p&gt;Show link layer interface information&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ip link
 &lt;/pre&gt;&lt;/div&gt;
@@ -134,7 +142,20 @@ ip link set eth1 arp on
 
 
 &lt;p&gt;By default, this should at least list your gateway. Arp is a protocol used to gather information about physical devices accessible through the local network.&lt;/p&gt;
-&lt;p&gt;Basically, an arp request is broadcast over the local network whenever an IP address needs to be reached. The matching IP address responds and then the local computer knows where to send information to that IP address. This information is cached on the local system for some time (typically about 15 minutes) to avoid having to query during follow up communication.&lt;/p&gt;</summary></entry><entry><title>How to split string in Python?</title><link href="http://danieldai.me/how-to-split-string-in-python.html" rel="alternate"></link><published>2016-06-30T09:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-06-30:how-to-split-string-in-python.html</id><summary type="html">&lt;h2&gt;Split string with identical separator&lt;/h2&gt;
+&lt;p&gt;Basically, an arp request is broadcast over the local network whenever an IP address needs to be reached. The matching IP address responds and then the local computer knows where to send information to that IP address. This information is cached on the local system for some time (typically about 15 minutes) to avoid having to query during follow up communication.&lt;/p&gt;</content></entry><entry><title>How to split string in Python?</title><link href="http://danieldai.cn/how-to-split-string-in-python.html" rel="alternate"></link><published>2016-06-30T09:20:00+08:00</published><updated>2016-06-30T09:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.cn,2016-06-30:/how-to-split-string-in-python.html</id><summary type="html">&lt;h2&gt;Split string with identical separator&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.130.248:15+221.160.226.9:329+101.240.154.40:1197&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;nodes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;+&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[&amp;#39;45.63.130.248:15&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.130.248:15*+221.160.226 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2&gt;Split string with identical separator&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.130.248:15+221.160.226.9:329+101.240.154.40:1197&amp;#39;&lt;/span&gt;
 
 &lt;span class="n"&gt;nodes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;+&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -186,7 +207,12 @@ ip link set eth1 arp on
 
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[&amp;#39;45.63.120.248:1195&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]
-&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Django Template Include and I18n</title><link href="http://danieldai.me/django-template-include-and-i18n.html" rel="alternate"></link><published>2016-01-27T22:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-27:django-template-include-and-i18n.html</id><summary type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Django Template Include and I18n</title><link href="http://danieldai.cn/django-template-include-and-i18n.html" rel="alternate"></link><published>2016-01-27T22:20:00+08:00</published><updated>2016-01-27T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.cn,2016-01-27:/django-template-include-and-i18n.html</id><summary type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Sometimes, we need to tranalte &lt;code&gt;include prarameters&lt;/code&gt;, this can not be done in &lt;code&gt;another_template.html …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -206,8 +232,9 @@ ip link set eth1 arp on
 
 
 &lt;p&gt;Reference:&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags"&gt;http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags&lt;/a&gt;&lt;/p&gt;</summary><category term="Django"></category></entry><entry><title>Blogging with GitHub Pages and Pelican Step by Step</title><link href="http://danieldai.me/blogging-with-github-pages-and-pelican-step-by-step.html" rel="alternate"></link><published>2016-01-18T22:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-18:blogging-with-github-pages-and-pelican-step-by-step.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; is a service provide by GitHub to allow people having websites out of the content of their Repo. 
-As you know, &lt;strong&gt;&lt;a href="http://danieldai.me"&gt;DanielDai.Me&lt;/a&gt;&lt;/strong&gt; is hosted on &lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt;. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can be Markdown files writen is way supported by &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, GitHub Pages has built support for &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, it will convert Markdown to HTML.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags"&gt;http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags&lt;/a&gt;&lt;/p&gt;</content><category term="Django"></category></entry><entry><title>Blogging with GitHub Pages and Pelican Step by Step</title><link href="http://danieldai.cn/blogging-with-github-pages-and-pelican-step-by-step.html" rel="alternate"></link><published>2016-01-18T22:20:00+08:00</published><updated>2016-01-18T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.cn,2016-01-18:/blogging-with-github-pages-and-pelican-step-by-step.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; is a service provide by GitHub to allow people having websites out of the content of their Repo. 
+As you know, &lt;strong&gt;&lt;a href="http://danieldai.cn"&gt;DanielDai.cn&lt;/a&gt;&lt;/strong&gt; is hosted on &lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt;. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; is a service provide by GitHub to allow people having websites out of the content of their Repo. 
+As you know, &lt;strong&gt;&lt;a href="http://danieldai.cn"&gt;DanielDai.cn&lt;/a&gt;&lt;/strong&gt; is hosted on &lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt;. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can be Markdown files writen is way supported by &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, GitHub Pages has built support for &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, it will convert Markdown to HTML.&lt;/p&gt;
 &lt;p&gt;If you do not want to install &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;,but still want to write blog in Markdown, you can use a static site generator, This site is built with such a tool called &lt;strong&gt;&lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;&lt;/strong&gt;, a static site generaotr written in &lt;strong&gt;&lt;a href="http://python.org/"&gt;Python&lt;/a&gt;&lt;/strong&gt;. &lt;/p&gt;
 &lt;p&gt;I'm going to tell you how to blog with &lt;strong&gt;GitHub Pages&lt;/strong&gt; and &lt;strong&gt;Pelican&lt;/strong&gt; from scratch in this article.&lt;/p&gt;
 &lt;h2&gt;1. Setup the Repository&lt;/h2&gt;
@@ -269,7 +296,7 @@ needed by Pelican.
 &amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n)
 &amp;gt; What is your URL prefix? (see above example; no trailing slash)
 You must enter something
-&amp;gt; What is your URL prefix? (see above example; no trailing slash) http://danieldai.me
+&amp;gt; What is your URL prefix? (see above example; no trailing slash) http://danieldai.cn
 &amp;gt; Do you want to enable article pagination? (Y/n) Y
 &amp;gt; How many articles per page do you want? [10]
 &amp;gt; What is your time zone? [Europe/Paris]
@@ -362,7 +389,8 @@ git push
 
 
 &lt;p&gt;Visit &lt;code&gt;username.github.io&lt;/code&gt; with your favorite Browser, your new Blog site is on GitHub Pages now. &lt;/p&gt;
-&lt;p&gt;If you meet any problem, please feel free to checkout my site repo https://github.com/danieldai/danieldai.github.io&lt;/p&gt;</summary><category term="Pelican"></category><category term="GitHub Pages"></category></entry><entry><title>Python Modules, Packages and Import</title><link href="http://danieldai.me/python-modules-packages-and-import.html" rel="alternate"></link><published>2016-01-16T22:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-16:python-modules-packages-and-import.html</id><summary type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;If you meet any problem, please feel free to checkout my site repo https://github.com/danieldai/danieldai.github.io&lt;/p&gt;</content><category term="Pelican"></category><category term="GitHub Pages"></category></entry><entry><title>Python Modules, Packages and Import</title><link href="http://danieldai.cn/python-modules-packages-and-import.html" rel="alternate"></link><published>2016-01-16T22:20:00+08:00</published><updated>2016-01-16T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.cn,2016-01-16:/python-modules-packages-and-import.html</id><summary type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;To import a module, we use the &lt;code&gt;import&lt;/code&gt; command. Check out the full list of built-in modules in the Python standard library &lt;a href="http://docs.python.org/2/library/"&gt;here …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;To import a module, we use the &lt;code&gt;import&lt;/code&gt; command. Check out the full list of built-in modules in the Python standard library &lt;a href="http://docs.python.org/2/library/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The first time a module is loaded into a running Python script, it is initialized by executing the code in the module once. If another module in your code imports the same module again, it will not be loaded twice but once only - so local variables inside the module act as a &lt;strong&gt;"singleton"&lt;/strong&gt; - they are &lt;strong&gt;initialized only once&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;If we want to import the module &lt;code&gt;urllib&lt;/code&gt;, which enables us to create read data from URLs, we simply &lt;code&gt;import&lt;/code&gt; the module:&lt;/p&gt;
@@ -380,7 +408,7 @@ git push
 &lt;p&gt;Packages are namespaces which contain multiple packages and modules themselves. They are simply directories, but with a twist.&lt;/p&gt;
 &lt;p&gt;Each package in Python is a directory which &lt;strong&gt;MUST&lt;/strong&gt; contain a special file called &lt;strong&gt;&lt;code&gt;__init__.py&lt;/code&gt;&lt;/strong&gt;. This file can be empty, and it indicates that the directory it contains is a Python package, so it can be imported the same way a module can be imported.&lt;/p&gt;
 &lt;p&gt;The &lt;strong&gt;&lt;code&gt;__init__.py&lt;/code&gt;&lt;/strong&gt; file can also decide which modules the package exports as the API, while keeping other modules internal, by overriding the &lt;strong&gt;&lt;code&gt;__all__&lt;/code&gt;&lt;/strong&gt; variable, like so:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 
 &lt;span class="n"&gt;__all__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -449,7 +477,14 @@ git push
 &lt;li&gt;http://www.learnpython.org/en/Modules_and_Packages&lt;/li&gt;
 &lt;li&gt;https://www.python.org/dev/peps/pep-0328/&lt;/li&gt;
 &lt;li&gt;https://docs.python.org/2.5/whatsnew/pep-328.html&lt;/li&gt;
-&lt;/ol&gt;</summary></entry><entry><title>Java Language Notes</title><link href="http://danieldai.me/java-language-notes.html" rel="alternate"></link><published>2016-01-16T10:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-16:java-language-notes.html</id><summary type="html">&lt;h2&gt;History&lt;/h2&gt;
+&lt;/ol&gt;</content></entry><entry><title>Java Language Notes</title><link href="http://danieldai.cn/java-language-notes.html" rel="alternate"></link><published>2016-01-16T10:20:00+08:00</published><updated>2016-01-16T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.cn,2016-01-16:/java-language-notes.html</id><summary type="html">&lt;h2&gt;History&lt;/h2&gt;
+&lt;p&gt;Java was developed by a team led by James Gosling at Sun Microsystems. Originally called Oak, it was designed in 1991 for use in embedded chips in consumer electronic appliances. In 1995, renamed Java, it was redesigned for developing Internet applications.&lt;/p&gt;
+&lt;h2&gt;Syntax&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;File: Welcome.java&lt;/span&gt;
+&lt;span class="cm"&gt;*/&lt;/span&gt;
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Welcome&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+  &lt;span class="kd"&gt;public …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2&gt;History&lt;/h2&gt;
 &lt;p&gt;Java was developed by a team led by James Gosling at Sun Microsystems. Originally called Oak, it was designed in 1991 for use in embedded chips in consumer electronic appliances. In 1995, renamed Java, it was redesigned for developing Internet applications.&lt;/p&gt;
 &lt;h2&gt;Syntax&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
@@ -694,11 +729,11 @@ else {
 &lt;/ul&gt;
 &lt;h2&gt;switch&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;switch&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;status&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="n"&gt;case&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;statements&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-          &lt;span class="n"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="n"&gt;case&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;statements&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-          &lt;span class="n"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="nb"&gt;default&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;statements&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="err"&gt;case&lt;/span&gt; &lt;span class="err"&gt;0:&lt;/span&gt; &lt;span class="err"&gt;statements&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+          &lt;span class="err"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="err"&gt;case&lt;/span&gt; &lt;span class="err"&gt;1:&lt;/span&gt; &lt;span class="err"&gt;statements&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+          &lt;span class="err"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;statements&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -863,24 +898,24 @@ triangleArray[4] = new int[1];
 &lt;h1&gt;OOP&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;state&lt;/strong&gt; of object&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;behavior&lt;/strong&gt; of object&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Circle&lt;/span&gt; {
-  //&lt;span class="n"&gt;attribute&lt;/span&gt;
-  &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; = &lt;span class="mf"&gt;1.0&lt;/span&gt;;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;Circle&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="c1"&gt;//attribute&lt;/span&gt;
+  &lt;span class="kr"&gt;double&lt;/span&gt; &lt;span class="nx"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-  // &lt;span class="n"&gt;constructor&lt;/span&gt;
-  &lt;span class="n"&gt;Circle&lt;/span&gt;() {
-  }
+  &lt;span class="c1"&gt;// constructor&lt;/span&gt;
+  &lt;span class="nx"&gt;Circle() {&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
 
-  //&lt;span class="n"&gt;contructor&lt;/span&gt;
-  &lt;span class="n"&gt;Circlr&lt;/span&gt;(&lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;newRadius&lt;/span&gt;) {
-    &lt;span class="n"&gt;radius&lt;/span&gt; = &lt;span class="n"&gt;newRadius&lt;/span&gt;;
-  }
+  &lt;span class="c1"&gt;//contructor&lt;/span&gt;
+  &lt;span class="nx"&gt;Circlr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kr"&gt;double&lt;/span&gt; &lt;span class="nx"&gt;newRadius&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;newRadius&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
 
-  //&lt;span class="k"&gt;method&lt;/span&gt;
-  &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;getArea&lt;/span&gt;() {
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; * &lt;span class="n"&gt;radius&lt;/span&gt; * &lt;span class="mf"&gt;3.14&lt;/span&gt;;
-  }
-}
+  &lt;span class="c1"&gt;//method&lt;/span&gt;
+  &lt;span class="kr"&gt;double&lt;/span&gt; &lt;span class="nx"&gt;getArea() {&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nx"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mf"&gt;3.14&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -937,7 +972,12 @@ dot operator&lt;/p&gt;
 &lt;p&gt;&lt;link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css"&gt;
 &lt;script&gt;
   hljs.initHighlightingOnLoad();
-&lt;/script&gt;&lt;/p&gt;</summary></entry><entry><title>How to write Markdown</title><link href="http://danieldai.me/how-to-write-markdown.html" rel="alternate"></link><published>2016-01-15T10:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-15:how-to-write-markdown.html</id><summary type="html">&lt;h2&gt;Basic&lt;/h2&gt;
+&lt;/script&gt;&lt;/p&gt;</content></entry><entry><title>How to write Markdown</title><link href="http://danieldai.cn/how-to-write-markdown.html" rel="alternate"></link><published>2016-01-15T10:20:00+08:00</published><updated>2016-01-15T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.cn,2016-01-15:/how-to-write-markdown.html</id><summary type="html">&lt;h2&gt;Basic&lt;/h2&gt;
+&lt;h3&gt;Paragraphs&lt;/h3&gt;
+&lt;p&gt;Paragraphs in Markdown are just one or more lines of consecutive text followed by one or more blank lines.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;On July 2, an alien mothership entered Earth&amp;#39;s orbit and deployed several dozen saucer-shaped &amp;quot;destroyer&amp;quot; spacecraft, each 15 miles (24 km) wide.
+
+On July 3, the Black Knights …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2&gt;Basic&lt;/h2&gt;
 &lt;h3&gt;Paragraphs&lt;/h3&gt;
 &lt;p&gt;Paragraphs in Markdown are just one or more lines of consecutive text followed by one or more blank lines.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;On July 2, an alien mothership entered Earth&amp;#39;s orbit and deployed several dozen saucer-shaped &amp;quot;destroyer&amp;quot; spacecraft, each 15 miles (24 km) wide.
@@ -1047,13 +1087,13 @@ On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, partici
 &lt;p&gt;~~Mistaken text.~~&lt;/p&gt;
 &lt;h4&gt;Fenced code blocks&lt;/h4&gt;
 &lt;p&gt;Standard Markdown converts text with four spaces at the beginning of each line into a code block; GFM also supports fenced blocks. Just wrap your code in ``` (as shown below) and you won't need to indent it by four spaces. Note that although fenced code blocks don't have to be preceded by a blank line—unlike indented code blocks—we recommend placing a blank line before them to make the raw Markdown easier to read.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Here&amp;#39;s an example:
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;Here&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="nx"&gt;an&lt;/span&gt; &lt;span class="nx"&gt;example&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
 
-```
-function test() {
-  console.log(&amp;quot;notice the blank line before this function?&amp;quot;);
-}
-```
+&lt;span class="sb"&gt;```&lt;/span&gt;
+&lt;span class="sb"&gt;function test() {&lt;/span&gt;
+&lt;span class="sb"&gt;  console.log(&amp;quot;notice the blank line before this function?&amp;quot;);&lt;/span&gt;
+&lt;span class="sb"&gt;}&lt;/span&gt;
+&lt;span class="sb"&gt;```&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1080,5 +1120,6 @@ puts markdown.to_html
 &lt;li&gt;https://help.github.com/articles/markdown-basics&lt;/li&gt;
 &lt;li&gt;https://help.github.com/articles/github-flavored-markdown/&lt;/li&gt;
 &lt;li&gt;https://help.github.com/articles/writing-on-github/&lt;/li&gt;
-&lt;/ol&gt;</summary></entry><entry><title>Welcome to DanielDai.Me!</title><link href="http://danieldai.me/welcome-to-danieldaime.html" rel="alternate"></link><published>2015-07-30T10:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2015-07-30:welcome-to-danieldaime.html</id><summary type="html">&lt;p&gt;Hello World.&lt;/p&gt;
-&lt;p&gt;This is my blog, I will use it to share a lot of things with you.&lt;/p&gt;</summary></entry></feed>
+&lt;/ol&gt;</content></entry><entry><title>Welcome to DanielDai.Me!</title><link href="http://danieldai.cn/welcome-to-danieldaime.html" rel="alternate"></link><published>2015-07-30T10:20:00+08:00</published><updated>2015-07-30T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.cn,2015-07-30:/welcome-to-danieldaime.html</id><summary type="html">&lt;p&gt;Hello World.&lt;/p&gt;
+&lt;p&gt;This is my blog, I will use it to share a lot of things with you.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello World.&lt;/p&gt;
+&lt;p&gt;This is my blog, I will use it to share a lot of things with you.&lt;/p&gt;</content></entry></feed>

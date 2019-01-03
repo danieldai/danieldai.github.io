@@ -4,147 +4,147 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://danieldai.me/</loc>
-<lastmod>2017-08-24T10:46:14-00:00</lastmod>
+<loc>http://danieldai.cn/</loc>
+<lastmod>2019-01-03T09:13:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/archives.html</loc>
-<lastmod>2017-08-24T10:46:14-00:00</lastmod>
+<loc>http://danieldai.cn/archives.html</loc>
+<lastmod>2019-01-03T09:13:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/tags.html</loc>
-<lastmod>2017-08-24T10:46:14-00:00</lastmod>
+<loc>http://danieldai.cn/tags.html</loc>
+<lastmod>2019-01-03T09:13:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/categories.html</loc>
-<lastmod>2017-08-24T10:46:14-00:00</lastmod>
+<loc>http://danieldai.cn/categories.html</loc>
+<lastmod>2019-01-03T09:13:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/pages/about-me.html</loc>
+<loc>http://danieldai.cn/pages/about-me.html</loc>
 <lastmod>2016-01-15T10:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/iproute2-basic.html</loc>
+<loc>http://danieldai.cn/iproute2-basic.html</loc>
 <lastmod>2016-08-04T10:00:00+08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/how-to-split-string-in-python.html</loc>
+<loc>http://danieldai.cn/how-to-split-string-in-python.html</loc>
 <lastmod>2016-06-30T09:20:00+08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/django-template-include-and-i18n.html</loc>
+<loc>http://danieldai.cn/django-template-include-and-i18n.html</loc>
 <lastmod>2016-01-27T22:20:00+08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/blogging-with-github-pages-and-pelican-step-by-step.html</loc>
+<loc>http://danieldai.cn/blogging-with-github-pages-and-pelican-step-by-step.html</loc>
 <lastmod>2016-01-18T22:20:00+08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/python-modules-packages-and-import.html</loc>
+<loc>http://danieldai.cn/python-modules-packages-and-import.html</loc>
 <lastmod>2016-01-16T22:20:00+08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/java-language-notes.html</loc>
+<loc>http://danieldai.cn/java-language-notes.html</loc>
 <lastmod>2016-01-16T10:20:00+08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/how-to-write-markdown.html</loc>
+<loc>http://danieldai.cn/how-to-write-markdown.html</loc>
 <lastmod>2016-01-15T10:20:00+08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/welcome-to-danieldaime.html</loc>
+<loc>http://danieldai.cn/welcome-to-danieldaime.html</loc>
 <lastmod>2015-07-30T10:20:00+08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/category/java.html</loc>
+<loc>http://danieldai.cn/category/java.html</loc>
 <lastmod>2016-01-16T10:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/category/linux.html</loc>
+<loc>http://danieldai.cn/category/linux.html</loc>
 <lastmod>2016-08-04T10:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/category/post.html</loc>
+<loc>http://danieldai.cn/category/post.html</loc>
 <lastmod>2016-01-18T22:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/category/python.html</loc>
+<loc>http://danieldai.cn/category/python.html</loc>
 <lastmod>2016-06-30T09:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/tag/pelican.html</loc>
+<loc>http://danieldai.cn/tag/pelican.html</loc>
 <lastmod>2016-01-18T22:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/tag/github-pages.html</loc>
+<loc>http://danieldai.cn/tag/github-pages.html</loc>
 <lastmod>2016-01-18T22:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/tag/django.html</loc>
+<loc>http://danieldai.cn/tag/django.html</loc>
 <lastmod>2016-01-27T22:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://danieldai.me/author/daniel-dai.html</loc>
+<loc>http://danieldai.cn/author/daniel-dai.html</loc>
 <lastmod>2016-08-04T10:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>

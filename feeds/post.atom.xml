@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai - Linux, Network and Web Tech</title><link href="http://danieldai.me/" rel="alternate"></link><link href="http://danieldai.me/feeds/post.atom.xml" rel="self"></link><id>http://danieldai.me/</id><updated>2016-01-18T22:20:00+08:00</updated><entry><title>Blogging with GitHub Pages and Pelican Step by Step</title><link href="http://danieldai.me/blogging-with-github-pages-and-pelican-step-by-step.html" rel="alternate"></link><published>2016-01-18T22:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-18:blogging-with-github-pages-and-pelican-step-by-step.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; is a service provide by GitHub to allow people having websites out of the content of their Repo. 
-As you know, &lt;strong&gt;&lt;a href="http://danieldai.me"&gt;DanielDai.Me&lt;/a&gt;&lt;/strong&gt; is hosted on &lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt;. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can be Markdown files writen is way supported by &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, GitHub Pages has built support for &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, it will convert Markdown to HTML.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai - Linux, Network and Web Tech - Post</title><link href="http://danieldai.cn/" rel="alternate"></link><link href="http://danieldai.cn/feeds/post.atom.xml" rel="self"></link><id>http://danieldai.cn/</id><updated>2016-01-18T22:20:00+08:00</updated><subtitle>Daniel Dai - Web Tech Professional</subtitle><entry><title>Blogging with GitHub Pages and Pelican Step by Step</title><link href="http://danieldai.cn/blogging-with-github-pages-and-pelican-step-by-step.html" rel="alternate"></link><published>2016-01-18T22:20:00+08:00</published><updated>2016-01-18T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.cn,2016-01-18:/blogging-with-github-pages-and-pelican-step-by-step.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; is a service provide by GitHub to allow people having websites out of the content of their Repo. 
+As you know, &lt;strong&gt;&lt;a href="http://danieldai.cn"&gt;DanielDai.cn&lt;/a&gt;&lt;/strong&gt; is hosted on &lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt;. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; is a service provide by GitHub to allow people having websites out of the content of their Repo. 
+As you know, &lt;strong&gt;&lt;a href="http://danieldai.cn"&gt;DanielDai.cn&lt;/a&gt;&lt;/strong&gt; is hosted on &lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt;. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can be Markdown files writen is way supported by &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, GitHub Pages has built support for &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, it will convert Markdown to HTML.&lt;/p&gt;
 &lt;p&gt;If you do not want to install &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;,but still want to write blog in Markdown, you can use a static site generator, This site is built with such a tool called &lt;strong&gt;&lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;&lt;/strong&gt;, a static site generaotr written in &lt;strong&gt;&lt;a href="http://python.org/"&gt;Python&lt;/a&gt;&lt;/strong&gt;. &lt;/p&gt;
 &lt;p&gt;I'm going to tell you how to blog with &lt;strong&gt;GitHub Pages&lt;/strong&gt; and &lt;strong&gt;Pelican&lt;/strong&gt; from scratch in this article.&lt;/p&gt;
 &lt;h2&gt;1. Setup the Repository&lt;/h2&gt;
@@ -62,7 +63,7 @@ needed by Pelican.
 &amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n)
 &amp;gt; What is your URL prefix? (see above example; no trailing slash)
 You must enter something
-&amp;gt; What is your URL prefix? (see above example; no trailing slash) http://danieldai.me
+&amp;gt; What is your URL prefix? (see above example; no trailing slash) http://danieldai.cn
 &amp;gt; Do you want to enable article pagination? (Y/n) Y
 &amp;gt; How many articles per page do you want? [10]
 &amp;gt; What is your time zone? [Europe/Paris]
@@ -155,7 +156,12 @@ git push
 
 
 &lt;p&gt;Visit &lt;code&gt;username.github.io&lt;/code&gt; with your favorite Browser, your new Blog site is on GitHub Pages now. &lt;/p&gt;
-&lt;p&gt;If you meet any problem, please feel free to checkout my site repo https://github.com/danieldai/danieldai.github.io&lt;/p&gt;</summary><category term="Pelican"></category><category term="GitHub Pages"></category></entry><entry><title>How to write Markdown</title><link href="http://danieldai.me/how-to-write-markdown.html" rel="alternate"></link><published>2016-01-15T10:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2016-01-15:how-to-write-markdown.html</id><summary type="html">&lt;h2&gt;Basic&lt;/h2&gt;
+&lt;p&gt;If you meet any problem, please feel free to checkout my site repo https://github.com/danieldai/danieldai.github.io&lt;/p&gt;</content><category term="Pelican"></category><category term="GitHub Pages"></category></entry><entry><title>How to write Markdown</title><link href="http://danieldai.cn/how-to-write-markdown.html" rel="alternate"></link><published>2016-01-15T10:20:00+08:00</published><updated>2016-01-15T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.cn,2016-01-15:/how-to-write-markdown.html</id><summary type="html">&lt;h2&gt;Basic&lt;/h2&gt;
+&lt;h3&gt;Paragraphs&lt;/h3&gt;
+&lt;p&gt;Paragraphs in Markdown are just one or more lines of consecutive text followed by one or more blank lines.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;On July 2, an alien mothership entered Earth&amp;#39;s orbit and deployed several dozen saucer-shaped &amp;quot;destroyer&amp;quot; spacecraft, each 15 miles (24 km) wide.
+
+On July 3, the Black Knights …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2&gt;Basic&lt;/h2&gt;
 &lt;h3&gt;Paragraphs&lt;/h3&gt;
 &lt;p&gt;Paragraphs in Markdown are just one or more lines of consecutive text followed by one or more blank lines.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;On July 2, an alien mothership entered Earth&amp;#39;s orbit and deployed several dozen saucer-shaped &amp;quot;destroyer&amp;quot; spacecraft, each 15 miles (24 km) wide.
@@ -265,13 +271,13 @@ On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, partici
 &lt;p&gt;~~Mistaken text.~~&lt;/p&gt;
 &lt;h4&gt;Fenced code blocks&lt;/h4&gt;
 &lt;p&gt;Standard Markdown converts text with four spaces at the beginning of each line into a code block; GFM also supports fenced blocks. Just wrap your code in ``` (as shown below) and you won't need to indent it by four spaces. Note that although fenced code blocks don't have to be preceded by a blank line—unlike indented code blocks—we recommend placing a blank line before them to make the raw Markdown easier to read.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Here&amp;#39;s an example:
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;Here&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="nx"&gt;an&lt;/span&gt; &lt;span class="nx"&gt;example&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
 
-```
-function test() {
-  console.log(&amp;quot;notice the blank line before this function?&amp;quot;);
-}
-```
+&lt;span class="sb"&gt;```&lt;/span&gt;
+&lt;span class="sb"&gt;function test() {&lt;/span&gt;
+&lt;span class="sb"&gt;  console.log(&amp;quot;notice the blank line before this function?&amp;quot;);&lt;/span&gt;
+&lt;span class="sb"&gt;}&lt;/span&gt;
+&lt;span class="sb"&gt;```&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -298,5 +304,6 @@ puts markdown.to_html
 &lt;li&gt;https://help.github.com/articles/markdown-basics&lt;/li&gt;
 &lt;li&gt;https://help.github.com/articles/github-flavored-markdown/&lt;/li&gt;
 &lt;li&gt;https://help.github.com/articles/writing-on-github/&lt;/li&gt;
-&lt;/ol&gt;</summary></entry><entry><title>Welcome to DanielDai.Me!</title><link href="http://danieldai.me/welcome-to-danieldaime.html" rel="alternate"></link><published>2015-07-30T10:20:00+08:00</published><author><name>Daniel Dai</name></author><id>tag:danieldai.me,2015-07-30:welcome-to-danieldaime.html</id><summary type="html">&lt;p&gt;Hello World.&lt;/p&gt;
-&lt;p&gt;This is my blog, I will use it to share a lot of things with you.&lt;/p&gt;</summary></entry></feed>
+&lt;/ol&gt;</content></entry><entry><title>Welcome to DanielDai.Me!</title><link href="http://danieldai.cn/welcome-to-danieldaime.html" rel="alternate"></link><published>2015-07-30T10:20:00+08:00</published><updated>2015-07-30T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.cn,2015-07-30:/welcome-to-danieldaime.html</id><summary type="html">&lt;p&gt;Hello World.&lt;/p&gt;
+&lt;p&gt;This is my blog, I will use it to share a lot of things with you.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello World.&lt;/p&gt;
+&lt;p&gt;This is my blog, I will use it to share a lot of things with you.&lt;/p&gt;</content></entry></feed>

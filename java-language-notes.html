@@ -5,7 +5,7 @@
       <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="http://danieldai.me/java-language-notes.html" />
+    <link rel="canonical" href="http://danieldai.cn/java-language-notes.html" />
 
     <title>  Daniel Dai - Linux, Network and Web Tech &mdash; Java Language Notes
 </title>
@@ -31,7 +31,7 @@
 
 
 
-    <link rel="stylesheet" href="http://danieldai.me/theme/css/style.css">
+    <link rel="stylesheet" href="http://danieldai.cn/theme/css/style.css">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -50,7 +50,7 @@
   </script>
 
     <meta name="author" content="Daniel Dai">
-    <meta name="description" content="History Java was developed by a team led by James Gosling at Sun Microsystems. Originally called Oak, it was designed in 1991 for use in embedded chips in consumer electronic appliances. In 1995, renamed Java, it was redesigned for developing Internet applications. Syntax /* File: Welcome.java */ public class Welcome { public ...">
+    <meta name="description" content="History Java was developed by a team led by James Gosling at Sun Microsystems. Originally called Oak, it was designed in 1991 for use in embedded chips in consumer electronic appliances. In 1995, renamed Java, it was redesigned for developing Internet applications. Syntax /* File: Welcome.java */ public class Welcome { public …">
   <meta name="tags" contents="">
 </head>
 
@@ -58,22 +58,19 @@
 <header class="header">
   <div class="container">
       <div class="header-image pull-left">
-        <a class="nodec" href="http://danieldai.me"><img src=/daniel_150.png></a>
+        <a class="nodec" href="http://danieldai.cn"><img src=/daniel_150.png></a>
       </div>
     <div class="header-inner">
       <h1 class="header-name">
-        <a class="nodec" href="http://danieldai.me">Daniel Dai - Web Tech Professional</a>
+        <a class="nodec" href="http://danieldai.cn">Daniel Dai - Web Tech Professional</a>
       </h1>
       <h3 class="header-text">Day after day, we are closer to the Matrix, it's IT.</h3>
       <ul class="header-menu list-inline">
-              <li class="muted">|</li>
-            <li><a class="nodec" href="http://danieldai.me/pages/about-me.html">About Me</a></li>
-              <li class="muted">|</li>
-          <li><a class="nodec" href="http://danieldai.me/categories.html">Categories</a></li>
+          <li><a class="nodec" href="http://danieldai.cn/categories.html">Categories</a></li>
           <li class="muted">|</li>
-          <li><a class="nodec" href="http://danieldai.me/tags.html">Tags</a></li>
+          <li><a class="nodec" href="http://danieldai.cn/tags.html">Tags</a></li>
           <li class="muted">|</li>
-          <li><a class="nodec" href="http://danieldai.me/archives.html">Archives</a></li>
+          <li><a class="nodec" href="http://danieldai.cn/archives.html">Archives</a></li>
           <li class="muted">|</li>
           <li><a class="nodec icon-mail-alt" href="mailto:daeming@gmail.com"></a></li>
           <li><a class="nodec icon-github" href="https://github.com/danieldai"></a></li>
@@ -92,7 +89,7 @@
       </li>
       <li class="muted">&middot;</li>
       <li class="post-category">
-        <a href="http://danieldai.me/category/java.html">Java</a>
+        <a href="http://danieldai.cn/category/java.html">Java</a>
       </li>
     </ul>
     <div class="post-content">
@@ -341,11 +338,11 @@ else {
 </ul>
 <h2>switch</h2>
 <div class="highlight"><pre><span></span><span class="nt">switch</span> <span class="o">(</span><span class="nt">status</span><span class="o">)</span> <span class="p">{</span>
-  <span class="n">case</span> <span class="m">0</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
-          <span class="n">break</span><span class="p">;</span>
-  <span class="n">case</span> <span class="m">1</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
-          <span class="n">break</span><span class="p">;</span>
-  <span class="nb">default</span><span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
+  <span class="err">case</span> <span class="err">0:</span> <span class="err">statements</span><span class="p">;</span>
+          <span class="err">break</span><span class="p">;</span>
+  <span class="err">case</span> <span class="err">1:</span> <span class="err">statements</span><span class="p">;</span>
+          <span class="err">break</span><span class="p">;</span>
+  <span class="n">default</span><span class="p">:</span> <span class="n">statements</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -510,24 +507,24 @@ triangleArray[4] = new int[1];
 <h1>OOP</h1>
 <p><strong>state</strong> of object</p>
 <p><strong>behavior</strong> of object</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">Circle</span> {
-  //<span class="n">attribute</span>
-  <span class="n">double</span> <span class="n">radius</span> = <span class="mf">1.0</span>;
+<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">Circle</span> <span class="p">{</span>
+  <span class="c1">//attribute</span>
+  <span class="kr">double</span> <span class="nx">radius</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
 
-  // <span class="n">constructor</span>
-  <span class="n">Circle</span>() {
-  }
+  <span class="c1">// constructor</span>
+  <span class="nx">Circle() {</span>
+  <span class="p">}</span>
 
-  //<span class="n">contructor</span>
-  <span class="n">Circlr</span>(<span class="n">double</span> <span class="n">newRadius</span>) {
-    <span class="n">radius</span> = <span class="n">newRadius</span>;
-  }
+  <span class="c1">//contructor</span>
+  <span class="nx">Circlr</span><span class="p">(</span><span class="kr">double</span> <span class="nx">newRadius</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">radius</span> <span class="o">=</span> <span class="nx">newRadius</span><span class="p">;</span>
+  <span class="p">}</span>
 
-  //<span class="k">method</span>
-  <span class="n">double</span> <span class="n">getArea</span>() {
-    <span class="k">return</span> <span class="n">radius</span> * <span class="n">radius</span> * <span class="mf">3.14</span>;
-  }
-}
+  <span class="c1">//method</span>
+  <span class="kr">double</span> <span class="nx">getArea() {</span>
+    <span class="k">return</span> <span class="nx">radius</span> <span class="o">*</span> <span class="nx">radius</span> <span class="o">*</span> <span class="mf">3.14</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -623,8 +620,8 @@ dot operator</p>
     </div>
   </div>
 </footer> <!-- /.footer -->
-  <script src="http://danieldai.me/theme/js/jquery.min.js"></script>
-  <script src="http://danieldai.me/theme/js/bootstrap.min.js"></script>
+  <script src="http://danieldai.cn/theme/js/jquery.min.js"></script>
+  <script src="http://danieldai.cn/theme/js/bootstrap.min.js"></script>
 </body> <!-- 42 -->
 
 </html>
