@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://danieldai.cn/</loc>
-<lastmod>2019-01-03T09:13:04-00:00</lastmod>
+<lastmod>2019-01-03T09:18:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://danieldai.cn/archives.html</loc>
-<lastmod>2019-01-03T09:13:04-00:00</lastmod>
+<lastmod>2019-01-03T09:18:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://danieldai.cn/tags.html</loc>
-<lastmod>2019-01-03T09:13:04-00:00</lastmod>
+<lastmod>2019-01-03T09:18:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://danieldai.cn/categories.html</loc>
-<lastmod>2019-01-03T09:13:04-00:00</lastmod>
+<lastmod>2019-01-03T09:18:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -88,7 +88,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://danieldai.cn/welcome-to-danieldaime.html</loc>
+<loc>http://danieldai.cn/welcome-to-danieldaicn.html</loc>
 <lastmod>2015-07-30T10:20:00+08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
