@@ -1,7 +1,7 @@
 markdown
 pelican
 typogrify
-fabric
+fabric==1.14.0
 ghp-import
 
 
