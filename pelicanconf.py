@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Daniel Dai'
-SITENAME = u'Daniel Dai - Linux, Network and Web Tech'
+SITENAME = u'Daniel Dai - Python, Java and Web'
 SITEURL = ''
 
 PATH = 'content'
@@ -37,11 +37,11 @@ DEFAULT_PAGINATION = 10
 
 STATIC_PATHS = ['images', 
                 'extra/CNAME',
-                'extra/daniel_150.png' 
+                'extra/daniel_150.jpeg' 
                 ]
                 
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
-                        'extra/daniel_150.png': {'path': 'daniel_150.png'}}
+                        'extra/daniel_150.jpeg': {'path': 'daniel_150.jpeg'}}
 
 SITESUBTITLE = "Daniel Dai - Web Tech Professional"
 
@@ -49,12 +49,12 @@ LOAD_CONTENT_CACHE = False
 
 DISPLAY_PAGES_ON_MENU = True
 
-PROFILE_IMAGE = '/daniel_150.png'
+PROFILE_IMAGE = '/daniel_150.jpeg'
 
 SITE_SUBTEXT = "Day after day, we are closer to the Matrix, it's IT."
 
 META_DESCRIPTION = """
-Daniel Dai(代明) is an Experienced Software Professional in Linux, Network and Web Tech, who has 
+Daniel Dai(代明) is an Experienced Software Professional in Python, Java and Web, who has 
 passionate enthusiasm in changing people's life with Information Tech in various aspects. 
 """
 
