@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://danieldai.cn/iproute2-basic.html" />
 
-    <title>  Daniel Dai - Linux, Network and Web Tech &mdash; IPRoute2 Basic
+    <title>  Daniel Dai - Python, Java and Web &mdash; IPRoute2 Basic
 </title>
 
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/>
@@ -58,7 +58,7 @@
 <header class="header">
   <div class="container">
       <div class="header-image pull-left">
-        <a class="nodec" href="https://danieldai.cn"><img src=/daniel_150.png></a>
+        <a class="nodec" href="https://danieldai.cn"><img src=/daniel_150.jpeg></a>
       </div>
     <div class="header-inner">
       <h1 class="header-name">
@@ -95,7 +95,7 @@
     <div class="post-content">
       <h3>ip link</h3>
 <p>Show link layer interface information</p>
-<div class="highlight"><pre><span></span>ip link
+<div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">link</span>
 </pre></div>
 
 
@@ -107,7 +107,7 @@
 
 
 <p>To get statistics about how an interface is communicating, you can query statistics from each interface by passing the -s option to the link subcommand:</p>
-<div class="highlight"><pre><span></span>ip -s link show ens33
+<div class="highlight"><pre><span></span><span class="nv">ip</span> <span class="o">-</span><span class="nv">s</span> <span class="nv">link</span> <span class="k">show</span> <span class="nv">ens33</span>
 </pre></div>
 
 
@@ -148,57 +148,57 @@
 
 
 <p>To get a specific interface, you can use this syntax:</p>
-<div class="highlight"><pre><span></span>ip addr show eth0
+<div class="highlight"><pre><span></span><span class="nv">ip</span> <span class="nv">addr</span> <span class="k">show</span> <span class="nv">eth0</span>
 </pre></div>
 
 
 <h3>ip route</h3>
 <p>The routing table contains kernel information about the paths to other network locations. We can print off the current routing table by typing:</p>
-<div class="highlight"><pre><span></span>ip route
+<div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">route</span>
 </pre></div>
 
 
-<div class="highlight"><pre><span></span>default via 192.168.138.2 dev ens33  proto static  metric 100 
-169.254.0.0/16 dev docker0  scope link  metric 1000 
-172.17.0.0/16 dev docker0  proto kernel  scope link  src 172.17.0.1 
-192.168.138.0/24 dev ens33  proto kernel  scope link  src 192.168.138.128  metric 100
+<div class="highlight"><pre><span></span><span class="k">default</span> <span class="n">via</span> <span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">138</span><span class="p">.</span><span class="mi">2</span> <span class="n">dev</span> <span class="n">ens33</span>  <span class="n">proto</span> <span class="k">static</span>  <span class="n">metric</span> <span class="mi">100</span> 
+<span class="mi">169</span><span class="p">.</span><span class="mi">254</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="mi">16</span> <span class="n">dev</span> <span class="n">docker0</span>  <span class="k">scope</span> <span class="n">link</span>  <span class="n">metric</span> <span class="mi">1000</span> 
+<span class="mi">172</span><span class="p">.</span><span class="mi">17</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="mi">16</span> <span class="n">dev</span> <span class="n">docker0</span>  <span class="n">proto</span> <span class="n">kernel</span>  <span class="k">scope</span> <span class="n">link</span>  <span class="n">src</span> <span class="mi">172</span><span class="p">.</span><span class="mi">17</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span> 
+<span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">138</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="mi">24</span> <span class="n">dev</span> <span class="n">ens33</span>  <span class="n">proto</span> <span class="n">kernel</span>  <span class="k">scope</span> <span class="n">link</span>  <span class="n">src</span> <span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">138</span><span class="p">.</span><span class="mi">128</span>  <span class="n">metric</span> <span class="mi">100</span>
 </pre></div>
 
 
 <h2>How To Configure Network Interfaces and Addresses</h2>
 <h3>Config interface</h3>
-<div class="highlight"><pre><span></span>ip link set eth1 up
-ip link set eth1 down
+<div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">link</span> <span class="k">set</span> <span class="n">eth1</span> <span class="n">up</span>
+<span class="n">ip</span> <span class="n">link</span> <span class="k">set</span> <span class="n">eth1</span> <span class="n">down</span>
 </pre></div>
 
 
 <p>You can also use the ip link subcommand to set attributes about the interface. For instance, if you would like to change the multicast flag on or off for your interface, you can type:</p>
-<div class="highlight"><pre><span></span>ip link set eth1 multicast on
-ip link set eth1 multicast off
+<div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">link</span> <span class="k">set</span> <span class="n">eth1</span> <span class="n">multicast</span> <span class="k">on</span>
+<span class="n">ip</span> <span class="n">link</span> <span class="k">set</span> <span class="n">eth1</span> <span class="n">multicast</span> <span class="k">off</span>
 </pre></div>
 
 
 <p>You can adjust the mtu and package queue length like this:</p>
-<div class="highlight"><pre><span></span>ip link set eth1 mtu 1500
-ip link set eth1 txqueuelen 1000
+<div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">link</span> <span class="k">set</span> <span class="n">eth1</span> <span class="n">mtu</span> <span class="mi">1500</span>
+<span class="n">ip</span> <span class="n">link</span> <span class="k">set</span> <span class="n">eth1</span> <span class="n">txqueuelen</span> <span class="mi">1000</span>
 </pre></div>
 
 
 <p>If the interface you are configuring is down, you can adjust the interface name and the arp flag associated with the device:</p>
-<div class="highlight"><pre><span></span>ip link set eth1 name eth10
-ip link set eth1 arp on
+<div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">link</span> <span class="k">set</span> <span class="n">eth1</span> <span class="n">name</span> <span class="n">eth10</span>
+<span class="n">ip</span> <span class="n">link</span> <span class="k">set</span> <span class="n">eth1</span> <span class="n">arp</span> <span class="k">on</span>
 </pre></div>
 
 
 <p>To adjust the addresses associated with the interfaces, we again use the <code>ip addr</code> subcommand.</p>
 <p>We can add an address to a device by typing:</p>
-<div class="highlight"><pre><span></span>ip addr add ip_address/net_prefix brd + dev interface
+<div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">addr</span> <span class="k">add</span> <span class="n">ip_address</span><span class="o">/</span><span class="n">net_prefix</span> <span class="n">brd</span> <span class="o">+</span> <span class="n">dev</span> <span class="n">interface</span>
 </pre></div>
 
 
 <p>The <code>brd +</code> portion of the command automatically sets the broadcast address. Multiple addresses can be added to each interface without a problem.</p>
 <p>We can get rid of addresses with the inverse operation. To delete a specific address associated with an interface, you can use it like this:</p>
-<div class="highlight"><pre><span></span>ip addr del ip_address/net_prefix dev interface
+<div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">addr</span> <span class="n">del</span> <span class="n">ip_address</span><span class="o">/</span><span class="n">net_prefix</span> <span class="n">dev</span> <span class="n">interface</span>
 </pre></div>
 
 
@@ -208,22 +208,22 @@ ip link set eth1 arp on
 <p>IPRoute2 has some additional capabilities that we will not be able to discuss in-depth in this guide. Instead, we will talk about what these are and what situations you may find them useful.</p>
 <p>The idea of IP routing rules is difficult to talk about because it is very situation dependent. Basically, you can decide on how to route traffic based on a number of fields, including target address, source address, routing protocol, packet size, etc.</p>
 <p>We access this functionality by using the ip rule subcommand. The basic querying follows the general pattern of the other subcommands:</p>
-<div class="highlight"><pre><span></span>ip rule show
-0:  from all lookup local 
-32766:  from all lookup main 
-32767:  from all lookup default
+<div class="highlight"><pre><span></span><span class="nv">ip</span> <span class="nv">rule</span> <span class="k">show</span>
+<span class="mi">0</span>:  <span class="nv">from</span> <span class="nv">all</span> <span class="nv">lookup</span> <span class="nv">local</span> 
+<span class="mi">32766</span>:  <span class="nv">from</span> <span class="nv">all</span> <span class="nv">lookup</span> <span class="nv">main</span> 
+<span class="mi">32767</span>:  <span class="nv">from</span> <span class="nv">all</span> <span class="nv">lookup</span> <span class="nv">default</span>
 </pre></div>
 
 
 <p>These three routing rules are the default rules configured by the kernel. The first line matches any traffic and is used to route high priority traffic. The second line is the main rule that handles normal routing. The last one is an empty rule that is used for post-processing if the rules above didn't match the packet.</p>
 <p>Routing rules, as configured by the IPRoute2 software, are stored in a routing policy database, where the policy is selected by matching against sets of rules. We can add or delete rules using the appropriate actions. You should not do this without knowing what you are doing however. Look at the man pages and search for ip rule for more information.</p>
-<div class="highlight"><pre><span></span>man ip         # search for &quot;ip rule&quot;
+<div class="highlight"><pre><span></span><span class="nv">man</span> <span class="nv">ip</span>         # <span class="nv">search</span> <span class="k">for</span> <span class="s2">&quot;</span><span class="s">ip rule</span><span class="s2">&quot;</span>
 </pre></div>
 
 
 <p>Another thing that we'll discuss briefly is the handling of arp information through these tools. The subcommand that deals with this information is called ip neigh.</p>
-<div class="highlight"><pre><span></span>ip neigh
-107.170.58.1 dev eth0 lladdr 00:00:5e:00:01:68 DELAY
+<div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">neigh</span>
+<span class="mi">107</span><span class="p">.</span><span class="mi">170</span><span class="p">.</span><span class="mi">58</span><span class="p">.</span><span class="mi">1</span> <span class="n">dev</span> <span class="n">eth0</span> <span class="n">lladdr</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">5</span><span class="n">e</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mi">68</span> <span class="n">DELAY</span>
 </pre></div>
 
 

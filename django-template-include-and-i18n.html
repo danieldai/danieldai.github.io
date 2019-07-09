@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://danieldai.cn/django-template-include-and-i18n.html" />
 
-    <title>  Daniel Dai - Linux, Network and Web Tech &mdash; Django Template Include and I18n
+    <title>  Daniel Dai - Python, Java and Web &mdash; Django Template Include and I18n
 </title>
 
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/>
@@ -58,7 +58,7 @@
 <header class="header">
   <div class="container">
       <div class="header-image pull-left">
-        <a class="nodec" href="https://danieldai.cn"><img src=/daniel_150.png></a>
+        <a class="nodec" href="https://danieldai.cn"><img src=/daniel_150.jpeg></a>
       </div>
     <div class="header-inner">
       <h1 class="header-name">
@@ -97,7 +97,7 @@
     </ul>
     <div class="post-content">
       <p>In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.</p>
-<div class="highlight"><pre><span></span>{% include &quot;include/another_template.html&quot; with text=&#39;I love Python&#39; %}
+<div class="highlight"><pre><span></span>{<span class="o">%</span> <span class="k">include</span> <span class="s2">&quot;</span><span class="s">include/another_template.html</span><span class="s2">&quot;</span> <span class="nv">with</span> <span class="nv">text</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">I love Python</span><span class="s1">&#39;</span> <span class="o">%</span>}
 </pre></div>
 
 
@@ -110,8 +110,8 @@
 
 
 <p>We need to do the translation in the first temalate, before passing it to another template:</p>
-<div class="highlight"><pre><span></span>{% trans &#39;I love Python&#39; as text %}
-{% include &quot;include/another_template.html&quot; with text=text %}
+<div class="highlight"><pre><span></span>{<span class="o">%</span> <span class="nv">trans</span> <span class="s1">&#39;</span><span class="s">I love Python</span><span class="s1">&#39;</span> <span class="nv">as</span> <span class="nv">text</span> <span class="o">%</span>}
+{<span class="o">%</span> <span class="k">include</span> <span class="s2">&quot;</span><span class="s">include/another_template.html</span><span class="s2">&quot;</span> <span class="nv">with</span> <span class="nv">text</span><span class="o">=</span><span class="nv">text</span> <span class="o">%</span>}
 </pre></div>
 
 

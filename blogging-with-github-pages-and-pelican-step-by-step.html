@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://danieldai.cn/blogging-with-github-pages-and-pelican-step-by-step.html" />
 
-    <title>  Daniel Dai - Linux, Network and Web Tech &mdash; Blogging with GitHub Pages and Pelican Step by Step
+    <title>  Daniel Dai - Python, Java and Web &mdash; Blogging with GitHub Pages and Pelican Step by Step
 </title>
 
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/>
@@ -58,7 +58,7 @@
 <header class="header">
   <div class="container">
       <div class="header-image pull-left">
-        <a class="nodec" href="https://danieldai.cn"><img src=/daniel_150.png></a>
+        <a class="nodec" href="https://danieldai.cn"><img src=/daniel_150.jpeg></a>
       </div>
     <div class="header-inner">
       <h1 class="header-name">
@@ -102,92 +102,92 @@ As you know, <strong><a href="http://danieldai.cn">DanielDai.cn</a></strong> is 
 <p>I'm going to tell you how to blog with <strong>GitHub Pages</strong> and <strong>Pelican</strong> from scratch in this article.</p>
 <h2>1. Setup the Repository</h2>
 <p>First, you need to create a repo on GitHub to contain the content of the blog. Please follow the <a href="https://pages.github.com/">guides</a> provided by <strong>GitHub Pages</strong> to setup the repo. If you are creating a user site, the name of the repo would be <code>username.github.io</code>. At last you should have your repo cloned to your local machine:</p>
-<div class="highlight"><pre><span></span>git clone https://github.com/username/username.github.io
+<div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">username</span><span class="o">/</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
 </pre></div>
 
 
 <p>As the content of the site must be on <code>master</code> branch, which is required by GitHub Pages, to keep the repo clean, I will use a seperated branch to contain the source code. I choosed to use <code>source</code> name the branch, you can choose any name you like except <code>master</code></p>
-<div class="highlight"><pre><span></span>git checkout -b source
+<div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="k">source</span>
 </pre></div>
 
 
 <h3>How <code>master</code> and <code>source</code> branchs related to each other?</h3>
 <p>Unlike normal git repositories, in this repo, <code>master</code> branch and <code>source</code> branches are 2 parallel branches that only share a common parent, but will never merge together in future. The content of each commits on <code>master</code> branch is generated output by Pelican from the content of some commits on <code>source</code> branch, and usually <code>source</code> branch has more commits than <code>master</code> branch.</p>
-<div class="highlight"><pre><span></span>o----o----o----o----o----o master branch
- \
-  \---o--o--o--o--o--o--o--o--o--o--o--o--o--o--o source branch    
+<div class="highlight"><pre><span></span><span class="n">o</span><span class="c1">----o----o----o----o----o master branch</span>
+ <span class="err">\</span>
+  <span class="err">\</span><span class="c1">---o--o--o--o--o--o--o--o--o--o--o--o--o--o--o source branch    </span>
 </pre></div>
 
 
 <p>each commit on <code>master</code> branch is the compiled result of on commit on <code>source</code> branch</p>
 <h2>2. Install Pelican</h2>
 <p>Next, install Pelican and other utils on your local machine. Use your favorite text editor create a new files called <code>requirements.txt</code>, add the following lines to this file:</p>
-<div class="highlight"><pre><span></span>markdown
-pelican
-typogrify
-fabric
-ghp-import
+<div class="highlight"><pre><span></span><span class="n">markdown</span>
+<span class="n">pelican</span>
+<span class="n">typogrify</span>
+<span class="n">fabric</span>
+<span class="n">ghp</span><span class="o">-</span><span class="n">import</span>
 </pre></div>
 
 
 <p>And then run</p>
-<div class="highlight"><pre><span></span>pip install -r requirements.txt
+<div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 
 
 <p>If you like, you can save current state of <code>source</code> as a new commit.</p>
 <h2>3. Start Pelican Project</h2>
 <p>Run this command in repo dir, to start a new Pelican project:</p>
-<div class="highlight"><pre><span></span>pelican-quickstart
+<div class="highlight"><pre><span></span><span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span>
 </pre></div>
 
 
 <p>Pelican will ask you some questions:</p>
-<div class="highlight"><pre><span></span>(danidai)ming/tmp/pel$ pelican-quickstart
-Welcome to pelican-quickstart v3.6.3.
+<div class="highlight"><pre><span></span><span class="ss">(</span><span class="nv">danidai</span><span class="ss">)</span><span class="nv">ming</span><span class="o">/</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">pel</span>$ <span class="nv">pelican</span><span class="o">-</span><span class="nv">quickstart</span>
+<span class="nv">Welcome</span> <span class="nv">to</span> <span class="nv">pelican</span><span class="o">-</span><span class="nv">quickstart</span> <span class="nv">v3</span>.<span class="mi">6</span>.<span class="mi">3</span>.
 
-This script will help you create a new Pelican-based website.
+<span class="nv">This</span> <span class="nv">script</span> <span class="nv">will</span> <span class="nv">help</span> <span class="nv">you</span> <span class="nv">create</span> <span class="nv">a</span> <span class="nv">new</span> <span class="nv">Pelican</span><span class="o">-</span><span class="nv">based</span> <span class="nv">website</span>.
 
-Please answer the following questions so this script can generate the files
-needed by Pelican.
+<span class="nv">Please</span> <span class="nv">answer</span> <span class="nv">the</span> <span class="nv">following</span> <span class="nv">questions</span> <span class="nv">so</span> <span class="nv">this</span> <span class="nv">script</span> <span class="nv">can</span> <span class="nv">generate</span> <span class="nv">the</span> <span class="nv">files</span>
+<span class="nv">needed</span> <span class="nv">by</span> <span class="nv">Pelican</span>.
 
 
-&gt; Where do you want to create your new web site? [.]
-&gt; What will be the title of this web site? Pelican site
-&gt; Who will be the author of this web site? Daniel Dai
-&gt; What will be the default language of this web site? [en]
-&gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n)
-&gt; What is your URL prefix? (see above example; no trailing slash)
-You must enter something
-&gt; What is your URL prefix? (see above example; no trailing slash) http://danieldai.cn
-&gt; Do you want to enable article pagination? (Y/n) Y
-&gt; How many articles per page do you want? [10]
-&gt; What is your time zone? [Europe/Paris]
-&gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n)
-&gt; Do you want an auto-reload &amp; simpleHTTP script to assist with theme and site development? (Y/n)
-&gt; Do you want to upload your website using FTP? (y/N)
-&gt; Do you want to upload your website using SSH? (y/N)
-&gt; Do you want to upload your website using Dropbox? (y/N)
-&gt; Do you want to upload your website using S3? (y/N)
-&gt; Do you want to upload your website using Rackspace Cloud Files? (y/N)
-&gt; Do you want to upload your website using GitHub Pages? (y/N) y
-&gt; Is this your personal page (username.github.io)? (y/N) danieldai.github.io
-You must answer &#39;yes&#39; or &#39;no&#39;
-&gt; Is this your personal page (username.github.io)? (y/N) y
-Done. Your new project is available at /private/tmp/pel
+<span class="o">&gt;</span> <span class="nv">Where</span> <span class="k">do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">create</span> <span class="nv">your</span> <span class="nv">new</span> <span class="nv">web</span> <span class="nv">site</span>? [.]
+<span class="o">&gt;</span> <span class="nv">What</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">the</span> <span class="nv">title</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">web</span> <span class="nv">site</span>? <span class="nv">Pelican</span> <span class="nv">site</span>
+<span class="o">&gt;</span> <span class="nv">Who</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">the</span> <span class="nv">author</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">web</span> <span class="nv">site</span>? <span class="nv">Daniel</span> <span class="nv">Dai</span>
+<span class="o">&gt;</span> <span class="nv">What</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">the</span> <span class="nv">default</span> <span class="nv">language</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">web</span> <span class="nv">site</span>? [<span class="nv">en</span>]
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">a</span> <span class="nv">URL</span> <span class="nv">prefix</span>? <span class="nv">e</span>.<span class="nv">g</span>., <span class="nv">http</span>:<span class="o">//</span><span class="nv">example</span>.<span class="nv">com</span>   <span class="ss">(</span><span class="nv">Y</span><span class="o">/</span><span class="nv">n</span><span class="ss">)</span>
+<span class="o">&gt;</span> <span class="nv">What</span> <span class="nv">is</span> <span class="nv">your</span> <span class="nv">URL</span> <span class="nv">prefix</span>? <span class="ss">(</span><span class="nv">see</span> <span class="nv">above</span> <span class="nv">example</span><span class="c1">; no trailing slash)</span>
+<span class="nv">You</span> <span class="nv">must</span> <span class="nv">enter</span> <span class="nv">something</span>
+<span class="o">&gt;</span> <span class="nv">What</span> <span class="nv">is</span> <span class="nv">your</span> <span class="nv">URL</span> <span class="nv">prefix</span>? <span class="ss">(</span><span class="nv">see</span> <span class="nv">above</span> <span class="nv">example</span><span class="c1">; no trailing slash) http://danieldai.cn</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">enable</span> <span class="nv">article</span> <span class="nv">pagination</span>? <span class="ss">(</span><span class="nv">Y</span><span class="o">/</span><span class="nv">n</span><span class="ss">)</span> <span class="nv">Y</span>
+<span class="o">&gt;</span> <span class="nv">How</span> <span class="nv">many</span> <span class="nv">articles</span> <span class="nv">per</span> <span class="nv">page</span> <span class="k">do</span> <span class="nv">you</span> <span class="nv">want</span>? [<span class="mi">10</span>]
+<span class="o">&gt;</span> <span class="nv">What</span> <span class="nv">is</span> <span class="nv">your</span> <span class="nv">time</span> <span class="nv">zone</span>? [<span class="nv">Europe</span><span class="o">/</span><span class="nv">Paris</span>]
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">generate</span> <span class="nv">a</span> <span class="nv">Fabfile</span><span class="o">/</span><span class="nv">Makefile</span> <span class="nv">to</span> <span class="nv">automate</span> <span class="nv">generation</span> <span class="nv">and</span> <span class="nv">publishing</span>? <span class="ss">(</span><span class="nv">Y</span><span class="o">/</span><span class="nv">n</span><span class="ss">)</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">an</span> <span class="nv">auto</span><span class="o">-</span><span class="nv">reload</span> <span class="o">&amp;</span> <span class="nv">simpleHTTP</span> <span class="nv">script</span> <span class="nv">to</span> <span class="nv">assist</span> <span class="nv">with</span> <span class="nv">theme</span> <span class="nv">and</span> <span class="nv">site</span> <span class="nv">development</span>? <span class="ss">(</span><span class="nv">Y</span><span class="o">/</span><span class="nv">n</span><span class="ss">)</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">FTP</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">SSH</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">Dropbox</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">S3</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">Rackspace</span> <span class="nv">Cloud</span> <span class="nv">Files</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">GitHub</span> <span class="nv">Pages</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">y</span>
+<span class="o">&gt;</span> <span class="nv">Is</span> <span class="nv">this</span> <span class="nv">your</span> <span class="nv">personal</span> <span class="nv">page</span> <span class="ss">(</span><span class="nv">username</span>.<span class="nv">github</span>.<span class="nv">io</span><span class="ss">)</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">danieldai</span>.<span class="nv">github</span>.<span class="nv">io</span>
+<span class="nv">You</span> <span class="nv">must</span> <span class="nv">answer</span> <span class="s1">&#39;</span><span class="s">yes</span><span class="s1">&#39;</span> <span class="nv">or</span> <span class="s1">&#39;</span><span class="s">no</span><span class="s1">&#39;</span>
+<span class="o">&gt;</span> <span class="nv">Is</span> <span class="nv">this</span> <span class="nv">your</span> <span class="nv">personal</span> <span class="nv">page</span> <span class="ss">(</span><span class="nv">username</span>.<span class="nv">github</span>.<span class="nv">io</span><span class="ss">)</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">y</span>
+<span class="nv">Done</span>. <span class="nv">Your</span> <span class="nv">new</span> <span class="nv">project</span> <span class="nv">is</span> <span class="nv">available</span> <span class="nv">at</span> <span class="o">/</span><span class="nv">private</span><span class="o">/</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">pel</span>
 </pre></div>
 
 
 <p>These are the files generated by Pelican:</p>
-<div class="highlight"><pre><span></span>(danidai)ming/tmp/pel$ find .
-.
-./content             # the content of the site goes here
-./develop_server.sh
-./fabfile.py
-./Makefile
-./output
-./pelicanconf.py
-./publishconf.py
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="n">danidai</span><span class="p">)</span><span class="n">ming</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">pel$</span> <span class="n">find</span> <span class="p">.</span>
+<span class="p">.</span>
+<span class="p">.</span><span class="o">/</span><span class="n">content</span>             <span class="o">#</span> <span class="n">the</span> <span class="n">content</span> <span class="k">of</span> <span class="n">the</span> <span class="n">site</span> <span class="n">goes</span> <span class="n">here</span>
+<span class="p">.</span><span class="o">/</span><span class="n">develop_server</span><span class="p">.</span><span class="n">sh</span>
+<span class="p">.</span><span class="o">/</span><span class="n">fabfile</span><span class="p">.</span><span class="n">py</span>
+<span class="p">.</span><span class="o">/</span><span class="n">Makefile</span>
+<span class="p">.</span><span class="o">/</span><span class="k">output</span>
+<span class="p">.</span><span class="o">/</span><span class="n">pelicanconf</span><span class="p">.</span><span class="n">py</span>
+<span class="p">.</span><span class="o">/</span><span class="n">publishconf</span><span class="p">.</span><span class="n">py</span>
 </pre></div>
 
 
@@ -216,14 +216,14 @@ Done. Your new project is available at /private/tmp/pel
 <ul>
 <li>compile content in to HTML</li>
 </ul>
-<div class="highlight"><pre><span></span>fab build
+<div class="highlight"><pre><span></span><span class="n">fab</span> <span class="n">build</span>
 </pre></div>
 
 
 <ul>
 <li>start dev server</li>
 </ul>
-<div class="highlight"><pre><span></span>fab serve
+<div class="highlight"><pre><span></span><span class="n">fab</span> <span class="n">serve</span>
 </pre></div>
 
 
@@ -231,23 +231,23 @@ Done. Your new project is available at /private/tmp/pel
 <li>visit http://localhost:8888 to review it</li>
 <li>publish to <code>master</code> branch</li>
 </ul>
-<div class="highlight"><pre><span></span>fab pages:&#39;&lt;commit message for master branch&gt;&#39;
+<div class="highlight"><pre><span></span><span class="nv">fab</span> <span class="nv">pages</span>:<span class="s1">&#39;</span><span class="s">&lt;commit message for master branch&gt;</span><span class="s1">&#39;</span>
 </pre></div>
 
 
 <ul>
 <li>publish to GitHub Pages</li>
 </ul>
-<div class="highlight"><pre><span></span>fab push
+<div class="highlight"><pre><span></span><span class="n">fab</span> <span class="n">push</span>
 </pre></div>
 
 
 <ul>
 <li>push source branch</li>
 </ul>
-<div class="highlight"><pre><span></span>git add .
-git commit -m &quot;&lt;commit message for source branch&quot;
-git push
+<div class="highlight"><pre><span></span><span class="nv">git</span> <span class="nv">add</span> .
+<span class="nv">git</span> <span class="nv">commit</span> <span class="o">-</span><span class="nv">m</span> <span class="s2">&quot;</span><span class="s">&lt;commit message for source branch</span><span class="s2">&quot;</span>
+<span class="nv">git</span> <span class="nv">push</span>
 </pre></div>
 
 

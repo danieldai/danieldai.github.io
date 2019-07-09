@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://danieldai.cn/java-language-notes.html" />
 
-    <title>  Daniel Dai - Linux, Network and Web Tech &mdash; Java Language Notes
+    <title>  Daniel Dai - Python, Java and Web &mdash; Java Language Notes
 </title>
 
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/>
@@ -58,7 +58,7 @@
 <header class="header">
   <div class="container">
       <div class="header-image pull-left">
-        <a class="nodec" href="https://danieldai.cn"><img src=/daniel_150.png></a>
+        <a class="nodec" href="https://danieldai.cn"><img src=/daniel_150.jpeg></a>
       </div>
     <div class="header-inner">
       <h1 class="header-name">
@@ -156,15 +156,15 @@
 <li>characters</li>
 <li>Boolean types</li>
 </ul>
-<div class="highlight"><pre><span></span>public class ComputeArea {
-  double radius;
-  double area;
+<div class="highlight"><pre><span></span><span class="nv">public</span> <span class="nv">class</span> <span class="nv">ComputeArea</span> {
+  <span class="nv">double</span> <span class="nv">radius</span><span class="c1">;</span>
+  <span class="nv">double</span> <span class="nv">area</span><span class="c1">;</span>
 
-  radius = 20;
-  area = radius * radius * 3.14159;
+  <span class="nv">radius</span> <span class="o">=</span> <span class="mi">20</span><span class="c1">;</span>
+  <span class="nv">area</span> <span class="o">=</span> <span class="nv">radius</span> <span class="o">*</span> <span class="nv">radius</span> <span class="o">*</span> <span class="mi">3</span>.<span class="mi">14159</span><span class="c1">;</span>
 
-  System.out.println(&quot;The area for the circle of radius &quot; +
-    radius + &quot; is &quot; + area);
+  <span class="nv">System</span>.<span class="nv">out</span>.<span class="nv">println</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">The area for the circle of radius </span><span class="s2">&quot;</span> <span class="o">+</span>
+    <span class="nv">radius</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="s"> is </span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nv">area</span><span class="ss">)</span><span class="c1">;</span>
   }
 }
 </pre></div>
@@ -174,7 +174,7 @@
 <li>is also string concatenation operator, if on of the operands is nonstring, the nonstring value is converted into a string and concatenated with the other sring.</li>
 </ul>
 <h3>read input</h3>
-<div class="highlight"><pre><span></span>Scanner input = new Scanner(System.in);
+<div class="highlight"><pre><span></span><span class="n">Scanner</span> <span class="k">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="k">System</span><span class="p">.</span><span class="k">in</span><span class="p">);</span>
 </pre></div>
 
 
@@ -216,17 +216,17 @@
 </ul>
 <h2>Variables</h2>
 <p>variable declarations</p>
-<div class="highlight"><pre><span></span>int i, j, k;
-int i = 1;
-int i = j = k = 1;
-int count;
-double radius;
-double interestRate;
+<div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">;</span>
+<span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nb">int</span> <span class="k">count</span><span class="p">;</span>
+<span class="n">double</span> <span class="n">radius</span><span class="p">;</span>
+<span class="n">double</span> <span class="n">interestRate</span><span class="p">;</span>
 </pre></div>
 
 
 <h2>Constants</h2>
-<div class="highlight"><pre><span></span>final double PI = 3.14159;
+<div class="highlight"><pre><span></span><span class="k">final</span> <span class="n">double</span> <span class="n">PI</span> <span class="o">=</span> <span class="mi">3</span><span class="p">.</span><span class="mi">14159</span><span class="p">;</span>
 </pre></div>
 
 
@@ -247,15 +247,15 @@ double interestRate;
 </ul>
 <p>By default floating-point literal is treated as a <code>double</code> type value, to make a nubmer of float: 100.2F, double: 200.2D</p>
 <h3>Character Data Type</h3>
-<div class="highlight"><pre><span></span>char letter = &#39;A&#39;;  //&quot;A&quot; is a string, and &#39;A&#39; is a character;
-char numChar = &#39;4&#39;;
+<div class="highlight"><pre><span></span><span class="nb">char</span> <span class="n">letter</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span><span class="p">;</span>  <span class="o">//</span><span class="ss">&quot;A&quot;</span> <span class="k">is</span> <span class="n">a</span> <span class="n">string</span><span class="p">,</span> <span class="k">and</span> <span class="s1">&#39;A&#39;</span> <span class="k">is</span> <span class="n">a</span> <span class="nb">character</span><span class="p">;</span>
+<span class="nb">char</span> <span class="n">numChar</span> <span class="o">=</span> <span class="s1">&#39;4&#39;</span><span class="p">;</span>
 </pre></div>
 
 
 <h2>Unicode and ASCII</h2>
 <p>Mapping a character to its binary representaion is called <code>encoding</code></p>
 <h2>String</h2>
-<div class="highlight"><pre><span></span>String message = &quot;Welcome to Java&quot;;
+<div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">message</span> <span class="o">=</span> <span class="ss">&quot;Welcome to Java&quot;</span><span class="p">;</span>
 </pre></div>
 
 
@@ -267,17 +267,17 @@ char numChar = &#39;4&#39;;
 
 
 <h2>Converting String to numbers</h2>
-<div class="highlight"><pre><span></span>int a = Integer.parseInt(intStr);
-double b = Double.parseDouble(str);
+<div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">Integer</span><span class="p">.</span><span class="n">parseInt</span><span class="p">(</span><span class="n">intStr</span><span class="p">);</span>
+<span class="n">double</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="n">parseDouble</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
 </pre></div>
 
 
 <h1>Flow Control</h1>
-<div class="highlight"><pre><span></span>if (radius &lt; 0) {
-  System.out.println(&quot;Bad input&quot;);
-} else {
-  area = radius * radius * PI;
-  System.out.println(&quot;Area is &quot; + area);
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="ss">(</span><span class="nv">radius</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="ss">)</span> {
+  <span class="nv">System</span>.<span class="nv">out</span>.<span class="nv">println</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Bad input</span><span class="s2">&quot;</span><span class="ss">)</span><span class="c1">;</span>
+} <span class="k">else</span> {
+  <span class="nv">area</span> <span class="o">=</span> <span class="nv">radius</span> <span class="o">*</span> <span class="nv">radius</span> <span class="o">*</span> <span class="nv">PI</span><span class="c1">;</span>
+  <span class="nv">System</span>.<span class="nv">out</span>.<span class="nv">println</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Area is </span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nv">area</span><span class="ss">)</span><span class="c1">;</span>
 }
 </pre></div>
 
@@ -287,7 +287,7 @@ double b = Double.parseDouble(str);
 <li>true</li>
 <li>false</li>
 </ul>
-<div class="highlight"><pre><span></span>boolean lightsOn = true;
+<div class="highlight"><pre><span></span><span class="nb">boolean</span> <span class="n">lightsOn</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
 </pre></div>
 
 
@@ -301,30 +301,30 @@ double b = Double.parseDouble(str);
 <li><code>!=</code></li>
 </ul>
 <h2>if statement</h2>
-<div class="highlight"><pre><span></span>if (i &gt; 0) {
-  System.out.println(&quot;is is positive&quot;);
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="ss">(</span><span class="nv">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="ss">)</span> {
+  <span class="nv">System</span>.<span class="nv">out</span>.<span class="nv">println</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">is is positive</span><span class="s2">&quot;</span><span class="ss">)</span><span class="c1">;</span>
 }
 </pre></div>
 
 
 <h2>if else statement</h2>
-<div class="highlight"><pre><span></span>if (boolean-expression) {
-  statements;
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="ss">(</span><span class="nv">boolean</span><span class="o">-</span><span class="nv">expression</span><span class="ss">)</span> {
+  <span class="nv">statements</span><span class="c1">;</span>
 }
-else {
-  statements;
+<span class="k">else</span> {
+  <span class="nv">statements</span><span class="c1">;</span>
 }
 </pre></div>
 
 
 <h2>nested if</h2>
-<div class="highlight"><pre><span></span>if (i &gt; k) {
-  if (j &gt; k) {
-    statements;
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="ss">(</span><span class="nv">i</span> <span class="o">&gt;</span> <span class="nv">k</span><span class="ss">)</span> {
+  <span class="k">if</span> <span class="ss">(</span><span class="nv">j</span> <span class="o">&gt;</span> <span class="nv">k</span><span class="ss">)</span> {
+    <span class="nv">statements</span><span class="c1">;</span>
   }
 } 
-else {
-  statements;
+<span class="k">else</span> {
+  <span class="nv">statements</span><span class="c1">;</span>
 }
 </pre></div>
 
@@ -337,13 +337,13 @@ else {
 <li><code>^</code></li>
 </ul>
 <h2>switch</h2>
-<div class="highlight"><pre><span></span><span class="nt">switch</span> <span class="o">(</span><span class="nt">status</span><span class="o">)</span> <span class="p">{</span>
-  <span class="err">case</span> <span class="err">0:</span> <span class="err">statements</span><span class="p">;</span>
-          <span class="err">break</span><span class="p">;</span>
-  <span class="err">case</span> <span class="err">1:</span> <span class="err">statements</span><span class="p">;</span>
-          <span class="err">break</span><span class="p">;</span>
-  <span class="n">default</span><span class="p">:</span> <span class="n">statements</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><span class="nv">switch</span> <span class="ss">(</span><span class="nv">status</span><span class="ss">)</span> {
+  <span class="nv">case</span> <span class="mi">0</span>: <span class="nv">statements</span><span class="c1">;</span>
+          <span class="k">break</span><span class="c1">;</span>
+  <span class="nv">case</span> <span class="mi">1</span>: <span class="nv">statements</span><span class="c1">;</span>
+          <span class="k">break</span><span class="c1">;</span>
+  <span class="nv">default</span>: <span class="nv">statements</span><span class="c1">;</span>
+}
 </pre></div>
 
 
@@ -353,29 +353,29 @@ else {
 
 
 <h2>while loop</h2>
-<div class="highlight"><pre><span></span>while (loop-condition) {
-  stateements;
+<div class="highlight"><pre><span></span><span class="k">while</span> <span class="ss">(</span><span class="k">loop</span><span class="o">-</span><span class="nv">condition</span><span class="ss">)</span> {
+  <span class="nv">stateements</span><span class="c1">;</span>
 }
 </pre></div>
 
 
 <h2>do-while loop</h2>
-<div class="highlight"><pre><span></span>do {
-  statements;
-} while (condition);
+<div class="highlight"><pre><span></span><span class="k">do</span> {
+  <span class="nv">statements</span><span class="c1">;</span>
+} <span class="k">while</span> <span class="ss">(</span><span class="nv">condition</span><span class="ss">)</span><span class="c1">;</span>
 </pre></div>
 
 
 <h2>for loop</h2>
-<div class="highlight"><pre><span></span>for (i = 0; i &lt; 99; i++) {
-  statements;
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="ss">(</span><span class="nv">i</span> <span class="o">=</span> <span class="mi">0</span><span class="c1">; i &lt; 99; i++) {</span>
+  <span class="nv">statements</span><span class="c1">;</span>
 }
 </pre></div>
 
 
 <h2>for-each loop</h2>
-<div class="highlight"><pre><span></span>for (double u: myList) { 
-  System.out.println(u);
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="ss">(</span><span class="nv">double</span> <span class="nv">u</span>: <span class="nv">myList</span><span class="ss">)</span> { 
+  <span class="nv">System</span>.<span class="nv">out</span>.<span class="nv">println</span><span class="ss">(</span><span class="nv">u</span><span class="ss">)</span><span class="c1">;</span>
 }
 </pre></div>
 
@@ -396,18 +396,18 @@ else {
 <li><code>%10.2f</code> Output the floating item with width at least 10 including a decimal point</li>
 </ul>
 <h1>Methods</h1>
-<div class="highlight"><pre><span></span>public static int sum(int i1, int i2) {
-  int sum = 0;
-  for (int i = i1; i &lt;= i2; i++) {
-    sum += i;
+<div class="highlight"><pre><span></span><span class="nv">public</span> <span class="nv">static</span> <span class="nv">int</span> <span class="nv">sum</span><span class="ss">(</span><span class="nv">int</span> <span class="nv">i1</span>, <span class="nv">int</span> <span class="nv">i2</span><span class="ss">)</span> {
+  <span class="nv">int</span> <span class="nv">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="c1">;</span>
+  <span class="k">for</span> <span class="ss">(</span><span class="nv">int</span> <span class="nv">i</span> <span class="o">=</span> <span class="nv">i1</span><span class="c1">; i &lt;= i2; i++) {</span>
+    <span class="nv">sum</span> <span class="o">+=</span> <span class="nv">i</span><span class="c1">;</span>
   }
 
-  return sum; // method return something back
+  <span class="k">return</span> <span class="nv">sum</span><span class="c1">; // method return something back</span>
 }
 
-// void method does not returning value
-public static void main(String[] args) {
-  System.out.println(&quot;System from 1 to 10 is&quot; + sum(1, 10));
+<span class="o">//</span> <span class="nv">void</span> <span class="nv">method</span> <span class="nv">does</span> <span class="nv">not</span> <span class="nv">returning</span> <span class="nv">value</span>
+<span class="nv">public</span> <span class="nv">static</span> <span class="nv">void</span> <span class="nv">main</span><span class="ss">(</span><span class="nv">String</span>[] <span class="nv">args</span><span class="ss">)</span> {
+  <span class="nv">System</span>.<span class="nv">out</span>.<span class="nv">println</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">System from 1 to 10 is</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nv">sum</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">10</span><span class="ss">))</span><span class="c1">;</span>
 }
 </pre></div>
 
@@ -417,22 +417,22 @@ public static void main(String[] args) {
 <p>pass by value</p>
 <h2>OverLoading</h2>
 <p>two methods have the same name but different parameter lists within one class, can not overload methods with just different return type</p>
-<div class="highlight"><pre><span></span>public static int max(int a, int b) {
-  if (a &gt; b) {
-    return a;
+<div class="highlight"><pre><span></span><span class="nv">public</span> <span class="nv">static</span> <span class="nv">int</span> <span class="nv">max</span><span class="ss">(</span><span class="nv">int</span> <span class="nv">a</span>, <span class="nv">int</span> <span class="nv">b</span><span class="ss">)</span> {
+  <span class="k">if</span> <span class="ss">(</span><span class="nv">a</span> <span class="o">&gt;</span> <span class="nv">b</span><span class="ss">)</span> {
+    <span class="k">return</span> <span class="nv">a</span><span class="c1">;</span>
   }
-  else {
-    return b;
+  <span class="k">else</span> {
+    <span class="k">return</span> <span class="nv">b</span><span class="c1">;</span>
   }
 }
 
-// max(int, double) will also invoke this one
-public static double max(double a, double b) {
-  if (a &gt; b) {
-    return a;
+<span class="o">//</span> <span class="nv">max</span><span class="ss">(</span><span class="nv">int</span>, <span class="nv">double</span><span class="ss">)</span> <span class="nv">will</span> <span class="nv">also</span> <span class="nv">invoke</span> <span class="nv">this</span> <span class="nv">one</span>
+<span class="nv">public</span> <span class="nv">static</span> <span class="nv">double</span> <span class="nv">max</span><span class="ss">(</span><span class="nv">double</span> <span class="nv">a</span>, <span class="nv">double</span> <span class="nv">b</span><span class="ss">)</span> {
+  <span class="k">if</span> <span class="ss">(</span><span class="nv">a</span> <span class="o">&gt;</span> <span class="nv">b</span><span class="ss">)</span> {
+    <span class="k">return</span> <span class="nv">a</span><span class="c1">;</span>
   }
-  else {
-    return b;
+  <span class="k">else</span> {
+    <span class="k">return</span> <span class="nv">b</span><span class="c1">;</span>
   }
 }
 </pre></div>
@@ -447,11 +447,11 @@ public static double max(double a, double b) {
 </ul>
 <h1>Data Structure</h1>
 <h2>Array</h2>
-<div class="highlight"><pre><span></span>double[] numbers = new double[20];
-numbers[0] = 2.0;
-//
-// array initilizer 
-double[] myList = {1.9, 2.9, 3.4, 3.5};
+<div class="highlight"><pre><span></span><span class="n">double</span><span class="p">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">double</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+<span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+<span class="o">//</span>
+<span class="o">//</span> <span class="nb">array</span> <span class="n">initilizer</span> 
+<span class="n">double</span><span class="p">[]</span> <span class="n">myList</span> <span class="o">=</span> <span class="err">{</span><span class="mi">1</span><span class="p">.</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">.</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">.</span><span class="mi">5</span><span class="err">}</span><span class="p">;</span>
 </pre></div>
 
 
@@ -459,8 +459,8 @@ double[] myList = {1.9, 2.9, 3.4, 3.5};
 <p>array size can not be changed after created, and when an array is created, its elements are assigned the default value of <code>0</code> for the numeric primitive data types, <code>\u0000</code> for char types, and <code>false</code> for boolean types.</p>
 <h2>Array coping</h2>
 <p>In Java, you can use assignment statements to copy primitive data type variables, but not arrays.</p>
-<div class="highlight"><pre><span></span> list2 = list1;
- // list1 and list2 reference to the same array
+<div class="highlight"><pre><span></span> <span class="n">list2</span> <span class="o">=</span> <span class="n">list1</span><span class="p">;</span>
+ <span class="o">//</span> <span class="n">list1</span> <span class="k">and</span> <span class="n">list2</span> <span class="n">reference</span> <span class="k">to</span> <span class="n">the</span> <span class="n">same</span> <span class="nb">array</span>
 </pre></div>
 
 
@@ -474,57 +474,57 @@ double[] myList = {1.9, 2.9, 3.4, 3.5};
 <h2>Variable-Length Arguemnt list</h2>
 <p>Only one variable-length parameter may be specified in a method, and this parameter must be the last parameter.</p>
 <p>You can pass an array or a variable number of arguments to a variable-length parameter.</p>
-<div class="highlight"><pre><span></span>public static void printMax(double... numbers) {
-  double result = nubmers[0];
-}
+<div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="n">void</span> <span class="n">printMax</span><span class="p">(</span><span class="n">double</span><span class="p">...</span> <span class="n">numbers</span><span class="p">)</span> <span class="err">{</span>
+  <span class="n">double</span> <span class="k">result</span> <span class="o">=</span> <span class="n">nubmers</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="err">}</span>
 </pre></div>
 
 
 <h2>java.util.Arrays</h2>
-<div class="highlight"><pre><span></span>// Sort the whole array
-double[] numbers = {6.0, 4.4, 1.9, 2.9, 3.4, 3.5}; 
-java.util.Arrays.sort(numbers); 
-//
-char[] chars = {&#39;a&#39;, &#39;A&#39;, &#39;4&#39;, &#39;F&#39;, &#39;D&#39;, &#39;P&#39;}; 
-// Sort part of the array
-java.util.Arrays.sort(chars, 1, 3); 
+<div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Sort</span> <span class="n">the</span> <span class="n">whole</span> <span class="nb">array</span>
+<span class="n">double</span><span class="p">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="err">{</span><span class="mi">6</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">.</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">.</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">.</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">.</span><span class="mi">5</span><span class="err">}</span><span class="p">;</span> 
+<span class="n">java</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">Arrays</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span> 
+<span class="o">//</span>
+<span class="nb">char</span><span class="p">[]</span> <span class="n">chars</span> <span class="o">=</span> <span class="err">{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="err">}</span><span class="p">;</span> 
+<span class="o">//</span> <span class="n">Sort</span> <span class="n">part</span> <span class="k">of</span> <span class="n">the</span> <span class="nb">array</span>
+<span class="n">java</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">Arrays</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">chars</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> 
 </pre></div>
 
 
 <h2>2-dimensional array</h2>
-<div class="highlight"><pre><span></span>// normal array:
-double[][] matrix;
-//raged array:
-int[][] triangleArray = new int[5][] ; 
-triangleArray[0] = new int[5]; 
-triangleArray[1] = new int[4]; 
-triangleArray[2] = new int[3]; 
-triangleArray[3] = new int[2]; 
-triangleArray[4] = new int[1];
+<div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">normal</span> <span class="nb">array</span><span class="p">:</span>
+<span class="n">double</span><span class="p">[][]</span> <span class="n">matrix</span><span class="p">;</span>
+<span class="o">//</span><span class="n">raged</span> <span class="nb">array</span><span class="p">:</span>
+<span class="nb">int</span><span class="p">[][]</span> <span class="n">triangleArray</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">int</span><span class="p">[</span><span class="mi">5</span><span class="p">][]</span> <span class="p">;</span> 
+<span class="n">triangleArray</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">int</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span> 
+<span class="n">triangleArray</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">int</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span> 
+<span class="n">triangleArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">int</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span> 
+<span class="n">triangleArray</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">int</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span> 
+<span class="n">triangleArray</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">int</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
 </pre></div>
 
 
 <h1>OOP</h1>
 <p><strong>state</strong> of object</p>
 <p><strong>behavior</strong> of object</p>
-<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">Circle</span> <span class="p">{</span>
-  <span class="c1">//attribute</span>
-  <span class="kr">double</span> <span class="nx">radius</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="nv">class</span> <span class="nv">Circle</span> {
+  <span class="o">//</span><span class="nv">attribute</span>
+  <span class="nv">double</span> <span class="nv">radius</span> <span class="o">=</span> <span class="mi">1</span>.<span class="mi">0</span><span class="c1">;</span>
 
-  <span class="c1">// constructor</span>
-  <span class="nx">Circle() {</span>
-  <span class="p">}</span>
+  <span class="o">//</span> <span class="nv">constructor</span>
+  <span class="nv">Circle</span><span class="ss">()</span> {
+  }
 
-  <span class="c1">//contructor</span>
-  <span class="nx">Circlr</span><span class="p">(</span><span class="kr">double</span> <span class="nx">newRadius</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">radius</span> <span class="o">=</span> <span class="nx">newRadius</span><span class="p">;</span>
-  <span class="p">}</span>
+  <span class="o">//</span><span class="nv">contructor</span>
+  <span class="nv">Circlr</span><span class="ss">(</span><span class="nv">double</span> <span class="nv">newRadius</span><span class="ss">)</span> {
+    <span class="nv">radius</span> <span class="o">=</span> <span class="nv">newRadius</span><span class="c1">;</span>
+  }
 
-  <span class="c1">//method</span>
-  <span class="kr">double</span> <span class="nx">getArea() {</span>
-    <span class="k">return</span> <span class="nx">radius</span> <span class="o">*</span> <span class="nx">radius</span> <span class="o">*</span> <span class="mf">3.14</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+  <span class="o">//</span><span class="nv">method</span>
+  <span class="nv">double</span> <span class="nv">getArea</span><span class="ss">()</span> {
+    <span class="k">return</span> <span class="nv">radius</span> <span class="o">*</span> <span class="nv">radius</span> <span class="o">*</span> <span class="mi">3</span>.<span class="mi">14</span><span class="c1">;</span>
+  }
+}
 </pre></div>
 
 
@@ -534,35 +534,35 @@ triangleArray[4] = new int[1];
 <li>Constructors do not have a return type—not even void.</li>
 <li>Constructors are invoked using the new operator when an object is created.</li>
 </ul>
-<div class="highlight"><pre><span></span>//TV.java
-public class TV {
-  int channel = 1;
-  int VolumeLevel = 1;
-  boolean on = false;
+<div class="highlight"><pre><span></span><span class="o">//</span><span class="nv">TV</span>.<span class="nv">java</span>
+<span class="nv">public</span> <span class="nv">class</span> <span class="nv">TV</span> {
+  <span class="nv">int</span> <span class="nv">channel</span> <span class="o">=</span> <span class="mi">1</span><span class="c1">;</span>
+  <span class="nv">int</span> <span class="nv">VolumeLevel</span> <span class="o">=</span> <span class="mi">1</span><span class="c1">;</span>
+  <span class="nv">boolean</span> <span class="nv">on</span> <span class="o">=</span> <span class="nv">false</span><span class="c1">;</span>
 
-  public TV(){
+  <span class="nv">public</span> <span class="nv">TV</span><span class="ss">()</span>{
   }
 
-  public void turnOn() {
-    on = ture; // instance variable is refered directly here
+  <span class="nv">public</span> <span class="nv">void</span> <span class="nv">turnOn</span><span class="ss">()</span> {
+    <span class="nv">on</span> <span class="o">=</span> <span class="nv">ture</span><span class="c1">; // instance variable is refered directly here</span>
   }
 
-  public void turnOff() {
-    on = false;
+  <span class="nv">public</span> <span class="nv">void</span> <span class="nv">turnOff</span><span class="ss">()</span> {
+    <span class="nv">on</span> <span class="o">=</span> <span class="nv">false</span><span class="c1">;</span>
   }
 
-  public void setChannel(int newChannel) {
-    if (on &amp;&amp; newChannel &gt;= 1 &amp;&amp; newChannel &lt;= 120)
-      channel = newChannel;
+  <span class="nv">public</span> <span class="nv">void</span> <span class="nv">setChannel</span><span class="ss">(</span><span class="nv">int</span> <span class="nv">newChannel</span><span class="ss">)</span> {
+    <span class="k">if</span> <span class="ss">(</span><span class="nv">on</span> <span class="o">&amp;&amp;</span> <span class="nv">newChannel</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nv">newChannel</span> <span class="o">&lt;=</span> <span class="mi">120</span><span class="ss">)</span>
+      <span class="nv">channel</span> <span class="o">=</span> <span class="nv">newChannel</span><span class="c1">;</span>
   }
 
-  public void setVolume(int new VolumeLevel) {
-    if (on &amp;&amp; newVolumeLevel &gt;=1 &amp;&amp; newVolumeLevel &lt;=7)
-      volumeLevel = newVolumeLevel;
+  <span class="nv">public</span> <span class="nv">void</span> <span class="nv">setVolume</span><span class="ss">(</span><span class="nv">int</span> <span class="nv">new</span> <span class="nv">VolumeLevel</span><span class="ss">)</span> {
+    <span class="k">if</span> <span class="ss">(</span><span class="nv">on</span> <span class="o">&amp;&amp;</span> <span class="nv">newVolumeLevel</span> <span class="o">&gt;=</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nv">newVolumeLevel</span> <span class="o">&lt;=</span><span class="mi">7</span><span class="ss">)</span>
+      <span class="nv">volumeLevel</span> <span class="o">=</span> <span class="nv">newVolumeLevel</span><span class="c1">;</span>
   }
 
-  public void channelUp() {
-    if 
+  <span class="nv">public</span> <span class="nv">void</span> <span class="nv">channelUp</span><span class="ss">()</span> {
+    <span class="k">if</span> 
 
 }
 </pre></div>
