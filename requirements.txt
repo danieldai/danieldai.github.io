@@ -1,7 +1,7 @@
 markdown
-pelican==3.7.1
+pelican==4.2.0
 typogrify
-fabric==1.14.0
+fabric3
 ghp-import
 
 
