@@ -1,6 +1,6 @@
-# Welcome to [DanielDai.cn](http://danieldai.cn)!
+# Welcome to [DanielDai.com](http://danieldai.com)!
 
-**[DanielDai.cn](http://danieldai.cn)** is powered by **[Pelican](http://getpelican.com/)**, a static site generaotr written in **[Python](http://python.org/)**. 
+**[DanielDai.com](http://danieldai.com)** is powered by **[Pelican](http://getpelican.com/)**, a static site generaotr written in **[Python](http://python.org/)**. 
 
 As the contents of GitHub Pages for user must be on `master` branch, I put the source code of this blog on another branch named `source`. Whenever I do any changes to the contents of the blog, I check out the `source` branch, edit the markdown files, regenerate the content and output the content to `master` branch with `ghp-import`
 
@@ -13,7 +13,7 @@ As the contents of GitHub Pages for user must be on `master` branch, I put the s
 git clone git@github.com:danieldai/danieldai.github.io.git
 cd danieldai.github.io.git
 git checkout source
-mkvirtualenv danidai
+mkvirtualenv danieldai
 pip install -r requirements.txt
 ```
 
