@@ -4,7 +4,7 @@ Category: Post
 Tags: Pelican, GitHub Pages
 
 **[GitHub Pages](https://pages.github.com/)** is a service provide by GitHub to allow people having websites out of the content of their Repo. 
-As you know, **[DanielDai.cn](http://danieldai.cn)** is hosted on **[GitHub Pages](https://pages.github.com/)**. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can be Markdown files writen is way supported by [Jekyll](http://jekyllrb.com/]), GitHub Pages has built support for [Jekyll](http://jekyllrb.com/]), it will convert Markdown to HTML.
+As you know, **[DanielDai.com](http://danieldai.com)** is hosted on **[GitHub Pages](https://pages.github.com/)**. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can be Markdown files writen is way supported by [Jekyll](http://jekyllrb.com/]), GitHub Pages has built support for [Jekyll](http://jekyllrb.com/]), it will convert Markdown to HTML.
 
 If you do not want to install [Jekyll](http://jekyllrb.com/]),but still want to write blog in Markdown, you can use a static site generator, This site is built with such a tool called **[Pelican](http://getpelican.com/)**, a static site generaotr written in **[Python](http://python.org/)**. 
 
@@ -82,7 +82,7 @@ needed by Pelican.
 > Do you want to specify a URL prefix? e.g., http://example.com   (Y/n)
 > What is your URL prefix? (see above example; no trailing slash)
 You must enter something
-> What is your URL prefix? (see above example; no trailing slash) http://danieldai.cn
+> What is your URL prefix? (see above example; no trailing slash) http://danieldai.com
 > Do you want to enable article pagination? (Y/n) Y
 > How many articles per page do you want? [10]
 > What is your time zone? [Europe/Paris]

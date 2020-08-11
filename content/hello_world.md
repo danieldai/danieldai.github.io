@@ -1,4 +1,4 @@
-Title: Welcome to DanielDai.cn!
+Title: Welcome to DanielDai.com!
 Date: 2015-07-30 10:20
 Category: Post
 
