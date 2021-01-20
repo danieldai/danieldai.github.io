@@ -7,13 +7,22 @@ As the contents of GitHub Pages for user must be on `master` branch, I put the s
 
 ## How to edit this blog (just notes for author)
 
-* checkout code and setup virtualenv
+* setup virtualenv and checkout code
+
+on machine with python 3 as default
+```
+mkvirtualenv danieldai
+```
+
+on machine with python 2 as default
+```
+mkvirtualenv -p /usr/bin/python3 danieldai
+```
 
 ```
 git clone git@github.com:danieldai/danieldai.github.io.git
 cd danieldai.github.io.git
 git checkout source
-mkvirtualenv danieldai
 pip install -r requirements.txt
 ```
 
