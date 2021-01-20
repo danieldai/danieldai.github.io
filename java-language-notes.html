@@ -5,7 +5,7 @@
       <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="https://danieldai.com/java-language-notes.html" />
+    <link rel="canonical" href="https://www.danieldai.com/java-language-notes.html" />
 
     <title>  Daniel Dai - Python, Java and Web &mdash; Java Language Notes
 </title>
@@ -30,7 +30,7 @@
 
 
 
-    <link rel="stylesheet" href="https://danieldai.com/theme/css/style.css">
+    <link rel="stylesheet" href="https://www.danieldai.com/theme/css/style.css">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -57,19 +57,19 @@
 <header class="header">
   <div class="container">
       <div class="header-image pull-left">
-        <a class="nodec" href="https://danieldai.com"><img src=/daniel_150.jpeg></a>
+        <a class="nodec" href="https://www.danieldai.com"><img src=/daniel_150.jpeg></a>
       </div>
     <div class="header-inner">
       <h1 class="header-name">
-        <a class="nodec" href="https://danieldai.com">Daniel Dai - Web Tech Professional</a>
+        <a class="nodec" href="https://www.danieldai.com">Daniel Dai - Web Tech Professional</a>
       </h1>
       <h3 class="header-text">Day after day, we are closer to the Matrix, it's IT.</h3>
       <ul class="header-menu list-inline">
-          <li><a class="nodec" href="https://danieldai.com/categories.html">Categories</a></li>
+          <li><a class="nodec" href="https://www.danieldai.com/categories.html">Categories</a></li>
           <li class="muted">|</li>
-          <li><a class="nodec" href="https://danieldai.com/tags.html">Tags</a></li>
+          <li><a class="nodec" href="https://www.danieldai.com/tags.html">Tags</a></li>
           <li class="muted">|</li>
-          <li><a class="nodec" href="https://danieldai.com/archives.html">Archives</a></li>
+          <li><a class="nodec" href="https://www.danieldai.com/archives.html">Archives</a></li>
           <li class="muted">|</li>
           <li><a class="nodec icon-mail-alt" href="mailto:daeming@gmail.com"></a></li>
           <li><a class="nodec icon-github" href="https://github.com/danieldai"></a></li>
@@ -88,7 +88,7 @@
       </li>
       <li class="muted">&middot;</li>
       <li class="post-category">
-        <a href="https://danieldai.com/category/java.html">Java</a>
+        <a href="https://www.danieldai.com/category/java.html">Java</a>
       </li>
     </ul>
     <div class="post-content">
@@ -506,24 +506,24 @@
 <h1>OOP</h1>
 <p><strong>state</strong> of object</p>
 <p><strong>behavior</strong> of object</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="n">Circle</span> {
-  //<span class="n">attribute</span>
-  <span class="n">double</span> <span class="n">radius</span> = <span class="mf">1.0</span>;
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="n">Circle</span> <span class="p">{</span>
+  <span class="o">//</span><span class="n">attribute</span>
+  <span class="n">double</span> <span class="n">radius</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
 
-  // <span class="n">constructor</span>
-  <span class="n">Circle</span>() {
-  }
+  <span class="o">//</span> <span class="n">constructor</span>
+  <span class="n">Circle</span><span class="p">()</span> <span class="p">{</span>
+  <span class="p">}</span>
 
-  //<span class="n">contructor</span>
-  <span class="n">Circlr</span>(<span class="n">double</span> <span class="n">newRadius</span>) {
-    <span class="n">radius</span> = <span class="n">newRadius</span>;
-  }
+  <span class="o">//</span><span class="n">contructor</span>
+  <span class="n">Circlr</span><span class="p">(</span><span class="n">double</span> <span class="n">newRadius</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">radius</span> <span class="o">=</span> <span class="n">newRadius</span><span class="p">;</span>
+  <span class="p">}</span>
 
-  //<span class="k">method</span>
-  <span class="n">double</span> <span class="n">getArea</span>() {
-    <span class="k">return</span> <span class="n">radius</span> * <span class="n">radius</span> * <span class="mf">3.14</span>;
-  }
-}
+  <span class="o">//</span><span class="n">method</span>
+  <span class="n">double</span> <span class="n">getArea</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="mf">3.14</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 
 
@@ -533,37 +533,37 @@
 <li>Constructors do not have a return type—not even void.</li>
 <li>Constructors are invoked using the new operator when an object is created.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="o">//</span><span class="n">TV</span><span class="p">.</span><span class="n">java</span>
-<span class="k">public</span> <span class="k">class</span> <span class="n">TV</span> <span class="err">{</span>
-  <span class="nb">int</span> <span class="n">channel</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="nb">int</span> <span class="n">VolumeLevel</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="nb">boolean</span> <span class="k">on</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="o">//</span><span class="n">TV</span><span class="o">.</span><span class="n">java</span>
+<span class="n">public</span> <span class="k">class</span> <span class="n">TV</span> <span class="p">{</span>
+  <span class="nb nb-Type">int</span> <span class="n">channel</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="nb nb-Type">int</span> <span class="n">VolumeLevel</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">boolean</span> <span class="n">on</span> <span class="o">=</span> <span class="bp">false</span><span class="p">;</span>
 
-  <span class="k">public</span> <span class="n">TV</span><span class="p">()</span><span class="err">{</span>
-  <span class="err">}</span>
+  <span class="n">public</span> <span class="n">TV</span><span class="p">(){</span>
+  <span class="p">}</span>
 
-  <span class="k">public</span> <span class="n">void</span> <span class="n">turnOn</span><span class="p">()</span> <span class="err">{</span>
-    <span class="k">on</span> <span class="o">=</span> <span class="n">ture</span><span class="p">;</span> <span class="o">//</span> <span class="n">instance</span> <span class="k">variable</span> <span class="k">is</span> <span class="n">refered</span> <span class="n">directly</span> <span class="n">here</span>
-  <span class="err">}</span>
+  <span class="n">public</span> <span class="n">void</span> <span class="n">turnOn</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">on</span> <span class="o">=</span> <span class="n">ture</span><span class="p">;</span> <span class="o">//</span> <span class="n">instance</span> <span class="n">variable</span> <span class="k">is</span> <span class="n">refered</span> <span class="n">directly</span> <span class="n">here</span>
+  <span class="p">}</span>
 
-  <span class="k">public</span> <span class="n">void</span> <span class="n">turnOff</span><span class="p">()</span> <span class="err">{</span>
-    <span class="k">on</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
-  <span class="err">}</span>
+  <span class="n">public</span> <span class="n">void</span> <span class="n">turnOff</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">on</span> <span class="o">=</span> <span class="bp">false</span><span class="p">;</span>
+  <span class="p">}</span>
 
-  <span class="k">public</span> <span class="n">void</span> <span class="n">setChannel</span><span class="p">(</span><span class="nb">int</span> <span class="n">newChannel</span><span class="p">)</span> <span class="err">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">on</span> <span class="o">&amp;&amp;</span> <span class="n">newChannel</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">newChannel</span> <span class="o">&lt;=</span> <span class="mi">120</span><span class="p">)</span>
+  <span class="n">public</span> <span class="n">void</span> <span class="n">setChannel</span><span class="p">(</span><span class="nb nb-Type">int</span> <span class="n">newChannel</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">on</span> <span class="o">&amp;&amp;</span> <span class="n">newChannel</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">newChannel</span> <span class="o">&lt;=</span> <span class="mi">120</span><span class="p">)</span>
       <span class="n">channel</span> <span class="o">=</span> <span class="n">newChannel</span><span class="p">;</span>
-  <span class="err">}</span>
+  <span class="p">}</span>
 
-  <span class="k">public</span> <span class="n">void</span> <span class="n">setVolume</span><span class="p">(</span><span class="nb">int</span> <span class="k">new</span> <span class="n">VolumeLevel</span><span class="p">)</span> <span class="err">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">on</span> <span class="o">&amp;&amp;</span> <span class="n">newVolumeLevel</span> <span class="o">&gt;=</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">newVolumeLevel</span> <span class="o">&lt;=</span><span class="mi">7</span><span class="p">)</span>
+  <span class="n">public</span> <span class="n">void</span> <span class="n">setVolume</span><span class="p">(</span><span class="nb nb-Type">int</span> <span class="n">new</span> <span class="n">VolumeLevel</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">on</span> <span class="o">&amp;&amp;</span> <span class="n">newVolumeLevel</span> <span class="o">&gt;=</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">newVolumeLevel</span> <span class="o">&lt;=</span><span class="mi">7</span><span class="p">)</span>
       <span class="n">volumeLevel</span> <span class="o">=</span> <span class="n">newVolumeLevel</span><span class="p">;</span>
-  <span class="err">}</span>
+  <span class="p">}</span>
 
-  <span class="k">public</span> <span class="n">void</span> <span class="n">channelUp</span><span class="p">()</span> <span class="err">{</span>
+  <span class="n">public</span> <span class="n">void</span> <span class="n">channelUp</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">if</span> 
 
-<span class="err">}</span>
+<span class="p">}</span>
 </code></pre></div>
 
 
@@ -619,8 +619,8 @@ dot operator</p>
     </div>
   </div>
 </footer> <!-- /.footer -->
-  <script src="https://danieldai.com/theme/js/jquery.min.js"></script>
-  <script src="https://danieldai.com/theme/js/bootstrap.min.js"></script>
+  <script src="https://www.danieldai.com/theme/js/jquery.min.js"></script>
+  <script src="https://www.danieldai.com/theme/js/bootstrap.min.js"></script>
 </body> <!-- 42 -->
 
 </html>

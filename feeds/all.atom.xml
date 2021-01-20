@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai - Python, Java and Web</title><link href="https://danieldai.com/" rel="alternate"></link><link href="https://danieldai.com/feeds/all.atom.xml" rel="self"></link><id>https://danieldai.com/</id><updated>2016-08-04T10:00:00+08:00</updated><subtitle>Daniel Dai - Web Tech Professional</subtitle><entry><title>IPRoute2 Basic</title><link href="https://danieldai.com/iproute2-basic.html" rel="alternate"></link><published>2016-08-04T10:00:00+08:00</published><updated>2016-08-04T10:00:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.com,2016-08-04:/iproute2-basic.html</id><summary type="html">&lt;h3&gt;ip link&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai - Python, Java and Web</title><link href="https://www.danieldai.com/" rel="alternate"></link><link href="https://www.danieldai.com/feeds/all.atom.xml" rel="self"></link><id>https://www.danieldai.com/</id><updated>2016-08-04T10:00:00+08:00</updated><subtitle>Daniel Dai - Web Tech Professional</subtitle><entry><title>IPRoute2 Basic</title><link href="https://www.danieldai.com/iproute2-basic.html" rel="alternate"></link><published>2016-08-04T10:00:00+08:00</published><updated>2016-08-04T10:00:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-08-04:/iproute2-basic.html</id><summary type="html">&lt;h3&gt;ip link&lt;/h3&gt;
 &lt;p&gt;Show link layer interface information&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;ip link&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -142,7 +142,7 @@
 
 
 &lt;p&gt;By default, this should at least list your gateway. Arp is a protocol used to gather information about physical devices accessible through the local network.&lt;/p&gt;
-&lt;p&gt;Basically, an arp request is broadcast over the local network whenever an IP address needs to be reached. The matching IP address responds and then the local computer knows where to send information to that IP address. This information is cached on the local system for some time (typically about 15 minutes) to avoid having to query during follow up communication.&lt;/p&gt;</content><category term="Linux"></category></entry><entry><title>How to split string in Python?</title><link href="https://danieldai.com/how-to-split-string-in-python.html" rel="alternate"></link><published>2016-06-30T09:20:00+08:00</published><updated>2016-06-30T09:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.com,2016-06-30:/how-to-split-string-in-python.html</id><summary type="html">&lt;h2&gt;Split string with identical separator&lt;/h2&gt;
+&lt;p&gt;Basically, an arp request is broadcast over the local network whenever an IP address needs to be reached. The matching IP address responds and then the local computer knows where to send information to that IP address. This information is cached on the local system for some time (typically about 15 minutes) to avoid having to query during follow up communication.&lt;/p&gt;</content><category term="Linux"></category></entry><entry><title>How to split string in Python?</title><link href="https://www.danieldai.com/how-to-split-string-in-python.html" rel="alternate"></link><published>2016-06-30T09:20:00+08:00</published><updated>2016-06-30T09:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-06-30:/how-to-split-string-in-python.html</id><summary type="html">&lt;h2&gt;Split string with identical separator&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.130.248:15+221.160.226.9:329+101.240.154.40:1197&amp;#39;&lt;/span&gt;
 
 &lt;span class="n"&gt;nodes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;+&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -207,7 +207,7 @@
 
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;45.63.120.248:1195&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category></entry><entry><title>Django Template Include and I18n</title><link href="https://danieldai.com/django-template-include-and-i18n.html" rel="alternate"></link><published>2016-01-27T22:20:00+08:00</published><updated>2016-01-27T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.com,2016-01-27:/django-template-include-and-i18n.html</id><summary type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category></entry><entry><title>Django Template Include and I18n</title><link href="https://www.danieldai.com/django-template-include-and-i18n.html" rel="alternate"></link><published>2016-01-27T22:20:00+08:00</published><updated>2016-01-27T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-01-27:/django-template-include-and-i18n.html</id><summary type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -232,7 +232,7 @@
 
 
 &lt;p&gt;Reference:&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags"&gt;http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Django"></category></entry><entry><title>Blogging with GitHub Pages and Pelican Step by Step</title><link href="https://danieldai.com/blogging-with-github-pages-and-pelican-step-by-step.html" rel="alternate"></link><published>2016-01-18T22:20:00+08:00</published><updated>2016-01-18T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.com,2016-01-18:/blogging-with-github-pages-and-pelican-step-by-step.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; is a service provide by GitHub to allow people having websites out of the content of their Repo. 
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags"&gt;http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Django"></category></entry><entry><title>Blogging with GitHub Pages and Pelican Step by Step</title><link href="https://www.danieldai.com/blogging-with-github-pages-and-pelican-step-by-step.html" rel="alternate"></link><published>2016-01-18T22:20:00+08:00</published><updated>2016-01-18T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-01-18:/blogging-with-github-pages-and-pelican-step-by-step.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; is a service provide by GitHub to allow people having websites out of the content of their Repo. 
 As you know, &lt;strong&gt;&lt;a href="http://danieldai.com"&gt;DanielDai.com&lt;/a&gt;&lt;/strong&gt; is hosted on &lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt;. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; is a service provide by GitHub to allow people having websites out of the content of their Repo. 
 As you know, &lt;strong&gt;&lt;a href="http://danieldai.com"&gt;DanielDai.com&lt;/a&gt;&lt;/strong&gt; is hosted on &lt;strong&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt;. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can be Markdown files writen is way supported by &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, GitHub Pages has built support for &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;, it will convert Markdown to HTML.&lt;/p&gt;
 &lt;p&gt;If you do not want to install &lt;a href="http://jekyllrb.com/]"&gt;Jekyll&lt;/a&gt;,but still want to write blog in Markdown, you can use a static site generator, This site is built with such a tool called &lt;strong&gt;&lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;&lt;/strong&gt;, a static site generaotr written in &lt;strong&gt;&lt;a href="http://python.org/"&gt;Python&lt;/a&gt;&lt;/strong&gt;. &lt;/p&gt;
@@ -389,7 +389,7 @@ As you know, &lt;strong&gt;&lt;a href="http://danieldai.com"&gt;DanielDai.com&lt
 
 
 &lt;p&gt;Visit &lt;code&gt;username.github.io&lt;/code&gt; with your favorite Browser, your new Blog site is on GitHub Pages now. &lt;/p&gt;
-&lt;p&gt;If you meet any problem, please feel free to checkout my site repo https://github.com/danieldai/danieldai.github.io&lt;/p&gt;</content><category term="Post"></category><category term="Pelican"></category><category term="GitHub Pages"></category></entry><entry><title>Python Modules, Packages and Import</title><link href="https://danieldai.com/python-modules-packages-and-import.html" rel="alternate"></link><published>2016-01-16T22:20:00+08:00</published><updated>2016-01-16T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.com,2016-01-16:/python-modules-packages-and-import.html</id><summary type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;If you meet any problem, please feel free to checkout my site repo https://github.com/danieldai/danieldai.github.io&lt;/p&gt;</content><category term="Post"></category><category term="Pelican"></category><category term="GitHub Pages"></category></entry><entry><title>Python Modules, Packages and Import</title><link href="https://www.danieldai.com/python-modules-packages-and-import.html" rel="alternate"></link><published>2016-01-16T22:20:00+08:00</published><updated>2016-01-16T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-01-16:/python-modules-packages-and-import.html</id><summary type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;To import a module, we use the &lt;code&gt;import&lt;/code&gt; command. Check out the full list of built-in modules in the Python standard library &lt;a href="http://docs.python.org/2/library/"&gt;here …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;To import a module, we use the &lt;code&gt;import&lt;/code&gt; command. Check out the full list of built-in modules in the Python standard library &lt;a href="http://docs.python.org/2/library/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The first time a module is loaded into a running Python script, it is initialized by executing the code in the module once. If another module in your code imports the same module again, it will not be loaded twice but once only - so local variables inside the module act as a &lt;strong&gt;"singleton"&lt;/strong&gt; - they are &lt;strong&gt;initialized only once&lt;/strong&gt;.&lt;/p&gt;
@@ -477,7 +477,7 @@ As you know, &lt;strong&gt;&lt;a href="http://danieldai.com"&gt;DanielDai.com&lt
 &lt;li&gt;http://www.learnpython.org/en/Modules_and_Packages&lt;/li&gt;
 &lt;li&gt;https://www.python.org/dev/peps/pep-0328/&lt;/li&gt;
 &lt;li&gt;https://docs.python.org/2.5/whatsnew/pep-328.html&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Python"></category></entry><entry><title>Java Language Notes</title><link href="https://danieldai.com/java-language-notes.html" rel="alternate"></link><published>2016-01-16T10:20:00+08:00</published><updated>2016-01-16T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.com,2016-01-16:/java-language-notes.html</id><summary type="html">&lt;h2&gt;History&lt;/h2&gt;
+&lt;/ol&gt;</content><category term="Python"></category></entry><entry><title>Java Language Notes</title><link href="https://www.danieldai.com/java-language-notes.html" rel="alternate"></link><published>2016-01-16T10:20:00+08:00</published><updated>2016-01-16T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-01-16:/java-language-notes.html</id><summary type="html">&lt;h2&gt;History&lt;/h2&gt;
 &lt;p&gt;Java was developed by a team led by James Gosling at Sun Microsystems. Originally called Oak, it was designed in 1991 for use in embedded chips in consumer electronic appliances. In 1995, renamed Java, it was redesigned for developing Internet applications.&lt;/p&gt;
 &lt;h2&gt;Syntax&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
@@ -898,24 +898,24 @@ As you know, &lt;strong&gt;&lt;a href="http://danieldai.com"&gt;DanielDai.com&lt
 &lt;h1&gt;OOP&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;state&lt;/strong&gt; of object&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;behavior&lt;/strong&gt; of object&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Circle&lt;/span&gt; {
-  //&lt;span class="n"&gt;attribute&lt;/span&gt;
-  &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; = &lt;span class="mf"&gt;1.0&lt;/span&gt;;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Circle&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;attribute&lt;/span&gt;
+  &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-  // &lt;span class="n"&gt;constructor&lt;/span&gt;
-  &lt;span class="n"&gt;Circle&lt;/span&gt;() {
-  }
+  &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;constructor&lt;/span&gt;
+  &lt;span class="n"&gt;Circle&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
 
-  //&lt;span class="n"&gt;contructor&lt;/span&gt;
-  &lt;span class="n"&gt;Circlr&lt;/span&gt;(&lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;newRadius&lt;/span&gt;) {
-    &lt;span class="n"&gt;radius&lt;/span&gt; = &lt;span class="n"&gt;newRadius&lt;/span&gt;;
-  }
+  &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;contructor&lt;/span&gt;
+  &lt;span class="n"&gt;Circlr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;newRadius&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;newRadius&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
 
-  //&lt;span class="k"&gt;method&lt;/span&gt;
-  &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;getArea&lt;/span&gt;() {
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; * &lt;span class="n"&gt;radius&lt;/span&gt; * &lt;span class="mf"&gt;3.14&lt;/span&gt;;
-  }
-}
+  &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;method&lt;/span&gt;
+  &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;getArea&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mf"&gt;3.14&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
@@ -925,37 +925,37 @@ As you know, &lt;strong&gt;&lt;a href="http://danieldai.com"&gt;DanielDai.com&lt
 &lt;li&gt;Constructors do not have a return type—not even void.&lt;/li&gt;
 &lt;li&gt;Constructors are invoked using the new operator when an object is created.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;TV&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;java&lt;/span&gt;
-&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;TV&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
-  &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;channel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;VolumeLevel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="nb"&gt;boolean&lt;/span&gt; &lt;span class="k"&gt;on&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;TV&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;java&lt;/span&gt;
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;TV&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nb nb-Type"&gt;int&lt;/span&gt; &lt;span class="n"&gt;channel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nb nb-Type"&gt;int&lt;/span&gt; &lt;span class="n"&gt;VolumeLevel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-  &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;TV&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;
-  &lt;span class="err"&gt;}&lt;/span&gt;
+  &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;TV&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
 
-  &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;turnOn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;on&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ture&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;instance&lt;/span&gt; &lt;span class="k"&gt;variable&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;refered&lt;/span&gt; &lt;span class="n"&gt;directly&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;
-  &lt;span class="err"&gt;}&lt;/span&gt;
+  &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;turnOn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ture&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;instance&lt;/span&gt; &lt;span class="n"&gt;variable&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;refered&lt;/span&gt; &lt;span class="n"&gt;directly&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
 
-  &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;turnOff&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;on&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="err"&gt;}&lt;/span&gt;
+  &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;turnOff&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
 
-  &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setChannel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;newChannel&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;newChannel&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;newChannel&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setChannel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb nb-Type"&gt;int&lt;/span&gt; &lt;span class="n"&gt;newChannel&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;newChannel&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;newChannel&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
       &lt;span class="n"&gt;channel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;newChannel&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="err"&gt;}&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
 
-  &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setVolume&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;VolumeLevel&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;newVolumeLevel&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;newVolumeLevel&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setVolume&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb nb-Type"&gt;int&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;VolumeLevel&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;newVolumeLevel&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;newVolumeLevel&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
       &lt;span class="n"&gt;volumeLevel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;newVolumeLevel&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="err"&gt;}&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
 
-  &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;channelUp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;channelUp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; 
 
-&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
@@ -972,7 +972,7 @@ dot operator&lt;/p&gt;
 &lt;p&gt;&lt;link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css"&gt;
 &lt;script&gt;
   hljs.initHighlightingOnLoad();
-&lt;/script&gt;&lt;/p&gt;</content><category term="Java"></category></entry><entry><title>How to write Markdown</title><link href="https://danieldai.com/how-to-write-markdown.html" rel="alternate"></link><published>2016-01-15T10:20:00+08:00</published><updated>2016-01-15T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.com,2016-01-15:/how-to-write-markdown.html</id><summary type="html">&lt;h2&gt;Basic&lt;/h2&gt;
+&lt;/script&gt;&lt;/p&gt;</content><category term="Java"></category></entry><entry><title>How to write Markdown</title><link href="https://www.danieldai.com/how-to-write-markdown.html" rel="alternate"></link><published>2016-01-15T10:20:00+08:00</published><updated>2016-01-15T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-01-15:/how-to-write-markdown.html</id><summary type="html">&lt;h2&gt;Basic&lt;/h2&gt;
 &lt;h3&gt;Paragraphs&lt;/h3&gt;
 &lt;p&gt;Paragraphs in Markdown are just one or more lines of consecutive text followed by one or more blank lines.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;On&lt;/span&gt; &lt;span class="n"&gt;July&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;an&lt;/span&gt; &lt;span class="n"&gt;alien&lt;/span&gt; &lt;span class="n"&gt;mothership&lt;/span&gt; &lt;span class="n"&gt;entered&lt;/span&gt; &lt;span class="n"&gt;Earth&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;orbit&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="n"&gt;deployed&lt;/span&gt; &lt;span class="n"&gt;several&lt;/span&gt; &lt;span class="n"&gt;dozen&lt;/span&gt; &lt;span class="n"&gt;saucer&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;shaped&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;destroyer&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;spacecraft&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;each&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt; &lt;span class="n"&gt;miles&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt; &lt;span class="n"&gt;km&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;wide&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
@@ -1050,7 +1050,7 @@ dot operator&lt;/p&gt;
 &lt;h2&gt;Code formating&lt;/h2&gt;
 &lt;h3&gt;Inline formats&lt;/h3&gt;
 &lt;p&gt;Use single backticks (`) to format text in a special monospace format. Everything within the backticks appear as-is, with no other special formatting.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Here&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;s an idea: why don&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;we&lt;/span&gt; &lt;span class="n"&gt;take&lt;/span&gt; &lt;span class="ss"&gt;`SuperiorProject`&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="n"&gt;turn&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="k"&gt;into&lt;/span&gt; &lt;span class="ss"&gt;`**Reasonable**Project`&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Here&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;s an idea: why don&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;we&lt;/span&gt; &lt;span class="n"&gt;take&lt;/span&gt; &lt;span class="n n-Quoted"&gt;`SuperiorProject`&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="n"&gt;turn&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="k"&gt;into&lt;/span&gt; &lt;span class="n n-Quoted"&gt;`**Reasonable**Project`&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1087,13 +1087,13 @@ dot operator&lt;/p&gt;
 &lt;p&gt;~~Mistaken text.~~&lt;/p&gt;
 &lt;h4&gt;Fenced code blocks&lt;/h4&gt;
 &lt;p&gt;Standard Markdown converts text with four spaces at the beginning of each line into a code block; GFM also supports fenced blocks. Just wrap your code in ``` (as shown below) and you won't need to indent it by four spaces. Note that although fenced code blocks don't have to be preceded by a blank line—unlike indented code blocks—we recommend placing a blank line before them to make the raw Markdown easier to read.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Here&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;an&lt;/span&gt; &lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;Here&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;s&lt;/span&gt; &lt;span class="nt"&gt;an&lt;/span&gt; &lt;span class="nt"&gt;example&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
 
-&lt;span class="o"&gt;```&lt;/span&gt;
-&lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
-  &lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;notice the blank line before this function?&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="err"&gt;}&lt;/span&gt;
-&lt;span class="o"&gt;```&lt;/span&gt;
+&lt;span class="err"&gt;```&lt;/span&gt;
+&lt;span class="nt"&gt;function&lt;/span&gt; &lt;span class="nt"&gt;test&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="err"&gt;console.log(&amp;quot;notice&lt;/span&gt; &lt;span class="err"&gt;the&lt;/span&gt; &lt;span class="err"&gt;blank&lt;/span&gt; &lt;span class="err"&gt;line&lt;/span&gt; &lt;span class="err"&gt;before&lt;/span&gt; &lt;span class="err"&gt;this&lt;/span&gt; &lt;span class="err"&gt;function?&amp;quot;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;```&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1120,5 +1120,5 @@ dot operator&lt;/p&gt;
 &lt;li&gt;https://help.github.com/articles/markdown-basics&lt;/li&gt;
 &lt;li&gt;https://help.github.com/articles/github-flavored-markdown/&lt;/li&gt;
 &lt;li&gt;https://help.github.com/articles/writing-on-github/&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Post"></category></entry><entry><title>Welcome to DanielDai.com!</title><link href="https://danieldai.com/welcome-to-danieldaicom.html" rel="alternate"></link><published>2015-07-30T10:20:00+08:00</published><updated>2015-07-30T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:danieldai.com,2015-07-30:/welcome-to-danieldaicom.html</id><content type="html">&lt;p&gt;Hello World.&lt;/p&gt;
+&lt;/ol&gt;</content><category term="Post"></category></entry><entry><title>Welcome to DanielDai.com!</title><link href="https://www.danieldai.com/welcome-to-danieldaicom.html" rel="alternate"></link><published>2015-07-30T10:20:00+08:00</published><updated>2015-07-30T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2015-07-30:/welcome-to-danieldaicom.html</id><content type="html">&lt;p&gt;Hello World.&lt;/p&gt;
 &lt;p&gt;This is my blog, I will use it to share a lot of things with you.&lt;/p&gt;</content><category term="Post"></category></entry></feed>
