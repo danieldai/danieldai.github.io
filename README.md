@@ -26,6 +26,8 @@ git checkout source
 pip install -r requirements.txt
 ```
 
+Install plugins from https://github.com/getpelican/pelican-plugins
+
 * edit exiting or add new blogs in `content` directory
 * compile content in to HTML
 
