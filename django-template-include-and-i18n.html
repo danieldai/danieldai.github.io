@@ -99,7 +99,6 @@
 <div class="highlight"><pre><span></span><code><span class="err">{% include &quot;include/another_template.html&quot; with text=&#39;I love Python&#39; %}</span>
 </code></pre></div>
 
-
 <p>Sometimes, we need to tranalte <code>include prarameters</code>, this can not be done in <code>another_template.html</code>, <code>blocktrans</code> will not work here.</p>
 <div class="highlight"><pre><span></span><code><span class="x"># in another_template.html</span>
 <span class="cp">{%</span> <span class="k">blocktrans</span> <span class="cp">%}</span><span class="x"></span>
@@ -107,12 +106,10 @@
 <span class="cp">{%</span> <span class="k">endblocktrans</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
 
-
 <p>We need to do the translation in the first temalate, before passing it to another template:</p>
 <div class="highlight"><pre><span></span><code><span class="err">{% trans &#39;I love Python&#39; as text %}</span>
 <span class="err">{% include &quot;include/another_template.html&quot; with text=text %}</span>
 </code></pre></div>
-
 
 <p>Reference:</p>
 <p><a href="http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags">http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags</a></p>

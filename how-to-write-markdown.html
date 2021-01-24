@@ -100,7 +100,6 @@
 <span class="k">On</span> <span class="n">July</span> <span class="mi">3</span><span class="p">,</span> <span class="n">the</span> <span class="n">Black</span> <span class="n">Knights</span><span class="p">,</span> <span class="n">a</span> <span class="n">squadron</span> <span class="k">of</span> <span class="n">Marine</span> <span class="n">Corps</span> <span class="n">F</span><span class="o">/</span><span class="n">A</span><span class="o">-</span><span class="mi">18</span> <span class="n">Hornets</span><span class="p">,</span> <span class="n">participated</span> <span class="k">in</span> <span class="n">an</span> <span class="n">assault</span> <span class="k">on</span> <span class="n">a</span> <span class="n">destroyer</span> <span class="n">near</span> <span class="n">the</span> <span class="n">city</span> <span class="k">of</span> <span class="n">Los</span> <span class="n">Angeles</span><span class="p">.</span>
 </code></pre></div>
 
-
 <h3>Headings</h3>
 <p>You can create a heading by adding one or more <code>#</code> symbols before your heading text. The number of <code>#</code> you use will determine the size of the heading.</p>
 <div class="highlight"><pre><span></span><code><span class="err"># The largest heading (an &lt;h1&gt; tag)</span>
@@ -109,12 +108,10 @@
 <span class="err">###### The 6th largest heading (an &lt;h6&gt; tag)</span>
 </code></pre></div>
 
-
 <h3>Blockquotes</h3>
 <div class="highlight"><pre><span></span><code><span class="err">In the words of Abraham Lincoln:</span>
 <span class="err">&gt; Pardon my french</span>
 </code></pre></div>
-
 
 <h3>Styling text</h3>
 <p>You can make text <strong>bold</strong> or <em>italic</em></p>
@@ -122,11 +119,9 @@
 <span class="err">**This text will be bold**</span>
 </code></pre></div>
 
-
 <p>Both <strong>bold</strong> and <em>italic</em> can use either a <code>*</code> or an <code>_</code> around the text for styling. This allows yo to combine both bold and italic if needed.</p>
 <div class="highlight"><pre><span></span><code><span class="err">**Everyone _must_ attend the meeting at 5 o&#39;clock today**</span>
 </code></pre></div>
-
 
 <h1>Lists</h1>
 <h3>Unordered lists</h3>
@@ -140,14 +135,12 @@
 <span class="o">-</span> <span class="n">Item</span>
 </code></pre></div>
 
-
 <h3>Ordered lists</h3>
 <p>You can make an ordered list by preceding list items with a number</p>
 <div class="highlight"><pre><span></span><code><span class="err">1. Item 1</span>
 <span class="err">2. Item 2</span>
 <span class="err">3. Item 3</span>
 </code></pre></div>
-
 
 <h3>Nested lists</h3>
 <p>You can create nested lists by indenting list items by two spaces.</p>
@@ -161,13 +154,11 @@
 <span class="err">3. Item 3</span>
 </code></pre></div>
 
-
 <h2>Code formating</h2>
 <h3>Inline formats</h3>
 <p>Use single backticks (`) to format text in a special monospace format. Everything within the backticks appear as-is, with no other special formatting.</p>
 <div class="highlight"><pre><span></span><code><span class="n">Here</span><span class="s1">&#39;s an idea: why don&#39;</span><span class="n">t</span> <span class="n">we</span> <span class="n">take</span> <span class="n n-Quoted">`SuperiorProject`</span> <span class="k">and</span> <span class="n">turn</span> <span class="n">it</span> <span class="k">into</span> <span class="n n-Quoted">`**Reasonable**Project`</span><span class="p">.</span>
 </code></pre></div>
-
 
 <h3>Multiple lines</h3>
 <p>You can use triple backticks(```) to format text as its down distinct block</p>
@@ -189,14 +180,12 @@
 <div class="highlight"><pre><span></span><code><span class="c">http://example.com</span>
 </code></pre></div>
 
-
 <p>becomes</p>
 <p>http://example.com</p>
 <h4>Strikethrough</h4>
 <p>GFM adds syntax to create strikethrough text, which is missing from standard Markdown.</p>
 <div class="highlight"><pre><span></span><code><span class="err">~~Mistaken text.~~</span>
 </code></pre></div>
-
 
 <p>becomes</p>
 <p>~~Mistaken text.~~</p>
@@ -211,7 +200,6 @@
 <span class="err">```</span>
 </code></pre></div>
 
-
 <p>Keep in mind that, within lists, you must indent non-fenced code blocks eight spaces to render them properly.</p>
 <h4>Syntax highlighting</h4>
 <p>Code blocks can be taken a step further by adding syntax highlighting. In your fenced block, add an optional language identifier and we'll run it through syntax highlighting. For example, to syntax highlight Ruby code:</p>
@@ -222,12 +210,10 @@
 <span class="err">```</span>
 </code></pre></div>
 
-
 <div class="highlight"><pre><span></span><code><span class="nb">require</span> <span class="s1">&#39;redcarpet&#39;</span>
 <span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
 <span class="nb">puts</span> <span class="n">markdown</span><span class="o">.</span><span class="n">to_html</span>
 </code></pre></div>
-
 
 <p>GitHub use <a href="https://github.com/github/linguist">Linguist</a> to perform language detection and syntax highlighting. You can find out which keywords are valid by perusing <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml">the languages YAML file</a>.</p>
 <h2>References</h2>

@@ -100,10 +100,8 @@
 <span class="nb">print</span> <span class="n">nodes</span>
 </code></pre></div>
 
-
 <div class="highlight"><pre><span></span><code><span class="err">[&#39;45.63.130.248:15&#39;, &#39;221.160.226.9:329&#39;, &#39;101.240.154.40:1197&#39;]</span>
 </code></pre></div>
-
 
 <div class="highlight"><pre><span></span><code><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;45.63.130.248:15*+221.160.226.9:329*+101.240.154.40:1197&#39;</span>
 
@@ -112,10 +110,8 @@
 <span class="nb">print</span> <span class="n">nodes</span>
 </code></pre></div>
 
-
 <div class="highlight"><pre><span></span><code><span class="err">[&#39;45.63.130.248:15&#39;, &#39;221.160.226.9:329&#39;, &#39;101.240.154.40:1197&#39;]</span>
 </code></pre></div>
-
 
 <h2>Split string with non-identical separator</h2>
 <div class="highlight"><pre><span></span><code><span class="n">ticket_key</span> <span class="o">=</span> <span class="s1">&#39;45.63.120.248:1195&amp;221.160.226.9:329^101.240.154.40:1197&#39;</span>
@@ -128,10 +124,8 @@
 <span class="nb">print</span> <span class="n">node1</span><span class="p">,</span> <span class="n">node2</span><span class="p">,</span> <span class="n">node3</span>
 </code></pre></div>
 
-
 <div class="highlight"><pre><span></span><code><span class="err">45.63.120.248:1195 221.160.226.9:329 101.240.154.40:1197</span>
 </code></pre></div>
-
 
 <div class="highlight"><pre><span></span><code><span class="c1"># A more elegent way, is to use the re.split()</span>
 <span class="kn">import</span> <span class="nn">re</span>
@@ -141,7 +135,6 @@
 <span class="n">nodes</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;[&amp;\^]&#39;</span><span class="p">,</span> <span class="n">ticket_key</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">nodes</span>
 </code></pre></div>
-
 
 <div class="highlight"><pre><span></span><code><span class="err">[&#39;45.63.120.248:1195&#39;, &#39;221.160.226.9:329&#39;, &#39;101.240.154.40:1197&#39;]</span>
 </code></pre></div>

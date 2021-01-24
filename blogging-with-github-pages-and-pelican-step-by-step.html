@@ -96,7 +96,7 @@
     </ul>
     <div class="post-content">
       <p><strong><a href="https://pages.github.com/">GitHub Pages</a></strong> is a service provide by GitHub to allow people having websites out of the content of their Repo. 
-As you know, <strong><a href="http://danieldai.com">DanielDai.com</a></strong> is hosted on <strong><a href="https://pages.github.com/">GitHub Pages</a></strong>. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can be Markdown files writen is way supported by <a href="http://jekyllrb.com/]">Jekyll</a>, GitHub Pages has built support for <a href="http://jekyllrb.com/]">Jekyll</a>, it will convert Markdown to HTML.</p>
+As you know, <strong><a href="http://www.danieldai.com">DanielDai.com</a></strong> is hosted on <strong><a href="https://pages.github.com/">GitHub Pages</a></strong>. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can be Markdown files writen is way supported by <a href="http://jekyllrb.com/]">Jekyll</a>, GitHub Pages has built support for <a href="http://jekyllrb.com/]">Jekyll</a>, it will convert Markdown to HTML.</p>
 <p>If you do not want to install <a href="http://jekyllrb.com/]">Jekyll</a>,but still want to write blog in Markdown, you can use a static site generator, This site is built with such a tool called <strong><a href="http://getpelican.com/">Pelican</a></strong>, a static site generaotr written in <strong><a href="http://python.org/">Python</a></strong>. </p>
 <p>I'm going to tell you how to blog with <strong>GitHub Pages</strong> and <strong>Pelican</strong> from scratch in this article.</p>
 <h2>1. Setup the Repository</h2>
@@ -104,11 +104,9 @@ As you know, <strong><a href="http://danieldai.com">DanielDai.com</a></strong> i
 <div class="highlight"><pre><span></span><code><span class="err">git clone https://github.com/username/username.github.io</span>
 </code></pre></div>
 
-
 <p>As the content of the site must be on <code>master</code> branch, which is required by GitHub Pages, to keep the repo clean, I will use a seperated branch to contain the source code. I choosed to use <code>source</code> name the branch, you can choose any name you like except <code>master</code></p>
 <div class="highlight"><pre><span></span><code><span class="err">git checkout -b source</span>
 </code></pre></div>
-
 
 <h3>How <code>master</code> and <code>source</code> branchs related to each other?</h3>
 <p>Unlike normal git repositories, in this repo, <code>master</code> branch and <code>source</code> branches are 2 parallel branches that only share a common parent, but will never merge together in future. The content of each commits on <code>master</code> branch is generated output by Pelican from the content of some commits on <code>source</code> branch, and usually <code>source</code> branch has more commits than <code>master</code> branch.</p>
@@ -116,7 +114,6 @@ As you know, <strong><a href="http://danieldai.com">DanielDai.com</a></strong> i
 <span class="err"> \</span>
 <span class="err">  \---o--o--o--o--o--o--o--o--o--o--o--o--o--o--o source branch    </span>
 </code></pre></div>
-
 
 <p>each commit on <code>master</code> branch is the compiled result of on commit on <code>source</code> branch</p>
 <h2>2. Install Pelican</h2>
@@ -128,18 +125,15 @@ As you know, <strong><a href="http://danieldai.com">DanielDai.com</a></strong> i
 <span class="err">ghp-import</span>
 </code></pre></div>
 
-
 <p>And then run</p>
 <div class="highlight"><pre><span></span><code><span class="err">pip install -r requirements.txt</span>
 </code></pre></div>
-
 
 <p>If you like, you can save current state of <code>source</code> as a new commit.</p>
 <h2>3. Start Pelican Project</h2>
 <p>Run this command in repo dir, to start a new Pelican project:</p>
 <div class="highlight"><pre><span></span><code><span class="err">pelican-quickstart</span>
 </code></pre></div>
-
 
 <p>Pelican will ask you some questions:</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">danidai</span><span class="p">)</span><span class="n">ming</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">pel</span><span class="err">$</span><span class="w"> </span><span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span><span class="w"></span>
@@ -158,7 +152,7 @@ As you know, <strong><a href="http://danieldai.com">DanielDai.com</a></strong> i
 <span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="k">prefix</span><span class="vm">?</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="w">   </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
 <span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="k">prefix</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">see</span><span class="w"> </span><span class="n">above</span><span class="w"> </span><span class="n">example</span><span class="p">;</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="k">trailing</span><span class="w"> </span><span class="n">slash</span><span class="p">)</span><span class="w"></span>
 <span class="n">You</span><span class="w"> </span><span class="n">must</span><span class="w"> </span><span class="n">enter</span><span class="w"> </span><span class="n">something</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="k">prefix</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">see</span><span class="w"> </span><span class="n">above</span><span class="w"> </span><span class="n">example</span><span class="p">;</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="k">trailing</span><span class="w"> </span><span class="n">slash</span><span class="p">)</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">danieldai</span><span class="p">.</span><span class="n">com</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="k">prefix</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">see</span><span class="w"> </span><span class="n">above</span><span class="w"> </span><span class="n">example</span><span class="p">;</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="k">trailing</span><span class="w"> </span><span class="n">slash</span><span class="p">)</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">danieldai</span><span class="p">.</span><span class="n">com</span><span class="w"></span>
 <span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="n">pagination</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">Y</span><span class="w"></span>
 <span class="o">&gt;</span><span class="w"> </span><span class="n">How</span><span class="w"> </span><span class="n">many</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">10</span><span class="o">]</span><span class="w"></span>
 <span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="k">zone</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">Europe/Paris</span><span class="o">]</span><span class="w"></span>
@@ -176,7 +170,6 @@ As you know, <strong><a href="http://danieldai.com">DanielDai.com</a></strong> i
 <span class="n">Done</span><span class="p">.</span><span class="w"> </span><span class="n">Your</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">available</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="o">/</span><span class="n">private</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">pel</span><span class="w"></span>
 </code></pre></div>
 
-
 <p>These are the files generated by Pelican:</p>
 <div class="highlight"><pre><span></span><code><span class="err">(danidai)ming/tmp/pel$ find .</span>
 <span class="err">.</span>
@@ -189,14 +182,12 @@ As you know, <strong><a href="http://danieldai.com">DanielDai.com</a></strong> i
 <span class="err">./publishconf.py</span>
 </code></pre></div>
 
-
 <p>Create some example files in <code>content</code> diretory. You can get more tips on who to write from <a href="http://docs.getpelican.com/en/3.6.3/index.html">Pelican docs</a></p>
 <h3>Customize Fabric file</h3>
 <p>As we are going to publish the site to GitHub Pages, we need to customize <code>fabfile.py</code> a bit. First, tell Pelican our GitHub Pages Branch is <code>master</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Github Pages configuration</span>
 <span class="n">env</span><span class="o">.</span><span class="n">github_pages_branch</span> <span class="o">=</span> <span class="s2">&quot;master&quot;</span>
 </code></pre></div>
-
 
 <p>Then add 2 fabric commands to output generated site to master branch,and push master branch to GitHub Pages:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pages</span><span class="p">(</span><span class="n">comment</span><span class="p">):</span>
@@ -210,7 +201,6 @@ As you know, <strong><a href="http://danieldai.com">DanielDai.com</a></strong> i
     <span class="n">local</span><span class="p">(</span><span class="s2">&quot;git push origin </span><span class="si">{github_pages_branch}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">env</span><span class="p">))</span>
 </code></pre></div>
 
-
 <p><code>ghp-import</code> plays a very important role here. Pelican put the generated site in <code>output</code> directory, <code>ghp-import</code> takes the content of <code>output</code> directory, and outout it to <code>master</code> branch of current repo.</p>
 <ul>
 <li>compile content in to HTML</li>
@@ -218,13 +208,11 @@ As you know, <strong><a href="http://danieldai.com">DanielDai.com</a></strong> i
 <div class="highlight"><pre><span></span><code><span class="err">fab build</span>
 </code></pre></div>
 
-
 <ul>
 <li>start dev server</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="err">fab serve</span>
 </code></pre></div>
-
 
 <ul>
 <li>visit http://localhost:8888 to review it</li>
@@ -233,13 +221,11 @@ As you know, <strong><a href="http://danieldai.com">DanielDai.com</a></strong> i
 <div class="highlight"><pre><span></span><code><span class="err">fab pages:&#39;&lt;commit message for master branch&gt;&#39;</span>
 </code></pre></div>
 
-
 <ul>
 <li>publish to GitHub Pages</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="err">fab push</span>
 </code></pre></div>
-
 
 <ul>
 <li>push source branch</li>
@@ -248,7 +234,6 @@ As you know, <strong><a href="http://danieldai.com">DanielDai.com</a></strong> i
 <span class="err">git commit -m &quot;&lt;commit message for source branch&quot;</span>
 <span class="err">git push</span>
 </code></pre></div>
-
 
 <p>Visit <code>username.github.io</code> with your favorite Browser, your new Blog site is on GitHub Pages now. </p>
 <p>If you meet any problem, please feel free to checkout my site repo https://github.com/danieldai/danieldai.github.io</p>
