@@ -5,41 +5,44 @@ import os
 import shutil
 import sys
 import socketserver
+import datetime
 
-from pelican.server import ComplexHTTPRequestHandler
+from pelican import main as pelican_main
+from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
+from pelican.settings import DEFAULT_CONFIG, get_settings_from_file
 
-# Local path configuration (can be absolute or relative to fabfile)
-env.deploy_path = 'output'
-DEPLOY_PATH = env.deploy_path
+SETTINGS_FILE_BASE = 'pelicanconf.py'
+SETTINGS = {}
+SETTINGS.update(DEFAULT_CONFIG)
+LOCAL_SETTINGS = get_settings_from_file(SETTINGS_FILE_BASE)
+SETTINGS.update(LOCAL_SETTINGS)
 
-# Remote server configuration
-production = 'root@localhost:22'
-dest_path = '/var/www'
-
-# Rackspace Cloud Files configuration settings
-env.cloudfiles_username = 'my_rackspace_username'
-env.cloudfiles_api_key = 'my_rackspace_api_key'
-env.cloudfiles_container = 'my_cloudfiles_container'
-
-# Github Pages configuration
-env.github_pages_branch = "master"
-
-# Port for `serve`
-PORT = 8888
+CONFIG = {
+    'settings_base': SETTINGS_FILE_BASE,
+    'settings_publish': 'publishconf.py',
+    # Output path. Can be absolute or relative to tasks.py. Default: 'output'
+    'deploy_path': SETTINGS['OUTPUT_PATH'],
+    # Github Pages configuration
+    'github_pages_branch': 'master',
+    'commit_message': "'Publish site on {}'".format(datetime.date.today().isoformat()),
+    # Host and port for `serve`
+    'host': 'localhost',
+    'port': 8000,
+}
 
 def clean():
     """Remove generated files"""
-    if os.path.isdir(DEPLOY_PATH):
-        shutil.rmtree(DEPLOY_PATH)
-        os.makedirs(DEPLOY_PATH)
+    if os.path.isdir(CONFIG['deploy_path']):
+        shutil.rmtree(CONFIG['deploy_path'])
+        os.makedirs(CONFIG['deploy_path'])
 
 def _copy_extra_files():
     #Hakcy way to publish README.md to `master` banch
-    local("cp README.md {deploy_path}".format(**env))
+    local("cp README.md {deploy_path}".format(**CONFIG))
     
-    local("cp .gitignore {deploy_path}".format(**env))
-    local("cp google7ed5b9715d9d7c37.html {deploy_path}".format(**env))
-    local("cp favicons/* {deploy_path}".format(**env))
+    local("cp .gitignore {deploy_path}".format(**CONFIG))
+    local("cp google7ed5b9715d9d7c37.html {deploy_path}".format(**CONFIG))
+    local("cp favicons/* {deploy_path}".format(**CONFIG))
 
 def build():
     """Build local version of site"""
@@ -61,15 +64,17 @@ def regenerate():
     local('pelican -r -s pelicanconf.py')
 
 def serve():
-    """Serve site at http://localhost:8000/"""
-    os.chdir(env.deploy_path)
+    """Serve site at http://$HOST:$PORT/ (default is localhost:8000)"""
 
-    class AddressReuseTCPServer(socketserver.TCPServer):
+    class AddressReuseTCPServer(RootedHTTPServer):
         allow_reuse_address = True
 
-    server = AddressReuseTCPServer(('', PORT), ComplexHTTPRequestHandler)
+    server = AddressReuseTCPServer(
+        CONFIG['deploy_path'],
+        (CONFIG['host'], CONFIG['port']),
+        ComplexHTTPRequestHandler)
 
-    sys.stderr.write('Serving on port {0} ...\n'.format(PORT))
+    sys.stderr.write('Serving at {host}:{port} ...\n'.format(**CONFIG))
     server.serve_forever()
 
 def reserve():
@@ -81,34 +86,35 @@ def preview():
     """Build production version of site"""
     local('pelican -s publishconf.py')
 
-def cf_upload():
-    """Publish to Rackspace Cloud Files"""
-    rebuild()
-    with lcd(DEPLOY_PATH):
-        local('swift -v -A https://auth.api.rackspacecloud.com/v1.0 '
-              '-U {cloudfiles_username} '
-              '-K {cloudfiles_api_key} '
-              'upload -c {cloudfiles_container} .'.format(**env))
-
-@hosts(production)
-def publish():
-    """Publish to production via rsync"""
-    local('pelican -s publishconf.py')
-    project.rsync_project(
-        remote_dir=dest_path,
-        exclude=".DS_Store",
-        local_dir=DEPLOY_PATH.rstrip('/') + '/',
-        delete=True,
-        extra_opts='-c',
-    )
-
 def pages(comment):
     """Prepare GitHub Pages, put it on master branch"""
     clean()
     publish_build()
     env.comment=comment
-    local("ghp-import -m '{comment}' -b {github_pages_branch} {deploy_path}".format(**env))
+    local("ghp-import -m '{comment}' -b {github_pages_branch} {deploy_path}".format(**CONFIG))
 
 def push():
     """Publish GibHub Pages"""
-    local("git push origin {github_pages_branch}".format(**env))
+    local("git push origin {github_pages_branch}".format(**CONFIG))
+
+def live():
+    """Automatically reload browser tab upon file modification."""
+    from livereload import Server
+    build()
+    server = Server()
+    # Watch the base settings file
+    server.watch(CONFIG['settings_base'], lambda: build())
+    # Watch content source files
+    content_file_extensions = ['.md', '.rst']
+    for extension in content_file_extensions:
+        content_blob = '{0}/**/*{1}'.format(SETTINGS['PATH'], extension)
+        server.watch(content_blob, lambda: build())
+    # Watch the theme's templates and static assets
+    theme_path = SETTINGS['THEME']
+    server.watch('{}/templates/*.html'.format(theme_path), lambda: build())
+    static_file_extensions = ['.css', '.js']
+    for extension in static_file_extensions:
+        static_file = '{0}/static/**/*{1}'.format(theme_path, extension)
+        server.watch(static_file, lambda: build())
+    # Serve output path on configured host and port
+    server.serve(host=CONFIG['host'], port=CONFIG['port'], root=CONFIG['deploy_path'])

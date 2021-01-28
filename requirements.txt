@@ -1,7 +1,8 @@
 markdown
-pelican==4.2.0
+pelican==4.5.4
 typogrify
 fabric3
 ghp-import
+livereload
 
 
