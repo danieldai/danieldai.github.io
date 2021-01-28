@@ -2,24 +2,21 @@
 
 {% block head %}
   {{ super() }}
-  {% if page.author %}
-    <meta name="author" content="{{ page.author }}">
-  {% endif %}
-  {% if page.summary %}
-    <meta name="description" content="{{ page.summary|striptags }}">
-  {% endif %}
-  <meta name="tags" contents="{% for tag in page.tags %}{{ tag }}, {% endfor %}">
+  <meta name="description" content="{{ page.summary|striptags }}">
 {% endblock %}
 
 {% block title %}
-  {{ SITENAME }} &mdash; {{ page.title|striptags }}
+  {{ page.title|striptags }} {{ super() }}
+{% endblock %}
+
+{% block page_header %}
+  {{ page.title }}
 {% endblock %}
 
 {% block content %}
-  <div class="page">
-    <h1 class="title">{{ page.title }}</h1>
+  <article class="article">
     <div class="content">
       {{ page.content }}
     </div>
-  </div>
+  </article>
 {% endblock %}

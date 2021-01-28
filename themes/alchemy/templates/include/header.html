@@ -1,61 +1,49 @@
-<header class="header">
-  <div class="container">
-    {% if PROFILE_IMAGE %}
-      <div class="header-image pull-left">
-        <a class="nodec" href="{{ SITEURL }}"><img src={{ PROFILE_IMAGE }}></a>
-      </div>
+{%- macro fa(icon) -%}
+{%- set fa_special_icons = {
+  "feed": "fas fa-rss",
+  "rss": "fas fa-rss",
+} -%}
+{%- if icon in fa_special_icons -%}
+{{ fa_special_icons[icon] }}
+{%- elif icon.split()|select("in", ["fab", "fas", "far", "fal", "fad"])|list -%}
+{{ icon }}
+{%- else -%}
+fab fa-{{icon}}
+{%- endif -%}
+{%- endmacro -%}
+<div class="row">
+  {% if SITEIMAGE %}
+    <div class="col-sm-4">
+      <a href="{{ SITEURL }}/">
+        <img class="img-fluid rounded" src={{ url(SITEIMAGE) }} alt="{{ SITENAME }}">
+      </a>
+    </div>
+  {% endif %}
+  <div class="col-sm-{% if SITEIMAGE %}8{% else %}12{% endif %}">
+    <h1 class="title"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+    {% if SITESUBTITLE %}
+      <p class="text-muted">{{ SITESUBTITLE }}</p>
     {% endif %}
-    <div class="header-inner">
-      <h1 class="header-name">
-        <a class="nodec" href="{{ SITEURL }}">{{ SITESUBTITLE }}</a>
-      </h1>
-      <h3 class="header-text">{{ SITE_SUBTEXT }}</h3>
-      <ul class="header-menu list-inline">
-        {% for title, link in MENU_ITEMS %}
-          <li><a class="nodec" href="{{ link }}" target="_blank">{{ title }}</a></li>
+    {% if LINKS or (DISPLAY_PAGES_ON_MENU and pages) or ICONS %}
+      <ul class="list-inline">
+        {% for title, link in LINKS %}
+          <li class="list-inline-item"><a href="{{ url(link) }}" target="_blank">{{ title }}</a></li>
         {% endfor %}
-        {% if PAGES_ON_MENU %}
-          {% for p in PAGES %}
-            {% if loop.first %}
-              <li class="muted">|</li>
+        {% if DISPLAY_PAGES_ON_MENU %}
+          {% for page in pages %}
+            {% if LINKS and loop.first %}
+              <li class="list-inline-item text-muted">|</li>
             {% endif %}
-            <li><a class="nodec" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-            {% if loop.last %}
-              <li class="muted">|</li>
-            {% endif %}
+            <li class="list-inline-item"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
           {% endfor %}
         {% endif %}
-        {% if CATEGORIES_ON_MENU %}
-          <li><a class="nodec" href="{{ SITEURL }}/categories.html">Categories</a></li>
-          <li class="muted">|</li>
-        {% endif %}
-        {% if TAGS_ON_MENU %}
-          <li><a class="nodec" href="{{ SITEURL }}/tags.html">Tags</a></li>
-          <li class="muted">|</li>
-        {% endif %}
-        {% if ARCHIVES_ON_MENU %}
-          <li><a class="nodec" href="{{ SITEURL }}/archives.html">Archives</a></li>
-          <li class="muted">|</li>
-        {% endif %}
-        {% if EMAIL_ADDRESS %}
-          <li><a class="nodec icon-mail-alt" href="mailto:{{ EMAIL_ADDRESS }}"></a></li>
-        {% endif %}
-        {% if GITHUB_ADDRESS %}
-          <li><a class="nodec icon-github" href="{{ GITHUB_ADDRESS }}"></a></li>
-        {% endif %}
-        {% if SO_ADDRESS %}
-          <li><a class="nodec icon-stackoverflow" href="{{ SO_ADDRESS }}"></a></li>
-        {% endif %}
-        {% if TWITTER_ADDRESS %}
-          <li><a class="nodec icon-twitter" href="{{ TWITTER_ADDRESS }}"></a></li>
-        {% endif %}
-        {% if FB_ADDRESS %}
-          <li><a class="nodec icon-facebook" href="{{ FB_ADDRESS }}"></a></li>
-        {% endif %}
-        {% if FEED_ATOM or FEED_RSS %}
-          <li><a class="nodec icon-rss" href="/{% if FEED_ATOM %}{{ FEED_ATOM }}{% else %}{{ FEED_RSS }}{% endif %}"></a></li>
-        {% endif %}
+        {% for icon, link in ICONS %}
+          {% if (LINKS or (DISPLAY_PAGES_ON_MENU and pages)) and loop.first %}
+            <li class=" list-inline-item text-muted">|</li>
+          {% endif %}
+          <li class="list-inline-item"><a class="{{ fa(icon) }}" href="{{ url(link) }}" target="_blank"></a></li>
+        {% endfor %}
       </ul>
-    </div>
+    {% endif %}
   </div>
-</header> <!-- /.header -->
+</div>

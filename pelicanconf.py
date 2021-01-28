@@ -23,7 +23,7 @@ THEME = "themes/alchemy"
 EXTRA_FAVICON = True
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
+FOOTER_LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
          ('Jinja2', 'http://jinja.pocoo.org/'),)
 
@@ -49,7 +49,9 @@ LOAD_CONTENT_CACHE = False
 
 DISPLAY_PAGES_ON_MENU = True
 
-PROFILE_IMAGE = '/daniel_150.jpeg'
+SITEIMAGE = '/daniel_150.jpeg'
+
+THEME_CSS_OVERRIDES = ['theme/css/oldstyle.css']
 
 SITE_SUBTEXT = "Day after day, we are closer to the Matrix, it's IT."
 
