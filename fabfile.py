@@ -91,7 +91,7 @@ def pages(comment):
     clean()
     publish_build()
     env.comment=comment
-    local("ghp-import -m '{comment}' -b {github_pages_branch} {deploy_path}".format(**CONFIG))
+    local("ghp-import -m '{comment}' -b {github_pages_branch} {deploy_path}".format(comment=comment, **CONFIG))
 
 def push():
     """Publish GibHub Pages"""
