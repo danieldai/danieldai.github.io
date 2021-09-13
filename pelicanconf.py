@@ -64,12 +64,15 @@ PAGES_ON_MENU = True
 CATEGORIES_ON_MENU = True
 TAGS_ON_MENU = True
 ARCHIVES_ON_MENU = True
+HIDE_AUTHORS = True
+
+DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 EMAIL_ADDRESS = 'daeming@gmail.com'
 GITHUB_ADDRESS = 'https://github.com/danieldai'
 SO_ADDRESS = 'http://stackoverflow.com/users/1089262/daniel-dai'
 
-PLUGIN_PATHS = ['/home/daniel/github/pelican-plugins']
+PLUGIN_PATHS = ['/home/daniel/danieldai/pelican-plugins']
 
 PLUGINS = ['sitemap']
 
