@@ -49,7 +49,7 @@ LOAD_CONTENT_CACHE = False
 
 DISPLAY_PAGES_ON_MENU = True
 
-SITEIMAGE = '/daniel_150.jpeg'
+# SITEIMAGE = '/daniel_150.jpeg'
 
 THEME_CSS_OVERRIDES = ['theme/css/oldstyle.css']
 
