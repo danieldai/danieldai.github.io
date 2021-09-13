@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Daniel Dai'
-SITENAME = u'Daniel Dai - Python, Java and Web'
+SITENAME = u'Daniel Dai的网络日志'
 SITEURL = ''
 
 PATH = 'content'
@@ -43,7 +43,7 @@ STATIC_PATHS = ['images',
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
                         'extra/daniel_150.jpeg': {'path': 'daniel_150.jpeg'}}
 
-SITESUBTITLE = "Daniel Dai - Web Tech Professional"
+SITESUBTITLE = "互联网产品和技术的探索"
 
 LOAD_CONTENT_CACHE = False
 

@@ -1,5 +1,6 @@
-Title: About Me
+Title: 关于我
 Date: 2016-01-15 10:20
+Slug: about-me
 
 
 I'm a Software Engineer speak mainly `Python`, and `Java` currently. 
