@@ -1,12 +1,13 @@
-Title: Gin API 示例
+Title: Gin API 示例 【进行中】
 Date: 2021-09-14 22:20
 Slug: gin-api-examples
 Category: Post
 Tags: Golang, Go
+Status: published
 
-## AsciiJSON
+## 1. AsciiJSON
 
-Using AsciiJSON to Generates ASCII-only JSON with escaped non-ASCII characters.
+使用 AsciiJSON 生成纯 ASCII JSON, 非 ASCII 字符会被转义。
 
 ```go
 func main() {
@@ -15,21 +16,36 @@ func main() {
 	r.GET("/someJSON", func(c *gin.Context) {
 		data := map[string]interface{}{
 			"lang": "GO语言",
-			"tag":  "<br>",
+			"tag":  "<br",
 		}
-
-		// will output : {"lang":"GO\u8bed\u8a00","tag":"\u003cbr\u003e"}
+		// 将会输出 : {"lang":"GO\u8bed\u8a00","tag":"\u003cbr"}
 		c.AsciiJSON(http.StatusOK, data)
 	})
 
-	// Listen and serve on 0.0.0.0:8080
+	// 在 0.0.0.0:8080 上监听
 	r.Run(":8080")
 }
 ```
 
-## Bind form-data request with custom struct
+测试：
+```bash
+$ curl http://localhost:8080/someJSON
 
-The follow example using custom struct:
+{"lang":"GO\u8bed\u8a00","tag":"\u003cbr"}
+```
+
+注意，如果使用chrome浏览器访问这个地址，浏览器中会显示，这是浏览器自动进行了处理：
+```json
+{
+  lang: "GO语言",
+  tag: "<br"
+}
+```
+
+
+## 2. 绑定表单请求数据到自定义的 struct
+
+下列示例使用了自定义的`struct`:
 
 ```go
 type StructA struct {
@@ -86,21 +102,41 @@ func main() {
     r.GET("/getc", GetDataC)
     r.GET("/getd", GetDataD)
 
+	r.POST("/getb", GetDataB)
+	r.POST("/getc", GetDataC)
+	r.POST("/getd", GetDataD)
+
     r.Run()
 }
 ```
-Using the command curl command result:
+使用 `curl` 命令测试：
 
 ```bash
+# 下面3个命令使用query string 传递数据
 $ curl "http://localhost:8080/getb?field_a=hello&field_b=world"
 {"a":{"FieldA":"hello"},"b":"world"}
+
 $ curl "http://localhost:8080/getc?field_a=hello&field_c=world"
 {"a":{"FieldA":"hello"},"c":"world"}
+
 $ curl "http://localhost:8080/getd?field_x=hello&field_d=world"
 {"d":"world","x":{"FieldX":"hello"}}
+
+# 下面3个命令使用表单传递数据
+$ curl -X POST -d "field_a=hello&field_b=world" "http://localhost:8080/getb"
+{"a":{"FieldA":"hello"},"b":"world"}
+
+$ curl -X POST -d "field_a=hello&field_c=world" "http://localhost:8080/getc"
+{"a":{"FieldA":"hello"},"c":"world"}
+
+$ curl -X POST -d "field_x=hello&field_d=world" "http://localhost:8080/getd"
+{"d":"world","x":{"FieldX":"hello"}}
+
 ```
 
-## Bind html checkboxes
+从测试可以看出，上面的方法不但可以绑定来自`query string`的数据，还可以绑定来自表单的数据
+
+## 3. Bind html checkboxes
 
 main.go
 
@@ -261,3 +297,5 @@ func loadTemplate() (*template.Template, error) {
 }
 ```
 See a complete example in the assets-in-binary/example01 directory.
+
+未完待续......
