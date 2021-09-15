@@ -19,7 +19,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-THEME = "themes/alchemy"
+THEME = "/home/daniel/pelican-themes/Nuja"
 EXTRA_FAVICON = True
 
 # Blogroll
