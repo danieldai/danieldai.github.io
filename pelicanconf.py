@@ -27,6 +27,10 @@ FOOTER_LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
          ('Jinja2', 'http://jinja.pocoo.org/'),)
 
+ICONS = (
+    ('github', 'https://github.com/danieldai'),
+)
+
 # Social widget
 SOCIAL = (('Gather Health', 'https://gatherhealth.com'),)
 
