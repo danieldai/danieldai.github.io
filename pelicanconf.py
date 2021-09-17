@@ -19,7 +19,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-THEME = "/home/daniel/pelican-themes/Nuja"
+THEME = "/home/daniel/pelican-themes/Flex"
 EXTRA_FAVICON = True
 
 # Blogroll
@@ -44,6 +44,8 @@ STATIC_PATHS = ['images',
                 'extra/daniel_150.jpeg' 
                 ]
                 
+SITELOGO = SITEURL + "/daniel_150.jpeg"
+
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
                         'extra/daniel_150.jpeg': {'path': 'daniel_150.jpeg'}}
 
