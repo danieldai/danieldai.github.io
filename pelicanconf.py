@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Daniel Dai'
 SITETITLE = 'Daniel Dai'
 SITENAME = u'Daniel Dai的网络日志'
-SITEURL = ''
+SITEURL = 'https://www.danieldai.com'
 
 PATH = 'content'
 
@@ -77,7 +77,7 @@ SITELOGO = SITEURL + "/daniel_150.jpeg"
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
                         'extra/daniel_150.jpeg': {'path': 'daniel_150.jpeg'}}
 
-SITESUBTITLE = "互联网产品和技术的探索"
+SITESUBTITLE = "互联网产品和技术"
 
 LOAD_CONTENT_CACHE = False
 
