@@ -11,7 +11,7 @@ PATH = 'content'
 
 TIMEZONE = 'Asia/Chongqing'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'zh'
 
 CC_LICENSE = {
     "name": "Creative Commons Attribution-ShareAlike",
@@ -22,20 +22,20 @@ CC_LICENSE = {
 MAIN_MENU = True
 
 LINKS = (
-    ("Linkedin", "https://www.linkedin.com/in/daniel-dai/"),
-    ("Github", "https://github.com/danieldai"),
+#     ("Linkedin", "https://www.linkedin.com/in/daniel-dai/"),
+#     ("Github", "https://github.com/danieldai"),
 )
 
 SOCIAL = (
-    ("linkedin", "https://www.linkedin.com/in/alexandrevicenzi/en"),
-    ("Github", "https://github.com/danieldai"),
-    ("twitter", "https://twitter.com/alxvicenzi"),
+    ("github", "https://github.com/danieldai"),
+    ("linkedin", "https://www.linkedin.com/in/daniel-dai"),
+    ("twitter", "https://twitter.com/danieldai_com"),
 )
 
 MENUITEMS = (
-    ("Archives", "/archives.html"),
-    ("Categories", "/categories.html"),
-    ("Tags", "/tags.html"),
+    ("存档", "/archives.html"),
+    ("分类", "/categories.html"),
+    ("标签", "/tags.html"),
 )
 
 PYGMENTS_STYLE = "monokai"
@@ -59,8 +59,6 @@ ICONS = (
     ('github', 'https://github.com/danieldai'),
 )
 
-# Social widget
-SOCIAL = (('Gather Health', 'https://gatherhealth.com'),)
 
 DEFAULT_PAGINATION = 10
 
@@ -100,7 +98,7 @@ TAGS_ON_MENU = True
 ARCHIVES_ON_MENU = True
 HIDE_AUTHORS = True
 
-DEFAULT_DATE_FORMAT = '%Y-%m-%d'
+DEFAULT_DATE_FORMAT = '%Y年%m月%d日'
 
 EMAIL_ADDRESS = 'daeming@gmail.com'
 GITHUB_ADDRESS = 'https://github.com/danieldai'
