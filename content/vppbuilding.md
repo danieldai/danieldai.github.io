@@ -52,4 +52,50 @@ $ sudo bash
 # make run
 ```
 
+## 错误处理
+执行 `make run` 时发生如下错误：
+```text
+/vpp/build-root/install-vpp_debug-native/vpp/bin/vpp: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.29' not found
+```
+
+我是在Ubuntu 18.04上进行的实验，查看对应库的GLIBC版本发现最大支持到 `GLIBC_2.29`
+```bash
+$ strings /lib/x86_64-linux-gnu/libm.so.6 |grep GLIBC_
+GLIBC_2.2.5
+GLIBC_2.4
+GLIBC_2.15
+GLIBC_2.18
+GLIBC_2.23
+GLIBC_2.24
+GLIBC_2.25
+GLIBC_2.26
+GLIBC_2.27
+GLIBC_PRIVATE
+```
+
+为了继续实验，需要把glibm升级到 2.29
+
+### 安装glibc-2.29
+
+```bash
+wget http://ftp.gnu.org/gnu/glibc/glibc-2.29.tar.gz 
+tar -zxvf glibc-2.29.tar.gz
+cd glibc-2.29
+mkdir build
+cd build
+sudo apt install gawk bison
+../configure --prefix=/opt/glibc-2.29
+make
+make install
+```
+
+glibc 软连接
+
+安装完成后, 建立软链指向glibc-2.29, 执行如下命令:
+```bash
+rm -rf /lib/x86_64-linux-gnu/libm.so.6   //先删除之前的软连接
+
+ln -s /opt/glibc-2.29/lib/libm-2.29.so  /lib/x86_64-linux-gnu/libm.so.6
+```
+
 英文源：https://fd.io/vppproject/vppbuilding/

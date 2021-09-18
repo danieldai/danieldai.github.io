@@ -38,7 +38,7 @@ MENUITEMS = (
     ("标签", "/tags.html"),
 )
 
-PYGMENTS_STYLE = "monokai"
+PYGMENTS_STYLE = "github"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
