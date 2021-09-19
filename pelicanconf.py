@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Daniel Dai'
 SITETITLE = 'Daniel Dai'
 SITENAME = u'Daniel Dai的网络日志'
-SITEURL = 'https://www.danieldai.com'
+SITEURL = 'http://localhost:8000'
 
 PATH = 'content'
 
@@ -13,10 +13,14 @@ TIMEZONE = 'Asia/Chongqing'
 
 DEFAULT_LANG = 'zh'
 
+COPYRIGHT_YEAR = "2021"
+COPYRIGHT_NAME = 'Daniel Dai'
+
 CC_LICENSE = {
-    "name": "Creative Commons Attribution-ShareAlike",
-    "version": "4.0",
-    "slug": "by-sa"
+    "name": "自由转载-非商用-非衍生-保持署名",
+    "version": "3.0",
+    "slug": "by-nc-nd",
+    "language": "zh"
 }
 
 MAIN_MENU = True
