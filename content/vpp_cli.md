@@ -148,6 +148,27 @@ https://docs.fd.io/vpp/17.07/clicmd_src_vnet.html#clicmd_set_interface
 
 https://docs.fd.io/vpp/17.07/clicmd_src_vnet.html#clicmd_show_interface
 
+### create vlan subinterface
+
+### set interface ip
+
+### set interface ip addr
+
+### set interface ip table
+
+## Routing table commands
+
+### ip route add/del
+
+### show ip fib / show ip6 fib
+
+### Manipulating the ARP cache
+
+### Proxy ARP
+
+### dhcp 代理
+
+### dhcp proxy option 82 (circuit-ID)
 
 未完待续......
 
