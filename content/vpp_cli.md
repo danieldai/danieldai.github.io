@@ -76,7 +76,7 @@ CLI有几个编辑功能，使其易于使用。
 - CLI可以通过`exit`命令关闭。或者，在空行上的输入`^D`也将关闭会话。
 - 关闭调试会话也将关闭VPP
 
-超过终端页面长度的输出将被缓存，直到有缓存大小限制。
+超过终端页面长度的输出将被缓存，直到到达缓存大小限制。
 
 - 空格或下一页键显示下一页。
 - 回车键或向下箭头显示下一行。
@@ -85,8 +85,71 @@ CLI有几个编辑功能，使其易于使用。
 - Home/End键跳转到缓冲输出的开始/结束。
 - 按`q`键退出分页器。如果到达缓冲区的末尾，空格键和回车键也将退出分页器。
 
+## 接口命令
+
+### 显示接口
+
+要显示接口名称和 rx/tx 包/字节和丢弃计数器，请使用“show interface”：
+
+```bash
+vpp# show interface
+             Name                    State          Counter          Count     
+GigabitEthernet2/0/0                   up       rx packets                  1801
+                                                rx bytes                  179560
+                                                tx packets                   343
+                                                tx bytes                   88050
+                                                drops                       1459
+GigabitEthernet2/2/0                   up       rx packets                  7875
+                                                rx bytes                  740694
+                                                tx packets                   228
+                                                tx bytes                   78888
+                                                drops                       7647
+GigabitEthernet2/3/0                  down      
+GigabitEthernet2/4/0                  down      
+local0                                down      
+pg/stream-0                           down      
+pg/stream-1                           down      
+pg/stream-2                           down      
+pg/stream-3                           down      
+tuntap-0                               up
+```
+
+在x86_64硬件上，接口名称直接来自PCI总线、id和函数。Local0和数据包生成器流是“特殊的”，不应该直接配置。当在“"punt/inject mode”下运行时，tuntap-0是“特殊的”，不应该直接配置。
+
+### 显示接口地址
+
+要显示接口地址和 up/down 状态：
+
+```bash
+vpp# show int address
+GigabitEthernet0/8/0 (up):
+  172.28.128.5/24
+local0 (dn):
+pg/stream-0 (dn):
+pg/stream-1 (dn):
+pg/stream-2 (dn):
+pg/stream-3 (dn):
+```
+
+### 显示硬件
+
+https://docs.fd.io/vpp/17.07/clicmd_src_vnet.html#clicmd_show_hardware-interfaces
+
+### clear interface
+
+https://docs.fd.io/vpp/17.07/clicmd_src_vnet.html#clicmd_clear_interface
+
+
+### set interface
+
+https://docs.fd.io/vpp/17.07/clicmd_src_vnet.html#clicmd_set_interface
+
+### show interface
+
+https://docs.fd.io/vpp/17.07/clicmd_src_vnet.html#clicmd_show_interface
 
 
 未完待续......
+
 
 源文件：https://wiki.fd.io/view/VPP/Command-line_Interface_(CLI)_Guide
