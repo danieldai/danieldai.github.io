@@ -1,7 +1,7 @@
 Title: 编译VPP
 Date: 2021-09-15 22:20
 Slug: vppbuilding
-Category: Post
+Category: VPP
 Tags: VPP, 矢量报文处理
 Status: published
 
