@@ -117,5 +117,3 @@ func main() {
 # 运行 example.go 并在浏览器里访问 localhost:8080/ping
 $ go run example.go
 ```
-
-未完待续...
