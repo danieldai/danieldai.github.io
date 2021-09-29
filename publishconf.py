@@ -27,7 +27,7 @@ GOOGLE_ANALYTICS = "UA-72604787-1"
 GITHUB_URL = "https://github.com/danieldai"
 GOOGLE_ANALYTICS_ID = GOOGLE_ANALYTICS # for alchemy theme
 
-GOOGLE_GLOBAL_SITE_TAG = 'G-286858962'
+GOOGLE_GLOBAL_SITE_TAG = 'G-Z9KZ43RGT7'
 
 # GOOGLE_ADSENSE = {
 #     'ca_id': 'ca-pub-1234567890',    # Your AdSense ID
