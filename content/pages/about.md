@@ -38,4 +38,4 @@ I was in a team that was reseaching `Mobile Network Delivery Optimization`, whic
 Now I'm a Web backend developer using Django in a startup mobile health care company. I'm the main developer in backend. And I'm also involed in some iOS app development.
 
 
-If you are interested, you can get me at `daeming@gmail.com`
+If you are interested, you can get me at `daniel@danieldai.com`
