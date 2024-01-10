@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai的网络日志 - Python</title><link href="https://www.danieldai.com/" rel="alternate"></link><link href="https://www.danieldai.com/feeds/python.atom.xml" rel="self"></link><id>https://www.danieldai.com/</id><updated>2016-06-30T09:20:00+08:00</updated><subtitle>互联网产品和技术</subtitle><subtitle>互联网产品和技术</subtitle><entry><title>How to split string in Python?</title><link href="https://www.danieldai.com/how-to-split-string-in-python.html" rel="alternate"></link><published>2016-06-30T09:20:00+08:00</published><updated>2016-06-30T09:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-06-30:/how-to-split-string-in-python.html</id><summary type="html">&lt;h2&gt;Split string with identical separator&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai的网络日志 - Python</title><link href="https://www.danieldai.com/" rel="alternate"></link><link href="https://www.danieldai.com/feeds/python.atom.xml" rel="self"></link><id>https://www.danieldai.com/</id><updated>2016-06-30T09:20:00+08:00</updated><subtitle>互联网产品和技术</subtitle><entry><title>How to split string in Python?</title><link href="https://www.danieldai.com/how-to-split-string-in-python.html" rel="alternate"></link><published>2016-06-30T09:20:00+08:00</published><updated>2016-06-30T09:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-06-30:/how-to-split-string-in-python.html</id><summary type="html">&lt;h2&gt;Split string with identical separator&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.130.248:15+221.160.226.9:329+101.240.154.40:1197&amp;#39;&lt;/span&gt;
 
 &lt;span class="n"&gt;nodes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;+&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -7,7 +7,7 @@
 &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;45.63.130.248:15&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[&amp;#39;45.63.130.248:15&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.130.248:15*+221.160.226 …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2&gt;Split string with identical separator&lt;/h2&gt;
@@ -18,7 +18,7 @@
 &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;45.63.130.248:15&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[&amp;#39;45.63.130.248:15&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.130.248:15*+221.160.226.9:329*+101.240.154.40:1197&amp;#39;&lt;/span&gt;
@@ -28,7 +28,7 @@
 &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;45.63.130.248:15&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[&amp;#39;45.63.130.248:15&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;Split string with non-identical separator&lt;/h2&gt;
@@ -42,7 +42,7 @@
 &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;node1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;node2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;node3&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;45.63.120.248:1195 221.160.226.9:329 101.240.154.40:1197&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;45.63.120.248&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;1195&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;221.160.226.9&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;329&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;101.240.154.40&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;1197&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# A more elegent way, is to use the re.split()&lt;/span&gt;
@@ -54,25 +54,25 @@
 &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;45.63.120.248:1195&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[&amp;#39;45.63.120.248:1195&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category></entry><entry><title>Django Template Include and I18n</title><link href="https://www.danieldai.com/django-template-include-and-i18n.html" rel="alternate"></link><published>2016-01-27T22:20:00+08:00</published><updated>2016-01-27T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-01-27:/django-template-include-and-i18n.html</id><summary type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Sometimes, we need to tranalte &lt;code&gt;include prarameters&lt;/code&gt;, this can not be done in &lt;code&gt;another_template.html …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Sometimes, we need to tranalte &lt;code&gt;include prarameters&lt;/code&gt;, this can not be done in &lt;code&gt;another_template.html&lt;/code&gt;, &lt;code&gt;blocktrans&lt;/code&gt; will not work here.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="x"&gt;# in another_template.html&lt;/span&gt;
-&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;blocktrans&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;text&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endblocktrans&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;blocktrans&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;text&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endblocktrans&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We need to do the translation in the first temalate, before passing it to another template:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;{% trans &amp;#39;I love Python&amp;#39; as text %}&lt;/span&gt;
-&lt;span class="err"&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=text %}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% trans &amp;#39;I love Python&amp;#39; as text %}
+{% include &amp;quot;include/another_template.html&amp;quot; with text=text %}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Reference:&lt;/p&gt;
@@ -113,16 +113,16 @@
 &lt;p&gt;This part of the proposal had BDFL approval from the beginning.&lt;/p&gt;
 &lt;h1&gt;Relative Imports&lt;/h1&gt;
 &lt;p&gt;Relative imports use leading dots. A single leading dot indicates a relative import, starting with the current package. Two or more leading dots give a relative import to the parent(s) of the current package, one level per dot after the first. Here's a sample package layout:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;package/&lt;/span&gt;
-&lt;span class="err"&gt;    __init__.py&lt;/span&gt;
-&lt;span class="err"&gt;    subpackage1/&lt;/span&gt;
-&lt;span class="err"&gt;        __init__.py&lt;/span&gt;
-&lt;span class="err"&gt;        moduleX.py&lt;/span&gt;
-&lt;span class="err"&gt;        moduleY.py&lt;/span&gt;
-&lt;span class="err"&gt;    subpackage2/&lt;/span&gt;
-&lt;span class="err"&gt;        __init__.py&lt;/span&gt;
-&lt;span class="err"&gt;        moduleZ.py&lt;/span&gt;
-&lt;span class="err"&gt;    moduleA.py&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;package&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;py&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;subpackage1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;py&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;moduleX&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;py&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;moduleY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;py&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;subpackage2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;py&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;moduleZ&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;py&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;moduleA&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;py&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Assuming that the current file is either &lt;code&gt;moduleX.py&lt;/code&gt; or &lt;code&gt;subpackage1/__init__.py&lt;/code&gt; , following are correct usages of the new syntax:&lt;/p&gt;
@@ -142,7 +142,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;then&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;XXX.YYY.ZZZ&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;XXX.YYY.ZZZ
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;is usable in an expression. But&lt;/p&gt;

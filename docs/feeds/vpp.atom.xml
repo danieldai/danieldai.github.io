@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai的网络日志 - VPP</title><link href="https://www.danieldai.com/" rel="alternate"></link><link href="https://www.danieldai.com/feeds/vpp.atom.xml" rel="self"></link><id>https://www.danieldai.com/</id><updated>2021-09-22T22:20:00+08:00</updated><subtitle>互联网产品和技术</subtitle><subtitle>互联网产品和技术</subtitle><entry><title>VPP命令行</title><link href="https://www.danieldai.com/vpp_cli.html" rel="alternate"></link><published>2021-09-22T22:20:00+08:00</published><updated>2021-09-22T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2021-09-22:/vpp_cli.html</id><summary type="html">&lt;h2&gt;导言&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai的网络日志 - VPP</title><link href="https://www.danieldai.com/" rel="alternate"></link><link href="https://www.danieldai.com/feeds/vpp.atom.xml" rel="self"></link><id>https://www.danieldai.com/</id><updated>2021-09-22T22:20:00+08:00</updated><subtitle>互联网产品和技术</subtitle><entry><title>VPP命令行</title><link href="https://www.danieldai.com/vpp_cli.html" rel="alternate"></link><published>2021-09-22T22:20:00+08:00</published><updated>2021-09-22T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2021-09-22:/vpp_cli.html</id><summary type="html">&lt;h2&gt;导言&lt;/h2&gt;
 &lt;p&gt;vpp网络堆栈配备了一组用于调试的命令。&lt;/p&gt;
 &lt;p&gt;访问CLI（具有适当权限）的最简单方法是使用vppctl命令：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo vppctl &amp;lt;cli command&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;vppctl&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;cli&lt;span class="w"&gt; &lt;/span&gt;command&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;CLI解析器匹配静态关键字字符串，最终调用操作函数。明确的部分关键字匹配总是发生。操 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;导言&lt;/h2&gt;
+&lt;p&gt;vpp网络堆栈配备了一组用于调试的命令。&lt;/p&gt;
+&lt;p&gt;访问CLI（具有适当权限）的最简单方法是使用vppctl命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;vppctl&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;cli&lt;span class="w"&gt; &lt;/span&gt;command&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;CLI解析器匹配静态关键字字符串，最终调用操作函数。明确的部分关键字匹配总是发生。操作函数消耗输入，直到满足或失败。这种模型易于编码，但不能保证有用的“帮助”输出。由CLI命令编写器来添加有用的帮助字符串。&lt;/p&gt;
@@ -11,27 +17,9 @@
 &lt;p&gt;调试CLI通过&lt;code&gt;unix interactive&lt;/code&gt;参数或启动配置选项启用。这将导致VPP在没有后台化的情况下启动，并在运行它的终端上显示命令行界面。&lt;/p&gt;
 &lt;p&gt;Telnet CLI启用了&lt;code&gt;cli-listen localhost:5002&lt;/code&gt;选项，这将导致VPP监听localhost地址端口5002上的TCP连接。然后Telnet客户端可以连接到该端口（例如，&lt;code&gt;telnet localhost 5002&lt;/code&gt;），并将收到命令行提示符。&lt;/p&gt;
 &lt;p&gt;这一配置将使这两种机制成为可能：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;unix &lt;span class="o"&gt;{&lt;/span&gt;
-  interactive
-  cli-listen localhost:5002
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;调试CLI可以以行模式运行 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;导言&lt;/h2&gt;
-&lt;p&gt;vpp网络堆栈配备了一组用于调试的命令。&lt;/p&gt;
-&lt;p&gt;访问CLI（具有适当权限）的最简单方法是使用vppctl命令：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo vppctl &amp;lt;cli command&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;CLI解析器匹配静态关键字字符串，最终调用操作函数。明确的部分关键字匹配总是发生。操作函数消耗输入，直到满足或失败。这种模型易于编码，但不能保证有用的“帮助”输出。由CLI命令编写器来添加有用的帮助字符串。&lt;/p&gt;
-&lt;p&gt;您可以通过在代码源文件中搜索&lt;code&gt;VLIB_CLI_COMMAND&lt;/code&gt; 宏的实例来找到CLI命令的源代码。&lt;/p&gt;
-&lt;h2&gt;调试和Telnet CLI&lt;/h2&gt;
-&lt;p&gt;调试CLI通过&lt;code&gt;unix interactive&lt;/code&gt;参数或启动配置选项启用。这将导致VPP在没有后台化的情况下启动，并在运行它的终端上显示命令行界面。&lt;/p&gt;
-&lt;p&gt;Telnet CLI启用了&lt;code&gt;cli-listen localhost:5002&lt;/code&gt;选项，这将导致VPP监听localhost地址端口5002上的TCP连接。然后Telnet客户端可以连接到该端口（例如，&lt;code&gt;telnet localhost 5002&lt;/code&gt;），并将收到命令行提示符。&lt;/p&gt;
-&lt;p&gt;这一配置将使这两种机制成为可能：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;unix &lt;span class="o"&gt;{&lt;/span&gt;
-  interactive
-  cli-listen localhost:5002
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;unix&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;interactive
+&lt;span class="w"&gt;  &lt;/span&gt;cli-listen&lt;span class="w"&gt; &lt;/span&gt;localhost:5002
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -80,39 +68,39 @@ DBGvpp#
 &lt;h2&gt;接口命令&lt;/h2&gt;
 &lt;h3&gt;显示接口&lt;/h3&gt;
 &lt;p&gt;要显示接口名称和 rx/tx 包/字节和丢弃计数器，请使用“show interface”：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;vpp# show interface
-             Name                    State          Counter          Count     
-GigabitEthernet2/0/0                   up       rx packets                  &lt;span class="m"&gt;1801&lt;/span&gt;
-                                                rx bytes                  &lt;span class="m"&gt;179560&lt;/span&gt;
-                                                tx packets                   &lt;span class="m"&gt;343&lt;/span&gt;
-                                                tx bytes                   &lt;span class="m"&gt;88050&lt;/span&gt;
-                                                drops                       &lt;span class="m"&gt;1459&lt;/span&gt;
-GigabitEthernet2/2/0                   up       rx packets                  &lt;span class="m"&gt;7875&lt;/span&gt;
-                                                rx bytes                  &lt;span class="m"&gt;740694&lt;/span&gt;
-                                                tx packets                   &lt;span class="m"&gt;228&lt;/span&gt;
-                                                tx bytes                   &lt;span class="m"&gt;78888&lt;/span&gt;
-                                                drops                       &lt;span class="m"&gt;7647&lt;/span&gt;
-GigabitEthernet2/3/0                  down      
-GigabitEthernet2/4/0                  down      
-local0                                down      
-pg/stream-0                           down      
-pg/stream-1                           down      
-pg/stream-2                           down      
-pg/stream-3                           down      
-tuntap-0                               up
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;vpp#&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;interface
+&lt;span class="w"&gt;             &lt;/span&gt;Name&lt;span class="w"&gt;                    &lt;/span&gt;State&lt;span class="w"&gt;          &lt;/span&gt;Counter&lt;span class="w"&gt;          &lt;/span&gt;Count&lt;span class="w"&gt;     &lt;/span&gt;
+GigabitEthernet2/0/0&lt;span class="w"&gt;                   &lt;/span&gt;up&lt;span class="w"&gt;       &lt;/span&gt;rx&lt;span class="w"&gt; &lt;/span&gt;packets&lt;span class="w"&gt;                  &lt;/span&gt;&lt;span class="m"&gt;1801&lt;/span&gt;
+&lt;span class="w"&gt;                                                &lt;/span&gt;rx&lt;span class="w"&gt; &lt;/span&gt;bytes&lt;span class="w"&gt;                  &lt;/span&gt;&lt;span class="m"&gt;179560&lt;/span&gt;
+&lt;span class="w"&gt;                                                &lt;/span&gt;tx&lt;span class="w"&gt; &lt;/span&gt;packets&lt;span class="w"&gt;                   &lt;/span&gt;&lt;span class="m"&gt;343&lt;/span&gt;
+&lt;span class="w"&gt;                                                &lt;/span&gt;tx&lt;span class="w"&gt; &lt;/span&gt;bytes&lt;span class="w"&gt;                   &lt;/span&gt;&lt;span class="m"&gt;88050&lt;/span&gt;
+&lt;span class="w"&gt;                                                &lt;/span&gt;drops&lt;span class="w"&gt;                       &lt;/span&gt;&lt;span class="m"&gt;1459&lt;/span&gt;
+GigabitEthernet2/2/0&lt;span class="w"&gt;                   &lt;/span&gt;up&lt;span class="w"&gt;       &lt;/span&gt;rx&lt;span class="w"&gt; &lt;/span&gt;packets&lt;span class="w"&gt;                  &lt;/span&gt;&lt;span class="m"&gt;7875&lt;/span&gt;
+&lt;span class="w"&gt;                                                &lt;/span&gt;rx&lt;span class="w"&gt; &lt;/span&gt;bytes&lt;span class="w"&gt;                  &lt;/span&gt;&lt;span class="m"&gt;740694&lt;/span&gt;
+&lt;span class="w"&gt;                                                &lt;/span&gt;tx&lt;span class="w"&gt; &lt;/span&gt;packets&lt;span class="w"&gt;                   &lt;/span&gt;&lt;span class="m"&gt;228&lt;/span&gt;
+&lt;span class="w"&gt;                                                &lt;/span&gt;tx&lt;span class="w"&gt; &lt;/span&gt;bytes&lt;span class="w"&gt;                   &lt;/span&gt;&lt;span class="m"&gt;78888&lt;/span&gt;
+&lt;span class="w"&gt;                                                &lt;/span&gt;drops&lt;span class="w"&gt;                       &lt;/span&gt;&lt;span class="m"&gt;7647&lt;/span&gt;
+GigabitEthernet2/3/0&lt;span class="w"&gt;                  &lt;/span&gt;down&lt;span class="w"&gt;      &lt;/span&gt;
+GigabitEthernet2/4/0&lt;span class="w"&gt;                  &lt;/span&gt;down&lt;span class="w"&gt;      &lt;/span&gt;
+local0&lt;span class="w"&gt;                                &lt;/span&gt;down&lt;span class="w"&gt;      &lt;/span&gt;
+pg/stream-0&lt;span class="w"&gt;                           &lt;/span&gt;down&lt;span class="w"&gt;      &lt;/span&gt;
+pg/stream-1&lt;span class="w"&gt;                           &lt;/span&gt;down&lt;span class="w"&gt;      &lt;/span&gt;
+pg/stream-2&lt;span class="w"&gt;                           &lt;/span&gt;down&lt;span class="w"&gt;      &lt;/span&gt;
+pg/stream-3&lt;span class="w"&gt;                           &lt;/span&gt;down&lt;span class="w"&gt;      &lt;/span&gt;
+tuntap-0&lt;span class="w"&gt;                               &lt;/span&gt;up
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;在x86_64硬件上，接口名称直接来自PCI总线、id和函数。Local0和数据包生成器流是“特殊的”，不应该直接配置。当在“"punt/inject mode”下运行时，tuntap-0是“特殊的”，不应该直接配置。&lt;/p&gt;
 &lt;h3&gt;显示接口地址&lt;/h3&gt;
 &lt;p&gt;要显示接口地址和 up/down 状态：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;vpp# show int address
-GigabitEthernet0/8/0 &lt;span class="o"&gt;(&lt;/span&gt;up&lt;span class="o"&gt;)&lt;/span&gt;:
-  &lt;span class="m"&gt;172&lt;/span&gt;.28.128.5/24
-local0 &lt;span class="o"&gt;(&lt;/span&gt;dn&lt;span class="o"&gt;)&lt;/span&gt;:
-pg/stream-0 &lt;span class="o"&gt;(&lt;/span&gt;dn&lt;span class="o"&gt;)&lt;/span&gt;:
-pg/stream-1 &lt;span class="o"&gt;(&lt;/span&gt;dn&lt;span class="o"&gt;)&lt;/span&gt;:
-pg/stream-2 &lt;span class="o"&gt;(&lt;/span&gt;dn&lt;span class="o"&gt;)&lt;/span&gt;:
-pg/stream-3 &lt;span class="o"&gt;(&lt;/span&gt;dn&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;vpp#&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;int&lt;span class="w"&gt; &lt;/span&gt;address
+GigabitEthernet0/8/0&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;up&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="m"&gt;172&lt;/span&gt;.28.128.5/24
+local0&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;dn&lt;span class="o"&gt;)&lt;/span&gt;:
+pg/stream-0&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;dn&lt;span class="o"&gt;)&lt;/span&gt;:
+pg/stream-1&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;dn&lt;span class="o"&gt;)&lt;/span&gt;:
+pg/stream-2&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;dn&lt;span class="o"&gt;)&lt;/span&gt;:
+pg/stream-3&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;dn&lt;span class="o"&gt;)&lt;/span&gt;:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;显示硬件&lt;/h3&gt;
@@ -137,59 +125,34 @@ pg/stream-3 &lt;span class="o"&gt;(&lt;/span&gt;dn&lt;span class="o"&gt;)&lt;/sp
 &lt;p&gt;源文件：https://wiki.fd.io/view/VPP/Command-line_Interface_(CLI)_Guide&lt;/p&gt;</content><category term="VPP"></category><category term="VPP"></category><category term="CLI"></category></entry><entry><title>编译VPP</title><link href="https://www.danieldai.com/vppbuilding.html" rel="alternate"></link><published>2021-09-15T22:20:00+08:00</published><updated>2021-09-15T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2021-09-15:/vppbuilding.html</id><summary type="html">&lt;h1&gt;如何下载和构建VPP&lt;/h1&gt;
 &lt;p&gt;下面介绍了如何下载和构建VPP。&lt;/p&gt;
 &lt;h2&gt;设置代理&lt;/h2&gt;
-&lt;p&gt;根据您操作的环境，可能需要设置代理。运行这些代理命令来指定代理服务器名称和相应的端口号：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;http_proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://&amp;lt;proxy-server-name&amp;gt;.com:&amp;lt;port-number&amp;gt;
-$ &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;https_proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://&amp;lt;proxy-server-name&amp;gt;.com:&amp;lt;port-number&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2&gt;获取VPP源代码&lt;/h2&gt;
-&lt;p&gt;要获取用于创建构建的VPP源代码，请运行以下命令：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git clone https://gerrit.fd.io/r/vpp
-$ &lt;span class="nb"&gt;cd&lt;/span&gt; vpp
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2&gt;构建VPP依赖关系&lt;/h2&gt;
-&lt;p&gt;运行以下make命令来安装VPP的依赖项。&lt;/p&gt;
-&lt;p&gt;如果下载时发生挂起，那么您可能需要先按第一步设置代理才能正常下载。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ make install-dep
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2&gt;构建VPP（发布版本）&lt;/h2&gt;
-&lt;p&gt;使用下面的make命令构建VPP的发布版本。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ make build-release
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2&gt;运行VPP&lt;/h2&gt;
-&lt;p&gt;构建VPP二进制文件后，您现在已经构建了几个镜像。使用以下命令运行VPP&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo bash
-&lt;span class="c1"&gt;# make run …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h1&gt;如何下载和构建VPP&lt;/h1&gt;
+&lt;p&gt;根据您操作的环境，可能需要设置代理。运行这些代理命令来 …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;如何下载和构建VPP&lt;/h1&gt;
 &lt;p&gt;下面介绍了如何下载和构建VPP。&lt;/p&gt;
 &lt;h2&gt;设置代理&lt;/h2&gt;
 &lt;p&gt;根据您操作的环境，可能需要设置代理。运行这些代理命令来指定代理服务器名称和相应的端口号：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;http_proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://&amp;lt;proxy-server-name&amp;gt;.com:&amp;lt;port-number&amp;gt;
-$ &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;https_proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://&amp;lt;proxy-server-name&amp;gt;.com:&amp;lt;port-number&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;http_proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://&amp;lt;proxy-server-name&amp;gt;.com:&amp;lt;port-number&amp;gt;
+$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;https_proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://&amp;lt;proxy-server-name&amp;gt;.com:&amp;lt;port-number&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;获取VPP源代码&lt;/h2&gt;
 &lt;p&gt;要获取用于创建构建的VPP源代码，请运行以下命令：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git clone https://gerrit.fd.io/r/vpp
-$ &lt;span class="nb"&gt;cd&lt;/span&gt; vpp
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;clone&lt;span class="w"&gt; &lt;/span&gt;https://gerrit.fd.io/r/vpp
+$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;vpp
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;构建VPP依赖关系&lt;/h2&gt;
 &lt;p&gt;运行以下make命令来安装VPP的依赖项。&lt;/p&gt;
 &lt;p&gt;如果下载时发生挂起，那么您可能需要先按第一步设置代理才能正常下载。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ make install-dep
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;install-dep
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;构建VPP（发布版本）&lt;/h2&gt;
 &lt;p&gt;使用下面的make命令构建VPP的发布版本。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ make build-release
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;build-release
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;运行VPP&lt;/h2&gt;
 &lt;p&gt;构建VPP二进制文件后，您现在已经构建了几个镜像。使用以下命令运行VPP&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo bash
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;bash
 &lt;span class="c1"&gt;# make run&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -199,7 +162,7 @@ $ &lt;span class="nb"&gt;cd&lt;/span&gt; vpp
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;我是在Ubuntu 18.04上进行的实验，查看对应库的GLIBC版本发现最大支持到 &lt;code&gt;GLIBC_2.29&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ strings /lib/x86_64-linux-gnu/libm.so.6 &lt;span class="p"&gt;|&lt;/span&gt;grep GLIBC_
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;strings&lt;span class="w"&gt; &lt;/span&gt;/lib/x86_64-linux-gnu/libm.so.6&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;grep&lt;span class="w"&gt; &lt;/span&gt;GLIBC_
 GLIBC_2.2.5
 GLIBC_2.4
 GLIBC_2.15
@@ -214,22 +177,22 @@ GLIBC_PRIVATE
 
 &lt;p&gt;为了继续实验，需要把glibm升级到 2.29&lt;/p&gt;
 &lt;h3&gt;安装glibc-2.29&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wget http://ftp.gnu.org/gnu/glibc/glibc-2.29.tar.gz 
-tar -zxvf glibc-2.29.tar.gz
-&lt;span class="nb"&gt;cd&lt;/span&gt; glibc-2.29
-mkdir build
-&lt;span class="nb"&gt;cd&lt;/span&gt; build
-sudo apt install gawk bison
-../configure --prefix&lt;span class="o"&gt;=&lt;/span&gt;/opt/glibc-2.29
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wget&lt;span class="w"&gt; &lt;/span&gt;http://ftp.gnu.org/gnu/glibc/glibc-2.29.tar.gz&lt;span class="w"&gt; &lt;/span&gt;
+tar&lt;span class="w"&gt; &lt;/span&gt;-zxvf&lt;span class="w"&gt; &lt;/span&gt;glibc-2.29.tar.gz
+&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;glibc-2.29
+mkdir&lt;span class="w"&gt; &lt;/span&gt;build
+&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;build
+sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;gawk&lt;span class="w"&gt; &lt;/span&gt;bison
+../configure&lt;span class="w"&gt; &lt;/span&gt;--prefix&lt;span class="o"&gt;=&lt;/span&gt;/opt/glibc-2.29
 make
-make install
+make&lt;span class="w"&gt; &lt;/span&gt;install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;glibc 软连接&lt;/p&gt;
 &lt;p&gt;安装完成后, 建立软链指向glibc-2.29, 执行如下命令:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;rm -rf /lib/x86_64-linux-gnu/libm.so.6   //先删除之前的软连接
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;rm&lt;span class="w"&gt; &lt;/span&gt;-rf&lt;span class="w"&gt; &lt;/span&gt;/lib/x86_64-linux-gnu/libm.so.6&lt;span class="w"&gt;   &lt;/span&gt;//先删除之前的软连接
 
-ln -s /opt/glibc-2.29/lib/libm-2.29.so  /lib/x86_64-linux-gnu/libm.so.6
+ln&lt;span class="w"&gt; &lt;/span&gt;-s&lt;span class="w"&gt; &lt;/span&gt;/opt/glibc-2.29/lib/libm-2.29.so&lt;span class="w"&gt;  &lt;/span&gt;/lib/x86_64-linux-gnu/libm.so.6
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;英文源：https://fd.io/vppproject/vppbuilding/&lt;/p&gt;</content><category term="VPP"></category><category term="VPP"></category><category term="矢量报文处理"></category></entry></feed>
