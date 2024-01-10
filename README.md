@@ -1,20 +1,20 @@
-# Welcome to [DanielDai.com](http://www.danieldai.com)!
+# 欢迎访问 [DanielDai.com](http://www.danieldai.com)
 
-**[DanielDai.com](http://www.danieldai.com)** is powered by **[Pelican](http://getpelican.com/)**, a static site generaotr written in **[Python](http://python.org/)**. 
+**[DanielDai.com](http://www.danieldai.com)** 是使用 **[Pelican](http://getpelican.com/)** 生成的个人博客网站，**[Pelican](http://getpelican.com/)** 是使用 **[Python](http://python.org/)** 开发的静态网页网站生成工具。 
 
-As the contents of GitHub Pages for user must be on `master` branch, I put the source code of this blog on another branch named `source`. Whenever I do any changes to the contents of the blog, I check out the `source` branch, edit the markdown files, regenerate the content and output the content to `master` branch with `ghp-import`
+网站内容的源文件放在 `master` 分支，生成的静态网页文件放在 `github-pages` 分支。
 
 
-## How to edit this blog (just notes for author)
+## 怎么编辑这个博客 (给本人自己的笔记提示)
 
-* setup virtualenv and checkout code
+* 设置 venv 环境
 
-on machine with python 3 as default
+在使用 Python 3 作为默认python的电脑
 ```
 mkvirtualenv danieldai
 ```
 
-on machine with python 2 as default
+在使用 Python 2 作为默认python的电脑
 ```
 mkvirtualenv -p /usr/bin/python3 danieldai
 ```
@@ -22,60 +22,28 @@ mkvirtualenv -p /usr/bin/python3 danieldai
 ```
 git clone git@github.com:danieldai/danieldai.github.io.git
 cd danieldai.github.io.git
-git checkout source
 pip install -r requirements.txt
 ```
 
-Install plugins from https://github.com/getpelican/pelican-plugins
+安装插件 https://github.com/getpelican/pelican-plugins
 
-* edit exiting or add new blogs in `content` directory
-* compile content in to HTML
-
-```
-fab build
-```
-
-* start dev server
+* 在 `content` 目录创建新内容或者编辑已有内容文件
+* 把内容源文件编译为 HTML 文件
 
 ```
-fab serve
+make html
 ```
 
-* visit http://localhost:8888 to review it
-* publish to `master` branch
+* 启动本地预览服务器
 
 ```
-fab pages:'<commit message for master branch>'
+make devserver
 ```
 
-* publish to GitHub Pages
+* 用浏览器方位 http://localhost:8000 预览内容
+  
+* 把内容发布到 Github Pages
 
 ```
-fab push
+make github
 ```
-
-* push source branch
-
-```
-git add .
-git commit -m "<commit message for source branch"
-git push
-```
-
-## `master` and `source` are two parallel branchs
-
-Unlike normal git repositories, `master` branch and `source` branches are 2 parallel branches that only share a common parent, but will never merge together in future.
-
-```
-o----o----o----o----o----o master branch
- \
-  \---o--o--o--o--o--o--o--o--o--o--o--o--o--o--o source branch    
-```    
-
-each commit on `master` branch is the compiled result of on commit on `source` branch
-   
-
-
-
-
-
