@@ -1,7 +1,6 @@
 markdown
 pelican
 typogrify
-fabric3
 ghp-import
 livereload
 
