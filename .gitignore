@@ -1,5 +1,5 @@
 *pyc
 *.pid
-output
+docs
 .DS_Store
 venv
