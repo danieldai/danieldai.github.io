@@ -1,5 +1,5 @@
 markdown
-pelican==4.5.4
+pelican
 typogrify
 fabric3
 ghp-import
