@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai的网络日志 - Python</title><link href="https://www.danieldai.com/" rel="alternate"></link><link href="https://www.danieldai.com/feeds/python.atom.xml" rel="self"></link><id>https://www.danieldai.com/</id><updated>2016-06-30T09:20:00+08:00</updated><subtitle>互联网产品和技术</subtitle><subtitle>互联网产品和技术</subtitle><entry><title>How to split string in Python?</title><link href="https://www.danieldai.com/how-to-split-string-in-python.html" rel="alternate"></link><published>2016-06-30T09:20:00+08:00</published><updated>2016-06-30T09:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-06-30:/how-to-split-string-in-python.html</id><summary type="html">&lt;h2&gt;Split string with identical separator&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.130.248:15+221.160.226.9:329+101.240.154.40:1197&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;nodes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;+&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;45.63.130.248:15&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.130.248:15*+221.160.226 …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2&gt;Split string with identical separator&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.130.248:15+221.160.226.9:329+101.240.154.40:1197&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;nodes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;+&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;45.63.130.248:15&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.130.248:15*+221.160.226.9:329*+101.240.154.40:1197&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;nodes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;*+&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# separator can have more than one charactor&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;45.63.130.248:15&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Split string with non-identical separator&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;ticket_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.120.248:1195&amp;amp;221.160.226.9:329^101.240.154.40:1197&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# how about this one? It has 2 diffrent separators &amp;#39;&amp;amp;&amp;#39; and &amp;#39;^&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;node1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ticket_key&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;amp;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;node2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ticket_key&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;amp;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;^&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;node3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ticket_key&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;amp;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;^&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;node1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;node2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;node3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;45.63.120.248:1195 221.160.226.9:329 101.240.154.40:1197&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# A more elegent way, is to use the re.split()&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+
+&lt;span class="n"&gt;ticket_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;45.63.120.248:1195&amp;amp;221.160.226.9:329^101.240.154.40:1197&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;nodes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;[&amp;amp;\^]&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ticket_key&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;45.63.120.248:1195&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category></entry><entry><title>Django Template Include and I18n</title><link href="https://www.danieldai.com/django-template-include-and-i18n.html" rel="alternate"></link><published>2016-01-27T22:20:00+08:00</published><updated>2016-01-27T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-01-27:/django-template-include-and-i18n.html</id><summary type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Sometimes, we need to tranalte &lt;code&gt;include prarameters&lt;/code&gt;, this can not be done in &lt;code&gt;another_template.html …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Sometimes, we need to tranalte &lt;code&gt;include prarameters&lt;/code&gt;, this can not be done in &lt;code&gt;another_template.html&lt;/code&gt;, &lt;code&gt;blocktrans&lt;/code&gt; will not work here.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="x"&gt;# in another_template.html&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;blocktrans&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;text&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endblocktrans&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We need to do the translation in the first temalate, before passing it to another template:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;{% trans &amp;#39;I love Python&amp;#39; as text %}&lt;/span&gt;
+&lt;span class="err"&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=text %}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Reference:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags"&gt;http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Django"></category></entry><entry><title>Python Modules, Packages and Import</title><link href="https://www.danieldai.com/python-modules-packages-and-import.html" rel="alternate"></link><published>2016-01-16T22:20:00+08:00</published><updated>2016-01-16T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-01-16:/python-modules-packages-and-import.html</id><summary type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;To import a module, we use the &lt;code&gt;import&lt;/code&gt; command. Check out the full list of built-in modules in the Python standard library &lt;a href="http://docs.python.org/2/library/"&gt;here …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;To import a module, we use the &lt;code&gt;import&lt;/code&gt; command. Check out the full list of built-in modules in the Python standard library &lt;a href="http://docs.python.org/2/library/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The first time a module is loaded into a running Python script, it is initialized by executing the code in the module once. If another module in your code imports the same module again, it will not be loaded twice but once only - so local variables inside the module act as a &lt;strong&gt;"singleton"&lt;/strong&gt; - they are &lt;strong&gt;initialized only once&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If we want to import the module &lt;code&gt;urllib&lt;/code&gt;, which enables us to create read data from URLs, we simply &lt;code&gt;import&lt;/code&gt; the module:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# import the library&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib&lt;/span&gt;
+
+&lt;span class="c1"&gt;# use it&lt;/span&gt;
+&lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Writing modules&lt;/h2&gt;
+&lt;p&gt;Writing Python modules is very simple. To create a module of your own, simply create a new .py file with the module name, and then import it using the Python file name (without the .py extension) using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
+&lt;h2&gt;Writing packages&lt;/h2&gt;
+&lt;p&gt;Packages are namespaces which contain multiple packages and modules themselves. They are simply directories, but with a twist.&lt;/p&gt;
+&lt;p&gt;Each package in Python is a directory which &lt;strong&gt;MUST&lt;/strong&gt; contain a special file called &lt;strong&gt;&lt;code&gt;__init__.py&lt;/code&gt;&lt;/strong&gt;. This file can be empty, and it indicates that the directory it contains is a Python package, so it can be imported the same way a module can be imported.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;&lt;code&gt;__init__.py&lt;/code&gt;&lt;/strong&gt; file can also decide which modules the package exports as the API, while keeping other modules internal, by overriding the &lt;strong&gt;&lt;code&gt;__all__&lt;/code&gt;&lt;/strong&gt; variable, like so:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+
+&lt;span class="n"&gt;__all__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;Absolute Imports&lt;/h1&gt;
+&lt;p&gt;In Python 2.4 and earlier, if you're reading a module located inside a package, it is not clear whether&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;foo&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;refers to a top-level module or to another module inside the package. As Python's library expands, more and more existing package internal modules suddenly shadow standard library modules by accident. It's a particularly difficult problem inside packages because there's no way to specify which module is meant. To resolve the ambiguity, it is proposed that foo will always be a module or package reachable from sys.path . This is called an absolute import.&lt;/p&gt;
+&lt;p&gt;The python-dev community chose absolute imports as the default because they're the more common use case and because absolute imports can provide all the functionality of relative (intra-package) imports -- albeit at the cost of difficulty when renaming package pieces higher up in the hierarchy or when moving one package inside another.&lt;/p&gt;
+&lt;p&gt;Because this represents a change in semantics, absolute imports will be optional in Python 2.5 and 2.6 through the use of&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;absolute_import&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This part of the proposal had BDFL approval from the beginning.&lt;/p&gt;
+&lt;h1&gt;Relative Imports&lt;/h1&gt;
+&lt;p&gt;Relative imports use leading dots. A single leading dot indicates a relative import, starting with the current package. Two or more leading dots give a relative import to the parent(s) of the current package, one level per dot after the first. Here's a sample package layout:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;package/&lt;/span&gt;
+&lt;span class="err"&gt;    __init__.py&lt;/span&gt;
+&lt;span class="err"&gt;    subpackage1/&lt;/span&gt;
+&lt;span class="err"&gt;        __init__.py&lt;/span&gt;
+&lt;span class="err"&gt;        moduleX.py&lt;/span&gt;
+&lt;span class="err"&gt;        moduleY.py&lt;/span&gt;
+&lt;span class="err"&gt;    subpackage2/&lt;/span&gt;
+&lt;span class="err"&gt;        __init__.py&lt;/span&gt;
+&lt;span class="err"&gt;        moduleZ.py&lt;/span&gt;
+&lt;span class="err"&gt;    moduleA.py&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Assuming that the current file is either &lt;code&gt;moduleX.py&lt;/code&gt; or &lt;code&gt;subpackage1/__init__.py&lt;/code&gt; , following are correct usages of the new syntax:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;.moduleY&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;spam&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;.moduleY&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;spam&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ham&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;.&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;moduleY&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;..subpackage1&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;moduleY&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;..subpackage2.moduleZ&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;eggs&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;..moduleA&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;...package&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;bar&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;...sys&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that while that last case is legal, it is certainly discouraged ("insane" was the word Guido used).&lt;/p&gt;
+&lt;p&gt;Relative imports must always use &lt;code&gt;from &amp;lt;&amp;gt; import&lt;/code&gt; ; &lt;code&gt;import &amp;lt;&amp;gt;&lt;/code&gt; is always absolute. Of course, absolute imports can use &lt;code&gt;from &amp;lt;&amp;gt; import&lt;/code&gt; by omitting the leading dots. The reason &lt;code&gt;import .foo&lt;/code&gt; is prohibited is because after&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;XXX.YYY.ZZZ&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;then&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;XXX.YYY.ZZZ&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;is usable in an expression. But&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;.moduleY&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;is not usable in an expression.&lt;/p&gt;
+&lt;h1&gt;ref&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;http://www.learnpython.org/en/Modules_and_Packages&lt;/li&gt;
+&lt;li&gt;https://www.python.org/dev/peps/pep-0328/&lt;/li&gt;
+&lt;li&gt;https://docs.python.org/2.5/whatsnew/pep-328.html&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Python"></category></entry></feed>

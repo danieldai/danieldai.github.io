@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="http://localhost:8000/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/solid.css">
+
+
+
+
+
+  
+
+
+ 
+
+<meta name="author" content="Daniel Dai" />
+<meta name="description" content="Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the import command. To import a module, we use the import command. Check out the full list of built-in modules in the Python standard library here …" />
+<meta name="keywords" content="">
+
+
+  <meta property="og:site_name" content="Daniel Dai的网络日志"/>
+  <meta property="og:title" content="Python Modules, Packages and Import"/>
+  <meta property="og:description" content="Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the import command. To import a module, we use the import command. Check out the full list of built-in modules in the Python standard library here …"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="http://localhost:8000/python-modules-packages-and-import.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2016-01-16 22:20:00+08:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="http://localhost:8000/author/daniel-dai.html">
+  <meta property="article:section" content="Python"/>
+  <meta property="og:image" content="http://localhost:8000/daniel_150.jpeg">
+
+  <title>Daniel Dai的网络日志 &ndash; Python Modules, Packages and Import</title>
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0025679579683360"
+          crossorigin="anonymous"></script>
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="http://localhost:8000/">
+        <img src="http://localhost:8000/daniel_150.jpeg" alt="Daniel Dai" title="Daniel Dai">
+      </a>
+
+      <h3>
+        <a href="http://localhost:8000/">Daniel Dai</a>
+      </h3>
+
+<p>互联网产品和技术</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="http://localhost:8000/pages/about-me.html#about-me">
+                  关于我
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/danieldai" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/daniel-dai" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/danieldai_com" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://localhost:8000/">首页</a>
+
+      <a href="/archives.html">存档</a>
+      <a href="/categories.html">分类</a>
+      <a href="/tags.html">标签</a>
+
+
+
+      <a href="https://kalacloud.com" target="__blank">卡拉云后台系统</a>
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="python-modules-packages-and-import">Python Modules, Packages and Import</h1>
+    <p>
+      发布时间: 2016年01月16日, 分类: <a href="http://localhost:8000/category/python.html">Python</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the <code>import</code> command.</p>
+<p>To import a module, we use the <code>import</code> command. Check out the full list of built-in modules in the Python standard library <a href="http://docs.python.org/2/library/">here</a>.</p>
+<p>The first time a module is loaded into a running Python script, it is initialized by executing the code in the module once. If another module in your code imports the same module again, it will not be loaded twice but once only - so local variables inside the module act as a <strong>"singleton"</strong> - they are <strong>initialized only once</strong>.</p>
+<p>If we want to import the module <code>urllib</code>, which enables us to create read data from URLs, we simply <code>import</code> the module:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># import the library</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
+
+<span class="c1"># use it</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div>
+
+<h2>Writing modules</h2>
+<p>Writing Python modules is very simple. To create a module of your own, simply create a new .py file with the module name, and then import it using the Python file name (without the .py extension) using the <code>import</code> command.</p>
+<h2>Writing packages</h2>
+<p>Packages are namespaces which contain multiple packages and modules themselves. They are simply directories, but with a twist.</p>
+<p>Each package in Python is a directory which <strong>MUST</strong> contain a special file called <strong><code>__init__.py</code></strong>. This file can be empty, and it indicates that the directory it contains is a Python package, so it can be imported the same way a module can be imported.</p>
+<p>The <strong><code>__init__.py</code></strong> file can also decide which modules the package exports as the API, while keeping other modules internal, by overriding the <strong><code>__all__</code></strong> variable, like so:</p>
+<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">]</span>
+</code></pre></div>
+
+<h1>Absolute Imports</h1>
+<p>In Python 2.4 and earlier, if you're reading a module located inside a package, it is not clear whether</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">foo</span>
+</code></pre></div>
+
+<p>refers to a top-level module or to another module inside the package. As Python's library expands, more and more existing package internal modules suddenly shadow standard library modules by accident. It's a particularly difficult problem inside packages because there's no way to specify which module is meant. To resolve the ambiguity, it is proposed that foo will always be a module or package reachable from sys.path . This is called an absolute import.</p>
+<p>The python-dev community chose absolute imports as the default because they're the more common use case and because absolute imports can provide all the functionality of relative (intra-package) imports -- albeit at the cost of difficulty when renaming package pieces higher up in the hierarchy or when moving one package inside another.</p>
+<p>Because this represents a change in semantics, absolute imports will be optional in Python 2.5 and 2.6 through the use of</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+</code></pre></div>
+
+<p>This part of the proposal had BDFL approval from the beginning.</p>
+<h1>Relative Imports</h1>
+<p>Relative imports use leading dots. A single leading dot indicates a relative import, starting with the current package. Two or more leading dots give a relative import to the parent(s) of the current package, one level per dot after the first. Here's a sample package layout:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="o">/</span>
+<span class="w">    </span><span class="nx">__init__</span><span class="p">.</span><span class="nx">py</span>
+<span class="w">    </span><span class="nx">subpackage1</span><span class="o">/</span>
+<span class="w">        </span><span class="nx">__init__</span><span class="p">.</span><span class="nx">py</span>
+<span class="w">        </span><span class="nx">moduleX</span><span class="p">.</span><span class="nx">py</span>
+<span class="w">        </span><span class="nx">moduleY</span><span class="p">.</span><span class="nx">py</span>
+<span class="w">    </span><span class="nx">subpackage2</span><span class="o">/</span>
+<span class="w">        </span><span class="nx">__init__</span><span class="p">.</span><span class="nx">py</span>
+<span class="w">        </span><span class="nx">moduleZ</span><span class="p">.</span><span class="nx">py</span>
+<span class="w">    </span><span class="nx">moduleA</span><span class="p">.</span><span class="nx">py</span>
+</code></pre></div>
+
+<p>Assuming that the current file is either <code>moduleX.py</code> or <code>subpackage1/__init__.py</code> , following are correct usages of the new syntax:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">.moduleY</span> <span class="kn">import</span> <span class="n">spam</span>
+<span class="kn">from</span> <span class="nn">.moduleY</span> <span class="kn">import</span> <span class="n">spam</span> <span class="k">as</span> <span class="n">ham</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">moduleY</span>
+<span class="kn">from</span> <span class="nn">..subpackage1</span> <span class="kn">import</span> <span class="n">moduleY</span>
+<span class="kn">from</span> <span class="nn">..subpackage2.moduleZ</span> <span class="kn">import</span> <span class="n">eggs</span>
+<span class="kn">from</span> <span class="nn">..moduleA</span> <span class="kn">import</span> <span class="n">foo</span>
+<span class="kn">from</span> <span class="nn">...package</span> <span class="kn">import</span> <span class="n">bar</span>
+<span class="kn">from</span> <span class="nn">...sys</span> <span class="kn">import</span> <span class="n">path</span>
+</code></pre></div>
+
+<p>Note that while that last case is legal, it is certainly discouraged ("insane" was the word Guido used).</p>
+<p>Relative imports must always use <code>from &lt;&gt; import</code> ; <code>import &lt;&gt;</code> is always absolute. Of course, absolute imports can use <code>from &lt;&gt; import</code> by omitting the leading dots. The reason <code>import .foo</code> is prohibited is because after</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">XXX.YYY.ZZZ</span>
+</code></pre></div>
+
+<p>then</p>
+<div class="highlight"><pre><span></span><code>XXX.YYY.ZZZ
+</code></pre></div>
+
+<p>is usable in an expression. But</p>
+<div class="highlight"><pre><span></span><code><span class="na">.moduleY</span>
+</code></pre></div>
+
+<p>is not usable in an expression.</p>
+<h1>ref</h1>
+<ol>
+<li>http://www.learnpython.org/en/Modules_and_Packages</li>
+<li>https://www.python.org/dev/peps/pep-0328/</li>
+<li>https://docs.python.org/2.5/whatsnew/pep-328.html</li>
+</ol>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; 2024 Daniel Dai - <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank">自由转载-非商用-非衍生-保持署名</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-nc-nd/3.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Daniel Dai的网络日志 ",
+  "url" : "http://localhost:8000",
+  "image": "http://localhost:8000/daniel_150.jpeg",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

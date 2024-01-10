@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="http://localhost:8000/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/solid.css">
+
+
+
+
+
+  
+
+
+ 
+
+<meta name="author" content="Daniel Dai" />
+<meta name="description" content="导言 vpp网络堆栈配备了一组用于调试的命令。 访问CLI（具有适当权限）的最简单方法是使用vppctl命令： sudo vppctl &lt;cli command&gt; CLI解析器匹配静态关键字字符串，最终调用操作函数。明确的部分关键字匹配总是发生。操 …" />
+<meta name="keywords" content="VPP, CLI">
+
+
+  <meta property="og:site_name" content="Daniel Dai的网络日志"/>
+  <meta property="og:title" content="VPP命令行"/>
+  <meta property="og:description" content="导言 vpp网络堆栈配备了一组用于调试的命令。 访问CLI（具有适当权限）的最简单方法是使用vppctl命令： sudo vppctl &lt;cli command&gt; CLI解析器匹配静态关键字字符串，最终调用操作函数。明确的部分关键字匹配总是发生。操 …"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="http://localhost:8000/vpp_cli.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2021-09-22 22:20:00+08:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="http://localhost:8000/author/daniel-dai.html">
+  <meta property="article:section" content="VPP"/>
+  <meta property="article:tag" content="VPP"/>
+  <meta property="article:tag" content="CLI"/>
+  <meta property="og:image" content="http://localhost:8000/daniel_150.jpeg">
+
+  <title>Daniel Dai的网络日志 &ndash; VPP命令行</title>
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0025679579683360"
+          crossorigin="anonymous"></script>
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="http://localhost:8000/">
+        <img src="http://localhost:8000/daniel_150.jpeg" alt="Daniel Dai" title="Daniel Dai">
+      </a>
+
+      <h3>
+        <a href="http://localhost:8000/">Daniel Dai</a>
+      </h3>
+
+<p>互联网产品和技术</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="http://localhost:8000/pages/about-me.html#about-me">
+                  关于我
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/danieldai" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/daniel-dai" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/danieldai_com" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://localhost:8000/">首页</a>
+
+      <a href="/archives.html">存档</a>
+      <a href="/categories.html">分类</a>
+      <a href="/tags.html">标签</a>
+
+
+
+      <a href="https://kalacloud.com" target="__blank">卡拉云后台系统</a>
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="vpp_cli">VPP命令行</h1>
+    <p>
+      发布时间: 2021年09月22日, 分类: <a href="http://localhost:8000/category/vpp.html">VPP</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h2>导言</h2>
+<p>vpp网络堆栈配备了一组用于调试的命令。</p>
+<p>访问CLI（具有适当权限）的最简单方法是使用vppctl命令：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>vppctl<span class="w"> </span>&lt;cli<span class="w"> </span>command&gt;
+</code></pre></div>
+
+<p>CLI解析器匹配静态关键字字符串，最终调用操作函数。明确的部分关键字匹配总是发生。操作函数消耗输入，直到满足或失败。这种模型易于编码，但不能保证有用的“帮助”输出。由CLI命令编写器来添加有用的帮助字符串。</p>
+<p>您可以通过在代码源文件中搜索<code>VLIB_CLI_COMMAND</code> 宏的实例来找到CLI命令的源代码。</p>
+<h2>调试和Telnet CLI</h2>
+<p>调试CLI通过<code>unix interactive</code>参数或启动配置选项启用。这将导致VPP在没有后台化的情况下启动，并在运行它的终端上显示命令行界面。</p>
+<p>Telnet CLI启用了<code>cli-listen localhost:5002</code>选项，这将导致VPP监听localhost地址端口5002上的TCP连接。然后Telnet客户端可以连接到该端口（例如，<code>telnet localhost 5002</code>），并将收到命令行提示符。</p>
+<p>这一配置将使这两种机制成为可能：</p>
+<div class="highlight"><pre><span></span><code>unix<span class="w"> </span><span class="o">{</span>
+<span class="w">  </span>interactive
+<span class="w">  </span>cli-listen<span class="w"> </span>localhost:5002
+<span class="o">}</span>
+</code></pre></div>
+
+<p>调试CLI可以以行模式运行，这在像Emacs这样的集成开发环境中运行时可能很有用。这是通过选项<code>unix cli-line-mode</code>启用的。还有其他几个选项可以改变这个CLI的工作方式，详情请参阅VPP/Command-line_Arguments。</p>
+<p>CLI以横幅图形（可以禁用）和提示符开始。提示符通常为VPP发布版本的<code>vpp</code>和启用调试的开发版本的<code>DBGvpp#</code>，例如：</p>
+<div class="highlight"><pre><span></span><code>    _______    _        _   _____  ___ 
+ __/ __/ _ \  (_)__    | | / / _ \/ _ \
+ _/ _// // / / / _ \   | |/ / ___/ ___/
+ /_/ /____(_)_/\___/   |___/_/  /_/    
+
+vpp# 
+</code></pre></div>
+
+<p>与：</p>
+<div class="highlight"><pre><span></span><code>    _______    _        _   _____  ___ 
+ __/ __/ _ \  (_)__    | | / / _ \/ _ \
+ _/ _// // / / / _ \   | |/ / ___/ ___/
+ /_/ /____(_)_/\___/   |___/_/  /_/    
+
+DBGvpp# 
+</code></pre></div>
+
+<p>这个提示符可以配置为<code>unix cli-prompt</code>符设置，并通过<code>unix cli-no-banner</code>禁用横幅。</p>
+<h2>CLI功能</h2>
+<p>CLI有几个编辑功能，使其易于使用。</p>
+<ul>
+<li>光标键左/右将在命令行内移动光标；打字将在光标处插入；擦除将在光标处擦除。</li>
+<li>Ctrl-左/右将搜索左或右的下一个单词的开头。</li>
+<li>Home/end将光标跳转到行的开始和结束。</li>
+<li>游标键向上/向下和<code>^P</code>/<code>^N</code>遍历命令历史缓冲区。历史缓冲区中的行可以编辑。执行时，新命令将添加到缓冲区的末尾；尽管不添加先前命令的副本。</li>
+<li><code>^U</code>擦除从光标左边到开始的行内容。<code>^K</code>擦除从光标到结束的内容。</li>
+<li><code>^R</code>将向前或反向搜索命令历史记录中的命令；开始键入匹配项以自动完成。</li>
+<li><code>^L</code>将清除屏幕并重新绘制提示和任何当前行。光标位置也将保留。</li>
+<li>CLI可以通过<code>exit</code>命令关闭。或者，在空行上的输入<code>^D</code>也将关闭会话。</li>
+<li>关闭调试会话也将关闭VPP</li>
+</ul>
+<p>超过终端页面长度的输出将被缓存，直到到达缓存大小限制。</p>
+<ul>
+<li>空格或下一页键显示下一页。</li>
+<li>回车键或向下箭头显示下一行。</li>
+<li>上一页键向上返回一页。</li>
+<li>向上箭头向上一行。</li>
+<li>Home/End键跳转到缓冲输出的开始/结束。</li>
+<li>按<code>q</code>键退出分页器。如果到达缓冲区的末尾，空格键和回车键也将退出分页器。</li>
+</ul>
+<h2>接口命令</h2>
+<h3>显示接口</h3>
+<p>要显示接口名称和 rx/tx 包/字节和丢弃计数器，请使用“show interface”：</p>
+<div class="highlight"><pre><span></span><code>vpp#<span class="w"> </span>show<span class="w"> </span>interface
+<span class="w">             </span>Name<span class="w">                    </span>State<span class="w">          </span>Counter<span class="w">          </span>Count<span class="w">     </span>
+GigabitEthernet2/0/0<span class="w">                   </span>up<span class="w">       </span>rx<span class="w"> </span>packets<span class="w">                  </span><span class="m">1801</span>
+<span class="w">                                                </span>rx<span class="w"> </span>bytes<span class="w">                  </span><span class="m">179560</span>
+<span class="w">                                                </span>tx<span class="w"> </span>packets<span class="w">                   </span><span class="m">343</span>
+<span class="w">                                                </span>tx<span class="w"> </span>bytes<span class="w">                   </span><span class="m">88050</span>
+<span class="w">                                                </span>drops<span class="w">                       </span><span class="m">1459</span>
+GigabitEthernet2/2/0<span class="w">                   </span>up<span class="w">       </span>rx<span class="w"> </span>packets<span class="w">                  </span><span class="m">7875</span>
+<span class="w">                                                </span>rx<span class="w"> </span>bytes<span class="w">                  </span><span class="m">740694</span>
+<span class="w">                                                </span>tx<span class="w"> </span>packets<span class="w">                   </span><span class="m">228</span>
+<span class="w">                                                </span>tx<span class="w"> </span>bytes<span class="w">                   </span><span class="m">78888</span>
+<span class="w">                                                </span>drops<span class="w">                       </span><span class="m">7647</span>
+GigabitEthernet2/3/0<span class="w">                  </span>down<span class="w">      </span>
+GigabitEthernet2/4/0<span class="w">                  </span>down<span class="w">      </span>
+local0<span class="w">                                </span>down<span class="w">      </span>
+pg/stream-0<span class="w">                           </span>down<span class="w">      </span>
+pg/stream-1<span class="w">                           </span>down<span class="w">      </span>
+pg/stream-2<span class="w">                           </span>down<span class="w">      </span>
+pg/stream-3<span class="w">                           </span>down<span class="w">      </span>
+tuntap-0<span class="w">                               </span>up
+</code></pre></div>
+
+<p>在x86_64硬件上，接口名称直接来自PCI总线、id和函数。Local0和数据包生成器流是“特殊的”，不应该直接配置。当在“"punt/inject mode”下运行时，tuntap-0是“特殊的”，不应该直接配置。</p>
+<h3>显示接口地址</h3>
+<p>要显示接口地址和 up/down 状态：</p>
+<div class="highlight"><pre><span></span><code>vpp#<span class="w"> </span>show<span class="w"> </span>int<span class="w"> </span>address
+GigabitEthernet0/8/0<span class="w"> </span><span class="o">(</span>up<span class="o">)</span>:
+<span class="w">  </span><span class="m">172</span>.28.128.5/24
+local0<span class="w"> </span><span class="o">(</span>dn<span class="o">)</span>:
+pg/stream-0<span class="w"> </span><span class="o">(</span>dn<span class="o">)</span>:
+pg/stream-1<span class="w"> </span><span class="o">(</span>dn<span class="o">)</span>:
+pg/stream-2<span class="w"> </span><span class="o">(</span>dn<span class="o">)</span>:
+pg/stream-3<span class="w"> </span><span class="o">(</span>dn<span class="o">)</span>:
+</code></pre></div>
+
+<h3>显示硬件</h3>
+<p>https://docs.fd.io/vpp/17.07/clicmd_src_vnet.html#clicmd_show_hardware-interfaces</p>
+<h3>clear interface</h3>
+<p>https://docs.fd.io/vpp/17.07/clicmd_src_vnet.html#clicmd_clear_interface</p>
+<h3>set interface</h3>
+<p>https://docs.fd.io/vpp/17.07/clicmd_src_vnet.html#clicmd_set_interface</p>
+<h3>show interface</h3>
+<p>https://docs.fd.io/vpp/17.07/clicmd_src_vnet.html#clicmd_show_interface</p>
+<h3>create vlan subinterface</h3>
+<h3>set interface ip</h3>
+<h3>set interface ip addr</h3>
+<h3>set interface ip table</h3>
+<h2>Routing table commands</h2>
+<h3>ip route add/del</h3>
+<h3>show ip fib / show ip6 fib</h3>
+<h3>Manipulating the ARP cache</h3>
+<h3>Proxy ARP</h3>
+<h3>dhcp 代理</h3>
+<h3>dhcp proxy option 82 (circuit-ID)</h3>
+<p>源文件：https://wiki.fd.io/view/VPP/Command-line_Interface_(CLI)_Guide</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://localhost:8000/tag/vpp.html">VPP</a>
+      <a href="http://localhost:8000/tag/cli.html">CLI</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; 2024 Daniel Dai - <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank">自由转载-非商用-非衍生-保持署名</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-nc-nd/3.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Daniel Dai的网络日志 ",
+  "url" : "http://localhost:8000",
+  "image": "http://localhost:8000/daniel_150.jpeg",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

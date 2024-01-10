@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Dai的网络日志 - Java</title><link href="https://www.danieldai.com/" rel="alternate"></link><link href="https://www.danieldai.com/feeds/java.atom.xml" rel="self"></link><id>https://www.danieldai.com/</id><updated>2016-01-16T10:20:00+08:00</updated><subtitle>互联网产品和技术</subtitle><subtitle>互联网产品和技术</subtitle><entry><title>Java Language Notes</title><link href="https://www.danieldai.com/java-language-notes.html" rel="alternate"></link><published>2016-01-16T10:20:00+08:00</published><updated>2016-01-16T10:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-01-16:/java-language-notes.html</id><summary type="html">&lt;h2&gt;History&lt;/h2&gt;
+&lt;p&gt;Java was developed by a team led by James Gosling at Sun Microsystems. Originally called Oak, it was designed in 1991 for use in embedded chips in consumer electronic appliances. In 1995, renamed Java, it was redesigned for developing Internet applications.&lt;/p&gt;
+&lt;h2&gt;Syntax&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;File: Welcome.java&lt;/span&gt;
+&lt;span class="cm"&gt;*/&lt;/span&gt;
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Welcome&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kd"&gt;public …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2&gt;History&lt;/h2&gt;
+&lt;p&gt;Java was developed by a team led by James Gosling at Sun Microsystems. Originally called Oak, it was designed in 1991 for use in embedded chips in consumer electronic appliances. In 1995, renamed Java, it was redesigned for developing Internet applications.&lt;/p&gt;
+&lt;h2&gt;Syntax&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;File: Welcome.java&lt;/span&gt;
+&lt;span class="cm"&gt;*/&lt;/span&gt;
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Welcome&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="c1"&gt;// Display message Welcome to Java! to the console&lt;/span&gt;
+    &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Welcome to Java!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Every java program must have at least one class&lt;/li&gt;
+&lt;li&gt;The program is executed from the &lt;code&gt;main&lt;/code&gt; method&lt;/li&gt;
+&lt;li&gt;Every statement in Java ends with a semicolon&lt;/li&gt;
+&lt;li&gt;// starts line comment&lt;/li&gt;
+&lt;li&gt;/&lt;em&gt; &lt;/em&gt;/ for block comment&lt;/li&gt;
+&lt;li&gt;{} in a program forms a &lt;code&gt;block&lt;/code&gt;, &lt;code&gt;class block&lt;/code&gt;, &lt;code&gt;method block&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Java is case sensitive&lt;/li&gt;
+&lt;li&gt;java classes are grouped into &lt;code&gt;packages&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;javax.swing.JOptionPane&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;WelcomeInMessageDialogBox&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;JOptionPane&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;showMessageDialog&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Welcome to Java!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Import&lt;/h3&gt;
+&lt;p&gt;The import statement simply tells the compiler where to locate the classes. The information for the classes in an imported package is not read in at compile time or runtime unless the class is used in the program.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;specific import and wildcard import&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;javax.swing.JOptionPane&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;javax.swing.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;All the classes in the &lt;code&gt;java.lang&lt;/code&gt; package are &lt;strong&gt;implicitly&lt;/strong&gt; imported in every java program.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;System&lt;/code&gt; is in the &lt;code&gt;java.lang&lt;/code&gt; package.&lt;/p&gt;
+&lt;h3&gt;How to run&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Compile java source code to java bytecode first&lt;/li&gt;
+&lt;li&gt;java bytecode runs on Java Virtual Machine (JVM)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Date types&lt;/h2&gt;
+&lt;h3&gt;primitive data types&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;integers&lt;/li&gt;
+&lt;li&gt;floating point numbers&lt;/li&gt;
+&lt;li&gt;characters&lt;/li&gt;
+&lt;li&gt;Boolean types&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;ComputeArea&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;area&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;area&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;14159&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="k"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;The area for the circle of radius &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot; is &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;area&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;is also string concatenation operator, if on of the operands is nonstring, the nonstring value is converted into a string and concatenated with the other sring.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;read input&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Scanner input = new Scanner(System.in);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Methods of &lt;code&gt;Scanner&lt;/code&gt; objects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nextByte()&lt;/li&gt;
+&lt;li&gt;nextShort()&lt;/li&gt;
+&lt;li&gt;nextInt()&lt;/li&gt;
+&lt;li&gt;nextLong()&lt;/li&gt;
+&lt;li&gt;nextFloat()&lt;/li&gt;
+&lt;li&gt;netDouble()&lt;/li&gt;
+&lt;li&gt;next()      reads a string that ends before a whitespace character&lt;/li&gt;
+&lt;li&gt;nextLine()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ComputeAreaWithConsoleInput&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+  &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Enter a number for radius: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+  &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nextDouble&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+  &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;area&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mf"&gt;3.14159&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The area for the circle of radius &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot; is &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;area&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Identifiers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;letters, digits, underscores and dollar signs is allowed in identifier&lt;/li&gt;
+&lt;li&gt;starts with _, $ or digit&lt;/li&gt;
+&lt;li&gt;case sensitive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Variables&lt;/h2&gt;
+&lt;p&gt;variable declarations&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;int i, j, k;&lt;/span&gt;
+&lt;span class="err"&gt;int i = 1;&lt;/span&gt;
+&lt;span class="err"&gt;int i = j = k = 1;&lt;/span&gt;
+&lt;span class="err"&gt;int count;&lt;/span&gt;
+&lt;span class="err"&gt;double radius;&lt;/span&gt;
+&lt;span class="err"&gt;double interestRate;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Constants&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;final double PI = 3.14159;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Numeric Data Types&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;byte&lt;/li&gt;
+&lt;li&gt;short&lt;/li&gt;
+&lt;li&gt;int&lt;/li&gt;
+&lt;li&gt;long&lt;/li&gt;
+&lt;li&gt;float&lt;/li&gt;
+&lt;li&gt;double&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Numeric literals&lt;/h3&gt;
+&lt;p&gt;An integer literal is assumed to be of the &lt;code&gt;int&lt;/code&gt; type, to denote an integer literal of &lt;code&gt;long&lt;/code&gt; type: 121211412L&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;01234  octal integer&lt;/li&gt;
+&lt;li&gt;0xf87 or 0XF78 hexadecimal integer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By default floating-point literal is treated as a &lt;code&gt;double&lt;/code&gt; type value, to make a nubmer of float: 100.2F, double: 200.2D&lt;/p&gt;
+&lt;h3&gt;Character Data Type&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;char letter = &amp;#39;A&amp;#39;;  //&amp;quot;A&amp;quot; is a string, and &amp;#39;A&amp;#39; is a character;&lt;/span&gt;
+&lt;span class="err"&gt;char numChar = &amp;#39;4&amp;#39;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Unicode and ASCII&lt;/h2&gt;
+&lt;p&gt;Mapping a character to its binary representaion is called &lt;code&gt;encoding&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;String&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;String message = &amp;quot;Welcome to Java&amp;quot;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Javadoc&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
+
+&lt;span class="cm"&gt;*/&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Converting String to numbers&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;int a = Integer.parseInt(intStr);&lt;/span&gt;
+&lt;span class="err"&gt;double b = Double.parseDouble(str);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;Flow Control&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;if (radius &amp;lt; 0) {&lt;/span&gt;
+&lt;span class="err"&gt;  System.out.println(&amp;quot;Bad input&amp;quot;);&lt;/span&gt;
+&lt;span class="err"&gt;} else {&lt;/span&gt;
+&lt;span class="err"&gt;  area = radius * radius * PI;&lt;/span&gt;
+&lt;span class="err"&gt;  System.out.println(&amp;quot;Area is &amp;quot; + area);&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;boolean type&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;true&lt;/li&gt;
+&lt;li&gt;false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;boolean lightsOn = true;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;comparsion operators&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;=&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;gt;=&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;==&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;!=&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;if statement&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;if (i &amp;gt; 0) {&lt;/span&gt;
+&lt;span class="err"&gt;  System.out.println(&amp;quot;is is positive&amp;quot;);&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;if else statement&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;if (boolean-expression) {&lt;/span&gt;
+&lt;span class="err"&gt;  statements;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;else {&lt;/span&gt;
+&lt;span class="err"&gt;  statements;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;nested if&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;if (i &amp;gt; k) {&lt;/span&gt;
+&lt;span class="err"&gt;  if (j &amp;gt; k) {&lt;/span&gt;
+&lt;span class="err"&gt;    statements;&lt;/span&gt;
+&lt;span class="err"&gt;  }&lt;/span&gt;
+&lt;span class="err"&gt;} &lt;/span&gt;
+&lt;span class="err"&gt;else {&lt;/span&gt;
+&lt;span class="err"&gt;  statements;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;logical operators&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;!&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;||&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;^&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;switch&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;switch (status) {&lt;/span&gt;
+&lt;span class="err"&gt;  case 0: statements;&lt;/span&gt;
+&lt;span class="err"&gt;          break;&lt;/span&gt;
+&lt;span class="err"&gt;  case 1: statements;&lt;/span&gt;
+&lt;span class="err"&gt;          break;&lt;/span&gt;
+&lt;span class="err"&gt;  default: statements;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Conditional expression&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;y = (x&amp;gt;0)? 1: -1;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;while loop&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;while (loop-condition) {&lt;/span&gt;
+&lt;span class="err"&gt;  stateements;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;do-while loop&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;do {&lt;/span&gt;
+&lt;span class="err"&gt;  statements;&lt;/span&gt;
+&lt;span class="err"&gt;} while (condition);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;for loop&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;for (i = 0; i &amp;lt; 99; i++) {&lt;/span&gt;
+&lt;span class="err"&gt;  statements;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;for-each loop&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;for (double u: myList) { &lt;/span&gt;
+&lt;span class="err"&gt;  System.out.println(u);&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Formatting console output&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;System.out.printf(format, item1, item2, ..., item_k_);&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%b&lt;/code&gt; boolean value&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%c&lt;/code&gt; char&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%d&lt;/code&gt; integar&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%f&lt;/code&gt; floating&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%e&lt;/code&gt; scientfic notation&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%s&lt;/code&gt; string&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Width and precison&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%5c&lt;/code&gt; Output the character and add four spaces before the character item&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%10.2f&lt;/code&gt; Output the floating item with width at least 10 including a decimal point&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Methods&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="k"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+  &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="k"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;i2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="k"&gt;method&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;something&lt;/span&gt; &lt;span class="n"&gt;back&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+
+&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="k"&gt;method&lt;/span&gt; &lt;span class="n"&gt;does&lt;/span&gt; &lt;span class="k"&gt;not&lt;/span&gt; &lt;span class="n"&gt;returning&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;System from 1 to 10 is&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A call to void method must be a statement&lt;/p&gt;
+&lt;h2&gt;prarameters&lt;/h2&gt;
+&lt;p&gt;pass by value&lt;/p&gt;
+&lt;h2&gt;OverLoading&lt;/h2&gt;
+&lt;p&gt;two methods have the same name but different parameter lists within one class, can not overload methods with just different return type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="k"&gt;max&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+  &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+
+&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="k"&gt;max&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;double&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;also&lt;/span&gt; &lt;span class="n"&gt;invoke&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;one&lt;/span&gt;
+&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="k"&gt;max&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+  &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Scope of variable&lt;/h2&gt;
+&lt;h3&gt;local varialbe&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;variable scope begains from its declaration&lt;/li&gt;
+&lt;li&gt;parameter is a local variable&lt;/li&gt;
+&lt;li&gt;varialbe declared in for loop has its scope in the entire loop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Data Structure&lt;/h1&gt;
+&lt;h2&gt;Array&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;double[] numbers = new double[20];&lt;/span&gt;
+&lt;span class="err"&gt;numbers[0] = 2.0;&lt;/span&gt;
+&lt;span class="err"&gt;//&lt;/span&gt;
+&lt;span class="err"&gt;// array initilizer &lt;/span&gt;
+&lt;span class="err"&gt;double[] myList = {1.9, 2.9, 3.4, 3.5};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;the declaration of an array variable does not allocate any space in memory for the array. It creates only a storage location for the refer- ence to an array.&lt;/p&gt;
+&lt;p&gt;array size can not be changed after created, and when an array is created, its elements are assigned the default value of &lt;code&gt;0&lt;/code&gt; for the numeric primitive data types, &lt;code&gt;\u0000&lt;/code&gt; for char types, and &lt;code&gt;false&lt;/code&gt; for boolean types.&lt;/p&gt;
+&lt;h2&gt;Array coping&lt;/h2&gt;
+&lt;p&gt;In Java, you can use assignment statements to copy primitive data type variables, but not arrays.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt; list2 = list1;&lt;/span&gt;
+&lt;span class="err"&gt; // list1 and list2 reference to the same array&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use a loop to copy individual elements one by one.&lt;/li&gt;
+&lt;li&gt;Use the static arraycopy method in the System class.&lt;/li&gt;
+&lt;li&gt;Use the clone method to copy arrays&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;passing array as argument&lt;/h2&gt;
+&lt;p&gt;array is pass-by-sharing&lt;/p&gt;
+&lt;h2&gt;Variable-Length Arguemnt list&lt;/h2&gt;
+&lt;p&gt;Only one variable-length parameter may be specified in a method, and this parameter must be the last parameter.&lt;/p&gt;
+&lt;p&gt;You can pass an array or a variable number of arguments to a variable-length parameter.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;public static void printMax(double... numbers) {&lt;/span&gt;
+&lt;span class="err"&gt;  double result = nubmers[0];&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;java.util.Arrays&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;// Sort the whole array&lt;/span&gt;
+&lt;span class="err"&gt;double[] numbers = {6.0, 4.4, 1.9, 2.9, 3.4, 3.5}; &lt;/span&gt;
+&lt;span class="err"&gt;java.util.Arrays.sort(numbers); &lt;/span&gt;
+&lt;span class="err"&gt;//&lt;/span&gt;
+&lt;span class="err"&gt;char[] chars = {&amp;#39;a&amp;#39;, &amp;#39;A&amp;#39;, &amp;#39;4&amp;#39;, &amp;#39;F&amp;#39;, &amp;#39;D&amp;#39;, &amp;#39;P&amp;#39;}; &lt;/span&gt;
+&lt;span class="err"&gt;// Sort part of the array&lt;/span&gt;
+&lt;span class="err"&gt;java.util.Arrays.sort(chars, 1, 3); &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;2-dimensional array&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;// normal array:&lt;/span&gt;
+&lt;span class="err"&gt;double[][] matrix;&lt;/span&gt;
+&lt;span class="err"&gt;//raged array:&lt;/span&gt;
+&lt;span class="err"&gt;int[][] triangleArray = new int[5][] ; &lt;/span&gt;
+&lt;span class="err"&gt;triangleArray[0] = new int[5]; &lt;/span&gt;
+&lt;span class="err"&gt;triangleArray[1] = new int[4]; &lt;/span&gt;
+&lt;span class="err"&gt;triangleArray[2] = new int[3]; &lt;/span&gt;
+&lt;span class="err"&gt;triangleArray[3] = new int[2]; &lt;/span&gt;
+&lt;span class="err"&gt;triangleArray[4] = new int[1];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;OOP&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;state&lt;/strong&gt; of object&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;behavior&lt;/strong&gt; of object&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Circle&lt;/span&gt; {
+  //&lt;span class="n"&gt;attribute&lt;/span&gt;
+  &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; = &lt;span class="mf"&gt;1.0&lt;/span&gt;;
+
+  // &lt;span class="n"&gt;constructor&lt;/span&gt;
+  &lt;span class="n"&gt;Circle&lt;/span&gt;() {
+  }
+
+  //&lt;span class="n"&gt;contructor&lt;/span&gt;
+  &lt;span class="n"&gt;Circlr&lt;/span&gt;(&lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;newRadius&lt;/span&gt;) {
+    &lt;span class="n"&gt;radius&lt;/span&gt; = &lt;span class="n"&gt;newRadius&lt;/span&gt;;
+  }
+
+  //&lt;span class="k"&gt;method&lt;/span&gt;
+  &lt;span class="n"&gt;double&lt;/span&gt; &lt;span class="n"&gt;getArea&lt;/span&gt;() {
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; * &lt;span class="n"&gt;radius&lt;/span&gt; * &lt;span class="mf"&gt;3.14&lt;/span&gt;;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can put the two classes into one file, but only one class in the file can be a public class. Furthermore, the public class must have the same name as the file name.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A constructor must have the same name as the class itself.&lt;/li&gt;
+&lt;li&gt;Constructors do not have a return type—not even void.&lt;/li&gt;
+&lt;li&gt;Constructors are invoked using the new operator when an object is created.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;TV&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;java&lt;/span&gt;
+&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;TV&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+  &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;channel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;VolumeLevel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nb"&gt;boolean&lt;/span&gt; &lt;span class="k"&gt;on&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;TV&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+
+  &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;turnOn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;on&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ture&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;instance&lt;/span&gt; &lt;span class="k"&gt;variable&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;refered&lt;/span&gt; &lt;span class="n"&gt;directly&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+
+  &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;turnOff&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;on&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+
+  &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setChannel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;newChannel&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;newChannel&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;newChannel&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="n"&gt;channel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;newChannel&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+
+  &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setVolume&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;VolumeLevel&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;newVolumeLevel&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;newVolumeLevel&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="n"&gt;volumeLevel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;newVolumeLevel&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+
+  &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;channelUp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; 
+
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Objects are accessed via object reference variables, which contain references to the objects.&lt;/p&gt;
+&lt;p&gt;a class is a &lt;code&gt;reference type&lt;/code&gt;
+dot operator&lt;/p&gt;
+&lt;h2&gt;Constructor&lt;/h2&gt;
+&lt;h1&gt;Exceptions&lt;/h1&gt;
+&lt;h1&gt;Libraries&lt;/h1&gt;
+&lt;!-- Highlight syntax for Mou.app, insert at the bottom of the markdown document  --&gt;
+
+&lt;script src="http://yandex.st/highlightjs/7.3/highlight.min.js"&gt;&lt;/script&gt;
+&lt;p&gt;&lt;link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css"&gt;&lt;/p&gt;
+&lt;script&gt;
+  hljs.initHighlightingOnLoad();
+&lt;/script&gt;</content><category term="Java"></category></entry></feed>

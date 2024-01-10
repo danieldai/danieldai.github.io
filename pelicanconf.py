@@ -7,6 +7,7 @@ SITETITLE = 'Daniel Dai'
 SITENAME = u'Daniel Dai的网络日志'
 SITEURL = 'http://localhost:8000'
 
+OUTPUT_PATH = 'docs/'
 PATH = 'content'
 
 TIMEZONE = 'Asia/Chongqing'
