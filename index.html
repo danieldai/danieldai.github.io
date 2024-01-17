@@ -132,163 +132,6 @@
 
 <article>
   <header>
-    <h2><a href="https://www.danieldai.com/grpc.html#grpc">gRPC</a></h2>
-    <p>
-      发布时间 2021年09月23日 分类: <a href="https://www.danieldai.com/category/go.html">Go</a>
-
-          &#8226; 标签:
-              <a href="https://www.danieldai.com/tag/grpc.html">gRPC</a>,              <a href="https://www.danieldai.com/tag/python.html">Python</a>
-    </p>
-  </header>
-  <div>
-      <div><p>gRPC 是Google发起的一个开源远程过程调用系统。该系统基于HTTP/2 协议传输，使用Protocol Buffers 作为接口描述语言。 </p>
-<p>其他功能： </p>
-<ul>
-<li>认证 </li>
-<li>双向流 </li>
-<li>流控制 </li>
-<li>超时 </li>
-</ul>
-<p>最常见的应用场景是： </p>
-<ul>
-<li>微 …</li></ul></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/grpc.html#grpc">
-           阅读全文
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://www.danieldai.com/vpp_cli.html#vpp_cli">VPP命令行</a></h2>
-    <p>
-      发布时间 2021年09月22日 分类: <a href="https://www.danieldai.com/category/vpp.html">VPP</a>
-
-          &#8226; 标签:
-              <a href="https://www.danieldai.com/tag/vpp.html">VPP</a>,              <a href="https://www.danieldai.com/tag/cli.html">CLI</a>
-    </p>
-  </header>
-  <div>
-      <div><h2>导言</h2>
-<p>vpp网络堆栈配备了一组用于调试的命令。</p>
-<p>访问CLI（具有适当权限）的最简单方法是使用vppctl命令：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>vppctl<span class="w"> </span>&lt;cli<span class="w"> </span>command&gt;
-</code></pre></div>
-
-<p>CLI解析器匹配静态关键字字符串，最终调用操作函数。明确的部分关键字匹配总是发生。操 …</p></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/vpp_cli.html#vpp_cli">
-           阅读全文
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://www.danieldai.com/vppbuilding.html#vppbuilding">编译VPP</a></h2>
-    <p>
-      发布时间 2021年09月15日 分类: <a href="https://www.danieldai.com/category/vpp.html">VPP</a>
-
-          &#8226; 标签:
-              <a href="https://www.danieldai.com/tag/vpp.html">VPP</a>,              <a href="https://www.danieldai.com/tag/shi-liang-bao-wen-chu-li.html">矢量报文处理</a>
-    </p>
-  </header>
-  <div>
-      <div><h1>如何下载和构建VPP</h1>
-<p>下面介绍了如何下载和构建VPP。</p>
-<h2>设置代理</h2>
-<p>根据您操作的环境，可能需要设置代理。运行这些代理命令来 …</p></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/vppbuilding.html#vppbuilding">
-           阅读全文
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://www.danieldai.com/gin-api-examples.html#gin-api-examples">Gin API 示例 【进行中】</a></h2>
-    <p>
-      发布时间 2021年09月14日 分类: <a href="https://www.danieldai.com/category/post.html">Post</a>
-
-          &#8226; 标签:
-              <a href="https://www.danieldai.com/tag/golang.html">Golang</a>,              <a href="https://www.danieldai.com/tag/go.html">Go</a>
-    </p>
-  </header>
-  <div>
-      <div><h2>1. AsciiJSON</h2>
-<p>使用 AsciiJSON 生成纯 ASCII JSON, 非 ASCII 字符会被转义。</p>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">r</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">gin</span><span class="p">.</span><span class="nx">Default</span><span class="p">()</span>
-
-<span class="w">    </span><span class="nx">r</span><span class="p">.</span><span class="nx">GET</span><span class="p">(</span><span class="s">&quot;/someJSON&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">gin</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
-<span class="w">            </span><span class="s">&quot;lang&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;GO语言&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s">&quot;tag&quot;</span><span class="p">:</span><span class="w">  </span><span class="s">&quot;&lt;br&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="c1">// 将会输出 : {&quot;lang&quot;:&quot;GO\u8bed\u8a00&quot;,&quot;tag&quot;:&quot;\u003cbr&quot;}</span>
-<span class="w">        </span><span class="nx">c</span><span class="p">.</span><span class="nx">AsciiJSON …</span></code></pre></div></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/gin-api-examples.html#gin-api-examples">
-           阅读全文
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://www.danieldai.com/gin-introduction.html#gin-introduction">Gin简介</a></h2>
-    <p>
-      发布时间 2021年09月13日 分类: <a href="https://www.danieldai.com/category/post.html">Post</a>
-
-          &#8226; 标签:
-              <a href="https://www.danieldai.com/tag/golang.html">Golang</a>,              <a href="https://www.danieldai.com/tag/go.html">Go</a>
-    </p>
-  </header>
-  <div>
-      <div><h1>一、简单介绍</h1>
-<p>Gin 是一个用 Go (Golang) 编写的 Web 框架。 它具有类似 martini 的 API，但是具有更好的性能； 得益于httprouter，它速度提高了 40 倍。 如果ni需要性能和良好的生产力 …</p></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/gin-introduction.html#gin-introduction">
-           阅读全文
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://www.danieldai.com/iproute2-basic.html#iproute2-basic">IPRoute2 Basic</a></h2>
-    <p>
-      发布时间 2016年08月04日 分类: <a href="https://www.danieldai.com/category/linux.html">Linux</a>
-
-
-    </p>
-  </header>
-  <div>
-      <div><h3>ip link</h3>
-<p>Show link layer interface information</p>
-<div class="highlight"><pre><span></span><code>ip link
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mi">1</span><span class="o">:</span><span class="w"> </span><span class="n">lo</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="n">LOOPBACK</span><span class="o">,</span><span class="n">UP</span><span class="o">,</span><span class="n">LOWER_UP</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mtu</span><span class="w"> </span><span class="mi">65536</span><span class="w"> </span><span class="n">qdisc</span><span class="w"> </span><span class="n">noqueue</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="n">UNKNOWN</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="n">DEFAULT</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">qlen</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">    </span><span class="n">link</span><span class="o">/</span><span class="n">loopback</span><span class="w"> </span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="w"> </span><span class="n">brd</span><span class="w"> </span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span>
-<span class="mi">2</span><span class="o">:</span><span class="w"> </span><span class="n">ens33</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="n">BROADCAST</span><span class="o">,</span><span class="n">MULTICAST</span><span class="o">,</span><span class="n">UP</span><span class="o">,</span><span class="n">LOWER_UP</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mtu</span><span class="w"> </span><span class="mi">1500</span><span class="w"> </span><span class="n">qdisc …</span></code></pre></div></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/iproute2-basic.html#iproute2-basic">
-           阅读全文
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
     <h2><a href="https://www.danieldai.com/how-to-split-string-in-python.html#how-to-split-string-in-python">How to split string in Python?</a></h2>
     <p>
       发布时间 2016年06月30日 分类: <a href="https://www.danieldai.com/category/python.html">Python</a>
@@ -343,27 +186,6 @@
 </article>
 <article>
   <header>
-    <h2><a href="https://www.danieldai.com/blogging-with-github-pages-and-pelican-step-by-step.html#blogging-with-github-pages-and-pelican-step-by-step">Blogging with GitHub Pages and Pelican Step by Step</a></h2>
-    <p>
-      发布时间 2016年01月18日 分类: <a href="https://www.danieldai.com/category/post.html">Post</a>
-
-          &#8226; 标签:
-              <a href="https://www.danieldai.com/tag/pelican.html">Pelican</a>,              <a href="https://www.danieldai.com/tag/github-pages.html">GitHub Pages</a>
-    </p>
-  </header>
-  <div>
-      <div><p><strong><a href="https://pages.github.com/">GitHub Pages</a></strong> is a service provide by GitHub to allow people having websites out of the content of their Repo. 
-As you know, <strong><a href="http://www.danieldai.com">DanielDai.com</a></strong> is hosted on <strong><a href="https://pages.github.com/">GitHub Pages</a></strong>. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can …</p></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/blogging-with-github-pages-and-pelican-step-by-step.html#blogging-with-github-pages-and-pelican-step-by-step">
-           阅读全文
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
     <h2><a href="https://www.danieldai.com/python-modules-packages-and-import.html#python-modules-packages-and-import">Python Modules, Packages and Import</a></h2>
     <p>
       发布时间 2016年01月16日 分类: <a href="https://www.danieldai.com/category/python.html">Python</a>
@@ -380,12 +202,33 @@ As you know, <strong><a href="http://www.danieldai.com">DanielDai.com</a></stron
            阅读全文
         </a>
   </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="https://www.danieldai.com/how-to-write-markdown.html#how-to-write-markdown">How to write Markdown</a></h2>
+    <p>
+      发布时间 2016年01月15日 分类: <a href="https://www.danieldai.com/category/post.html">Post</a>
+
+
+    </p>
+  </header>
+  <div>
+      <div><h2>Basic</h2>
+<h3>Paragraphs</h3>
+<p>Paragraphs in Markdown are just one or more lines of consecutive text followed by one or more blank lines.</p>
+<div class="highlight"><pre><span></span><code>On July 2, an alien mothership entered Earth&#39;s orbit and deployed several dozen saucer-shaped &quot;destroyer&quot; spacecraft, each 15 miles (24 km) wide.
+
+On July 3, the Black Knights …</code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="https://www.danieldai.com/how-to-write-markdown.html#how-to-write-markdown">
+           阅读全文
+        </a>
+  </div>
 </article>
 
   <div class="pagination">
-    <a class="btn float-left" href="https://www.danieldai.com/index2.html">
-      <i class="fa fa-angle-left"></i> Older Posts
-    </a>
   </div>
 
 

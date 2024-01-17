@@ -132,79 +132,6 @@
 
 <article>
   <header>
-    <h2><a href="https://www.danieldai.com/gin-api-examples.html#gin-api-examples">Gin API 示例 【进行中】</a></h2>
-    <p>
-      发布时间 2021年09月14日 分类: <a href="https://www.danieldai.com/category/post.html">Post</a>
-
-          &#8226; 标签:
-              <a href="https://www.danieldai.com/tag/golang.html">Golang</a>,              <a href="https://www.danieldai.com/tag/go.html">Go</a>
-    </p>
-  </header>
-  <div>
-      <div><h2>1. AsciiJSON</h2>
-<p>使用 AsciiJSON 生成纯 ASCII JSON, 非 ASCII 字符会被转义。</p>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">r</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">gin</span><span class="p">.</span><span class="nx">Default</span><span class="p">()</span>
-
-<span class="w">    </span><span class="nx">r</span><span class="p">.</span><span class="nx">GET</span><span class="p">(</span><span class="s">&quot;/someJSON&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">gin</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
-<span class="w">            </span><span class="s">&quot;lang&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;GO语言&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s">&quot;tag&quot;</span><span class="p">:</span><span class="w">  </span><span class="s">&quot;&lt;br&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="c1">// 将会输出 : {&quot;lang&quot;:&quot;GO\u8bed\u8a00&quot;,&quot;tag&quot;:&quot;\u003cbr&quot;}</span>
-<span class="w">        </span><span class="nx">c</span><span class="p">.</span><span class="nx">AsciiJSON …</span></code></pre></div></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/gin-api-examples.html#gin-api-examples">
-           阅读全文
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://www.danieldai.com/gin-introduction.html#gin-introduction">Gin简介</a></h2>
-    <p>
-      发布时间 2021年09月13日 分类: <a href="https://www.danieldai.com/category/post.html">Post</a>
-
-          &#8226; 标签:
-              <a href="https://www.danieldai.com/tag/golang.html">Golang</a>,              <a href="https://www.danieldai.com/tag/go.html">Go</a>
-    </p>
-  </header>
-  <div>
-      <div><h1>一、简单介绍</h1>
-<p>Gin 是一个用 Go (Golang) 编写的 Web 框架。 它具有类似 martini 的 API，但是具有更好的性能； 得益于httprouter，它速度提高了 40 倍。 如果ni需要性能和良好的生产力 …</p></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/gin-introduction.html#gin-introduction">
-           阅读全文
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://www.danieldai.com/blogging-with-github-pages-and-pelican-step-by-step.html#blogging-with-github-pages-and-pelican-step-by-step">Blogging with GitHub Pages and Pelican Step by Step</a></h2>
-    <p>
-      发布时间 2016年01月18日 分类: <a href="https://www.danieldai.com/category/post.html">Post</a>
-
-          &#8226; 标签:
-              <a href="https://www.danieldai.com/tag/pelican.html">Pelican</a>,              <a href="https://www.danieldai.com/tag/github-pages.html">GitHub Pages</a>
-    </p>
-  </header>
-  <div>
-      <div><p><strong><a href="https://pages.github.com/">GitHub Pages</a></strong> is a service provide by GitHub to allow people having websites out of the content of their Repo. 
-As you know, <strong><a href="http://www.danieldai.com">DanielDai.com</a></strong> is hosted on <strong><a href="https://pages.github.com/">GitHub Pages</a></strong>. The content of Website Repo can be static HTML files, with related CSS, Javascript and image resources, or it can …</p></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/blogging-with-github-pages-and-pelican-step-by-step.html#blogging-with-github-pages-and-pelican-step-by-step">
-           阅读全文
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
     <h2><a href="https://www.danieldai.com/how-to-write-markdown.html#how-to-write-markdown">How to write Markdown</a></h2>
     <p>
       发布时间 2016年01月15日 分类: <a href="https://www.danieldai.com/category/post.html">Post</a>
@@ -224,21 +151,6 @@ On July 3, the Black Knights …</code></pre></div></div>
            href="https://www.danieldai.com/how-to-write-markdown.html#how-to-write-markdown">
            阅读全文
         </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://www.danieldai.com/welcome-to-danieldaicom.html#welcome-to-danieldaicom">Welcome to DanielDai.com!</a></h2>
-    <p>
-      发布时间 2015年07月30日 分类: <a href="https://www.danieldai.com/category/post.html">Post</a>
-
-
-    </p>
-  </header>
-  <div>
-      <div><p>Hello World.</p>
-<p>This is my blog, I will use it to share a lot of things with you.</p></div>
   </div>
 </article>
 
