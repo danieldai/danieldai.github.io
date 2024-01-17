@@ -27,6 +27,18 @@ pip install -r requirements.txt
 
 安装插件 https://github.com/getpelican/pelican-plugins
 
+在当前目录的上级目录运行如下命令
+```
+git clone --recursive https://github.com/getpelican/pelican-plugins
+```
+
+按如下方式配置 `PLUGIN_PATHS`
+```
+PLUGIN_PATHS = ['../pelican-plugins']
+PLUGINS = ['sitemap']
+```
+
+
 * 在 `content` 目录创建新内容或者编辑已有内容文件
 * 把内容源文件编译为 HTML 文件
 

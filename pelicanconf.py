@@ -109,8 +109,7 @@ EMAIL_ADDRESS = 'daeming@gmail.com'
 GITHUB_ADDRESS = 'https://github.com/danieldai'
 SO_ADDRESS = 'http://stackoverflow.com/users/1089262/daniel-dai'
 
-PLUGIN_PATHS = ['/home/daniel/danieldai/pelican-plugins']
-
+PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = ['sitemap']
 
 SITEMAP = {
