@@ -56,17 +56,24 @@
 
  
 
-    <meta name="author" content="Daniel Dai" />
-    <meta name="description" content="" />
+<meta name="author" content="Daniel Dai" />
+<meta name="description" content="我的Git配置文件，里面定义了一些常用的alias，方便使用。 [user] name = Daniel Dai email = daniel@danieldai.com [alias] s = status br = branch co = checkout cm = commit oldest-ancestor = !bash -c &#39;diff --old-line-format= --new-line-format= &lt;(git rev-list --first-parent \&#34;${1:-master}\&#34;) &lt;(git rev-list --first-parent \&#34;${2 …" />
+<meta name="keywords" content="">
+
+
   <meta property="og:site_name" content="Daniel Dai's Blog"/>
-  <meta property="og:type" content="blog"/>
-  <meta property="og:title" content="Daniel Dai's Blog"/>
-  <meta property="og:description" content=""/>
+  <meta property="og:title" content="我的Git配置文件"/>
+  <meta property="og:description" content="我的Git配置文件，里面定义了一些常用的alias，方便使用。 [user] name = Daniel Dai email = daniel@danieldai.com [alias] s = status br = branch co = checkout cm = commit oldest-ancestor = !bash -c &#39;diff --old-line-format= --new-line-format= &lt;(git rev-list --first-parent \&#34;${1:-master}\&#34;) &lt;(git rev-list --first-parent \&#34;${2 …"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:url" content="https://www.danieldai.com"/>
+  <meta property="og:url" content="https://www.danieldai.com/my_gitconfig_file.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2024-07-14 22:20:00+08:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="https://www.danieldai.com/author/daniel-dai.html">
+  <meta property="article:section" content="misc"/>
   <meta property="og:image" content="https://www.danieldai.com/daniel_150.jpeg">
 
-  <title>Daniel Dai's Blog &ndash; Posts by Daniel Dai:</title>
+  <title>Daniel Dai's Blog &ndash; 我的Git配置文件</title>
 
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0025679579683360"
@@ -133,19 +140,19 @@
 
     </nav>
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="https://www.danieldai.com/my_gitconfig_file.html#my_gitconfig_file">我的Git配置文件</a></h2>
+      
+    <h1 id="my_gitconfig_file">我的Git配置文件</h1>
     <p>
-      发布时间 2024年07月14日 分类: <a href="https://www.danieldai.com/category/misc.html">misc</a>
-
+      发布时间: 2024年07月14日, 分类: <a href="https://www.danieldai.com/category/misc.html">misc</a>
 
     </p>
   </header>
+
+
   <div>
-      <div><p>我的Git配置文件，里面定义了一些常用的alias，方便使用。</p>
+    <p>我的Git配置文件，里面定义了一些常用的alias，方便使用。</p>
 <div class="highlight"><pre><span></span><code><span class="k">[user]</span>
 <span class="w">        </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Daniel Dai</span>
 <span class="w">        </span><span class="na">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">daniel@danieldai.com</span>
@@ -154,69 +161,49 @@
 <span class="w">        </span><span class="na">br</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">branch</span>
 <span class="w">        </span><span class="na">co</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">checkout</span>
 <span class="w">        </span><span class="na">cm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">commit</span>
-<span class="w">        </span><span class="na">oldest-ancestor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">!bash -c &#39;diff --old-line-format= --new-line-format= &lt;(git rev-list --first-parent \&quot;${1:-master}\&quot;) &lt;(git rev-list --first-parent \&quot;${2 …</span></code></pre></div></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/my_gitconfig_file.html#my_gitconfig_file">
-           阅读全文
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://www.danieldai.com/how-to-split-string-in-python.html#how-to-split-string-in-python">How to split string in Python?</a></h2>
-    <p>
-      发布时间 2016年06月30日 分类: <a href="https://www.danieldai.com/category/python.html">Python</a>
-
-
-    </p>
-  </header>
-  <div>
-      <div><h2>Split string with identical separator</h2>
-<div class="highlight"><pre><span></span><code><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;45.63.130.248:15+221.160.226.9:329+101.240.154.40:1197&#39;</span>
-
-<span class="n">nodes</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span> <span class="n">nodes</span>
+<span class="w">        </span><span class="na">oldest-ancestor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">!bash -c &#39;diff --old-line-format= --new-line-format= &lt;(git rev-list --first-parent \&quot;${1:-master}\&quot;) &lt;(git rev-list --first-parent \&quot;${2:-HEAD}\&quot;) | head -1&#39; -</span>
+<span class="w">        </span><span class="na">ssv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;log --no-merges --pretty=format:\&quot;\\\&quot;%h\\\&quot;</span><span class="c1">;%an;%ai;%ct;\\\&quot;%s\\\&quot;\&quot;&quot;</span>
+<span class="w">        </span><span class="na">lg1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">log --graph --abbrev-commit --decorate --date=relative --format=format:&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39;</span>
+<span class="w">        </span><span class="na">lg2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">log --graph --abbrev-commit --decorate --format=format:&#39;%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n&#39;&#39;          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)&#39;</span>
+<span class="w">        </span><span class="na">lg3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">log --graph --abbrev-commit --decorate --format=format:&#39;%C(bold blue)%h%C(reset) - %C(bold cyan)%aD / %cD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n&#39;&#39;          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)&#39;</span>
+<span class="w">        </span><span class="na">lg1a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">!&quot;git lg1 --all&quot;</span>
+<span class="w">        </span><span class="na">lg2a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">!&quot;git lg2 --all&quot;</span>
+<span class="w">        </span><span class="na">lg3a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">!&quot;git lg3 --all&quot;</span>
+<span class="w">        </span><span class="na">lg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">!&quot;git lg1&quot;</span>
+<span class="w">        </span><span class="na">fap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">fetch --all --prune</span>
+<span class="w">        </span><span class="na">fpush</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">push --force-with-lease</span>
+<span class="k">[core]</span>
+<span class="w">        </span><span class="na">editor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">vim</span>
+<span class="w">    </span><span class="na">excludesfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">~/.gitignore</span>
+<span class="w">    </span><span class="na">autocrlf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">input</span>
+<span class="k">[push]</span>
+<span class="w">        </span><span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">simple</span>
 </code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[&#39;45.63.130.248:15&#39;, &#39;221.160.226.9:329&#39;, &#39;101.240.154.40:1197&#39;]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;45.63.130.248:15*+221.160.226 …</span></code></pre></div></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/how-to-split-string-in-python.html#how-to-split-string-in-python">
-           阅读全文
-        </a>
   </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://www.danieldai.com/python-modules-packages-and-import.html#python-modules-packages-and-import">Python Modules, Packages and Import</a></h2>
+  <div class="tag-cloud">
     <p>
-      发布时间 2016年01月16日 分类: <a href="https://www.danieldai.com/category/python.html">Python</a>
-
-
     </p>
-  </header>
-  <div>
-      <div><p>Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the <code>import</code> command.</p>
-<p>To import a module, we use the <code>import</code> command. Check out the full list of built-in modules in the Python standard library <a href="http://docs.python.org/2/library/">here …</a></p></div>
-        <br>
-        <a class="btn"
-           href="https://www.danieldai.com/python-modules-packages-and-import.html#python-modules-packages-and-import">
-           阅读全文
-        </a>
   </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'danieldai';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
 </article>
-
-  <div class="pagination">
-  </div>
-
-
 
     <footer>
 <p>

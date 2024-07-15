@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.danieldai.com/</loc>
-<lastmod>2024-07-15T10:48:50-00:00</lastmod>
+<lastmod>2024-07-15T11:24:09-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.danieldai.com/tags.html</loc>
-<lastmod>2024-07-15T10:48:50-00:00</lastmod>
+<lastmod>2024-07-15T11:24:09-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.danieldai.com/categories.html</loc>
-<lastmod>2024-07-15T10:48:50-00:00</lastmod>
+<lastmod>2024-07-15T11:24:09-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.danieldai.com/authors.html</loc>
-<lastmod>2024-07-15T10:48:50-00:00</lastmod>
+<lastmod>2024-07-15T11:24:09-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.danieldai.com/archives.html</loc>
-<lastmod>2024-07-15T10:48:50-00:00</lastmod>
+<lastmod>2024-07-15T11:24:09-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -42,6 +42,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>https://www.danieldai.com/pages/about-me.html</loc>
 <lastmod>2024-07-13T20:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://www.danieldai.com/my_gitconfig_file.html</loc>
+<lastmod>2024-07-14T22:20:00+08:00</lastmod>
+<changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -60,6 +67,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://www.danieldai.com/category/misc.html</loc>
+<lastmod>2024-07-14T22:20:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://www.danieldai.com/category/python.html</loc>
 <lastmod>2016-06-30T09:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -68,7 +82,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.danieldai.com/author/daniel-dai.html</loc>
-<lastmod>2016-06-30T09:20:00+08:06</lastmod>
+<lastmod>2024-07-14T22:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
