@@ -7,25 +7,16 @@
 
 ## 怎么编辑这个博客 (给本人自己的笔记提示)
 
-* 设置 venv 环境
+* 设置 venv 环境 并安装依赖
 
-在使用 Python 3 作为默认python的电脑
+在Linux 或者 Windows WSL 下运行如下命令
 ```
-mkvirtualenv danieldai
-```
-
-在使用 Python 2 作为默认python的电脑
-```
-mkvirtualenv -p /usr/bin/python3 danieldai
-```
-
-```
-git clone git@github.com:danieldai/danieldai.github.io.git
-cd danieldai.github.io.git
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-安装插件 https://github.com/getpelican/pelican-plugins
+安装 Pelican 插件
 
 在当前目录的上级目录运行如下命令
 ```
