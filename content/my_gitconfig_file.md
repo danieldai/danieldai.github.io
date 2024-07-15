@@ -30,5 +30,5 @@ Slug: my_gitconfig_file
 	excludesfile = ~/.gitignore
 	autocrlf = input
 [push]
-        default = simpl
+        default = simple
 ```
