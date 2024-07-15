@@ -55,28 +55,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[&amp;#39;45.63.120.248:1195&amp;#39;, &amp;#39;221.160.226.9:329&amp;#39;, &amp;#39;101.240.154.40:1197&amp;#39;]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category></entry><entry><title>Django Template Include and I18n</title><link href="https://www.danieldai.com/django-template-include-and-i18n.html" rel="alternate"></link><published>2016-01-27T22:20:00+08:00</published><updated>2016-01-27T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-01-27:/django-template-include-and-i18n.html</id><summary type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Sometimes, we need to tranalte &lt;code&gt;include prarameters&lt;/code&gt;, this can not be done in &lt;code&gt;another_template.html …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;In Django template we can use include to include another template into current template, and at the same time we can pass parameters to included tempalte.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% include &amp;quot;include/another_template.html&amp;quot; with text=&amp;#39;I love Python&amp;#39; %}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Sometimes, we need to tranalte &lt;code&gt;include prarameters&lt;/code&gt;, this can not be done in &lt;code&gt;another_template.html&lt;/code&gt;, &lt;code&gt;blocktrans&lt;/code&gt; will not work here.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="x"&gt;# in another_template.html&lt;/span&gt;
-&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;blocktrans&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;text&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
-&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endblocktrans&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;We need to do the translation in the first temalate, before passing it to another template:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% trans &amp;#39;I love Python&amp;#39; as text %}
-{% include &amp;quot;include/another_template.html&amp;quot; with text=text %}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Reference:&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags"&gt;http://stackoverflow.com/questions/18899295/django-i18n-template-include-tags&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Django"></category></entry><entry><title>Python Modules, Packages and Import</title><link href="https://www.danieldai.com/python-modules-packages-and-import.html" rel="alternate"></link><published>2016-01-16T22:20:00+08:00</published><updated>2016-01-16T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-01-16:/python-modules-packages-and-import.html</id><summary type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category></entry><entry><title>Python Modules, Packages and Import</title><link href="https://www.danieldai.com/python-modules-packages-and-import.html" rel="alternate"></link><published>2016-01-16T22:20:00+08:00</published><updated>2016-01-16T22:20:00+08:00</updated><author><name>Daniel Dai</name></author><id>tag:www.danieldai.com,2016-01-16:/python-modules-packages-and-import.html</id><summary type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;To import a module, we use the &lt;code&gt;import&lt;/code&gt; command. Check out the full list of built-in modules in the Python standard library &lt;a href="http://docs.python.org/2/library/"&gt;here …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the &lt;code&gt;import&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;To import a module, we use the &lt;code&gt;import&lt;/code&gt; command. Check out the full list of built-in modules in the Python standard library &lt;a href="http://docs.python.org/2/library/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The first time a module is loaded into a running Python script, it is initialized by executing the code in the module once. If another module in your code imports the same module again, it will not be loaded twice but once only - so local variables inside the module act as a &lt;strong&gt;"singleton"&lt;/strong&gt; - they are &lt;strong&gt;initialized only once&lt;/strong&gt;.&lt;/p&gt;
