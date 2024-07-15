@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Daniel Dai'
 SITETITLE = 'Daniel Dai'
-SITENAME = u'Daniel Dai的网络日志'
+SITENAME = u"Daniel Dai's Blog"
 SITEURL = 'http://localhost:8000'
 
 OUTPUT_PATH = 'docs/'
@@ -80,7 +80,7 @@ SITELOGO = SITEURL + "/daniel_150.jpeg"
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
                         'extra/daniel_150.jpeg': {'path': 'daniel_150.jpeg'}}
 
-SITESUBTITLE = "互联网产品和技术"
+SITESUBTITLE = "人工智能和互联网"
 
 LOAD_CONTENT_CACHE = False
 
@@ -93,7 +93,7 @@ THEME_CSS_OVERRIDES = ['theme/css/oldstyle.css']
 SITE_SUBTEXT = "Day after day, we are closer to the Matrix, it's IT."
 
 META_DESCRIPTION = """
-Daniel Dai(代明) is an Experienced Software Professional in Python, Java and Web, who has 
+Daniel Dai is an Experienced Software Professional in Python, Java and Web, who has 
 passionate enthusiasm in changing people's life with Information Tech in various aspects. 
 """
 
