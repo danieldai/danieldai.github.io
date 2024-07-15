@@ -34,7 +34,7 @@ LINKS = (
 SOCIAL = (
     ("github", "https://github.com/danieldai"),
     ("linkedin", "https://www.linkedin.com/in/daniel-dai"),
-    ("twitter", "https://twitter.com/danieldai_com"),
+    ("twitter", "https://x.com/_DanielDai_"),
 )
 
 MENUITEMS = (
