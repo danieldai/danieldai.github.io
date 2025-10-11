@@ -57,9 +57,9 @@ include:
 # Giscus Comments Configuration
 giscus:
   repo: "danieldai/danieldai.github.io"
-  repo_id: "YOUR_REPO_ID"  # You'll need to get this from GitHub API
+  repo_id: "26950408"  # Repository ID for danieldai/danieldai.github.io
   category: "General"
-  category_id: "YOUR_CATEGORY_ID"  # You'll need to get this from GitHub API
+  category_id: "46267149"  # Category ID for General discussions
   mapping: "pathname"
   strict: "0"
   reactions_enabled: "1"
