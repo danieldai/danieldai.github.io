@@ -1,0 +1,58 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Tags</h1>
+    <p class="text-lg text-gray-600">Browse posts by tags</p>
+  </header>
+  
+  {%- assign sorted_tags = site.tags | sort -%}
+  
+  {%- if sorted_tags.size > 0 -%}
+    <div class="grid gap-6">
+      {%- for tag in sorted_tags -%}
+        {%- assign tag_name = tag[0] -%}
+        {%- assign tag_posts = tag[1] -%}
+        
+        <div class="card p-6" id="{{ tag_name | slugify }}">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-2xl font-semibold text-gray-900">
+              <a href="#{{ tag_name | slugify }}" class="hover:text-primary-600 transition-colors duration-200">
+                {{ tag_name }}
+              </a>
+            </h2>
+            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">
+              {{ tag_posts.size }} post{{ tag_posts.size | pluralize }}
+            </span>
+          </div>
+          
+          <div class="space-y-3">
+            {%- for post in tag_posts -%}
+              <div class="flex items-center justify-between py-2 border-b border-gray-100 last:border-b-0">
+                <div>
+                  <a href="{{ post.url | relative_url }}" class="text-gray-900 hover:text-primary-600 font-medium transition-colors duration-200">
+                    {{ post.title }}
+                  </a>
+                  {%- if post.excerpt -%}
+                    <p class="text-sm text-gray-600 mt-1">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+                  {%- endif -%}
+                </div>
+                <time datetime="{{ post.date | date_to_xmlschema }}" class="text-sm text-gray-500 ml-4">
+                  {{ post.date | date: "%b %d, %Y" }}
+                </time>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- else -%}
+    <div class="text-center py-12">
+      <p class="text-gray-600 text-lg">No tags found.</p>
+    </div>
+  {%- endif -%}
+</div>

@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<div class="max-w-6xl mx-auto px-4 py-8">
+  <div class="text-center mb-12">
+    <h1 class="text-5xl font-bold text-gray-900 mb-4">{{ site.title }}</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">{{ site.description }}</p>
+  </div>
+  
+  {%- if paginator.posts.size > 0 -%}
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {%- for post in paginator.posts -%}
+        {%- include post-card.html post=post -%}
+      {%- endfor -%}
+    </div>
+    
+    {%- if paginator.total_pages > 1 -%}
+      <div class="mt-12 flex justify-center">
+        <nav class="flex space-x-2">
+          {%- if paginator.previous_page -%}
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="btn btn-secondary">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+              Previous
+            </a>
+          {%- endif -%}
+          
+          <span class="flex items-center px-4 py-2 text-sm text-gray-600">
+            Page {{ paginator.page }} of {{ paginator.total_pages }}
+          </span>
+          
+          {%- if paginator.next_page -%}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="btn btn-secondary">
+              Next
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          {%- endif -%}
+        </nav>
+      </div>
+    {%- endif -%}
+  {%- else -%}
+    <div class="text-center py-12">
+      <p class="text-gray-600 text-lg">No posts yet. Check back soon!</p>
+    </div>
+  {%- endif -%}
+</div>

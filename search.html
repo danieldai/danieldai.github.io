@@ -1,0 +1,46 @@
+---
+layout: default
+title: Search
+permalink: /search/
+---
+
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Search</h1>
+    <p class="text-lg text-gray-600">Find posts by keywords</p>
+  </header>
+  
+  <div class="mb-8">
+    <div class="relative">
+      <input type="text" 
+             id="search-input" 
+             placeholder="Search posts..." 
+             class="search-input w-full pl-10 pr-4 py-3 text-lg">
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <svg class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+  
+  <div id="search-results" class="space-y-6">
+    <!-- Search results will be populated here -->
+  </div>
+  
+  <div id="no-results" class="hidden text-center py-12">
+    <svg class="mx-auto h-12 w-12 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-1.009-5.824-2.709M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+    </svg>
+    <h3 class="text-lg font-medium text-gray-900 mb-2">No results found</h3>
+    <p class="text-gray-600">Try different keywords or check the spelling.</p>
+  </div>
+  
+  <div id="search-loading" class="hidden text-center py-12">
+    <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
+    <p class="mt-2 text-gray-600">Searching...</p>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>
+<script src="{{ '/assets/js/search.js' | relative_url }}"></script>

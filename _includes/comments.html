@@ -1,0 +1,89 @@
+<div class="giscus-comments">
+  <div class="giscus" id="giscus-comments"></div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Only load Giscus if we're in production and have the required config
+  if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+    const giscusConfig = {
+      'data-repo': '{{ site.giscus.repo }}',
+      'data-repo-id': '{{ site.giscus.repo_id }}',
+      'data-category': '{{ site.giscus.category }}',
+      'data-category-id': '{{ site.giscus.category_id }}',
+      'data-mapping': '{{ site.giscus.mapping }}',
+      'data-strict': '{{ site.giscus.strict }}',
+      'data-reactions-enabled': '{{ site.giscus.reactions_enabled }}',
+      'data-emit-metadata': '{{ site.giscus.emit_metadata }}',
+      'data-input-position': '{{ site.giscus.input_position }}',
+      'data-theme': '{{ site.giscus.theme }}',
+      'data-lang': '{{ site.giscus.lang }}',
+      'data-loading': '{{ site.giscus.loading }}'
+    };
+    
+    // Check if all required config is present
+    const requiredFields = ['data-repo', 'data-repo-id', 'data-category', 'data-category-id'];
+    const hasRequiredConfig = requiredFields.every(field => giscusConfig[field] && giscusConfig[field] !== 'YOUR_' + field.split('-').pop().toUpperCase());
+    
+    if (hasRequiredConfig) {
+      // Create script element
+      const script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      script.crossOrigin = 'anonymous';
+      
+      // Add data attributes
+      Object.keys(giscusConfig).forEach(key => {
+        script.setAttribute(key, giscusConfig[key]);
+      });
+      
+      // Append to comments container
+      const commentsContainer = document.getElementById('giscus-comments');
+      if (commentsContainer) {
+        commentsContainer.appendChild(script);
+      }
+    } else {
+      // Show setup message if config is missing
+      const commentsContainer = document.getElementById('giscus-comments');
+      if (commentsContainer) {
+        commentsContainer.innerHTML = `
+          <div class="bg-blue-50 border border-blue-200 rounded-md p-4">
+            <div class="flex">
+              <svg class="h-5 w-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+              </svg>
+              <div class="ml-3">
+                <h3 class="text-sm font-medium text-blue-800">Comments Setup Required</h3>
+                <div class="mt-2 text-sm text-blue-700">
+                  <p>To enable comments, please configure Giscus in your <code>_config.yml</code> file.</p>
+                  <p class="mt-1">See the README for setup instructions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    }
+  } else {
+    // Show development message
+    const commentsContainer = document.getElementById('giscus-comments');
+    if (commentsContainer) {
+      commentsContainer.innerHTML = `
+        <div class="bg-gray-50 border border-gray-200 rounded-md p-4">
+          <div class="flex">
+            <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+            </svg>
+            <div class="ml-3">
+              <h3 class="text-sm font-medium text-gray-800">Comments Preview</h3>
+              <div class="mt-2 text-sm text-gray-700">
+                <p>Comments will appear here in production. Giscus is disabled in development mode.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+  }
+});
+</script>

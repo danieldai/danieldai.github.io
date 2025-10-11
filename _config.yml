@@ -1,0 +1,93 @@
+# Site settings
+title: "Daniel's Tech Blog"
+description: "Sharing software development experiences and insights"
+author: "Daniel Dai"
+email: "your-email@example.com"
+url: "https://danieldai.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - .gitignore
+
+# Include in processing
+include:
+  - _pages
+
+# Giscus Comments Configuration
+giscus:
+  repo: "danieldai/danieldai.github.io"
+  repo_id: "YOUR_REPO_ID"  # You'll need to get this from GitHub API
+  category: "General"
+  category_id: "YOUR_CATEGORY_ID"  # You'll need to get this from GitHub API
+  mapping: "pathname"
+  strict: "0"
+  reactions_enabled: "1"
+  emit_metadata: "0"
+  input_position: "bottom"
+  theme: "preferred_color_scheme"
+  lang: "en"
+  loading: "lazy"
+
+# Site navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about"
+  - title: "Tags"
+    url: "/tags"
+  - title: "Categories"
+    url: "/categories"
+  - title: "Search"
+    url: "/search"
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Timezone
+timezone: "UTC"
+
+# Encoding
+encoding: "utf-8"
