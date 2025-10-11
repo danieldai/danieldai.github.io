@@ -91,3 +91,7 @@ timezone: "UTC"
 
 # Encoding
 encoding: "utf-8"
+
+# Favicon
+favicon:
+  path: "/assets/icons"
