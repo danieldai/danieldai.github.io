@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google ADK Introduction - Getting Started with Agent Development Kit"
-date: 2025-10-11 10:00:00 -0000
+date: 2025-10-10 10:00:00 -0000
 categories: [AI, Development, Agents]
 tags: [AI, ADK, Development, Agents, Google, Python, LLM]
 author: Daniel Dai
