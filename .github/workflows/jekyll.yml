@@ -9,6 +9,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     
     steps:
     - uses: actions/checkout@v4
@@ -20,6 +24,12 @@ jobs:
     
     - name: Build Jekyll site
       run: bundle exec jekyll build --safe
+    
+    - name: Upload Pages artifact
+      if: github.ref == 'refs/heads/master'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./_site
     
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/master'
