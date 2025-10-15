@@ -1,0 +1,111 @@
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #333; }
+      .header { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #fff; }
+      .cell { font-family: Arial, sans-serif; font-size: 12px; fill: #333; }
+      .mem0-row { fill: #e8f5e8; }
+      .mem0g-row { fill: #e3f2fd; }
+      .full-context-row { fill: #fff3e0; }
+      .rag-row { fill: #fce4ec; }
+      .openai-row { fill: #f3e5f5; }
+      .header-bg { fill: #424242; }
+      .border { stroke: #ccc; stroke-width: 1; fill: none; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="30" class="title" text-anchor="middle">Mem0 性能对比详细数据表</text>
+  <text x="450" y="50" class="title" text-anchor="middle">Mem0 Performance Comparison Data Table</text>
+  
+  <!-- Table Header -->
+  <rect x="50" y="80" width="800" height="40" class="header-bg"/>
+  <text x="100" y="105" class="header" text-anchor="middle">方法 Method</text>
+  <text x="220" y="105" class="header" text-anchor="middle">准确性 Accuracy (%)</text>
+  <text x="340" y="105" class="header" text-anchor="middle">中位延迟 p50 (s)</text>
+  <text x="460" y="105" class="header" text-anchor="middle">P95延迟 p95 (s)</text>
+  <text x="580" y="105" class="header" text-anchor="middle">Token使用 (K)</text>
+  <text x="720" y="105" class="header" text-anchor="middle">性能评级 Rating</text>
+  
+  <!-- Mem0 Row -->
+  <rect x="50" y="120" width="800" height="40" class="mem0-row"/>
+  <text x="100" y="145" class="cell" text-anchor="middle">Mem0</text>
+  <text x="220" y="145" class="cell" text-anchor="middle">66.9%</text>
+  <text x="340" y="145" class="cell" text-anchor="middle">0.71</text>
+  <text x="460" y="145" class="cell" text-anchor="middle">1.44</text>
+  <text x="580" y="145" class="cell" text-anchor="middle">1.8K</text>
+  <text x="720" y="145" class="cell" text-anchor="middle">⭐⭐⭐⭐⭐</text>
+  
+  <!-- Mem0g Row -->
+  <rect x="50" y="160" width="800" height="40" class="mem0g-row"/>
+  <text x="100" y="185" class="cell" text-anchor="middle">Mem0ᵍ</text>
+  <text x="220" y="185" class="cell" text-anchor="middle">68.4%</text>
+  <text x="340" y="185" class="cell" text-anchor="middle">1.09</text>
+  <text x="460" y="185" class="cell" text-anchor="middle">2.59</text>
+  <text x="580" y="185" class="cell" text-anchor="middle">2.1K</text>
+  <text x="720" y="185" class="cell" text-anchor="middle">⭐⭐⭐⭐⭐</text>
+  
+  <!-- Full Context Row -->
+  <rect x="50" y="200" width="800" height="40" class="full-context-row"/>
+  <text x="100" y="225" class="cell" text-anchor="middle">全上下文 Full Context</text>
+  <text x="220" y="225" class="cell" text-anchor="middle">72.9%</text>
+  <text x="340" y="225" class="cell" text-anchor="middle">9.87</text>
+  <text x="460" y="225" class="cell" text-anchor="middle">17.12</text>
+  <text x="580" y="225" class="cell" text-anchor="middle">26.0K</text>
+  <text x="720" y="225" class="cell" text-anchor="middle">⭐⭐</text>
+  
+  <!-- RAG Row -->
+  <rect x="50" y="240" width="800" height="40" class="rag-row"/>
+  <text x="100" y="265" class="cell" text-anchor="middle">标准RAG Standard RAG</text>
+  <text x="220" y="265" class="cell" text-anchor="middle">61.0%</text>
+  <text x="340" y="265" class="cell" text-anchor="middle">-</text>
+  <text x="460" y="265" class="cell" text-anchor="middle">0.26</text>
+  <text x="580" y="265" class="cell" text-anchor="middle">8.0K</text>
+  <text x="720" y="265" class="cell" text-anchor="middle">⭐⭐⭐</text>
+  
+  <!-- OpenAI Memory Row -->
+  <rect x="50" y="280" width="800" height="40" class="openai-row"/>
+  <text x="100" y="305" class="cell" text-anchor="middle">OpenAI Memory</text>
+  <text x="220" y="305" class="cell" text-anchor="middle">52.9%</text>
+  <text x="340" y="305" class="cell" text-anchor="middle">-</text>
+  <text x="460" y="305" class="cell" text-anchor="middle">-</text>
+  <text x="580" y="305" class="cell" text-anchor="middle">3.0K</text>
+  <text x="720" y="305" class="cell" text-anchor="middle">⭐⭐⭐</text>
+  
+  <!-- Table borders -->
+  <rect x="50" y="80" width="800" height="240" class="border"/>
+  <!-- Vertical lines -->
+  <line x1="170" y1="80" x2="170" y2="320" class="border"/>
+  <line x1="270" y1="80" x2="270" y2="320" class="border"/>
+  <line x1="410" y1="80" x2="410" y2="320" class="border"/>
+  <line x1="530" y1="80" x2="530" y2="320" class="border"/>
+  <line x1="650" y1="80" x2="650" y2="320" class="border"/>
+  <!-- Horizontal lines -->
+  <line x1="50" y1="120" x2="850" y2="120" class="border"/>
+  <line x1="50" y1="160" x2="850" y2="160" class="border"/>
+  <line x1="50" y1="200" x2="850" y2="200" class="border"/>
+  <line x1="50" y1="240" x2="850" y2="240" class="border"/>
+  <line x1="50" y1="280" x2="850" y2="280" class="border"/>
+  
+  <!-- Key Insights -->
+  <text x="450" y="360" class="title" text-anchor="middle">关键洞察 Key Insights</text>
+  
+  <!-- Insight boxes -->
+  <rect x="70" y="380" width="240" height="80" fill="#e8f5e8" stroke="#4caf50" stroke-width="2" rx="5"/>
+  <text x="190" y="400" class="cell" text-anchor="middle" font-weight="bold">Mem0 优势</text>
+  <text x="190" y="420" class="cell" text-anchor="middle">• 平衡性能与效率</text>
+  <text x="190" y="435" class="cell" text-anchor="middle">• 低延迟高准确性</text>
+  <text x="190" y="450" class="cell" text-anchor="middle">• 成本效益最优</text>
+  
+  <rect x="330" y="380" width="240" height="80" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="5"/>
+  <text x="450" y="400" class="cell" text-anchor="middle" font-weight="bold">Mem0ᵍ 增强</text>
+  <text x="450" y="420" class="cell" text-anchor="middle">• 图结构优势</text>
+  <text x="450" y="435" class="cell" text-anchor="middle">• 更高准确性</text>
+  <text x="450" y="450" class="cell" text-anchor="middle">• 复杂推理支持</text>
+  
+  <rect x="590" y="380" width="240" height="80" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="5"/>
+  <text x="710" y="400" class="cell" text-anchor="middle" font-weight="bold">成本对比</text>
+  <text x="710" y="420" class="cell" text-anchor="middle">• 90% Token节省</text>
+  <text x="710" y="435" class="cell" text-anchor="middle">• 91% 延迟降低</text>
+  <text x="710" y="450" class="cell" text-anchor="middle">• 26% 准确性提升</text>
+</svg>
