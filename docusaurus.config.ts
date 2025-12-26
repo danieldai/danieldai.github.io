@@ -61,7 +61,7 @@ const config: Config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
-          routeBasePath: '/',
+          // routeBasePath: '/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -101,7 +101,7 @@ const config: Config = {
           position: 'left',
           label: 'Google ADK',
         },
-        // {to: '/', label: 'Blog', position: 'left'},
+        {to: '/', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/danieldai/danieldai.github.io',
           label: 'GitHub',
