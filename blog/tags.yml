@@ -17,3 +17,45 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+python:
+  label: Python
+  permalink: /python
+  description: Python tag description
+
+
+regex:
+  label: Regex
+  permalink: /regex
+  description: Regex tag description
+
+git:
+  label: Git
+  permalink: /git
+  description: Git tag description
+
+AI:
+  label: AI
+  permalink: /ai
+  description: AI tag description
+  
+ADK:
+  label: ADK
+  permalink: /adk
+  description: ADK tag description
+
+Agents:
+  label: Agents
+  permalink: /agents
+  description: Agents tag description
+
+Google:
+  label: Google
+  permalink: /google
+  description: Google tag description
+
+
+LLM:
+  label: LLM
+  permalink: /llm
+  description: LLM tag description
