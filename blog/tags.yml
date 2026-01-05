@@ -59,3 +59,18 @@ LLM:
   label: LLM
   permalink: /llm
   description: LLM tag description
+
+playwright:
+  label: Playwright
+  permalink: /playwright
+  description: Playwright tag description
+
+testing:
+  label: Testing
+  permalink: /testing
+  description: Testing tag description
+
+web-development:
+  label: Web Development
+  permalink: /web-development
+  description: Web Development tag description
