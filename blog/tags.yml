@@ -1,76 +1,74 @@
 facebook:
   label: Facebook
   permalink: /facebook
-  description: Facebook tag description
+  description: Content related to Facebook technologies, platform, and integrations
 
 hello:
   label: Hello
   permalink: /hello
-  description: Hello tag description
+  description: Introductory content and getting started guides
 
 docusaurus:
   label: Docusaurus
   permalink: /docusaurus
-  description: Docusaurus tag description
+  description: Content about the Docusaurus static site generator, configuration, and usage
 
 hola:
   label: Hola
   permalink: /hola
-  description: Hola tag description
+  description: Spanish language content and internationalization topics
 
 python:
   label: Python
   permalink: /python
-  description: Python tag description
-
+  description: Python programming language, libraries, frameworks, and best practices
 
 regex:
   label: Regex
   permalink: /regex
-  description: Regex tag description
+  description: Regular expressions, patterns, and usage across different programming languages
 
 git:
   label: Git
   permalink: /git
-  description: Git tag description
+  description: Git version control system, workflows, commands, and best practices
 
 AI:
   label: AI
   permalink: /ai
-  description: AI tag description
+  description: Artificial Intelligence concepts, applications, and technologies
   
 ADK:
   label: ADK
   permalink: /adk
-  description: ADK tag description
+  description: Advanced Development Kit, tools, and frameworks for development
 
 Agents:
   label: Agents
   permalink: /agents
-  description: Agents tag description
+  description: AI agents, autonomous systems, and intelligent assistants
 
 Google:
   label: Google
   permalink: /google
-  description: Google tag description
-
+  description: Google technologies, APIs, platforms, and services
 
 LLM:
   label: LLM
   permalink: /llm
-  description: LLM tag description
+  description: Large Language Models, their architectures, and applications
 
 playwright:
   label: Playwright
   permalink: /playwright
-  description: Playwright tag description
+  description: Playwright testing framework for web applications and automation
 
 testing:
   label: Testing
   permalink: /testing
-  description: Testing tag description
+  description: Software testing methodologies, tools, and best practices
 
 web-development:
   label: Web Development
   permalink: /web-development
-  description: Web Development tag description
+  description: Web development technologies, frameworks, and best practices
