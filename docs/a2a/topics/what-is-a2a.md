@@ -1,4 +1,5 @@
 ---
+title: "什么是 A2A？"
 sidebar_position: 1
 ---
 
@@ -120,7 +121,7 @@ A2A 位于更广泛的智能体栈中，其中包括：
 
 将智能体封装为简单工具的做法从根本上是有限的，因为它无法捕获智能体的全部能力。这一关键区别在文章[为什么智能体不是工具](https://discuss.google.dev/t/agents-are-not-tools/192812)中进行了探讨。
 
-有关更深入的比较，请参阅 [A2A 和 MCP 比较](a2a-and-mcp.md)文档。
+有关更深入的比较，请参阅 [A2A 和 MCP 比较](./a2a-and-mcp.md)文档。
 
 #### A2A 和 ADK
 

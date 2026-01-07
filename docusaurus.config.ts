@@ -117,7 +117,7 @@ const config: Config = {
           items: [
             {
               label: 'A2A',
-              to: '/docs/a2a/intro',
+              to: '/docs/a2a/topics/what-is-a2a',
             },
           ],
         },

@@ -1,0 +1,8 @@
+{
+  "label": "文档",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "A2A 文档，包括集成指南、API 参考和教程，帮助您充分利用我们的服务。"
+  }
+}
